@@ -1,0 +1,100 @@
+﻿ /* chart */
+.chart {
+	width: 100%;
+}
+.chart-small {
+	height: 150px;
+}
+.chart-medium {
+	height: 200px;
+}
+.chart-large {
+	height: 300px;
+}
+.chart-tooltip {
+	background: #333;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	display: none;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.chart .button {
+	position: absolute;
+	cursor: pointer;
+	font-size: smaller;
+	color: #999;
+	background-color: #eee;
+	padding: 2px;
+}
+/* chat */
+.chat-content > .chat-list, .chat-content > .chat-list > .chat {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position:relative;
+}
+.chat-content > .chat-list > .chat {
+	margin:10px 0;
+}
+.chat-content > .chat-list > .chat.in > .img {
+	float: left;
+	margin-right: 10px;
+}
+.chat-content > .chat-list > .chat.out > .img {
+	float: right;
+	margin-left: 10px;
+}
+.chat-content > .chat-list > .chat > .img > .chat-img {
+	width:64px;
+	height:64px;
+}
+.chat-content > .chat-list > .chat > .chat-body {
+	padding: 10px;
+}
+.chat-content > .chat-list > .chat.in > .chat-body {
+	margin-left: 80px;
+}
+.chat-content > .chat-list > .chat.out > .chat-body {
+	margin-right: 80px;
+}
+.chat-content > .chat-list > .chat > .chat-body > .chat-heading:after {
+	clear:both;
+	content: ' ';
+	display:table;
+}
+.chat-content > .chat-list > .chat > .chat-body > .name {
+	float:left;
+}
+.chat-body > .datetime {
+	margin-left:10px; font-size: 12px;
+}
+.chat-body > .message {
+	 display: block;
+    margin: 5px 0 0;
+}
+.chat-content > .chat-list > .chat > .chat-body:after {
+    top: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+   border-color: rgba(172, 25, 61, 0);
+   pointer-events: none;
+}
+.chat-content > .chat-list > .chat.in > .chat-body:after {
+    left: 60px;
+    border-right-color: inherit;
+    border-width: 10px;
+}
+.chat-content > .chat-list > .chat.out > .chat-body:after {
+    right: 60px;
+    border-left-color: inherit;
+    border-width: 11px;
+}
+/* morris chart */
+.morris-chart > svg {
+	width: 100% !important;
+}

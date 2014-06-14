@@ -1,0 +1,66 @@
+﻿body {
+    margin-top: 50px;
+}
+.login-panel, .lockout-panel {
+    width: 320px;
+    margin: 0 auto;
+}
+.login-panel .panel-heading {
+    padding: 15px 20px;
+}
+.login-panel .panel-heading .panel-title {
+    font-size: 20px;
+}
+.login-panel .panel-body {
+    padding: 20px 20px 0 20px;
+}
+.login-panel .form-group.social {
+    margin-bottom: 10px;
+}
+.login-panel .social > a {
+    display: inline-block;
+    margin-left: 10px;
+}
+.signup-panel .panel-heading {
+    padding: 15px 20px;
+}
+.signup-panel .panel-heading .panel-title {
+    font-size: 20px;
+}
+.signup-panel .panel-body {
+    padding: 20px 20px 0 20px;
+}
+.signup-panel .form-group.social {
+     margin-bottom: 10px;
+}
+.signup-panel .social > a {
+    display: inline-block;
+    margin-left: 10px;
+}
+.lockout-panel .login-user {
+	text-align:center;
+}
+.lockout-panel .login-user img {
+	width:120px;
+	height:120px;
+	border-radius:100%;
+}
+/* page-error */
+h1.page-error {
+	font-size: 80px;
+	margin:0;
+}
+/* line */
+.line {
+	background-color: transparent;
+	border-top: 1px solid #C9C9C9;
+	border-width: 1px 0 0;
+	font-size: 0;
+	height: 2px;
+	margin: 10px 0;
+	overflow: hidden;
+}
+.line-dashed {
+	background: transparent;
+	border-style: dashed;
+}

@@ -1,0 +1,318 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Panels" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
+		ThirdUrl = "/Home/Panels", ThirdUrlName = "Panels"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel title
+				</h3>
+				<div class="panel-tools">
+					<div class="btn-group">
+						<a class="btn btn-danger btn-xs" href="#" data-toggle="dropdown">Action <i class='fa fa-angle-down'></i></a>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#">Action</a> </li>
+							<li><a href="#">Another action</a> </li>
+							<li><a href="#">Something else here</a> </li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a> </li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<a class="btn btn-xs btn-primary" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Filter By <i class="fa fa-angle-down"></i></a>
+						<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+							<label class="checkbox metro-checkbox">
+								<input type="checkbox" id="finance" value="option1" />Finance
+							</label>
+							<label class="checkbox metro-checkbox">
+								<input type="checkbox" id="finance" value="option1" />Membership
+							</label>
+							<label class="checkbox metro-checkbox no-wrap">
+								<input type="checkbox" id="finance" value="option1" />Customer Support
+							</label>
+						</div>
+					</div>
+					<div class="btn-group">
+						<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Panel heading without title
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				Panel content
+			</div>
+			<div class="panel-footer">
+				Panel footer
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Panel header
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading no-padding">
+				<h3 class="panel-title pull-left padding-10">
+					Panel title
+				</h3>
+				<div class="panel-tools">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+						<li><a href="#profile" data-toggle="tab">Profile</a></li>
+						<li><a href="#messages" data-toggle="tab">Messages</a></li>
+						<li><a href="#settings" data-toggle="tab">Settings</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel-body">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						Home</div>
+					<div class="tab-pane" id="profile">
+						Profile</div>
+					<div class="tab-pane" id="messages">
+						Messages</div>
+					<div class="tab-pane" id="settings">
+						Settings</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Success
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Info
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Warning
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Danger
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Primary
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-transparent">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Transparent
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-purple">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Purple
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-cardovan">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Cardoavan
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-teal">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Teal
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-pink">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Pink
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-dark-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Dark Blue
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Panel Blue
+				</h3>
+				<div class="panel-tools">
+					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+	</div>
+</div>

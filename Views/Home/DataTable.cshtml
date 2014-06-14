@@ -1,0 +1,17 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Data Table" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/DataTable", SecondUrlName = "Tables",
+		ThirdUrl = "/Home/DataTable", ThirdUrlName = "Data Table"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+<!-- bootstrap datatable -->
+<link href="css/plugins/datatable/datatable-bs3.css" rel="stylesheet" type="text/css" />
+}
+@section 

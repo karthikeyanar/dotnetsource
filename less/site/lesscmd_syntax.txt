@@ -1,0 +1,1 @@
+lessc E:\wamp\www\templates\metroadmin\dotnetsource\less\site\site.less > E:\wamp\www\templates\metroadmin\dotnetsource\css\site.css

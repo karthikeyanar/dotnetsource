@@ -1,0 +1,15 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Sidbar Fixed Layout" };
+	ViewBag.Title = _PageHeaderModel.Title;
+}
+@section styles {
+	<link href="/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+}
+@section scripts {
+	<!-- Page-Level Plugin Scripts - Dashboard -->
+	<script src="/js/plugins/morris/raphael-2.1.0.min.js" type="text/javascript"></script>
+	<script src="/js/plugins/morris/morris.js" type="text/javascript"></script>
+	<script src="/js/pages/dashboard.js" type="text/javascript"></script>
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_Index")

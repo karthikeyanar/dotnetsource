@@ -1,0 +1,570 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Buttons" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
+		ThirdUrl = "/Home/Buttons", ThirdUrlName = "Buttons"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Buttons</h3>
+			</div>
+			<div class="panel-body">
+				<h4>
+					Bootstrap Buttons</h4>
+				<button class="btn btn-default" type="button">
+					Default</button>
+				<button class="btn btn-primary" type="button">
+					Primary</button>
+				<button class="btn btn-success" type="button">
+					Success</button>
+				<button class="btn btn-info" type="button">
+					Info</button>
+				<button class="btn btn-warning" type="button">
+					Warning</button>
+				<button class="btn btn-danger" type="button">
+					Danger</button>
+				<button class="btn btn-link" type="button">
+					Link</button>
+				<div class="clearfix">
+					&nbsp;</div>
+				<h4>
+					Color Buttons</h4>
+				<button class="btn btn-purple" type="button">
+					Purple</button>
+				<button class="btn btn-cardovan" type="button">
+					Cardovan</button>
+				<button class="btn btn-teal" type="button">
+					Teal</button>
+				<button class="btn btn-pink" type="button">
+					Pink</button>
+				<button class="btn btn-dark-blue" type="button">
+					Dark Blue</button>
+				<button class="btn btn-blue" type="button">
+					Blue</button>
+				<div class="clearfix">
+					&nbsp;</div>
+				<h4>
+					Metro Buttons</h4>
+				<button class="btn btn-metro btn-primary" type="button">
+					Primary</button>
+				<button class="btn btn-metro btn-success" type="button">
+					Success</button>
+				<button class="btn btn-metro btn-info" type="button">
+					Info</button>
+				<button class="btn btn-metro btn-warning" type="button">
+					Warning</button>
+				<button class="btn btn-metro btn-danger" type="button">
+					Danger</button>
+				<button class="btn btn-metro btn-purple" type="button">
+					Purple</button>
+				<button class="btn btn-metro btn-cardovan" type="button">
+					Cardovan</button>
+				<button class="btn btn-metro btn-teal" type="button">
+					Teal</button>
+				<button class="btn btn-metro btn-pink" type="button">
+					Pink</button>
+				<button class="btn btn-metro btn-dark-blue" type="button">
+					Dark Blue</button>
+				<button class="btn btn-metro btn-blue" type="button">
+					Blue</button>
+				<div class="clearfix">
+					&nbsp;</div>
+				<div class="well bg-primary col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-success col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-info col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-warning col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-danger col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-purple col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-cardovan col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-teal col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-pink col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-dark-blue col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="well bg-blue col-xs-3 text-center">
+					<button class="btn btn-metro btn-transparent" type="button">
+						Button</button>
+				</div>
+				<div class="clearfix">
+					&nbsp;</div>
+				<h4>
+					Split Buttons</h4>
+				<div class="btn-group">
+					<button class="btn btn-default" type="button">
+						Default</button>
+					<button type="button" class="btn btn-default">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-primary" type="button">
+						Primary</button>
+					<button type="button" class="btn btn-primary">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-success" type="button">
+						Success</button>
+					<button type="button" class="btn btn-success">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-info" type="button">
+						Info</button>
+					<button type="button" class="btn btn-info">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-warning" type="button">
+						Warning</button>
+					<button type="button" class="btn btn-warning">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-danger" type="button">
+						Danger</button>
+					<button type="button" class="btn btn-danger">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="clearfix">
+					&nbsp;</div>
+				<div class="btn-group">
+					<button class="btn btn-purple" type="button">
+						Purple</button>
+					<button type="button" class="btn btn-purple">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-cardovan" type="button">
+						Cardovan</button>
+					<button type="button" class="btn btn-cardovan">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-teal" type="button">
+						Teal</button>
+					<button type="button" class="btn btn-teal">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-pink" type="button">
+						Pink</button>
+					<button type="button" class="btn btn-pink">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-dark-blue" type="button">
+						Dark Blue</button>
+					<button type="button" class="btn btn-dark-blue">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-blue" type="button">
+						Blue</button>
+					<button type="button" class="btn btn-blue">
+						<span class="caret"></span>
+					</button>
+				</div>
+				<h4>
+					Disabled</h4>
+				<button class="btn btn-default" disabled type="button">
+					Default</button>
+				<h4>
+					Large Buttons</h4>
+				<button class="btn btn-default btn-lg" type="button">
+					Default</button>
+				<button class="btn btn-primary btn-lg" type="button">
+					Primary</button>
+				<button class="btn btn-success btn-lg" type="button">
+					Success</button>
+				<button class="btn btn-info btn-lg" type="button">
+					Info</button>
+				<button class="btn btn-warning btn-lg" type="button">
+					Warning</button>
+				<button class="btn btn-danger btn-lg" type="button">
+					Danger</button>
+				<h4>
+					Small Buttons</h4>
+				<button class="btn btn-default btn-sm" type="button">
+					Default</button>
+				<button class="btn btn-primary btn-sm" type="button">
+					Primary</button>
+				<button class="btn btn-success btn-sm" type="button">
+					Success</button>
+				<button class="btn btn-info btn-sm" type="button">
+					Info</button>
+				<button class="btn btn-warning btn-sm" type="button">
+					Warning</button>
+				<button class="btn btn-danger btn-sm" type="button">
+					Danger</button>
+				<h4>
+					Extra Small Buttons</h4>
+				<button class="btn btn-default btn-xs" type="button">
+					Default</button>
+				<button class="btn btn-primary btn-xs" type="button">
+					Primary</button>
+				<button class="btn btn-success btn-xs" type="button">
+					Success</button>
+				<button class="btn btn-info btn-xs" type="button">
+					Info</button>
+				<button class="btn btn-warning btn-xs" type="button">
+					Warning</button>
+				<button class="btn btn-danger btn-xs" type="button">
+					Danger</button>
+				<h4>
+					Block Buttons</h4>
+				<button class="btn btn-default btn-block" type="button">
+					Default</button>
+				<button class="btn btn-primary btn-block" type="button">
+					Primary</button>
+				<h4>
+					Normal Circle Buttons</h4>
+				<button class="btn btn-default btn-circle" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-primary btn-circle" type="button">
+					<i class="fa fa-list"></i>
+				</button>
+				<button class="btn btn-success btn-circle" type="button">
+					<i class="fa fa-link"></i>
+				</button>
+				<button class="btn btn-info btn-circle" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-warning btn-circle" type="button">
+					<i class="fa fa-times"></i>
+				</button>
+				<button class="btn btn-danger btn-circle" type="button">
+					<i class="fa fa-heart"></i>
+				</button>
+				<div class="clearfix">
+					&nbsp;</div>
+				<h4>
+					Large Circle Buttons</h4>
+				<button class="btn btn-default btn-circle btn-lg" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-primary btn-circle btn-lg" type="button">
+					<i class="fa fa-list"></i>
+				</button>
+				<button class="btn btn-success btn-circle btn-lg" type="button">
+					<i class="fa fa-link"></i>
+				</button>
+				<button class="btn btn-info btn-circle btn-lg" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-warning btn-circle btn-lg" type="button">
+					<i class="fa fa-times"></i>
+				</button>
+				<button class="btn btn-danger btn-circle btn-lg" type="button">
+					<i class="fa fa-heart"></i>
+				</button>
+				<div class="clearfix">
+					&nbsp;</div>
+				<h4>
+					Extra Large Circle Buttons</h4>
+				<button class="btn btn-default btn-circle btn-xl" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-primary btn-circle btn-xl" type="button">
+					<i class="fa fa-list"></i>
+				</button>
+				<button class="btn btn-success btn-circle btn-xl" type="button">
+					<i class="fa fa-link"></i>
+				</button>
+				<button class="btn btn-info btn-circle btn-xl" type="button">
+					<i class="fa fa-check"></i>
+				</button>
+				<button class="btn btn-warning btn-circle btn-xl" type="button">
+					<i class="fa fa-times"></i>
+				</button>
+				<button class="btn btn-danger btn-circle btn-xl" type="button">
+					<i class="fa fa-heart"></i>
+				</button>
+			</div>
+		</div>
+		<div class="panel panel-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Button Groups</h3>
+			</div>
+			<div class="panel-body">
+				<h4>
+					Basic</h4>
+				<div class="btn-group">
+					<button class="btn btn-danger" type="button">
+						Left</button>
+					<button class="btn btn-success" type="button">
+						Center</button>
+					<button class="btn btn-primary" type="button">
+						Right</button>
+				</div>
+				<h4>
+					Button Toolbar</h4>
+				<div class="btn-toolbar">
+					<div class="btn-group">
+						<button class="btn btn-danger" type="button">
+							1</button>
+						<button class="btn btn-success" type="button">
+							2</button>
+						<button class="btn btn-primary" type="button">
+							3</button>
+						<button class="btn btn-info" type="button">
+							4</button>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-primary" type="button">
+							5</button>
+						<button class="btn btn-success" type="button">
+							6</button>
+						<button class="btn btn-danger" type="button">
+							7</button>
+						<button class="btn btn-info" type="button">
+							8</button>
+					</div>
+				</div>
+				<h4>
+					Button Group With Sizing</h4>
+				<div class="btn-toolbar margin-bottom-10">
+					<div class="btn-group">
+						<button class="btn btn-danger btn-lg" type="button">
+							Left</button>
+						<button class="btn btn-success btn-lg" type="button">
+							Center</button>
+						<button class="btn btn-primary btn-lg" type="button">
+							Right</button>
+					</div>
+				</div>
+				<div class="btn-toolbar margin-bottom-10">
+					<div class="btn-group">
+						<button class="btn btn-danger" type="button">
+							Left</button>
+						<button class="btn btn-success" type="button">
+							Center</button>
+						<button class="btn btn-primary" type="button">
+							Right</button>
+					</div>
+				</div>
+				<div class="btn-toolbar margin-bottom-10">
+					<div class="btn-group">
+						<button class="btn btn-danger btn-sm" type="button">
+							Left</button>
+						<button class="btn btn-success btn-sm" type="button">
+							Center</button>
+						<button class="btn btn-primary btn-sm" type="button">
+							Right</button>
+					</div>
+				</div>
+				<div class="btn-toolbar margin-bottom-10">
+					<div class="btn-group">
+						<button class="btn btn-danger btn-xs" type="button">
+							Left</button>
+						<button class="btn btn-success btn-xs" type="button">
+							Center</button>
+						<button class="btn btn-primary btn-xs" type="button">
+							Right</button>
+					</div>
+				</div>
+				<h4>
+					Nesting Button Group</h4>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">
+						1</button>
+					<button type="button" class="btn btn-default">
+						2</button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Dropdown link</a> </li>
+							<li><a href="#">Dropdown link</a> </li>
+						</ul>
+					</div>
+				</div>
+				<h4>
+					Vertical variation</h4>
+				<div class="btn-group-vertical">
+					<button class="btn btn-default" type="button">
+						Button</button>
+					<button class="btn btn-default" type="button">
+						Button</button>
+					<div class="btn-group">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" id="btnGroupVerticalDrop1">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul aria-labelledby="btnGroupVerticalDrop1" role="menu" class="dropdown-menu">
+							<li><a href="#">Dropdown link</a> </li>
+							<li><a href="#">Dropdown link</a> </li>
+						</ul>
+					</div>
+					<button class="btn btn-default" type="button">
+						Button</button>
+					<button class="btn btn-default" type="button">
+						Button</button>
+					<div class="btn-group">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" id="btnGroupVerticalDrop2">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul aria-labelledby="btnGroupVerticalDrop2" role="menu" class="dropdown-menu">
+							<li><a href="#">Dropdown link</a> </li>
+							<li><a href="#">Dropdown link</a> </li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" id="btnGroupVerticalDrop3">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul aria-labelledby="btnGroupVerticalDrop3" role="menu" class="dropdown-menu">
+							<li><a href="#">Dropdown link</a> </li>
+							<li><a href="#">Dropdown link</a> </li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button" id="btnGroupVerticalDrop4">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul aria-labelledby="btnGroupVerticalDrop4" role="menu" class="dropdown-menu">
+							<li><a href="#">Dropdown link</a> </li>
+							<li><a href="#">Dropdown link</a> </li>
+						</ul>
+					</div>
+				</div>
+				<h4>
+					Justified link variation</h4>
+				<div class="btn-group btn-group-justified">
+					<a role="button" class="btn btn-default">Left</a> <a role="button" class="btn btn-default">Middle</a> <a role="button" class="btn btn-default">Right</a>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Button dropdowns</h3>
+			</div>
+			<div class="panel-body">
+				<h4>
+					Single button dropdowns</h4>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						Default <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Action</a> </li>
+						<li><a href="#">Another action</a> </li>
+						<li><a href="#">Something else here</a> </li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a> </li>
+					</ul>
+				</div>
+				<!-- /btn-group -->
+				<h4>
+					Split button dropdowns</h4>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default">
+						Default</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span><span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Action</a> </li>
+						<li><a href="#">Another action</a> </li>
+						<li><a href="#">Something else here</a> </li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Dropup menus
+				</h3>
+			</div>
+			<div class="panel-body">
+				<div style="margin: 0;" class="btn-toolbar">
+					<div class="btn-group dropup">
+						<button class="btn btn-default">
+							Dropup
+						</button>
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a> </li>
+							<li><a href="#">Another action</a> </li>
+							<li><a href="#">Something else here</a> </li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a> </li>
+						</ul>
+					</div>
+					<!-- /btn-group -->
+					<div class="btn-group dropup">
+						<button class="btn btn-default">
+							Right dropup
+						</button>
+						<button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="#">Action</a> </li>
+							<li><a href="#">Another action</a> </li>
+							<li><a href="#">Something else here</a> </li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a> </li>
+						</ul>
+					</div>
+					<!-- /btn-group -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

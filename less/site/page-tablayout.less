@@ -1,0 +1,56 @@
+@media (min-width: @screen-md) {
+	.page-tab-layout .page-container {
+		margin-top: 48px;
+	}
+	.page-tab-layout .page-container .page-content, .page-tab-layout .page-container .footer {
+		margin-left: 0;
+	}
+	.page-tab-layout .page-tab-menu:after {
+		clear: both;
+		content: ' ';
+		display: table;
+	}
+	.page-tab-layout .page-tab-menu > ul, .page-tab-layout .page-tab-menu > ul li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.page-tab-layout .page-tab-menu > ul > li {
+		float: left;
+	}
+	.page-tab-layout .page-tab-menu > ul > li > a {
+		text-align: center;
+		display: block;
+		padding: 10px 20px 10px 20px;
+		color: inherit;
+	}
+	.page-tab-layout .page-tab-menu > ul > li > a > i {
+		display: block;
+		font-size: 20px;
+		margin: 5px 0;
+	}
+	.page-tab-layout .page-tab-menu > ul > li > ul {
+		display: none;
+	}
+	.page-tab-layout .page-tab-menu > ul > li.active > ul {
+		display: block;
+		left: 0;
+		position: absolute;
+		right: 0;
+		z-index: 1;
+	}
+	.page-tab-layout .page-tab-menu > ul > li.active > ul > li {
+		float: left;
+		position: relative;
+	}
+	.page-tab-layout .page-tab-menu > ul > li.active > ul > li > a {
+		display: block;
+		padding: 15px;
+		text-align: center;
+		margin-right: 2px;
+	}
+	.page-tab-layout .page-tab-menu, .page-tab-layout .header, .page-tab-layout .page-container, .page-tab-layout .page-tab-menu > ul > li.active > ul {
+		padding-left: 50px !important;
+		padding-right: 50px !important;
+	}
+} 

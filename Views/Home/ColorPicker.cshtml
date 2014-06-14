@@ -1,0 +1,95 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Color Picker" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal", SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/ColorPicker", ThirdUrlName = "Color Picker"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+	<!-- color picker -->
+	<link href="/css/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+}
+@section scripts {
+	<!-- color picker -->
+	<script src="/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
+	<script>
+		$(function() {
+			$('.color-picker').colorpicker();
+			$('#enableColorPicker').colorpicker();
+			$("#btnEnable").click(function() {
+				$('#enableColorPicker').colorpicker('enable');
+			});
+			$("#btnDisable").click(function() {
+				$('#enableColorPicker').colorpicker('disable');
+			});
+		});
+	</script>
+}
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading panel-title">
+				<h3 class="panel-title">
+					Color Pickers</h3>
+			</div>
+			<div class="panel-body">
+				<form method="post" class="form-horizontal form-striped" onsubmit="return false">
+				<div class="form-group">
+					<label class="col-md-2 control-label">
+						Default</label>
+					<div class="col-md-4">
+						<input type="text" value="#5367ce" class="form-control color-picker">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">
+						As a component</label>
+					<div class="col-md-4">
+						<div class="input-group color-picker">
+							<input type="text" value="#5367ce" class="form-control">
+							<span class="input-group-addon"><i></i></span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">
+						Horizontal Mode</label>
+					<div class="col-md-4">
+						<input type="text" value="#5367ce" class="form-control color-picker" data-horizontal="true">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">
+						Inline Mode</label>
+					<div class="col-md-2">
+						<div id="demo_cont" class="color-picker" data-container="#demo_cont" data-color="rgba(150,216,62,0.55)" data-inline="true">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="color-picker" data-container="true" data-color="rgb(50,216,62)" data-inline="true">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">
+						Enable / Disable</label>
+					<div class="col-md-4">
+						<input type="text" disabled id="enableColorPicker" value="#5367ce" class="form-control">
+					</div>
+					<div class="col-md-4">
+						<button id="btnEnable" type="button" class="btn btn-default">
+							Enable</button>
+						<button id="btnDisable" type="button" class="btn btn-default">
+							Disable</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

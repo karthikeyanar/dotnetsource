@@ -1,0 +1,15 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+.breadcrumb {
+  background-color: @breadcrumb-bg;
+  border-radius: @border-radius-base;
+  > li {
+    + li:before {
+      color: @breadcrumb-color;
+    }
+  }
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}

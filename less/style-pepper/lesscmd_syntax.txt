@@ -1,0 +1,1 @@
+lessc E:\wamp\www\templates\metroadmin\dotnetsource\less\style-pepper\style-pepper.less > E:\wamp\www\templates\metroadmin\dotnetsource\css\style-pepper.css

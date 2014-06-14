@@ -1,0 +1,113 @@
+﻿<!-- page sidebar -->
+<div id="left-sidebar" class="page-sidebar page-sidebar-left">
+	<div class="sidebar-content">
+		<ul class="nav page-sidebar-menu">
+			<li>
+				<div class="ps-sm-toggler-wrapper">
+					<button type="button" class="navbar-toggle ps-toggler">
+						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+			</li>
+			<li class="page-sidebar-search">
+				<div class="input-group custom-search-form">
+					<input type="text" class="form-control input-sm" placeholder="Search..." />
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-sm" type="button">
+							<i class="fa fa-search"></i>
+						</button>
+					</span>
+				</div>
+				<a href="javascript:;" id="close-search">&times</a><a href="javascript:;" id="open-search"><i class="fa fa-search"></i></a></li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.DashBoard) ? "active" : ""))"><a href="/"><i class="fa fa-laptop"></i><span class="title">Dashboard</span></a> </li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Layouts) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-th"></i><span class="title">Layouts</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Layouts) ? "in" : ""))">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.BoxLayout) ? "active" : ""))"><a href="/Home/BoxLayout">Box Layout</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SidebarCollapseLayout) ? "active" : ""))"><a href="/Home/SidebarCollapseLayout">Sidebar Collapse Layout</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SidebarFixedLayout) ? "active" : ""))"><a href="/Home/SidebarFixedLayout">Sidebar Fixed Layout</a></li>
+				</ul>
+			</li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.UIFeatures) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-desktop"></i><span class="title">UI Features</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.UIFeatures) ? "in" : ""))">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.General) ? "active" : ""))"><a href="/Home/General">General</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Alerts) ? "active" : ""))"><a href="/Home/Alerts">Alerts</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.ToolTipAndPopover) ? "active" : ""))"><a href="/Home/ToolTipAndPopover">ToolTip & Popover</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Dropdowns) ? "active" : ""))"><a href="/Home/Dropdowns">Dropdowns</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Buttons) ? "active" : ""))"><a href="/Home/Buttons">Buttons</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Typography) ? "active" : ""))"><a href="/Home/Typography">Typography</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Panels) ? "active" : ""))"><a href="/Home/Panels">Panels</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Tiles) ? "active" : ""))"><a href="/Home/Tiles">Tiles</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Icons) ? "active" : ""))"><a href="/Home/Icons">Icons</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FileInput) ? "active" : ""))"><a href="/Home/FileInput">File Input</a></li>
+				</ul>
+			</li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Plugins) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-puzzle-piece"></i><span class="title">Plugins</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Plugins) ? "in" : ""))">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Modal) ? "active" : ""))"><a href="/Home/Modal">Modal</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.DatePicker) ? "active" : ""))"><a href="/Home/DatePicker">Date Picker</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.DateRangePicker) ? "active" : ""))"><a href="/Home/DateRangePicker">Date Range Picker</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.ColorPicker) ? "active" : ""))"><a href="/Home/ColorPicker">Color Picker</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Editor) ? "active" : ""))"><a href="/Home/Editor">Editor</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Slider) ? "active" : ""))"><a href="/Home/Slider">Slider</a></li>
+				</ul>
+			</li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Charts) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-image"></i><span class="title">Charts</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Charts) ? "in" : ""))">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FlotChart) ? "active" : ""))"><a href="/Home/FlotChart">FlotChart</a></li>
+				</ul>
+			</li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Forms) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-tasks"></i><span class="title">Forms</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormControls) ? "active" : ""))"><a href="/Home/FormControls">Form Controls</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormComponents) ? "active" : ""))"><a href="/Home/FormComponents">Form Components</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormLayouts) ? "active" : ""))"><a href="/Home/FormLayouts">Form Layouts</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormValidation) ? "active" : ""))"><a href="/Home/FormValidation">Form Validation</a></li>
+				</ul>
+			</li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Tables) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-table"></i><span class="title">Tables</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse">
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Table) ? "active" : ""))"><a href="/Home/Table">Basic</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.DataTable) ? "active" : ""))"><a href="/Home/DataTable">Data Table</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-files-o"></i><span class="title">Pages</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse">
+					<li><a href="signin.php">Sign In</a></li>
+					<li><a href="signup.php">Sign Up</a></li>
+					<li><a href="lock.php">Lock Screen</a></li>
+					<li><a href="blank.php">Blank</a></li>
+					<li><a href="404.php">404</a></li>
+					<li><a href="500.php">500</a></li>
+					<li><a href="calendar.php">Calendar</a></li>
+					<li><a href="timeline.php">Timeline</a></li>
+					<li><a href="inbox.php">Inbox</a></li>
+					<li><a href="invoice.php">Invoice</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="title">Menu Levels</span><span class="fa arrow"></span></a>
+				<ul class="nav sub-menu collapse">
+					<li><a href="#">Menu Level 1.1</a>
+					<li><a href="#">Menu Level 1.2</a>
+					<li><a href="#">Menu Level 1.3<span class="fa arrow"></span></a>
+						<ul class="nav sub-menu collapse">
+							<li><a href="#">Menu Level 2.1</a>
+							<li><a href="#">Menu Level 2.2<span class="fa arrow"></span></a>
+								<ul class="nav sub-menu collapse">
+									<li><a href="#">Menu Level 3.1</a>
+										<ul class="nav sub-menu collapse">
+											<li><a href="#">Menu Level 4.1</a></li>
+											<li><a href="#">Menu Level 4.2</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Menu Level 3.2</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Menu Level 2.3</a>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- end page-sidebar -->

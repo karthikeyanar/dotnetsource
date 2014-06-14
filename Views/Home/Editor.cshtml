@@ -1,0 +1,88 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Editor" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal", SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/Editor", ThirdUrlName = "Editor"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+	<!-- bootstrap wysihtml5 -->
+	<link href="/css/plugins/bootstrap-wysihtml5/wysiwyg-editor.css" rel="stylesheet" type="text/css" />
+}
+@section scripts {
+	<!-- wysihtml5 editor -->
+	<script src="/js/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js" type="text/javascript"></script>
+	<script src="/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.js" type="text/javascript"></script>
+	<!-- ckeditor -->
+	<script src="/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		/**** Specific JS for this page ****/
+		$(function() {
+			$('textarea.wysihtml5').wysihtml5();
+		});
+	</script>
+	<script>
+		CKEDITOR.replace('ckeditor',{
+			uiColor: '#F5F5F5',
+			on: {
+				//focus: onFocus,
+				//blur: onBlur,
+				// Check for availability of corresponding plugins.
+				pluginsLoaded: function(evt) {
+					var doc=CKEDITOR.document,ed=evt.editor;
+					if(!ed.getCommand('bold'))
+						doc.getById('exec-bold').hide();
+					if(!ed.getCommand('link'))
+						doc.getById('exec-link').hide();
+				}
+			}
+		});
+	</script>
+}
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-dark-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					WYSIHTML5 Editor</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<form action="#" method="POST">
+					<div class="form-group">
+						<div class="col-md-12">
+							<textarea id="wysihtml5" name="wysihtml5" class="wysihtml5 form-control" rows="10"></textarea>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					CK Editor</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<form action="#" method="POST">
+					<div class="form-group">
+						<div class="col-md-12">
+							<textarea id="ckeditor" name="ckeditor" class="form-control" rows="10"></textarea>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

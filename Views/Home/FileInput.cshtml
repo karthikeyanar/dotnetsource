@@ -1,0 +1,74 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "FileInput" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
+		ThirdUrl = "/Home/FileInput", ThirdUrlName = "FileInput"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+	<link href="/css/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css" rel="stylesheet" />
+}
+@section scripts {
+	<!-- Bootstrap FileUpload -->
+	<script src="/js/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js" type="text/javascript"></script>
+}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					File Input</h3>
+			</div>
+			<div class="panel-body">
+				<form action="#" method="POST">
+				<div class="form-group">
+					<div class="col-lg-10">
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+							<span class="btn btn-primary btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span> <span class="fileupload-preview"></span><a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">&times</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-lg-10">
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+							<div class="input-group">
+								<div class="uneditable-input col-md-3">
+									<span class="fileupload-preview"></span>
+								</div>
+								<span class="btn btn-primary btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-lg-10">
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+							<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;">
+							</div>
+							<div>
+								<span class="btn btn-primary btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-lg-10">
+						<div class="fileupload fileupload-new" data-provides="fileupload">
+							<div class="fileupload-new thumbnail" style="width: 50px; height: 50px;">
+							</div>
+							<div class="fileupload-preview fileupload-exists thumbnail" style="width: 50px; height: 50px;">
+							</div>
+							<span class="btn btn-primary btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
