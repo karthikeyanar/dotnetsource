@@ -83,10 +83,10 @@
 .panel-blue {
   .panel-variant(@panel-blue-border; @panel-blue-text; @panel-blue-heading-bg; @panel-blue-border);
 }
-.panel-transparent {
-  .panel-variant(@brand-white; @gray-dark; @brand-white; @gray-lighter);
+.panel-white {
+  .panel-variant(@brand-white; @gray-dark; transparent; @gray-lighter);
 }
-.panel-transparent .panel-heading, .panel-transparent .panel-body {
+.panel-white .panel-heading, .panel-white .panel-body {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -95,11 +95,11 @@
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 12px;
     padding: 0;
 }
 .panel.panel-default > .panel-heading .panel-tools a.icon-action,
-.panel.panel-transparent > .panel-heading .panel-tools a.icon-action {
+.panel.panel-white > .panel-heading .panel-tools a.icon-action {
 	color: @gray;
 }
 .panel > .panel-heading .nav-tabs {

@@ -15,7 +15,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					Panel title
+					Panel With Buttons
 				</h3>
 				<div class="panel-tools">
 					<div class="btn-group">
@@ -42,9 +42,6 @@
 							</label>
 						</div>
 					</div>
-					<div class="btn-group">
-						<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-					</div>
 				</div>
 			</div>
 			<div class="panel-body">
@@ -56,9 +53,6 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Panel heading without title
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -81,9 +75,6 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				Panel header
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -96,7 +87,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading no-padding">
 				<h3 class="panel-title pull-left padding-10">
-					Panel title
+					Panel With Tabs
 				</h3>
 				<div class="panel-tools">
 					<!-- Nav tabs -->
@@ -131,9 +122,7 @@
 				<h3 class="panel-title">
 					Panel Success
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -146,9 +135,7 @@
 				<h3 class="panel-title">
 					Panel Info
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -163,9 +150,7 @@
 				<h3 class="panel-title">
 					Panel Warning
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -178,9 +163,7 @@
 				<h3 class="panel-title">
 					Panel Danger
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -195,9 +178,7 @@
 				<h3 class="panel-title">
 					Panel Primary
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -205,14 +186,12 @@
 		</div>
 	</div>
 	<div class="col-md-6">
-		<div class="panel panel-transparent">
+		<div class="panel panel-white">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					Panel Transparent
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -227,9 +206,7 @@
 				<h3 class="panel-title">
 					Panel Purple
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -242,9 +219,7 @@
 				<h3 class="panel-title">
 					Panel Cardoavan
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -259,9 +234,7 @@
 				<h3 class="panel-title">
 					Panel Teal
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -274,9 +247,7 @@
 				<h3 class="panel-title">
 					Panel Pink
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -291,9 +262,7 @@
 				<h3 class="panel-title">
 					Panel Dark Blue
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content
@@ -306,9 +275,7 @@
 				<h3 class="panel-title">
 					Panel Blue
 				</h3>
-				<div class="panel-tools">
-					<a class="icon-action" data-action='collapse'><i class="entypo-down-open"></i></a><a class="icon-action"><i class="entypo-arrows-ccw"></i></a><a class="icon-action" data-action='remove'><i class="entypo-cancel"></i></a>
-				</div>
+				@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
 				Panel content

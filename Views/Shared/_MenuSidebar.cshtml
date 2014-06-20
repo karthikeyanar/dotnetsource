@@ -19,15 +19,15 @@
 					</span>
 				</div>
 				<a href="javascript:;" id="close-search">&times</a><a href="javascript:;" id="open-search"><i class="fa fa-search"></i></a></li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.DashBoard) ? "active" : ""))"><a href="/"><i class="fa fa-laptop"></i><span class="title">Dashboard</span></a> </li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Layouts) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-th"></i><span class="title">Layouts</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.DashBoard) ? "active open" : ""))"><a href="/"><i class="fa fa-laptop"></i><span class="menu-text">Dashboard</span></a></li>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Layouts) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-th"></i><span class="menu-text">Layouts</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Layouts) ? "in" : ""))">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.BoxLayout) ? "active" : ""))"><a href="/Home/BoxLayout">Box Layout</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SidebarCollapseLayout) ? "active" : ""))"><a href="/Home/SidebarCollapseLayout">Sidebar Collapse Layout</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SidebarFixedLayout) ? "active" : ""))"><a href="/Home/SidebarFixedLayout">Sidebar Fixed Layout</a></li>
 				</ul>
 			</li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.UIFeatures) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-desktop"></i><span class="title">UI Features</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.UIFeatures) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-desktop"></i><span class="menu-text">UI Features</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.UIFeatures) ? "in" : ""))">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.General) ? "active" : ""))"><a href="/Home/General">General</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Alerts) ? "active" : ""))"><a href="/Home/Alerts">Alerts</a></li>
@@ -41,7 +41,7 @@
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FileInput) ? "active" : ""))"><a href="/Home/FileInput">File Input</a></li>
 				</ul>
 			</li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Plugins) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-puzzle-piece"></i><span class="title">Plugins</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Plugins) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-puzzle-piece"></i><span class="menu-text">Plugins</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Plugins) ? "in" : ""))">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Modal) ? "active" : ""))"><a href="/Home/Modal">Modal</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.DatePicker) ? "active" : ""))"><a href="/Home/DatePicker">Date Picker</a></li>
@@ -51,12 +51,12 @@
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Slider) ? "active" : ""))"><a href="/Home/Slider">Slider</a></li>
 				</ul>
 			</li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Charts) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-image"></i><span class="title">Charts</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Charts) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-image"></i><span class="menu-text">Charts</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse @(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Charts) ? "in" : ""))">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FlotChart) ? "active" : ""))"><a href="/Home/FlotChart">FlotChart</a></li>
 				</ul>
 			</li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Forms) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-tasks"></i><span class="title">Forms</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Forms) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-tasks"></i><span class="menu-text">Forms</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormControls) ? "active" : ""))"><a href="/Home/FormControls">Form Controls</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormComponents) ? "active" : ""))"><a href="/Home/FormComponents">Form Components</a></li>
@@ -64,27 +64,27 @@
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.FormValidation) ? "active" : ""))"><a href="/Home/FormValidation">Form Validation</a></li>
 				</ul>
 			</li>
-			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Tables) ? "active" : ""))"><a href="javascript:;"><i class="fa fa-table"></i><span class="title">Tables</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Tables) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-table"></i><span class="menu-text">Tables</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse">
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Table) ? "active" : ""))"><a href="/Home/Table">Basic</a></li>
 					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.DataTable) ? "active" : ""))"><a href="/Home/DataTable">Data Table</a></li>
 				</ul>
 			</li>
-			<li><a href="javascript:;"><i class="fa fa-files-o"></i><span class="title">Pages</span><span class="fa arrow"></span></a>
+			<li class="@(((ViewBag.TopMenu == dotnetsource.Helpers.TopMenu.Pages) ? "active open" : ""))"><a href="javascript:;"><i class="fa fa-files-o"></i><span class="menu-text">Pages</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse">
-					<li><a href="signin.php">Sign In</a></li>
-					<li><a href="signup.php">Sign Up</a></li>
-					<li><a href="lock.php">Lock Screen</a></li>
-					<li><a href="blank.php">Blank</a></li>
-					<li><a href="404.php">404</a></li>
-					<li><a href="500.php">500</a></li>
-					<li><a href="calendar.php">Calendar</a></li>
-					<li><a href="timeline.php">Timeline</a></li>
-					<li><a href="inbox.php">Inbox</a></li>
-					<li><a href="invoice.php">Invoice</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SignIn) ? "active" : ""))"><a href="/Home/SignIn">Sign In</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SignUp) ? "active" : ""))"><a href="/Home/SignUp">Sign Up</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Lock) ? "active" : ""))"><a href="/Home/Lock">Lock Screen</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Page404) ? "active" : ""))"><a href="/Home/Page404">404</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Page500) ? "active" : ""))"><a href="/Home/Page500">500</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Blank) ? "active" : ""))"><a href="/Home/Blank">Blank</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Calendar) ? "active" : ""))"><a href="/Home/Calendar">Calendar</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Timeline) ? "active" : ""))"><a href="/Home/Timeline">Timeline</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Inbox) ? "active" : ""))"><a href="/Home/Inbox">Inbox</a></li>
+					<li class="@(((ViewBag.Submenu == dotnetsource.Helpers.SubMenu.Invoice) ? "active" : ""))"><a href="/Home/Invoice">Invoice</a></li>
 				</ul>
 			</li>
-			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="title">Menu Levels</span><span class="fa arrow"></span></a>
+			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="menu-text">Menu Levels</span><span class="fa arrow"></span></a>
 				<ul class="nav sub-menu collapse">
 					<li><a href="#">Menu Level 1.1</a>
 					<li><a href="#">Menu Level 1.2</a>

@@ -1,0 +1,142 @@
+﻿//
+// Variables
+// --------------------------------------------------
+//== Colors
+//
+@base-color: #002F65; 
+//@base-purple-color: #810489; 
+//@base-green-color: #3E9A3D; 
+//@base-fb-color: #3b5998; 
+//@base-red-color: #931111; 
+@brand-black: #000;
+@brand-white: #fff;
+@logo-type-color: #FF0741;
+
+
+@menu-color: darken(@brand-white, 5%);
+@menu-bottom-color: lighten(@base-color, 10%);
+@menu-hover-bg-color: lighten(@base-color, 10%);
+
+@submenu-bg-color: darken(@base-color, 5%);
+@submenu-hover-bg-color: darken(@base-color, 12%);
+@submenu-color: @brand-white;
+
+body {
+    background: darken(@base-color,25%);
+}
+/* header */
+.header {
+    background: darken(@base-color,3%);
+}
+.header .navbar-brand { 
+    color: darken(@brand-white, 5%);
+}
+/* header horizontal menu */
+.header .hor-menu .navbar-nav > li > a {
+	color: @menu-color !important;
+	background: inherit;
+}
+.header .hor-menu .navbar-nav > li.active > a,
+.header .hor-menu .navbar-nav > li > a:hover,
+.header .hor-menu .navbar-nav > li > a:focus {
+	color: @menu-color !important;
+	background-color: @menu-hover-bg-color !important;
+}
+@media (max-width: 991px) {
+	.header .hor-menu {
+		background: darken(@base-color,25%);
+	}
+	.header .hor-menu > .nav {
+		background: @base-color;
+	}
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .dropdown-header {
+		border-color: lighten(@base-color, 10%) !important;
+	}
+	.header .hor-menu .navbar-nav .open .dropdown-menu .divider {
+		background-color: lighten(@base-color, 10%) !important;
+	}
+	.header .hor-menu .navbar-nav > li > a,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > li > a {
+		border-bottom: 1px solid @menu-bottom-color !important;
+		color: @menu-color !important;
+		background: inherit;
+	}
+	.header .hor-menu .navbar-nav .open .dropdown-menu {
+		background: @submenu-bg-color !important;
+	}
+	.header .hor-menu .navbar-nav .open .dropdown-menu > li > a:hover,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > li > a:focus,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .active > a,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:focus
+	{
+		color: @submenu-color !important;
+		background-color: @submenu-hover-bg-color !important;
+	}
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+	.header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+		color: #444 !important;
+		background-color: transparent !important;
+	}
+}
+/* page-sidebar */
+.page-container, .page-sidebar {
+    background: @base-color;
+    color: @brand-white;
+}
+.page-sidebar-menu .navbar-toggle:hover {
+	background-color: @menu-hover-bg-color;
+}
+.page-container .page-content, .page-container .footer {
+    background: @brand-white;
+    color: lighten(@brand-black, 20%);
+}
+.page-sidebar-collapse .page-sidebar-search.open {
+    background-color: @base-color;
+}
+.page-sidebar-menu.nav li a {
+    color: darken(@brand-white, 5%);
+}
+/* page-sidebar first level menu */
+.page-sidebar-menu.nav > li > a {
+    border-bottom: 1px solid @menu-bottom-color !important;
+}
+.page-sidebar-menu.nav > li > a:hover, 
+.page-sidebar-menu.nav > li > a:focus, 
+.page-sidebar-collapse .page-sidebar-menu > li:hover > a, 
+.page-sidebar-menu.nav > li.active > a,
+.page-sidebar-menu.nav > li.open > a {
+    background-color: @menu-hover-bg-color;
+}
+/* page-sidebar second level menu */
+.page-sidebar-menu.nav > li > .nav {
+    background: @submenu-bg-color;
+}
+.page-sidebar-menu.nav > li .nav li.active > a,
+.page-sidebar-menu.nav > li .nav li a:hover, 
+.page-sidebar-menu.nav > li .nav li a:focus {
+    background-color: @submenu-hover-bg-color;
+    color: @submenu-color;
+}
+.page-sidebar-menu.nav > li > .nav li a {
+    border-bottom: 1px solid @menu-bottom-color !important;
+}
+.page-sidebar-search .btn.btn-default {
+    background-color: lighten(@base-color, 20%);
+    color: @brand-white;
+    border-color: lighten(@base-color, 20%);
+}
+.page-sidebar-menu .navbar-toggle .icon-bar {
+    background-color: @brand-white;
+}
+/* header dropdown-menu */
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus {
+	background: lighten(@base-color,30%);
+	color: @brand-white;
+}
+ 

@@ -51,7 +51,19 @@ namespace dotnetsource.Helpers {
 		FormValidation = 26,
 
 		Table = 27,
-		DataTable = 28
+		DataTable = 28,
+
+		SignIn = 29,
+		SignUp = 30,
+		Lock = 31,
+		Page404 = 32,
+		Page500 = 33,
+		Blank = 34,
+		Calendar = 35,
+		Timeline = 36,
+		Inbox = 37,
+		Invoice = 38,
+
 
 	}
 	 

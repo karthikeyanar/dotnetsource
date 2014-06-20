@@ -1,0 +1,11 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Blank" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/SignIn", SecondUrlName = "Pages",
+		ThirdUrl = "/Home/Blank", ThirdUrlName = "Blank"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+Content here.

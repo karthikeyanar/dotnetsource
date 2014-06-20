@@ -176,5 +176,67 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 		#endregion
+
+		#region Pages
+		public ActionResult SignIn() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SignIn;
+			return View();
+		}
+
+		public ActionResult SignUp() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SignUp;
+			return View();
+		}
+
+		public ActionResult Lock() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Lock;
+			return View();
+		}
+
+		public ActionResult Page404() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Page404;
+			return View();
+		}
+
+		public ActionResult Page500() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Page500;
+			return View();
+		}
+
+		public ActionResult Blank() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Blank;
+			return View();
+		}
+
+		public ActionResult Calendar() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Calendar;
+			return View();
+		}
+
+		public ActionResult Timeline() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Timeline;
+			return View();
+		}
+
+		public ActionResult Inbox() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Inbox;
+			return View();
+		}
+
+		public ActionResult Invoice() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Invoice;
+			return View();
+		}
+		#endregion
 	}
 }

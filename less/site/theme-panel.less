@@ -1,0 +1,32 @@
+.theme-panel {
+    margin-right: -@page-content-padding;
+	margin-top: -5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	z-index: 1;
+}
+.theme-panel > .toggler {
+	color:inherit;
+	float:left;
+	padding: 8px 10px;
+	color: #fff;background: #004B8B;
+}
+.theme-panel > .toggler > i {
+	font-size: 20px;
+}
+.theme-panel > .theme-options {
+	float:left;
+	width:200px;
+	border: solid 2px #004B8B;
+	border-right:0;
+	display:none;
+	background:#fff;
+	padding:10px;
+}
+.theme-panel > .theme-options.open {
+	display:block;
+}
+.theme-panel > .theme-options .form-horizontal .form-group {
+	margin: 0 0 3px 0;
+}

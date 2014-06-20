@@ -1,1 +1,1 @@
-lessc E:\wamp\www\templates\metroadmin\dotnetsource\less\themes\blue.less > E:\wamp\www\templates\metroadmin\dotnetsource\css\themes\blue.css
+lessc E:\Projects\dotnetsource\less\themes\blue.less > E:\Projects\dotnetsource\css\themes\blue.css

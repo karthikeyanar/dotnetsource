@@ -1,15 +1,6 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<!-- Apple devices fullscreen -->
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<!-- Apple devices fullscreen -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<title>@ViewBag.Title - </title>
-	@Html.Partial("_Styles")
-	@RenderSection("styles", required: false)
+﻿@Html.Partial("_Head")
+@Html.Partial("_Styles")
+@RenderSection("styles", required: false)
 </head>
 @{
 	var className = "";
@@ -47,34 +38,7 @@
 			<!-- navbar-header -->
 			<div class="navbar-header top-menu">
 				<ul>
-					<li class="dropdown"><a href="#" title="Settings" data-toggle="dropdown" rel="tooltip" data-placement="bottom"><i class="fa fa-cog fa-lg"></i></a>
-						<div class="dropdown-menu dropdown-menu-right settings hold-on-click">
-							<form id="frmLayoutSettings" class="form-horizontal form-row-separated" onsubmit="return false" role="form">
-							<div class="form-group">
-								<div class="col-md-12">
-									<label class="checkbox metro-checkbox">
-										<input type="checkbox" id="layout" />Fixed Layout
-									</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<label class="checkbox metro-checkbox">
-										<input type="checkbox" id="header" />Fixed Header
-									</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-md-12">
-									<label class="checkbox metro-checkbox">
-										<input type="checkbox" id="sidebar" />Fixed Sidebar
-									</label>
-								</div>
-							</div>
-							</form>
-						</div>
-					</li>
-					<li class="dropdown"><a href="lock.php" title="Lock" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lock fa-lg"></i></a></li>
+					<li class="dropdown"><a href="Home/Lock" title="Lock" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lock fa-lg"></i></a></li>
 					<li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Jarge Lue</span></a>
 						<ul class="dropdown-menu dropdown-menu-right" role="menu">
 							<li><a href="#">Edit Profile</a></li>
@@ -111,4 +75,4 @@
 	@Html.Partial("_Scripts")
 	@RenderSection("scripts", required: false)
 </body>
-</html>
+</html> 

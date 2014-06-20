@@ -118,15 +118,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="css\chart.css" />
+    <Content Include="css\pages\error-page.css" />
+    <Content Include="css\pages\fonts.css" />
+    <Content Include="css\pages\lock.css" />
+    <Content Include="css\pages\signup.css" />
+    <Content Include="css\pages\signin.css" />
     <Content Include="css\pages\inbox.css" />
     <Content Include="css\pages\timeline.css" />
     <Content Include="css\plugins\bootstrap-colorpicker\bootstrap-colorpicker.css" />
     <Content Include="css\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.css" />
     <Content Include="css\plugins\bootstrap-datepicker\bootstrap-datepicker.css" />
     <Content Include="css\plugins\bootstrap-datepicker\bootstrap-datepicker.min.css" />
-    <Content Include="css\plugins\bootstrap-fileupload\bootstrap-fileupload.css" />
-    <Content Include="css\plugins\bootstrap-fileupload\bootstrap-fileupload.min.css" />
     <Content Include="css\plugins\bootstrap-modal\bootstrap-modal.css" />
     <Content Include="css\plugins\bootstrap-modal\bootstrap-modal.min.css" />
     <Content Include="css\plugins\bootstrap-select\bootstrap-select.css" />
@@ -150,10 +152,8 @@
     <Content Include="css\plugins\jquery-inputlimiter\jquery.inputlimiter.1.0.css" />
     <Content Include="css\plugins\jquery-ui\jquery-ui-1.10.3.custom.css" />
     <Content Include="css\plugins\morris\morris-0.4.3.min.css" />
-    <Content Include="css\public.css" />
     <Content Include="css\site.css" />
     <Content Include="css\style-pepper.css" />
-    <Content Include="css\style-pepper.min.css" />
     <Content Include="css\themes\blue.css" />
     <Content Include="css\themes\_blue.css" />
     <Content Include="Global.asax" />
@@ -254,6 +254,7 @@
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\files\application.js" />
+    <Content Include="js\files\Copy of application.js" />
     <Content Include="js\files\pepper-notification.js" />
     <Content Include="js\files\setting.js" />
     <Content Include="js\jquery\additional-methods.js" />
@@ -278,8 +279,7 @@
     <Content Include="js\plugins\bootstrap-daterangepicker\daterangepicker.min.js" />
     <Content Include="js\plugins\bootstrap-daterangepicker\moment.js" />
     <Content Include="js\plugins\bootstrap-daterangepicker\moment.min.js" />
-    <Content Include="js\plugins\bootstrap-fileupload\bootstrap-fileupload.js" />
-    <Content Include="js\plugins\bootstrap-fileupload\bootstrap-fileupload.min.js" />
+    <Content Include="js\plugins\fileinput\fileinput.js" />
     <Content Include="js\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
     <Content Include="js\plugins\bootstrap-modal\bootstrap-modal.js" />
     <Content Include="js\plugins\bootstrap-modal\bootstrap-modal.min.js" />
@@ -413,6 +413,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="less\pages\" />
+    <Folder Include="less\plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -478,6 +480,8 @@
     <None Include="less\bootstrap\utilities.less" />
     <None Include="less\bootstrap\variables.less" />
     <None Include="less\bootstrap\wells.less" />
+    <None Include="less\site\theme-panel.less" />
+    <None Include="less\style-pepper\fileinput.less" />
     <None Include="less\site\header.less" />
     <None Include="less\site\mixins.less" />
     <None Include="less\site\page-setting.less" />
@@ -495,6 +499,7 @@
     <None Include="less\style-pepper\buttons.less" />
     <None Include="less\style-pepper\chart.less" />
     <None Include="less\style-pepper\chat.less" />
+    <None Include="less\style-pepper\line.less" />
     <None Include="less\style-pepper\dropdowns.less" />
     <None Include="less\style-pepper\forms.less" />
     <None Include="less\style-pepper\general.less" />
@@ -515,12 +520,14 @@
     <None Include="less\style-pepper\social-icons.less" />
     <None Include="less\style-pepper\style-pepper.less" />
     <None Include="less\style-pepper\tables.less" />
+    <None Include="less\style-pepper\thumbnails.less" />
     <None Include="less\style-pepper\tiles.less" />
     <None Include="less\style-pepper\tooltip.less" />
     <None Include="less\style-pepper\type.less" />
     <None Include="less\style-pepper\variables.less" />
     <None Include="less\style-pepper\wells.less" />
     <None Include="less\themes\blue.less" />
+    <None Include="less\themes\Copy of blue.less" />
     <None Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\Microsoft.AspNet.Mvc.4.0.20710.0.nupkg" />
     <None Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\Microsoft.AspNet.Razor.2.0.20710.0.nupkg" />
     <None Include="packages\Microsoft.AspNet.WebApi.4.0.20710.0\Microsoft.AspNet.WebApi.4.0.20710.0.nupkg" />
@@ -546,7 +553,7 @@
     <Content Include="Views\Home\FileInput.cshtml" />
     <Content Include="Views\Home\FlotChart.cshtml" />
     <Content Include="Views\Home\General.cshtml" />
-    <Content Include="Views\Home\Icons.cshtml" />
+    <None Include="Views\Home\Icons.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Modal.cshtml" />
     <Content Include="Views\Home\Panels.cshtml" />
@@ -572,6 +579,22 @@
     <Content Include="Views\Home\FormValidation.cshtml" />
     <Content Include="Views\Home\Table.cshtml" />
     <Content Include="Views\Home\DataTable.cshtml" />
+    <Content Include="Views\Home\SignIn.cshtml" />
+    <Content Include="Views\Shared\_PublicLayout.cshtml" />
+    <Content Include="Views\Shared\_Head.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Home\Lock.cshtml" />
+    <Content Include="Views\Home\Page404.cshtml" />
+    <Content Include="Views\Home\Page500.cshtml" />
+    <Content Include="Views\Home\Blank.cshtml" />
+    <Content Include="Views\Home\Calendar.cshtml" />
+    <Content Include="Views\Home\Timeline.cshtml" />
+    <Content Include="Views\Home\Inbox.cshtml" />
+    <Content Include="Views\Home\Invoice.cshtml" />
+    <Content Include="Views\Shared\_PanelCloseTools.cshtml" />
+    <None Include="Views\Shared\_Entypoicons.cshtml" />
+    <None Include="Views\Shared\_Glyphicons.cshtml" />
+    <None Include="Views\Shared\_FontAweSome.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

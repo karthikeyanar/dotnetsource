@@ -3,11 +3,7 @@
 // --------------------------------------------------
 //== Colors
 //
-@base-color: #002F65; 
-//@base-purple-color: #810489; 
-//@base-green-color: #3E9A3D; 
-//@base-fb-color: #3b5998; 
-//@base-red-color: #931111; 
+@base-color: #007FFF; 
 @brand-black: #000;
 @brand-white: #fff;
 @logo-type-color: #FF0741;
@@ -23,16 +19,6 @@
 
 body {
     background: darken(@base-color,25%);
-}
-body.public {
-     background: @base-color;
-}
-/* logo */
-.logo .name {
-	color: @brand-white;
-}
-.logo .type {
-	color: @logo-type-color;
 }
 /* header */
 .header {
@@ -115,14 +101,15 @@ body.public {
 .page-sidebar-menu.nav > li > a:hover, 
 .page-sidebar-menu.nav > li > a:focus, 
 .page-sidebar-collapse .page-sidebar-menu > li:hover > a, 
-.page-sidebar-menu.nav > li.active > a {
+.page-sidebar-menu.nav > li.active > a,
+.page-sidebar-menu.nav > li.open > a {
     background-color: @menu-hover-bg-color;
 }
 /* page-sidebar second level menu */
 .page-sidebar-menu.nav > li > .nav {
     background: @submenu-bg-color;
 }
-.page-sidebar-menu.nav > li .nav li.active > a, 
+.page-sidebar-menu.nav > li .nav li.active > a,
 .page-sidebar-menu.nav > li .nav li a:hover, 
 .page-sidebar-menu.nav > li .nav li a:focus {
     background-color: @submenu-hover-bg-color;
@@ -148,35 +135,4 @@ body.public {
 	background: lighten(@base-color,30%);
 	color: @brand-white;
 }
-/* page tab layout */
-.page-tab-layout {
-	background: @base-color;	
-}
-.page-tab-layout .page-tab-menu  {
-	background: darken(@base-color, 5%);
-    color: @brand-white;
-}
-.page-tab-layout .page-tab-menu > ul > li > a:hover {
-	background-color: lighten(@base-color, 12%); 
-}
-.page-tab-layout .page-tab-menu > ul > li.active > a {
-	background-color: lighten(@base-color, 10%);
-}
-.page-tab-layout .page-tab-menu > ul > li.active > ul {
-    background-color: lighten(@base-color, 10%);
-}
-.page-tab-layout .page-tab-menu > ul > li > a {
-	border-right: solid 1px darken(@base-color, 8%);
-}
-.page-tab-layout .page-tab-menu > ul > li.active > ul > li > a { 
-	 color: @brand-white; 
-}
-.page-tab-layout .page-tab-menu > ul > li.active > ul > li.open,
-.page-tab-layout .page-tab-menu > ul > li.active > ul > li.active a,
-.page-tab-layout .page-tab-menu > ul > li.active > ul > li > a:hover {
-	background-color: darken(@base-color, 8%);
-    color: @brand-white;
-}
-.page-tab-layout .page-container {
-	background: @brand-white;
-}
+ 

@@ -3,8 +3,10 @@
 	Layout = null;
 }
 <ul class="breadcrumb">
-	<li><a href="@Model.FirstUrl">@Model.FirstUrlName</a></li>
-	<li><a href="@Model.SecondUrl">@Model.SecondUrlName</a></li>
-	<li class="active"><a href="@Model.ThirdUrl">@Model.ThirdUrlName</li>
-	<li class="pull-right"><a href="#" data-dismiss='breadcrumb'><i class="fa fa-remove"></i></a></li>
+	<li><i class="fa fa-home"></i><a href="@Model.FirstUrl">@Model.FirstUrlName</a><i class="fa fa-angle-right"></i></li>
+	<li><a href="@Model.SecondUrl">@Model.SecondUrlName</a>@if (string.IsNullOrEmpty(Model.ThirdUrlName) == false && string.IsNullOrEmpty(Model.ThirdUrl) == false) {<i class="fa fa-angle-right"></i>}</li>
+	@if (string.IsNullOrEmpty(Model.ThirdUrlName) == false && string.IsNullOrEmpty(Model.ThirdUrl) == false) {
+		<li class="active"><a href="@Model.ThirdUrl">@Model.ThirdUrlName</a></li>
+ }
+	<li class="pull-right"><a href="#" class="close" data-dismiss='breadcrumb'>&times</a></li>
 </ul>
