@@ -14,7 +14,7 @@
 ;(function($,window,undefined) {
 	// don't do anything if touch is supported
 	// (plugin causes some issues on mobile)
-	 if('ontouchend' in document) return;
+	if('ontouchend' in document) return;
 
 	// outside the scope of the jQuery plugin to
 	// keep track of all dropdowns

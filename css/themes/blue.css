@@ -1,6 +1,5 @@
-body {
-  background: #003f80;
-}
+/* dropdown */
+/* page sidebar */
 /* header */
 .header {
   background: #0077f0;
@@ -10,14 +9,14 @@ body {
 }
 /* header horizontal menu */
 .header .hor-menu .navbar-nav > li > a {
-  color: #f2f2f2 !important;
+  color: #333333 !important;
   background: inherit;
 }
 .header .hor-menu .navbar-nav > li.active > a,
 .header .hor-menu .navbar-nav > li > a:hover,
 .header .hor-menu .navbar-nav > li > a:focus {
-  color: #f2f2f2 !important;
-  background-color: #3399ff !important;
+  color: #333333 !important;
+  background-color: #ffffff !important;
 }
 @media (max-width: 991px) {
   .header .hor-menu {
@@ -34,20 +33,20 @@ body {
   }
   .header .hor-menu .navbar-nav > li > a,
   .header .hor-menu .navbar-nav .open .dropdown-menu > li > a {
-    border-bottom: 1px solid #3399ff !important;
-    color: #f2f2f2 !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    color: #333333 !important;
     background: inherit;
   }
   .header .hor-menu .navbar-nav .open .dropdown-menu {
-    background: #0072e6 !important;
+    background: #ffffff !important;
   }
   .header .hor-menu .navbar-nav .open .dropdown-menu > li > a:hover,
   .header .hor-menu .navbar-nav .open .dropdown-menu > li > a:focus,
   .header .hor-menu .navbar-nav .open .dropdown-menu > .active > a,
   .header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:hover,
   .header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff !important;
-    background-color: #0061c2 !important;
+    color: #333333 !important;
+    background-color: #ffffff !important;
   }
   .header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a,
   .header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -57,13 +56,16 @@ body {
   }
 }
 /* page-sidebar */
-.page-container,
 .page-sidebar {
-  background: #007fff;
-  color: #ffffff;
+  background: #f5f5f5;
+  color: #333333;
+  border-right: solid 1px #cccccc;
+}
+.page-sidebar .page-sidebar-menu.nav {
+  border-bottom: 1px solid #e5e5e5 !important;
 }
 .page-sidebar-menu .navbar-toggle:hover {
-  background-color: #3399ff;
+  background-color: #ffffff;
 }
 .page-container .page-content,
 .page-container .footer {
@@ -74,39 +76,114 @@ body {
   background-color: #007fff;
 }
 .page-sidebar-menu.nav li a {
-  color: #f2f2f2;
+  color: #333333;
 }
 /* page-sidebar first level menu */
 .page-sidebar-menu.nav > li > a {
-  border-bottom: 1px solid #3399ff !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+.page-sidebar-menu.nav > li.open:last-child > a {
+  border-bottom: 0 !important;
 }
 .page-sidebar-menu.nav > li > a:hover,
 .page-sidebar-menu.nav > li > a:focus,
 .page-sidebar-collapse .page-sidebar-menu > li:hover > a,
-.page-sidebar-menu.nav > li.active > a,
 .page-sidebar-menu.nav > li.open > a {
-  background-color: #3399ff;
+  background-color: #ffffff;
+}
+.page-sidebar-menu.nav > li.open > a {
+  background-color: #f3f3f3;
+  color: #1963aa;
+  font-weight: 600;
+}
+.page-sidebar-menu.nav > li.active > a {
+  background-color: #ffffff;
+  color: #2b7dbc;
+  font-weight: 600;
+}
+.page-sidebar-menu.nav > li:hover:before,
+.page-sidebar-menu.nav > li.open:before,
+.page-sidebar-menu.nav > li.active:after,
+.page-sidebar-menu.nav > li.active .nav > li.active:after {
+  border-color: #2b7dbc;
+  border-image: none;
+  border-style: solid;
+  border-width: 0 2px 0 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 40px;
+}
+.page-sidebar-menu.nav > li.active:after,
+.page-sidebar-menu.nav > li.active .nav > li.active:after {
+  right: -2px;
+}
+.page-sidebar-menu.nav > li:hover:before,
+.page-sidebar-menu.nav > li.open:before {
+  left: 0;
+  border-width: 0 3px 0 0;
+}
+.page-sidebar-menu.nav > li.active > a:after,
+.page-sidebar-menu.nav > li.active > a:before,
+.page-sidebar-menu.nav > li.active .nav > li.active > a:after,
+.page-sidebar-menu.nav > li.active .nav > li.active > a:before {
+  right: 0;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.page-sidebar-menu.nav > li.active .nav > li.active > a:after,
+.page-sidebar-menu.nav > li.active > a:after {
+  border-color: rgba(43, 125, 188, 0);
+  border-right-color: #2b7dbc;
+  border-width: 10px;
+  margin-top: -10px;
+}
+.page-sidebar-menu.nav > li.active .nav > li.active > a:before,
+.page-sidebar-menu.nav > li.active > a:before {
+  border-color: rgba(43, 125, 188, 0);
+  border-right-color: #2b7dbc;
+  border-width: 11px;
+  margin-top: -11px;
+}
+.page-sidebar-menu.nav > li.page-siebar-toggler:before,
+.page-sidebar-menu.nav > li.page-siebar-toggler:after,
+.page-sidebar-menu.nav > li.page-sidebar-search:before,
+.page-sidebar-menu.nav > li.page-sidebar-search:after {
+  display: none;
 }
 /* page-sidebar second level menu */
-.page-sidebar-menu.nav > li > .nav {
-  background: #0072e6;
+.page-sidebar-menu.nav > li > .nav li a {
+  background: #ffffff;
 }
-.page-sidebar-menu.nav > li .nav li.active > a,
+.page-sidebar-menu.nav > li .nav li.active > a {
+  background-color: #f5f5f5;
+  color: #2b7dbc;
+  font-weight: 600;
+}
 .page-sidebar-menu.nav > li .nav li a:hover,
 .page-sidebar-menu.nav > li .nav li a:focus {
-  background-color: #0061c2;
-  color: #ffffff;
+  background-color: #f5f5f5;
+  color: #2b7dbc;
 }
 .page-sidebar-menu.nav > li > .nav li a {
-  border-bottom: 1px solid #3399ff !important;
+  background: #ffffff;
+  border-top: 1px solid #e4e4e4 !important;
 }
 .page-sidebar-search .btn.btn-default {
-  background-color: #66b2ff;
+  background-color: #007fff;
   color: #ffffff;
-  border-color: #66b2ff;
+  border-color: #007fff;
 }
 .page-sidebar-menu .navbar-toggle .icon-bar {
-  background-color: #ffffff;
+  background-color: #333333;
 }
 /* header dropdown-menu */
 .dropdown-menu > li > a:hover,
@@ -114,6 +191,6 @@ body {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background: #99ccff;
+  background: #007fff;
   color: #ffffff;
 }

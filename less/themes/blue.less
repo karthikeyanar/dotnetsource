@@ -8,18 +8,38 @@
 @brand-white: #fff;
 @logo-type-color: #FF0741;
 
+/* dropdown */
+@dropdown-hover-bg-color: @base-color;
+@dropdown-hover-text-color: #fff;
 
-@menu-color: darken(@brand-white, 5%);
-@menu-bottom-color: lighten(@base-color, 10%);
-@menu-hover-bg-color: lighten(@base-color, 10%);
+/* page sidebar */
+@page-sidebar-background-color: #f5f5f5;
+@page-sidebar-text-color: #333;
+@page-sidebar-border-color: #ccc;
 
-@submenu-bg-color: darken(@base-color, 5%);
-@submenu-hover-bg-color: darken(@base-color, 12%);
-@submenu-color: @brand-white;
+@page-sidebar-icon-bar-bg-color: #333;
 
-body {
-    background: darken(@base-color,25%);
-}
+@page-sidebar-search-btn-bg-color: @base-color;
+@page-sidebar-search-btn-border-color: @base-color;
+@page-sidebar-search-btn-text-color: #fff;
+
+@menu-active-bg-color: #fff;
+@menu-active-text-color: #2b7dbc;
+@menu-text-color: @page-sidebar-text-color;
+@menu-hover-color: @menu-active-bg-color;
+@menu-border-color: #e5e5e5;
+
+@submenu-bg-color: #fff;
+@submenu-text-color: @menu-text-color;
+@submenu-open-bg-color: #f3f3f3;
+@submenu-open-text-color: #1963aa;
+
+@submenu-active-bg-color: #f5f5f5;
+@submenu-active-text-color: @menu-active-text-color;
+
+@submenu-border-color: #e4e4e4;
+@submenu-hover-color: @submenu-active-bg-color;
+
 /* header */
 .header {
     background: darken(@base-color,3%);
@@ -29,14 +49,14 @@ body {
 }
 /* header horizontal menu */
 .header .hor-menu .navbar-nav > li > a {
-	color: @menu-color !important;
+	color: @menu-text-color !important;
 	background: inherit;
 }
 .header .hor-menu .navbar-nav > li.active > a,
 .header .hor-menu .navbar-nav > li > a:hover,
 .header .hor-menu .navbar-nav > li > a:focus {
-	color: @menu-color !important;
-	background-color: @menu-hover-bg-color !important;
+	color: @menu-text-color !important;
+	background-color: @menu-hover-color !important;
 }
 @media (max-width: 991px) {
 	.header .hor-menu {
@@ -53,8 +73,8 @@ body {
 	}
 	.header .hor-menu .navbar-nav > li > a,
 	.header .hor-menu .navbar-nav .open .dropdown-menu > li > a {
-		border-bottom: 1px solid @menu-bottom-color !important;
-		color: @menu-color !important;
+		border-bottom: 1px solid @menu-border-color !important;
+		color: @menu-text-color !important;
 		background: inherit;
 	}
 	.header .hor-menu .navbar-nav .open .dropdown-menu {
@@ -66,8 +86,8 @@ body {
 	.header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:hover,
 	.header .hor-menu .navbar-nav .open .dropdown-menu > .active > a:focus
 	{
-		color: @submenu-color !important;
-		background-color: @submenu-hover-bg-color !important;
+		color: @menu-text-color !important;
+		background-color: @menu-hover-color !important;
 	}
 	.header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a,
 	.header .hor-menu .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -77,12 +97,16 @@ body {
 	}
 }
 /* page-sidebar */
-.page-container, .page-sidebar {
-    background: @base-color;
-    color: @brand-white;
+.page-sidebar {
+    background: @page-sidebar-background-color;
+    color: @page-sidebar-text-color;
+	border-right: solid 1px @page-sidebar-border-color;
+}
+.page-sidebar .page-sidebar-menu.nav {
+	border-bottom: 1px solid @menu-border-color !important;
 }
 .page-sidebar-menu .navbar-toggle:hover {
-	background-color: @menu-hover-bg-color;
+	background-color: @menu-hover-color;
 }
 .page-container .page-content, .page-container .footer {
     background: @brand-white;
@@ -92,39 +116,117 @@ body {
     background-color: @base-color;
 }
 .page-sidebar-menu.nav li a {
-    color: darken(@brand-white, 5%);
+    color: @page-sidebar-text-color;
 }
 /* page-sidebar first level menu */
 .page-sidebar-menu.nav > li > a {
-    border-bottom: 1px solid @menu-bottom-color !important;
+    border-top: 1px solid @menu-border-color !important;
+}
+.page-sidebar-menu.nav > li.open:last-child > a {
+	border-bottom: 0 !important;
 }
 .page-sidebar-menu.nav > li > a:hover, 
 .page-sidebar-menu.nav > li > a:focus, 
 .page-sidebar-collapse .page-sidebar-menu > li:hover > a, 
-.page-sidebar-menu.nav > li.active > a,
 .page-sidebar-menu.nav > li.open > a {
-    background-color: @menu-hover-bg-color;
+    background-color: @menu-hover-color;
+}
+.page-sidebar-menu.nav > li.open > a {
+   background-color: @submenu-open-bg-color;
+   color: @submenu-open-text-color;
+   font-weight: 600;
+}
+.page-sidebar-menu.nav > li.active > a {
+	background-color: @menu-active-bg-color;
+	color: @menu-active-text-color;
+	font-weight: 600;
+}
+.page-sidebar-menu.nav > li:hover:before,
+.page-sidebar-menu.nav > li.open:before,
+.page-sidebar-menu.nav > li.active:after,
+.page-sidebar-menu.nav > li.active .nav > li.active:after
+{
+    border-color: @menu-active-text-color;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 2px 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+	height: 40px;
+} 
+.page-sidebar-menu.nav > li.active:after,
+.page-sidebar-menu.nav > li.active .nav > li.active:after
+{
+	right: -2px;
+}
+.page-sidebar-menu.nav > li:hover:before,
+.page-sidebar-menu.nav > li.open:before {
+	left: 0;
+	border-width: 0 3px 0 0;
+}
+.page-sidebar-menu.nav > li.active > a:after, 
+.page-sidebar-menu.nav > li.active > a:before,
+.page-sidebar-menu.nav > li.active .nav > li.active > a:after, 
+.page-sidebar-menu.nav > li.active .nav > li.active > a:before
+{ 
+	right: 0; 
+	top: 50%; 
+	border: solid transparent; 
+	content: " "; 
+	height: 0; 
+	width: 0; 
+	position: absolute; 
+	pointer-events: none; 
+} 
+.page-sidebar-menu.nav > li.active .nav > li.active > a:after,
+.page-sidebar-menu.nav > li.active > a:after { 
+	border-color: rgba(43, 125, 188, 0); 
+	border-right-color: @menu-active-text-color; 
+	border-width: 10px; 
+	margin-top: -10px; 
+} 
+.page-sidebar-menu.nav > li.active .nav > li.active > a:before,
+.page-sidebar-menu.nav > li.active > a:before { 
+	border-color: rgba(43, 125, 188, 0); 
+	border-right-color: @menu-active-text-color; 
+	border-width: 11px; 
+	margin-top: -11px; 
+}
+.page-sidebar-menu.nav > li.page-siebar-toggler:before,
+.page-sidebar-menu.nav > li.page-siebar-toggler:after,
+.page-sidebar-menu.nav > li.page-sidebar-search:before,
+.page-sidebar-menu.nav > li.page-sidebar-search:after {
+	display: none;
 }
 /* page-sidebar second level menu */
-.page-sidebar-menu.nav > li > .nav {
+.page-sidebar-menu.nav > li > .nav li a {
     background: @submenu-bg-color;
 }
-.page-sidebar-menu.nav > li .nav li.active > a,
+.page-sidebar-menu.nav > li .nav li.active > a {
+	background-color: @submenu-active-bg-color;
+    color: @submenu-active-text-color;
+	font-weight: 600;
+}
 .page-sidebar-menu.nav > li .nav li a:hover, 
 .page-sidebar-menu.nav > li .nav li a:focus {
-    background-color: @submenu-hover-bg-color;
-    color: @submenu-color;
+    background-color: @submenu-hover-color;
+    color: @submenu-active-text-color;
 }
 .page-sidebar-menu.nav > li > .nav li a {
-    border-bottom: 1px solid @menu-bottom-color !important;
+	background: @submenu-bg-color;
+    border-top: 1px solid @submenu-border-color !important;
 }
 .page-sidebar-search .btn.btn-default {
-    background-color: lighten(@base-color, 20%);
-    color: @brand-white;
-    border-color: lighten(@base-color, 20%);
+    background-color: @page-sidebar-search-btn-bg-color;
+    color: @page-sidebar-search-btn-text-color;
+    border-color: @page-sidebar-search-btn-border-color;
 }
 .page-sidebar-menu .navbar-toggle .icon-bar {
-    background-color: @brand-white;
+    background-color: @page-sidebar-icon-bar-bg-color;
 }
 /* header dropdown-menu */
 .dropdown-menu > li > a:hover, 
@@ -132,7 +234,7 @@ body {
 .dropdown-menu > .active > a, 
 .dropdown-menu > .active > a:hover, 
 .dropdown-menu > .active > a:focus {
-	background: lighten(@base-color,30%);
-	color: @brand-white;
+	background: @dropdown-hover-bg-color;
+	color: @dropdown-hover-text-color;
 }
  

@@ -2,9 +2,21 @@
 	position: absolute;
 	padding-left: 0;
 	padding-right: 0;
-	top: 0;
-	z-index:998;
+	float:left;
 	width: @page-sidebar-width;
+}
+.page-sidebar:before {
+    background-color: inherit;
+    border-color: inherit;
+    border-style: inherit;
+    border-width: inherit;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: -1;
 }
 .layout-change .page-sidebar {
 	.transition();
@@ -25,7 +37,6 @@
 	display: block;
 	padding: @menu-padding;
 	position: relative;
-	.sidebar_menu_transition();
 }
 .page-sidebar-menu.nav > li > .nav {
 	margin: 0;
@@ -45,28 +56,6 @@
 }
 .page-sidebar-menu.nav li a {
 	.sidebar_menu_transition();
-}
-.page-sidebar-menu.nav > li.active > a:after, 
-.page-sidebar-menu.nav > li.active > a:before { 
-	right: 0; 
-	top: 50%; 
-	border: solid transparent; content: " "; 
-	height: 0; 
-	width: 0; 
-	position: absolute; 
-	pointer-events: none; 
-} 
-.page-sidebar-menu.nav > li.active > a:after { 
-	border-color: rgba(255, 255, 255, 0); 
-	border-right-color: #fff; 
-	border-width: 10px; 
-	margin-top: -10px; 
-} 
-.page-sidebar-menu.nav > li.active > a:before { 
-	border-color: rgba(255, 255, 255, 0); 
-	border-right-color: #fff; 
-	border-width: 11px; 
-	margin-top: -11px; 
 }
 .page-sidebar-menu.nav > li > .nav > li > a {
 	padding: @second-level-menu-padding;

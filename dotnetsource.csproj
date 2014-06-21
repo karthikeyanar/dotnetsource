@@ -254,9 +254,8 @@
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\files\application.js" />
-    <Content Include="js\files\Copy of application.js" />
     <Content Include="js\files\pepper-notification.js" />
-    <Content Include="js\files\setting.js" />
+    <Content Include="js\files\layout-setting.js" />
     <Content Include="js\jquery\additional-methods.js" />
     <Content Include="js\jquery\additional-methods.min.js" />
     <Content Include="js\jquery\jquery-1.11.1.min.js" />
@@ -370,8 +369,6 @@
     <Content Include="js\plugins\morris\morris.min.js" />
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
     <Content Include="js\plugins\scrollTo\jquery.scrollTo.js" />
-    <Content Include="js\plugins\sidebarmenu\jquery.sidebarMenu.js" />
-    <Content Include="js\plugins\sidebarmenu\jquery.sidebarMenu.min.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.min.js" />
     <Content Include="less\site\lesscmd_syntax.txt" />

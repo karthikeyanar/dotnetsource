@@ -322,7 +322,7 @@
 			if(pageSidebarHeight>height)
 				height=pageSidebarHeight;
 		}
-		$pageContent.css({ 'min-height': height+'px' });
+		//$pageContent.css({ 'min-height': height+'px' });
 	};
 
 	this.responsive=function() {
