@@ -31,7 +31,7 @@
 	top: 0;
 }
 .page-sidebar .page-sidebar-search {
-	padding: 0 15px 10px;
+	padding: 0 15px 15px;
 }
 .page-sidebar-menu.nav > li > a {
 	display: block;
@@ -47,15 +47,16 @@
 }
 .page-sidebar-menu li a .arrow {
 	float: right;
+	font-size: 16px;
+}
+.page-sidebar-menu li > a > .ps-closed.arrow {
+   display: none;
 }
 .page-sidebar-menu .fa.arrow:before {
 	content: "\f104";
 }
 .page-sidebar-menu .open > a > .fa.arrow:before {
 	content: "\f107";
-}
-.page-sidebar-menu.nav li a {
-	.sidebar_menu_transition();
 }
 .page-sidebar-menu.nav > li > .nav > li > a {
 	padding: @second-level-menu-padding;
@@ -72,36 +73,37 @@
 .page-sidebar-search #open-search, .page-sidebar-search #close-search {
 	display: none;
 }
-.page-sidebar-menu .ps-sm-toggler-wrapper {
+.page-sidebar .page-sidebar-toggler {
 	display: block;
 	margin: 10px;
 }
-.page-sidebar-fixed .page-sidebar-menu .ps-sm-toggler-wrapper {
+.page-sidebar-fixed .page-sidebar-toggler {
 	margin-bottom: 20px;
 }
-.page-sidebar-fixed .page-sidebar-menu .ps-sm-toggler-wrapper .navbar-toggle {
+.page-sidebar-fixed .page-sidebar-toggler .navbar-toggle {
 	display:none;
 }
-.ps-collapse-fixed-toggler { 
+.ps-closed-fixed-toggler { 
 	display:none;
 }
-.page-sidebar-menu .ps-sm-toggler-wrapper:after {
+.page-sidebar .page-sidebar-toggler:after {
 	clear: both;
 	content: " ";
 	display: table;
 }
-.page-sidebar-menu .navbar-toggle {
+.page-sidebar .page-sidebar-toggler .navbar-toggle {
 	display: block;
 	float: right;
 	margin: 0;
 	padding: 6px;
 	.border-radius(0);
 }
-.page-sidebar .navbar-toggle .icon-bar {
+.page-sidebar .page-sidebar-toggler .navbar-toggle .icon-bar {
 	width: 20px;
 }
 .page-sidebar-search #close-search, .page-sidebar-search #open-search {
 	display: none;
+	padding: 10px;
 }
 @media (max-width: @screen-sm-max) {
 	.page-sidebar {
@@ -127,7 +129,7 @@
 	.page-sidebar-left-open .page-container .page-sidebar-left {
 		left: 0;
 	}
-	.page-sidebar-menu .ps-sm-toggler-wrapper {
+	.page-sidebar .page-sidebar-toggler {
 		display: none;
 	}
 }
@@ -135,7 +137,7 @@
 	.page-sidebar {
 		display: block !important;
 	}
-	.page-sidebar-fixed .ps-collapse-fixed-toggler {
+	.page-sidebar-fixed .ps-closed-fixed-toggler {
 		display: block;
 		margin-left: -44px;
 		border-color: transparent;

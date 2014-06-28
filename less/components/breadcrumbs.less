@@ -3,6 +3,7 @@
 // --------------------------------------------------
 .breadcrumb {
   background-color: @breadcrumb-bg;
+  border: solid 1px @breadcrumb-border-color;
   border-radius: @border-radius-base;
   > li {
     + li:before {
@@ -18,6 +19,10 @@
   > li > a {
 	color: @gray-dark;
 	margin-right: 7px;
+  }
+  > li > a.close {
+	color: #000;
+	margin-right: 0;
   }
   > .active {
     color: @breadcrumb-active-color;

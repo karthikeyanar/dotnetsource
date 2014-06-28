@@ -1,0 +1,15 @@
+.page-container .footer {
+	margin-left: @page-sidebar-width;
+	padding: @page-content-padding;
+	padding-top: 10px;
+	padding-bottom: 10px;
+} 
+.layout-change .page-container .footer {
+	.transition();
+	.transition_property(margin-left);
+}
+@media (max-width: @screen-sm-max) {
+	.page-container .footer {
+		margin-left: 0;
+	}
+}

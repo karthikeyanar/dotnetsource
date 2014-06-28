@@ -4,33 +4,39 @@
 </head>
 @{
 	var className = "";
+	var headerContainerClassName = "";
+	var pageContainerClassName = "";
 	dotnetsource.Helpers.SubMenu subMenuEnum = ViewBag.Submenu;
 	switch (subMenuEnum) {
 		case dotnetsource.Helpers.SubMenu.BoxLayout:
 			className = "header-fixed page-boxed";
+			headerContainerClassName = "container";
+			pageContainerClassName = "container";
 			break;
-		case dotnetsource.Helpers.SubMenu.SidebarCollapseLayout:
-			className = "header-fixed page-fluid page-sidebar-collapse";
+		case dotnetsource.Helpers.SubMenu.SidebarClosed:
+			className = "header-fixed page-sidebar-closed";
 			break;
-		case dotnetsource.Helpers.SubMenu.SidebarFixedLayout:
-			className = "header-fixed page-fluid page-sidebar-fixed";
+		case dotnetsource.Helpers.SubMenu.SidebarFixed:
+			className = "header-fixed page-sidebar-fixed";
 			break;
 		default:
-			className = "header-fixed page-fluid";
+			className = "header-fixed";
+			headerContainerClassName = "container-fluid";
+			pageContainerClassName = "container-fluid";
 			break;
 	}
 }
 <body class="@className">
 	<!-- header -->
 	<div class="header navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
+		<div class="header-content @headerContainerClassName">
 			<!-- navbar-header -->
 			<div class="navbar-header company-info">
 				<button type="button" class="navbar-toggle ps-sm-toggler">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
-				<a href="index.php" class="navbar-brand">Pepper</a>
-				<button type="button" class="navbar-toggle ps-collapse-fixed-toggler">
+				<a href="index.php" class="navbar-brand">@dotnetsource.Helpers.Common.SiteName</a>
+				<button type="button" class="navbar-toggle ps-closed-fixed-toggler">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
@@ -38,7 +44,7 @@
 			<!-- navbar-header -->
 			<div class="navbar-header top-menu">
 				<ul>
-					<li class="dropdown"><a href="Home/Lock" title="Lock" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lock fa-lg"></i></a></li>
+					<li class="dropdown"><a href="/Home/Lock" title="Lock" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-lock fa-lg"></i></a></li>
 					<li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Jarge Lue</span></a>
 						<ul class="dropdown-menu dropdown-menu-right" role="menu">
 							<li><a href="#">Edit Profile</a></li>
@@ -53,21 +59,58 @@
 				</button>
 			</div>
 			<!-- end navbar-header -->
+			@if (ViewBag.Submenu == dotnetsource.Helpers.SubMenu.SidebarHorizontalMenu) {
+				@Html.Partial("_HorizontalMenu")
+   }
 		</div>
 	</div>
 	<!-- end header -->
 	<!-- start page container -->
 	@RenderSection("featured", required: false)
-	<div class="page-container container">
+	<div class="page-container @pageContainerClassName">
 		<!-- start page sidebar -->
 		@Html.Partial("_MenuSidebar")
 		<!-- end page sidebar -->
+		<!-- start theme panel -->
+		<div class="theme-panel">
+			<a class="toggler" href="#"><i class="fa fa-cog"></i></a>
+			<div class="theme-options">
+				<form class="form-horizontal" onsubmit="return false" role="form">
+				<div class="form-group theme-group">
+					<ul>
+						<li class="select"><a href="javascript:;" class="theme-black" data-theme-name="black"></a></li>
+						<li><a href="javascript:;" class="theme-blue" data-theme-name="blue"></a></li>
+						<li><a href="javascript:;" class="theme-green" data-theme-name="green"></a></li>
+						<li><a href="javascript:;" class="theme-red" data-theme-name="red"></a></li>
+					</ul>
+				</div>
+				<div class="form-group">
+					<label class="checkbox metro-checkbox success">
+						<input type="checkbox" id="chklayout" />Box Layout
+					</label>
+				</div>
+				<div class="form-group">
+					<label class="checkbox metro-checkbox success">
+						<input type="checkbox" id="chkheader" />Fixed Header
+					</label>
+				</div>
+				<div class="form-group">
+					<label class="checkbox metro-checkbox success">
+						<input type="checkbox" id="chksidebar" />Fixed Sidebar
+					</label>
+				</div>
+				</form>
+			</div>
+		</div>
+		<!-- end theme panel -->
+		<!-- start page content -->
 		<div class="page-content">
 			@RenderBody()
 		</div>
+		<!-- end page content -->
 		<!-- start footer -->
 		<div class="footer">
-			&copy; 2014 <strong>Pepper</strong> Admin Theme
+			&copy; 2014 <strong>@dotnetsource.Helpers.Common.SiteName</strong> Admin Templates
 		</div>
 		<!-- end footer -->
 	</div>

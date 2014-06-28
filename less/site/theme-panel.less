@@ -1,16 +1,13 @@
-.theme-panel {
-    margin-right: -@page-content-padding;
-	margin-top: -5px;
+﻿.theme-panel {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10px;
 	z-index: 1;
 }
 .theme-panel > .toggler {
 	color:inherit;
 	float:left;
 	padding: 8px 10px;
-	color: #fff;background: #004B8B;
 }
 .theme-panel > .toggler > i {
 	font-size: 20px;
@@ -18,7 +15,7 @@
 .theme-panel > .theme-options {
 	float:left;
 	width:200px;
-	border: solid 2px #004B8B;
+	border: solid 2px #000;
 	border-right:0;
 	display:none;
 	background:#fff;
@@ -29,4 +26,30 @@
 }
 .theme-panel > .theme-options .form-horizontal .form-group {
 	margin: 0 0 3px 0;
+}
+.theme-panel .theme-group > ul, .theme-panel .theme-group > ul > li {
+	 list-style: none;
+	 margin:0;
+	 padding:0;
+}
+.theme-panel .theme-group > ul > li {
+	float:left;
+	position:relative;
+}
+.theme-panel .theme-group > ul > li > a {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 12px;
+	color:#fff;
+}
+.theme-panel .theme-group > ul > li.select > a:before {
+	color: inherit;
+	content: "";
+    content: "";
+    font-family: 'FontAwesome';
+	left: 5px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 2px;
 }

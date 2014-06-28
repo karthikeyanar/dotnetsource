@@ -18,14 +18,19 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.BoxLayout;
 			return View();
 		}
-		public ActionResult SidebarCollapseLayout() {
+		public ActionResult SidebarClosed() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarCollapseLayout;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarClosed;
 			return View();
 		}
-		public ActionResult SidebarFixedLayout() {
+		public ActionResult SidebarFixed() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarFixedLayout;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarFixed;
+			return View();
+		}
+		public ActionResult SidebarHorizontalMenu() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarHorizontalMenu;
 			return View();
 		}
 		#endregion

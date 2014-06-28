@@ -1,1 +1,7 @@
 lessc E:\Projects\dotnetsource\less\themes\blue.less > E:\Projects\dotnetsource\css\themes\blue.css
+
+lessc E:\Projects\dotnetsource\less\themes\black.less > E:\Projects\dotnetsource\css\themes\black.css
+
+lessc E:\Projects\dotnetsource\less\themes\green.less > E:\Projects\dotnetsource\css\themes\green.css
+
+lessc E:\Projects\dotnetsource\less\themes\red.less > E:\Projects\dotnetsource\css\themes\red.css

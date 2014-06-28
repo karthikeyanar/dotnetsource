@@ -24,7 +24,7 @@ body.page-boxed {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background: #0072e6;
+  background: #bc4022;
   color: #ffffff;
 }
 /* page container */
@@ -39,15 +39,15 @@ body.page-boxed {
 }
 /* theme panel */
 .theme-panel > .toggler {
-  background: #007fff;
+  background: #d24726;
   color: #ffffff;
 }
 .theme-panel > .theme-options {
-  border-color: #007fff;
+  border-color: #d24726;
 }
 /* header */
 .header {
-  background: #007fff;
+  background: #d24726;
   color: #ffffff;
 }
 .header.navbar-inverse .navbar-brand {
@@ -66,28 +66,28 @@ body.page-boxed {
 .header.navbar-inverse .navbar-nav > .open > a:focus,
 .header.navbar-inverse .navbar-nav > li > a:hover,
 .header.navbar-inverse .navbar-nav > li > a:focus {
-  background: #0072e6;
+  background: #bc4022;
   color: #ffffff;
 }
 .header .dropdown-menu {
   box-shadow: none;
   border-radius: 0;
   border-width: 2px;
-  border-color: #007fff;
+  border-color: #d24726;
   border-top: 0;
 }
 .header .dropdown-menu > li > a {
   padding: 6px 15px;
 }
 .header .navbar-toggle {
-  background-color: #007fff;
-  border-color: #007fff;
+  background-color: #d24726;
+  border-color: #d24726;
 }
 .header .navbar-toggle .icon-bar {
   background-color: #ffffff;
 }
 .header .navbar-toggle:hover {
-  background-color: #0072e6;
+  background-color: #bc4022;
 }
 .header .navbar-toggle:hover .icon-bar {
   background-color: #ffffff;
@@ -98,7 +98,7 @@ body.page-boxed {
 }
 .header .top-menu > ul > li > a:hover,
 .header .top-menu > ul > li > a:focus {
-  background: #0072e6;
+  background: #bc4022;
   color: #ffffff;
 }
 /* page-sidebar */

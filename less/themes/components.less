@@ -1,0 +1,268 @@
+﻿/* body */
+body {
+	background: @fluid-body-bg-color;
+}
+body.page-boxed {
+	background: @boxed-body-bg-color;
+}
+/* theme colors */
+.theme-black { background-color: @theme-black; }
+.theme-blue { background-color: @theme-blue; }
+.theme-green { background-color: @theme-green; }
+.theme-red { background-color: @theme-red; }
+
+/* dropdown-menu */
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus {
+	background: @dropdown-hover-bg-color;
+	color: @dropdown-hover-text-color;
+}
+/* page container */
+.page-container .page-content, .page-container .footer {
+    background: @page-content-bg-color;
+    color: @page-content-text-color;
+}
+.page-boxed .page-container.container {
+	border-left: solid @page-sidebar-left-border-width @page-sidebar-left-border-color;
+	border-right: solid @page-sidebar-right-border-width @page-sidebar-right-border-color;
+}
+/* theme panel */
+.theme-panel > .toggler {
+	background: @header-bg-color;
+	color: @header-text-color;
+}
+.theme-panel > .theme-options {
+	border-color: @header-bg-color;
+}
+/* header */
+.header {
+    background: @header-bg-color;
+	color: @header-text-color;
+}
+.header.navbar-inverse .navbar-brand {
+	color: inherit;
+}
+/* horizontal menu */
+.header.navbar-inverse .navbar-nav > li > a {
+	color: @horizontal-menu-text-color;
+}
+.header.navbar-inverse .navbar-nav > .active > a {
+	background: @horizontal-menu-active-bg-color;
+	color: @horizontal-menu-active-text-color;
+}
+.header.navbar-inverse .navbar-nav > .open > a, 
+.header.navbar-inverse .navbar-nav > .open > a:hover, 
+.header.navbar-inverse .navbar-nav > .open > a:focus,
+.header.navbar-inverse .navbar-nav > li > a:hover,
+.header.navbar-inverse .navbar-nav > li > a:focus
+{
+	background: @horizontal-menu-hover-bg-color;
+	color: @horizontal-menu-hover-text-color;
+}
+.header .dropdown-menu {
+	box-shadow: none;
+	border-radius: 0;
+	border-width: @horizontal-menu-border-width;
+	border-color: @horizontal-menu-border-color;
+	border-top: 0;
+}
+.header .dropdown-menu > li > a  {
+	padding: @horizontal-menu-padding; 
+}
+.header .navbar-toggle {
+   background-color: @header-toogle-bg-color;
+   border-color: @header-toogle-bg-color;
+}
+.header .navbar-toggle .icon-bar {
+   background-color: @header-toogle-barcode-color;
+}
+.header .navbar-toggle:hover {
+   background-color: @header-toogle-hover-bg-color;
+}
+.header .navbar-toggle:hover .icon-bar {
+   background-color: @header-toogle-hover-barcode-color;
+}
+/* top menu */
+.header .top-menu > ul > li > a {
+	color: inherit;
+}
+.header .top-menu > ul > li > a:hover,
+.header .top-menu > ul > li > a:focus {
+	background: @horizontal-menu-hover-bg-color;
+	color: @horizontal-menu-hover-text-color;
+}
+/* page-sidebar */
+.page-sidebar {
+    background: @page-sidebar-background-color;
+    color: @page-sidebar-text-color;
+	border-right: solid @page-sidebar-right-border-width @page-sidebar-right-border-color;
+}
+.page-sidebar .page-sidebar-search a {
+	color: @menu-text-color;
+}
+.page-sidebar .page-sidebar-menu.nav {
+	border-bottom: 1px solid @menu-border-color !important;
+}
+.page-sidebar-search .btn.btn-default {
+    background-color: @page-sidebar-search-btn-bg-color;
+    color: @page-sidebar-search-btn-text-color;
+    border-color: @page-sidebar-search-btn-border-color;
+}
+.page-sidebar-search > .input-group > .form-control {
+	border-color: @page-sidebar-search-text-box-border-color;
+	background-color: @page-sidebar-search-text-box-bg-color;
+	color: @page-sidebar-search-text-box-text-color;
+}
+.page-sidebar-search > .input-group > .form-control:focus {
+	border-color: @page-sidebar-search-text-box-focus-border-color;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle {
+	background-color: @page-sidebar-toogle-bg-color;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle .icon-bar {
+   background-color: @page-sidebar-toogle-barcode-color;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle:hover {
+	background-color: @page-sidebar-toogle-hover-bg-color;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle:hover .icon-bar {
+   background-color: @page-sidebar-toogle-hover-barcode-color;
+}
+.page-sidebar .page-sidebar-search a:hover,
+.page-sidebar .page-sidebar-search a:focus,
+{
+	background-color: @menu-hover-bg-color;
+	color: @menu-hover-text-color;
+}
+.page-sidebar-closed .page-sidebar-search.open {
+    background-color: @page-sidebar-background-color;
+}
+/* page-sidebar first level menu */
+.page-sidebar-menu.nav > li.open:last-child > a {
+	border-bottom: 0 !important;
+}
+.page-sidebar-menu.nav > li > a {
+    border-top: 1px solid @menu-border-color !important;
+	background-color: @menu-bg-color;
+	color: @menu-text-color;
+}
+/* open */
+.page-sidebar-menu.nav > li.open > a,
+.page-sidebar-menu.nav > li.open > a:hover,
+.page-sidebar-menu.nav > li.open > a:focus {
+  background-color: @menu-open-bg-color;
+  color: @menu-open-text-color;
+  border-top: solid @menu-open-border-width @menu-open-border-color;
+  font-weight: @menu-open-text-font-weight;
+} 
+/* active */
+.page-sidebar-menu.nav > li.active > a {
+  background-color: @menu-active-bg-color;
+  color: @menu-active-text-color;
+  border-top: solid @menu-active-border-width @menu-active-border-color;
+  font-weight: @menu-active-text-font-weight;
+} 
+/* hover */
+.page-sidebar-menu.nav > li > a:hover, 
+.page-sidebar-menu.nav > li > a:focus {
+    background-color: @menu-hover-bg-color;
+	color: @menu-hover-text-color;
+	border-top: solid @menu-hover-border-width @menu-hover-border-color;
+	font-weight: @menu-hover-text-font-weight;
+}
+/* page-sidebar sub menu */
+.page-sidebar-menu.nav > li > .nav li a {
+    background-color: @submenu-bg-color;
+	color: @submenu-text-color;
+	border-top: @submenu-border-width solid @submenu-border-color;
+}
+/* open */
+.page-sidebar-menu.nav > li .nav li.open > a,
+.page-sidebar-menu.nav > li .nav li.open > a:hover,
+.page-sidebar-menu.nav > li .nav li.open > a:focus
+{
+   background-color: @submenu-open-bg-color;
+   color: @submenu-open-text-color;
+   border-top: @submenu-open-border-width solid @submenu-open-border-color;
+   font-weight: @submenu-open-text-font-weight;
+}
+/* active */
+.page-sidebar-menu.nav > li .nav li.active > a {
+	background-color: @submenu-active-bg-color;
+    color: @submenu-active-text-color;
+	border-top: @submenu-active-border-width solid @submenu-active-border-color;
+	font-weight: @submenu-active-text-font-weight;
+}
+/* hover */
+.page-sidebar-menu.nav > li .nav li a:hover, 
+.page-sidebar-menu.nav > li .nav li a:focus {
+    background-color: @submenu-hover-bg-color;
+	border-top: @submenu-hover-border-width solid @submenu-hover-border-color;
+    color: @submenu-hover-text-color;
+	font-weight: @submenu-hover-text-font-weight;
+}
+@media (min-width: @screen-md-min) {
+	/* hover */
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a,
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:hover, 
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:focus {
+		background-color: @ps-closed-menu-hover-bg-color;
+		color: @ps-closed-menu-hover-text-color;
+		border-top: solid @ps-closed-menu-hover-border-width @ps-closed-menu-hover-border-color;
+		font-weight: @ps-closed-menu-hover-text-font-weight;
+	}
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a > .menu-text,
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > .nav {
+		box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+	}
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a > .menu-text,
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:hover > .menu-text, 
+	.page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:focus > .menu-text {
+		background-color:@ps-closed-menu-hover-menu-text-bg-color;
+		color: @ps-closed-menu-hover-menu-text-color;
+		font-weight: @ps-closed-menu-hover-menu-text-font-weight;
+		border: solid @ps-closed-submenu-border-width @ps-closed-submenu-border-color;
+		border-bottom: 0;
+		border-left: 0;
+	}
+	.page-sidebar-closed .page-sidebar-menu.nav > li > .nav {
+		 border: solid @ps-closed-submenu-border-width @ps-closed-submenu-border-color;
+		 border-top: 0;
+		 border-left: 0;
+	}
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after, 
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before { 
+		right: -1px; 
+		top: 50%; 
+		border: solid transparent; 
+		content: " "; 
+		height: 0; 
+		width: 0; 
+		position: absolute; 
+		pointer-events: none; 
+	} 
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after, 
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before	{ 
+		border-color: transparent @ps-closed-submenu-border-color transparent transparent; 
+		border-right-color: @ps-closed-submenu-border-color; 
+	}
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after {
+		border-width: 8px; 
+		margin-top: -8px;
+	} 
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before { 
+		border-width: 10px; 
+		margin-top: -10px;
+	}
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-closed-arrow:after { 
+		border-color: transparent @submenu-bg-color transparent transparent; 
+		border-right-color: @submenu-bg-color;
+	} 
+	.page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-closed-arrow:before { 
+		border-color: transparent @ps-closed-submenu-border-color transparent transparent; 
+		border-right-color: @ps-closed-submenu-border-color;
+	}
+}

@@ -1,9 +1,9 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "DashBoard" };
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Sidebar Horizontal Menu" };
 	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
 		FirstUrl = "/", FirstUrlName = "Home",
-		SecondUrl = "/Home", SecondUrlName = "DashBoard",
-		ThirdUrl = "", ThirdUrlName = ""
+		SecondUrl = "/Home/BoxLayout", SecondUrlName = "Layout",
+		ThirdUrl = "/Home/SidebarHorizontalMenu", ThirdUrlName = "Sidebar Horizontal Menu"
 	};
 	ViewBag.Title = _PageHeaderModel.Title;
 	Layout = "~/Views/Shared/_Layout.cshtml";

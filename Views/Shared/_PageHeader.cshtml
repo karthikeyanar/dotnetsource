@@ -1,29 +1,4 @@
 ﻿@model dotnetsource.Models.PageHeaderModel
-@{
-	Layout = null;
-}
 <div class="page-header">
 	<h1 class="page-title">@Model.Title</h1>
-	<div class="theme-panel">
-		<a class="toggler" href="#"><i class="fa fa-cog"></i></a>
-		<div class="theme-options">
-			<form id="frmLayoutSettings" class="form-horizontal" onsubmit="return false" role="form">
-			<div class="form-group">
-				<label class="checkbox metro-checkbox success">
-					<input type="checkbox" id="layout" />Fixed Layout
-				</label>
-			</div>
-			<div class="form-group">
-				<label class="checkbox metro-checkbox success">
-					<input type="checkbox" id="header" />Fixed Header
-				</label>
-			</div>
-			<div class="form-group">
-				<label class="checkbox metro-checkbox success">
-					<input type="checkbox" id="sidebar" />Fixed Sidebar
-				</label>
-			</div>
-			</form>
-		</div>
-	</div>
 </div>
