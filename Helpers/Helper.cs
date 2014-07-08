@@ -33,7 +33,8 @@ namespace dotnetsource.Helpers {
 		FileInput = 20,
 
 		BoxLayout = 21,
-		SidebarClosed = 22,
+		SidebarSmall = 22,
+        SidebarMedium = 49,
 		SidebarFixed = 23,
 		SidebarHorizontalMenu = 48,
 
@@ -110,11 +111,11 @@ namespace dotnetsource.Helpers {
 	 
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.BoxLayout, TopMenuID = (int)TopMenu.Layouts, MenuName = "Boxed Page", MenuURL = "/Home/BoxLayout" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarClosed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Collapse", MenuURL = "/Home/SidebarClosed" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarFixed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Fixed", MenuURL = "/Home/SidebarFixed" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarMedium, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Medium", MenuURL = "/Home/SidebarMedium" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarSmall, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Small", MenuURL = "/Home/SidebarSmall" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarFixed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Fixed", MenuURL = "/Home/SidebarFixed" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarHorizontalMenu, TopMenuID = (int)TopMenu.Layouts, MenuName = "Horizontal & Sidebar Menu", MenuURL = "/Home/SidebarHorizontalMenu" });
-
-
+            
 			Menus.Add(new Menu { MenuID = (int)SubMenu.General, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "General", MenuURL = "/Home/General" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Alerts, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Alerts", MenuURL = "/Home/Alerts" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ToolTipAndPopover, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "ToolTip & Popover", MenuURL = "/Home/ToolTipAndPopover" });

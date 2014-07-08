@@ -1,0 +1,158 @@
+﻿.fancy-checkbox &>input, .fancy-radio &>input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+.fancy-checkbox &>.check, .fancy-radio &>.check {
+    background-color: inherit;
+    border: 1px solid @gray-light;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    line-height: 12px;
+    margin: -3px 5px 0 0;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.fancy-radio {
+    & > .check {
+        border-radius: 100%;
+    }
+    & > input[type="radio"]:checked ~ .check:after {
+        background-color: @gray-dark;
+        border-radius: 100%;
+        content: "" !important;
+        display: block;
+        height: 8px;
+        margin: 3px;
+        width: 8px;
+    }
+}
+.fancy-checkbox &>input[type="checkbox"]:hover ~ .check, .fancy-radio &>input[type="radio"]:hover ~ .check {
+    border-color: #A9A9A9;
+}
+.fancy-checkbox {
+    & > input[type="checkbox"]:checked ~ .check:after {
+		color: @gray-dark;
+		content: "\f00c";
+		font-family: 'FontAwesome';
+		font-size: 12px;
+		margin: 2px;
+		top: 0;
+    }
+}
+.fancy-checkbox &>input[type="checkbox"]:disabled ~ .check, .fancy-radio &>input[type="radio"]:disabled ~ .check {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: not-allowed;
+}
+.fancy-checkbox &>input[type="checkbox"]:disabled ~ .text, .fancy-radio &>input[type="radio"]:disabled ~ .text {
+    cursor: not-allowed;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.table tr th .fancy-checkbox,.table tr td .fancy-radio,.table tr td .fancy-checkbox,.table tr td .fancy-radio {
+    margin:0;
+}
+.input-group-addon {
+    & > .fancy-checkbox {
+        min-height: 0px;
+        padding: 0;
+        margin: 0;
+        & > .check {
+            margin: 0;
+        }
+    }
+}
+.fancy-checkbox.primary &>.check, .fancy-radio.primary &>.check {
+    border-color: @brand-primary;
+}
+.fancy-checkbox.primary &>input[type="checkbox"]:hover ~ .check, .fancy-radio.primary &>input[type="radio"]:hover ~ .check {
+    border-color: @brand-primary;
+}
+.fancy-checkbox.primary &>input[type="checkbox"]:checked ~ .check {
+    background-color: @brand-primary;
+}
+.fancy-checkbox.primary &>input[type="checkbox"]:checked ~ .check:after {
+    color: @brand-white;
+}
+.fancy-radio.primary &>input[type="radio"]:checked ~ .check {
+    border-color: @brand-primary;
+}
+.fancy-radio.primary &>input[type="radio"]:checked ~ .check:after {
+    background-color: @brand-primary;
+}
+.fancy-checkbox.success &>.check, .fancy-radio.success .check {
+    border-color: @brand-success;
+}
+.fancy-checkbox.success &>input[type="checkbox"]:hover ~ .check, .fancy-radio.success &>input[type="radio"]:hover ~ .check {
+    border-color: @brand-success;
+}
+.fancy-checkbox.success &>input[type="checkbox"]:checked ~ .check {
+    background-color: @brand-success;
+}
+.fancy-checkbox.success &>input[type="checkbox"]:checked ~ .check:after {
+    color: @brand-white;
+}
+.fancy-radio.success &>input[type="radio"]:checked ~ .check {
+    border-color: @brand-success;
+}
+.fancy-radio.success &>input[type="radio"]:checked ~ .check:after {
+    background-color: @brand-success;
+}
+.fancy-checkbox.info &>.check, .fancy-radio.info .check {
+    border-color: @brand-info;
+}
+.fancy-checkbox.info &>input[type="checkbox"]:hover ~ .check, .fancy-radio.info &>input[type="radio"]:hover ~ .check {
+    border-color: @brand-info;
+}
+.fancy-checkbox.info &>input[type="checkbox"]:checked ~ .check {
+    background-color: @brand-info;
+}
+.fancy-checkbox.info &>input[type="checkbox"]:checked ~ .check:after {
+    color: @brand-white;
+}
+.fancy-radio.info &>input[type="radio"]:checked ~ .check {
+    border-color: @brand-info;
+}
+.fancy-radio.info &>input[type="radio"]:checked ~ .check:after {
+    background-color: @brand-info;
+}
+.fancy-checkbox.warning &>.check, .fancy-radio.warning .check {
+    border-color: @brand-warning;
+}
+.fancy-checkbox.warning &>input[type="checkbox"]:hover ~ .check, .fancy-radio.warning &>input[type="radio"]:hover ~ .check {
+    border-color: @brand-warning;
+}
+.fancy-checkbox.warning &>input[type="checkbox"]:checked ~ .check {
+    background-color: @brand-warning;
+}
+.fancy-checkbox.warning &>input[type="checkbox"]:checked ~ .check:after {
+    color: @brand-white;
+}
+.fancy-radio.warning &>input[type="radio"]:checked ~ .check {
+    border-color: @brand-warning;
+}
+.fancy-radio.warning &>input[type="radio"]:checked ~ .check:after {
+    background-color: @brand-warning;
+}
+.fancy-checkbox.danger &>.check, .fancy-radio.danger .check {
+    border-color: @brand-danger;
+}
+.fancy-checkbox.danger &>input[type="checkbox"]:hover ~ .check, .fancy-radio.danger input[type="radio"]:hover ~ .check {
+    border-color: @brand-danger;
+}
+.fancy-checkbox.danger &>input[type="checkbox"]:checked ~ .check {
+    background-color: @brand-danger;
+}
+.fancy-checkbox.danger &>input[type="checkbox"]:checked ~ .check:after {
+    color: @brand-white;
+}
+.fancy-radio.danger &>input[type="radio"]:checked ~ .check {
+    border-color: @brand-danger;
+}
+.fancy-radio.danger &>input[type="radio"]:checked ~ .check:after {
+    background-color: @brand-danger;
+}

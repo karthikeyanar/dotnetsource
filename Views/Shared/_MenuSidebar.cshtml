@@ -26,7 +26,7 @@
 	   int viewBagSubMenuID = (int)ViewBag.Submenu;
 	   int menuID = menu.MenuID;
 	   var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
-				<li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span>@if (subMenus.Count() > 0) {<span class="fa arrow"></span>}<span class="ps-closed-arrow"></span></a>
+				<li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span>@if (subMenus.Count() > 0) {<span class="fa arrow"></span>}<span class="ps-small-arrow"></span></a>
 					@if (subMenus.Count() > 0) {
 						<ul class="nav sub-menu collapse @((viewBagTopMenuID == menuID) ? "in" : "")">
 							@foreach (dotnetsource.Helpers.Menu submenu in subMenus) {
@@ -36,7 +36,7 @@
 	 }
 				</li>
    }
-			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="menu-text">Menu Levels</span><span class="fa arrow"></span><span class="ps-closed-arrow"></span></a>
+			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="menu-text">Menu Levels</span><span class="fa arrow"></span><span class="ps-small-arrow"></span></a>
 				<ul class="nav sub-menu collapse">
 					<li><a href="#">Menu Level 1.1</a>
 					<li><a href="#">Menu Level 1.2</a>

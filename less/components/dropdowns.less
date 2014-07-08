@@ -13,6 +13,15 @@
     padding: 5px 10px;
     color: #333;
 }
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @dropdown-link-hover-color;
+    background-color: @dropdown-link-hover-bg;
+  }
+}
 .dropdown-checkboxes .checkbox, .dropdown-checkboxes .radio {
     margin: 10px 0;
 }

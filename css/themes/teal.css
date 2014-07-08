@@ -1,0 +1,306 @@
+/* body */
+body {
+  background: #ffffff;
+}
+body.page-boxed {
+  background: #3a414c;
+}
+/* theme colors */
+.theme-sky-blue {
+  background-color: #007fff;
+}
+.theme-green {
+  background-color: #008a17;
+}
+.theme-blue-green {
+  background-color: #8c0095;
+}
+.theme-orange {
+  background-color: #ff8f32;
+}
+.theme-red {
+  background-color: #d24726;
+}
+.theme-purple {
+  background-color: #4617b4;
+}
+.theme-cardovan {
+  background-color: #570000;
+}
+.theme-teal {
+  background-color: #008299;
+}
+.theme-pink {
+  background-color: #dc4fad;
+}
+.theme-dark-blue {
+  background-color: #004b8b;
+}
+.theme-blue {
+  background-color: #0072c6;
+}
+.theme-black {
+  background-color: #24282f;
+}
+/* page container */
+.page-container .page-content,
+.page-container .footer {
+  background: #ffffff;
+  color: #333333;
+}
+.page-boxed .page-container.container {
+  border-left: solid 0 #2f343d;
+  border-right: solid 0 #2f343d;
+}
+/* theme panel */
+.theme-panel > .toggler {
+  background: #008299;
+  color: #ffffff;
+}
+.theme-panel > .theme-options {
+  border-color: #008299;
+}
+/* header */
+.header {
+  background: #008299;
+  color: #ffffff;
+}
+.header.navbar-inverse .navbar-brand {
+  color: inherit;
+}
+/* horizontal menu */
+.header.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.header.navbar-inverse .navbar-nav > .active > a {
+  background: #ffffff;
+  color: #333333;
+}
+.header.navbar-inverse .navbar-nav > .open > a,
+.header.navbar-inverse .navbar-nav > .open > a:hover,
+.header.navbar-inverse .navbar-nav > .open > a:focus,
+.header.navbar-inverse .navbar-nav > li > a:hover,
+.header.navbar-inverse .navbar-nav > li > a:focus {
+  background: #006c80;
+  color: #ffffff;
+}
+.header .dropdown-menu {
+  box-shadow: none;
+  border-radius: 0;
+  border-width: 2px;
+  border-color: #008299;
+  border-top: 0;
+}
+/* dropdown-menu */
+.header .dropdown-menu > li > a:hover,
+.header .dropdown-menu > li > a:focus,
+.header .dropdown-menu > .active > a,
+.header .dropdown-menu > .active > a:hover,
+.header .dropdown-menu > .active > a:focus {
+  background: #006c80;
+  color: #ffffff;
+}
+.header .dropdown-menu > li > a {
+  padding: 6px 15px;
+}
+.header .navbar-toggle {
+  background-color: #008299;
+  border-color: #008299;
+}
+.header .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.header .navbar-toggle:hover {
+  background-color: #006c80;
+}
+.header .navbar-toggle:hover .icon-bar {
+  background-color: #ffffff;
+}
+/* top menu */
+.header .top-menu > ul > li > a {
+  color: inherit;
+}
+.header .top-menu > ul > li > a:hover,
+.header .top-menu > ul > li > a:focus {
+  background: #006c80;
+  color: #ffffff;
+}
+/* page-sidebar */
+.page-sidebar {
+  background: #2f343d;
+  color: #ffffff;
+  border-right: solid 0 #2f343d;
+}
+.page-sidebar .page-sidebar-search a {
+  color: #a8aebc;
+}
+.page-sidebar .page-sidebar-menu.nav {
+  border-bottom: 1px solid #363c46 !important;
+}
+.page-sidebar-search .btn.btn-default {
+  background-color: #2f343d;
+  color: #ffffff;
+  border-color: #505969;
+}
+.page-sidebar-search > .input-group > .form-control {
+  border-color: #505969;
+  background-color: #2f343d;
+  color: #ffffff;
+}
+.page-sidebar-search > .input-group > .form-control:focus {
+  border-color: #727e93;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle {
+  background-color: #2f343d;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle:hover {
+  background-color: #2f343d;
+}
+.page-sidebar .page-sidebar-toggler .navbar-toggle:hover .icon-bar {
+  background-color: #ffffff;
+}
+.page-sidebar .page-sidebar-search a:hover,
+.page-sidebar .page-sidebar-search a:focus {
+  background-color: #24282f;
+  color: #ffffff;
+}
+.page-sidebar-closed .page-sidebar-search.open {
+  background-color: #2f343d;
+}
+/* page-sidebar first level menu */
+.page-sidebar-menu.nav > li.open:last-child > a {
+  border-bottom: 0 !important;
+}
+.page-sidebar-menu.nav > li > a {
+  border-top: 1px solid #363c46 !important;
+  background-color: #2f343d;
+  color: #a8aebc;
+}
+/* active */
+.page-sidebar-menu.nav > li.active > a,
+.page-sidebar-menu.nav > li.active > a:hover,
+.page-sidebar-menu.nav > li.active > a:focus,
+.page-sidebar-menu.nav > li.open.active > a,
+.page-sidebar-menu.nav > li.open.active > a:hover,
+.page-sidebar-menu.nav > li.open.active > a:focus {
+  background-color: #008299;
+  color: #ffffff;
+  border-top: solid 1px #008299;
+  font-weight: 400;
+}
+/* open */
+.page-sidebar-menu.nav > li.open > a,
+.page-sidebar-menu.nav > li.open > a:hover,
+.page-sidebar-menu.nav > li.open > a:focus {
+  background-color: #24282f;
+  color: #ffffff;
+  border-top: solid 1px #24282f;
+  font-weight: 400;
+}
+/* hover */
+.page-sidebar-menu.nav > li > a:hover,
+.page-sidebar-menu.nav > li > a:focus {
+  background-color: #24282f;
+  color: #ffffff;
+  border-top: solid 1px #24282f;
+  font-weight: 400;
+}
+/* page-sidebar sub menu */
+.page-sidebar-menu.nav > li > .nav li a {
+  background-color: #2f343d;
+  color: #a8aebc;
+  border-top: 1px solid #2f343d;
+}
+/* active */
+.page-sidebar-menu.nav > li .nav li.active > a,
+.page-sidebar-menu.nav > li .nav li.active > a:hover,
+.page-sidebar-menu.nav > li .nav li.active > a:focus,
+.page-sidebar-menu.nav > li .nav li.open.active > a,
+.page-sidebar-menu.nav > li .nav li.open.active > a:hover,
+.page-sidebar-menu.nav > li .nav li.open.active > a:focus {
+  background-color: #1d2126;
+  color: #ffffff;
+  border-top: 1px solid #1d2126;
+  font-weight: 400;
+}
+/* open */
+.page-sidebar-menu.nav > li .nav li.open > a,
+.page-sidebar-menu.nav > li .nav li.open > a:hover,
+.page-sidebar-menu.nav > li .nav li.open > a:focus {
+  background-color: #1d2126;
+  color: #ffffff;
+  border-top: 1px solid #1d2126;
+  font-weight: 400;
+}
+/* hover */
+.page-sidebar-menu.nav > li .nav li a:hover,
+.page-sidebar-menu.nav > li .nav li a:focus {
+  background-color: #1d2126;
+  border-top: 1px solid #1d2126;
+  color: #ffffff;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  /* hover */
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a,
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:hover,
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:focus {
+    background-color: #ffffff;
+    color: #333333;
+    border-top: solid 1px #ffffff;
+    font-weight: 400;
+  }
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a > .menu-text,
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > .nav {
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a > .menu-text,
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:hover > .menu-text,
+  .page-sidebar-closed .page-sidebar-menu.nav > li.open.hover > a:focus > .menu-text {
+    background-color: #008299;
+    color: #ffffff;
+    font-weight: 400;
+    border: solid 1px #008299;
+    border-bottom: 0;
+    border-left: 0;
+  }
+  .page-sidebar-closed .page-sidebar-menu.nav > li > .nav {
+    border: solid 1px #363c46;
+    border-top: 0;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after,
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before {
+    right: -1px;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after,
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before {
+    border-color: transparent #008299 transparent transparent;
+    border-right-color: #008299;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:after {
+    border-width: 8px;
+    margin-top: -8px;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-closed-arrow:before {
+    border-width: 10px;
+    margin-top: -10px;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-closed-arrow:after {
+    border-color: transparent #2f343d transparent transparent;
+    border-right-color: #2f343d;
+  }
+  .page-sidebar-closed .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-closed-arrow:before {
+    border-color: transparent #363c46 transparent transparent;
+    border-right-color: #363c46;
+  }
+}

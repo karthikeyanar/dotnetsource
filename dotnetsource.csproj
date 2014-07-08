@@ -16,6 +16,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -119,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\components.css" />
+    <Content Include="css\pages\Copy of timeline.css" />
     <Content Include="css\pages\error-page.css" />
     <Content Include="css\pages\fonts.css" />
     <Content Include="css\pages\lock.css" />
@@ -497,7 +502,7 @@
     <None Include="less\components\labels.less" />
     <None Include="less\components\line.less" />
     <None Include="less\components\list-group.less" />
-    <None Include="less\components\metro-inputs.less" />
+    <None Include="less\components\fancy-inputs.less" />
     <None Include="less\components\mixins.less" />
     <None Include="less\components\navbar.less" />
     <None Include="less\components\navs.less" />
@@ -506,7 +511,6 @@
     <None Include="less\components\popovers.less" />
     <None Include="less\components\progress-bars.less" />
     <None Include="less\components\scaffolding.less" />
-    <None Include="less\components\social-icons.less" />
     <None Include="less\components\tables.less" />
     <None Include="less\components\thumbnails.less" />
     <None Include="less\components\tiles.less" />
@@ -514,21 +518,31 @@
     <None Include="less\components\type.less" />
     <None Include="less\components\variables.less" />
     <None Include="less\components\wells.less" />
+    <None Include="less\components\bootstrap-social.less" />
     <None Include="less\site\normalize.less" />
     <None Include="less\site\page-header.less" />
     <None Include="less\site\footer.less" />
     <None Include="less\site\horizontalmenu.less" />
+    <Content Include="less\site\page-sidebar-medium.less" />
     <None Include="less\site\theme-panel.less" />
     <None Include="less\site\header.less" />
     <None Include="less\site\mixins.less" />
     <None Include="less\site\page-container.less" />
-    <None Include="less\site\page-sidebar-closed.less" />
+    <None Include="less\site\page-sidebar-small.less" />
     <None Include="less\site\page-sidebar.less" />
     <None Include="less\site\site.less" />
     <None Include="less\site\variables.less" />
     <None Include="less\themes\blue.less" />
     <None Include="less\themes\components.less" />
     <None Include="less\themes\black.less" />
+    <Content Include="less\themes\blue-green.less" />
+    <Content Include="less\themes\orange.less" />
+    <Content Include="less\themes\purple.less" />
+    <Content Include="less\themes\cardovan.less" />
+    <Content Include="less\themes\teal.less" />
+    <Content Include="less\themes\pink.less" />
+    <Content Include="less\themes\sky-blue.less" />
+    <None Include="less\themes\dark-blue.less" />
     <None Include="less\themes\red.less" />
     <None Include="less\themes\green.less" />
     <None Include="less\themes\variables.less" />
@@ -562,7 +576,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Modal.cshtml" />
     <Content Include="Views\Home\Panels.cshtml" />
-    <Content Include="Views\Home\SidebarClosed.cshtml" />
+    <Content Include="Views\Home\SidebarSmall.cshtml" />
     <Content Include="Views\Home\SidebarFixed.cshtml" />
     <Content Include="Views\Home\Slider.cshtml" />
     <Content Include="Views\Home\Tiles.cshtml" />
@@ -600,6 +614,7 @@
     <Content Include="Views\Shared\_HorizontalMenu.cshtml" />
     <Content Include="Views\Shared\_IndexScripts.cshtml" />
     <Content Include="Views\Shared\_IndexStyles.cshtml" />
+    <Content Include="Views\Home\SidebarMedium.cshtml" />
     <None Include="Views\Shared\_Entypoicons.cshtml" />
     <None Include="Views\Shared\_Glyphicons.cshtml" />
     <None Include="Views\Shared\_FontAweSome.cshtml" />

@@ -1,0 +1,128 @@
+﻿// Core variables 
+@import "variables.less";
+//
+// Variables
+// --------------------------------------------------
+//== Colors
+//
+@base-color: @theme-blue-green; 
+
+//  page-content 
+@page-content-bg-color: #fff;
+@page-content-text-color: #333;
+
+// header 
+@header-bg-color: @base-color; 
+@header-text-color: #fff; 
+
+// horizontal menu 
+@horizontal-menu-text-color: #fff;
+@horizontal-menu-active-bg-color: #fff;
+@horizontal-menu-active-text-color: #333;
+@horizontal-menu-hover-bg-color: darken(@base-color,5%);
+@horizontal-menu-hover-text-color: #fff;
+@horizontal-menu-padding: 6px 15px;
+@horizontal-menu-border-color: @header-bg-color;
+@horizontal-menu-border-width: 2px;
+
+@header-toogle-bg-color: @header-bg-color;
+@header-toogle-barcode-color: #fff;
+@header-toogle-hover-bg-color: @horizontal-menu-hover-bg-color;
+@header-toogle-hover-barcode-color: #fff;
+
+// dropdown 
+@dropdown-hover-bg-color: @horizontal-menu-hover-bg-color;
+@dropdown-hover-text-color: @horizontal-menu-hover-text-color;
+
+// page sidebar 
+@page-sidebar-background-color: lighten(@theme-black,5%);
+@page-sidebar-text-color: #fff;
+
+// body 
+@boxed-body-bg-color: lighten(@page-sidebar-background-color,5%);
+@fluid-body-bg-color: #fff;
+
+@page-sidebar-left-border-width: 0;
+@page-sidebar-left-border-color: @page-sidebar-background-color;
+
+@page-sidebar-right-border-width: 0;
+@page-sidebar-right-border-color: @page-sidebar-background-color;
+
+@page-sidebar-toogle-bg-color: @page-sidebar-background-color;
+@page-sidebar-toogle-barcode-color: #fff;
+@page-sidebar-toogle-hover-bg-color: @page-sidebar-background-color;
+@page-sidebar-toogle-hover-barcode-color: #fff;
+
+@page-sidebar-search-btn-bg-color: @page-sidebar-background-color;
+@page-sidebar-search-btn-border-color: lighten(@page-sidebar-background-color,15%);
+@page-sidebar-search-btn-text-color: #fff;
+
+@page-sidebar-search-text-box-border-color: @page-sidebar-search-btn-border-color;
+@page-sidebar-search-text-box-bg-color: @page-sidebar-background-color;
+@page-sidebar-search-text-box-text-color: #fff;
+@page-sidebar-search-text-box-focus-border-color: lighten(@page-sidebar-search-text-box-border-color,15%);
+
+
+// page sidebar menu 
+@menu-border-color: lighten(@page-sidebar-background-color,3%);
+
+@menu-bg-color: @page-sidebar-background-color;
+@menu-text-color: #a8aebc;
+
+@menu-active-bg-color: @base-color;
+@menu-active-border-width: 1px;
+@menu-active-border-color: @menu-active-bg-color;
+@menu-active-text-font-weight: 400;
+@menu-active-text-color: #fff;
+
+@menu-open-bg-color: darken(@page-sidebar-background-color,5%);
+@menu-open-border-width: 1px;
+@menu-open-border-color: @menu-open-bg-color;
+@menu-open-text-font-weight: 400;
+@menu-open-text-color: #fff;
+
+@menu-hover-bg-color: darken(@page-sidebar-background-color,5%);
+@menu-hover-border-width: 1px;
+@menu-hover-border-color: @menu-hover-bg-color;
+@menu-hover-text-font-weight: 400;
+@menu-hover-text-color: #fff;
+
+// page sidebar sub menu
+@submenu-bg-color: @page-sidebar-background-color;
+@submenu-border-width: 1px;
+@submenu-border-color: @submenu-bg-color;
+@submenu-text-color: @menu-text-color;
+
+@submenu-active-bg-color: darken(@menu-open-bg-color,3%);
+@submenu-active-border-width: 1px;
+@submenu-active-border-color: @submenu-active-bg-color;
+@submenu-active-text-font-weight: 400;
+@submenu-active-text-color: #fff;
+
+@submenu-open-bg-color: darken(@menu-open-bg-color,3%);
+@submenu-open-border-width: 1px;
+@submenu-open-border-color: @submenu-open-bg-color;
+@submenu-open-text-font-weight: 400;
+@submenu-open-text-color: #fff;
+
+@submenu-hover-bg-color:  darken(@menu-open-bg-color,3%);
+@submenu-hover-border-width: 1px;
+@submenu-hover-border-color: @submenu-hover-bg-color;
+@submenu-hover-text-font-weight: 400;
+@submenu-hover-text-color: #fff;
+
+// page sidebar closed 
+@ps-small-menu-hover-bg-color: #fff;
+@ps-small-menu-hover-border-width: 1px;
+@ps-small-menu-hover-border-color: #fff;
+@ps-small-menu-hover-text-font-weight: 400;
+@ps-small-menu-hover-text-color: #333;
+
+@ps-small-menu-hover-menu-text-bg-color: @base-color;
+@ps-small-menu-hover-menu-text-color: #fff;
+@ps-small-menu-hover-menu-text-font-weight: 400;
+@ps-small-submenu-border-width: 1px;
+@ps-small-submenu-border-color: @menu-border-color;
+
+@import "components.less";
+ 

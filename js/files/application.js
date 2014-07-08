@@ -103,9 +103,9 @@
 	this.handleMetroCheck=function(filter) {
 		var $elements;
 		if(filter)
-			$elements=$('.metro-checkbox,.metro-radio',filter);
+			$elements=$('.fancy-checkbox,.fancy-radio',filter);
 		else
-			$elements=$('.metro-checkbox,.metro-radio');
+			$elements=$('.fancy-checkbox,.fancy-radio');
 
 		$elements.each(function() {
 			var $this=$(this);
@@ -203,21 +203,21 @@
 		var $pageSidebar=$(".page-sidebar");
 		var $pageSidebarMenu=$(".page-sidebar-menu",$pageSidebar);
 		if($body.hasClass("page-sidebar-fixed")
-			&&$body.hasClass("page-sidebar-closed-fixed")) {
+			&&$body.hasClass("page-sidebar-small-fixed")) {
 			$pageSidebar.on('mouseenter',function() {
 				if($body.hasClass("page-sidebar-fixed")) {
-					$body.removeClass("page-sidebar-closed");
+					$body.removeClass("page-sidebar-small");
 				}
 			}).on('mouseleave',function() {
 				if($body.hasClass("page-sidebar-fixed")) {
-					$body.addClass("page-sidebar-closed");
+					$body.addClass("page-sidebar-small");
 				}
 			});
 		} else {
 			$pageSidebar.off("mouseenter").off("mouseleave");
 		}
 		if($body.hasClass("page-sidebar-fixed")==false
-			&&$body.hasClass("page-sidebar-closed")) {
+			&&$body.hasClass("page-sidebar-small")) {
 
 			$pageSidebarMenu.children('li')
 			.off('mouseenter').off('mouseleave')
@@ -399,7 +399,7 @@
 		var $body=$("body");
 		$body
 		.addClass("layout-change")
-		.toggleClass("page-sidebar-closed");
+		.toggleClass("page-sidebar-small");
 		self.applyPSCollapseFixed();
 		setTimeout(function() {
 			self.responsive();
@@ -411,10 +411,10 @@
 
 	this.applyPSCollapseFixed=function() {
 		var $body=$("body");
-		if($body.hasClass("page-sidebar-fixed")&&$body.hasClass("page-sidebar-closed")) {
-			$body.addClass("page-sidebar-closed-fixed");
+		if($body.hasClass("page-sidebar-fixed")&&$body.hasClass("page-sidebar-small")) {
+			$body.addClass("page-sidebar-small-fixed");
 		} else {
-			$body.removeClass("page-sidebar-closed-fixed");
+			$body.removeClass("page-sidebar-small-fixed");
 		}
 	}
 
@@ -443,7 +443,7 @@
                 	$(this).addClass("in").css({
                 		"display": ""
                 	});
-                	if($body.hasClass("page-sidebar-closed")==false) {
+                	if($body.hasClass("page-sidebar-small")==false) {
                 		if(self.isGTSmallDevice()) {
                 			if($body.hasClass("page-sidebar-fixed")==false) {
                 				self.scrollTo($this,slideOffeset);
@@ -460,7 +460,7 @@
                 	$(this).removeClass("in").css({
                 		"display": ""
                 	});
-                	if($body.hasClass("page-sidebar-closed")==false) {
+                	if($body.hasClass("page-sidebar-small")==false) {
                 		if(self.isGTSmallDevice()) {
                 			if($body.hasClass("page-sidebar-fixed")==false) {
                 				self.scrollTo($this,slideOffeset);
@@ -500,14 +500,14 @@
         	self.handleFixedSidebarCollapse();
         });
 
-		$(".ps-closed-fixed-toggler",$(".header"))
+		$(".ps-small-fixed-toggler",$(".header"))
         .on("click",function() {
         	if($body.hasClass("page-sidebar-fixed")
-			&&$body.hasClass("page-sidebar-closed-fixed")) {
+			&&$body.hasClass("page-sidebar-small-fixed")) {
         		$pageSidebar.off("mouseenter").off("mouseleave");
         		$body
-				.removeClass("page-sidebar-closed-fixed")
-				.removeClass("page-sidebar-closed");
+				.removeClass("page-sidebar-small-fixed")
+				.removeClass("page-sidebar-small");
         	} else {
         		self.changeToPageSidebarCollapse();
         		self.sidebarAccordionMenu();
@@ -640,7 +640,7 @@
 	}
 
 	this.setTheme=function(themeName) {
-		$('#theme-link').attr("href",this.themesPath+themeName+".css");
+		$('#theme-link').attr("href",this.themesPath+themeName+".css?v=1.0");
 	}
 
 	this.themePanelSettings=function() {

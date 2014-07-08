@@ -1,0 +1,19 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Sidebar Small" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/BoxLayout", SecondUrlName = "Layout",
+		ThirdUrl = "/Home/SidebarSmall", ThirdUrlName = "Sidebar Small"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles {
+	@Html.Partial("_IndexStyles")
+}
+@section scripts {
+	@Html.Partial("_IndexScripts")
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@Html.Partial("_Index")
