@@ -165,6 +165,11 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Spinner;
 			return View();
 		}
+		public ActionResult Editable() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Editable;
+			return View();
+		}
 		public ActionResult ColorPicker() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ColorPicker;
