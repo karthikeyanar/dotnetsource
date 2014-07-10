@@ -1,5 +1,6 @@
 .logo {
   font-size: 30px;
+  font-weight: 300;
   width: 300px;
   margin: 20px auto 20px auto;
   text-align: center;
@@ -22,7 +23,8 @@
   border-radius: 0;
   float: left;
   margin: 0;
-  padding: 14px 10px;
+  padding: 15px 10px;
+  border: 0;
 }
 .header .top-menu {
   float: right;
@@ -61,13 +63,28 @@
     border-top: 0;
   }
 }
+@media (max-width: 767px) {
+  .header .navbar-brand {
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .header .navbar-toggle {
+    margin-left: -15px;
+  }
+}
+@media (min-width: 992px) {
+  .header .visible-md.navbar-toggle {
+    margin-left: -44px;
+  }
+}
 .page-container .footer {
   margin-left: 220px;
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.layout-change .page-container .footer {
+.sidebar-animation .page-container .footer {
   -webkit-transition: none 0.4s ease;
   -moz-transition: none 0.4s ease;
   -ms-transition: none 0.4s ease;
@@ -93,7 +110,7 @@
   margin-left: 220px;
   padding: 20px;
 }
-.layout-change .page-container .page-content {
+.sidebar-animation .page-container .page-content {
   -webkit-transition: none 0.4s ease;
   -moz-transition: none 0.4s ease;
   -ms-transition: none 0.4s ease;
@@ -135,6 +152,7 @@
   margin: 0;
   font-size: 30px;
   float: left;
+  font-weight: 300;
 }
 .page-header:after {
   clear: both;
@@ -161,7 +179,7 @@
   width: inherit;
   z-index: -1;
 }
-.layout-change .page-sidebar {
+.sidebar-animation .page-sidebar {
   -webkit-transition: none 0.4s ease;
   -moz-transition: none 0.4s ease;
   -ms-transition: none 0.4s ease;
@@ -181,8 +199,8 @@
 .page-sidebar-fixed .page-sidebar-left.autofix_sb.fixed {
   top: 0;
 }
-.page-sidebar .page-sidebar-search {
-  padding: 0 15px 15px;
+.page-sidebar-menu {
+  margin: 20px 0;
 }
 .page-sidebar-menu.nav > li > a {
   display: block;
@@ -221,43 +239,6 @@
 .page-sidebar-menu.nav > li > .nav > li > .nav > li > .nav > li > .nav > li > a {
   padding: 10px 15px 10px 98px;
 }
-.page-sidebar-search #open-search,
-.page-sidebar-search #close-search {
-  display: none;
-}
-.page-sidebar .page-sidebar-toggler {
-  display: block;
-  margin: 10px;
-}
-.page-sidebar-fixed .page-sidebar-toggler {
-  display: none;
-}
-.page-sidebar-fixed .page-sidebar-search {
-  margin-top: 20px;
-}
-.ps-small-fixed-toggler {
-  display: none;
-}
-.page-sidebar .page-sidebar-toggler:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-.page-sidebar .page-sidebar-toggler .navbar-toggle {
-  display: block;
-  float: right;
-  margin: 0;
-  padding: 6px;
-  border-radius: 0;
-}
-.page-sidebar .page-sidebar-toggler .navbar-toggle .icon-bar {
-  width: 20px;
-}
-.page-sidebar-search #close-search,
-.page-sidebar-search #open-search {
-  display: none;
-  padding: 10px;
-}
 @media (max-width: 991px) {
   .page-sidebar {
     display: block;
@@ -290,18 +271,10 @@
   .page-sidebar-left-open .page-container .page-sidebar-left {
     left: 0;
   }
-  .page-sidebar .page-sidebar-toggler {
-    display: none;
-  }
 }
 @media (min-width: 992px) {
   .page-sidebar {
     display: block !important;
-  }
-  .page-sidebar-fixed .ps-small-fixed-toggler {
-    display: block;
-    margin-left: -44px;
-    border-color: transparent;
   }
 }
 @media (min-width: 992px) {
@@ -309,53 +282,14 @@
   .page-sidebar-small .page-sidebar {
     width: 35px;
   }
-  .page-sidebar-small .page-sidebar-search {
-    padding: 0;
-  }
   .page-sidebar-small .page-container .page-content,
   .page-sidebar-small .page-container .footer {
     margin-left: 35px;
-  }
-  .page-sidebar-small .page-sidebar-toggler {
-    margin: 5px 0;
-  }
-  .page-sidebar-small .page-sidebar-search .input-group {
-    display: none;
   }
   .page-sidebar-small .page-sidebar-menu .navbar-toggle {
     float: none;
     padding-bottom: 10px;
     padding-top: 10px;
-  }
-  .page-sidebar-small .page-sidebar-search {
-    width: 35px !important;
-  }
-  .page-sidebar-small .page-sidebar-search.open {
-    width: 300px !important;
-    padding: 5px 3px 5px 0;
-    position: relative;
-    z-index: 1;
-  }
-  .page-sidebar-small .page-sidebar-search #open-search {
-    display: block;
-  }
-  .page-sidebar-small .page-sidebar-search.open #close-search {
-    background: inherit;
-    border: 0 none !important;
-    display: block;
-    font-size: 22px;
-    left: 10px;
-    padding: 0;
-    position: absolute;
-    top: 4px;
-  }
-  .page-sidebar-small .page-sidebar-search.open > #open-search {
-    display: none;
-  }
-  .page-sidebar-small .page-sidebar-search.open .input-group {
-    display: block;
-    margin-left: 35px;
-    margin-right: 35px;
   }
   .page-sidebar-small .page-sidebar-menu > li > a,
   .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .menu-text {
@@ -406,8 +340,11 @@
   .page-sidebar-small .page-sidebar .page-sidebar-menu > li > a > .menu-text {
     display: none;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow {
-    display: block;
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow {
+    display: block !important;
+  }
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover.no-submenu > a > .arrow {
+    display: none !important;
   }
   .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .menu-text,
   .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > .nav.in {
@@ -428,65 +365,28 @@
   .page-sidebar-medium .page-sidebar {
     width: 110px;
   }
-  .page-sidebar-medium .page-sidebar-search {
-    padding: 0;
-  }
   .page-sidebar-medium .page-container .page-content,
   .page-sidebar-medium .page-container .footer {
     margin-left: 110px;
-  }
-  .page-sidebar-medium .page-sidebar-toggler {
-    margin: 5px 0;
-  }
-  .page-sidebar-medium .page-sidebar-search .input-group {
-    display: none;
   }
   .page-sidebar-medium .page-sidebar-menu .navbar-toggle {
     float: none;
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  .page-sidebar-medium .page-sidebar-search {
-    width: 110px !important;
-  }
-  .page-sidebar-medium .page-sidebar-search.open {
-    width: 300px !important;
-    padding: 5px 3px 5px 0;
-    position: relative;
-    z-index: 1;
-  }
-  .page-sidebar-medium .page-sidebar-search #open-search {
-    display: block;
-  }
-  .page-sidebar-medium .page-sidebar-search.open #close-search {
-    background: inherit;
-    border: 0 none !important;
-    display: block;
-    font-size: 22px;
-    left: 10px;
-    padding: 0;
-    position: absolute;
-    top: 4px;
-  }
-  .page-sidebar-medium .page-sidebar-search.open > #open-search {
-    display: none;
-  }
-  .page-sidebar-medium .page-sidebar-search.open .input-group {
-    display: block;
-    margin-left: 110px;
-    margin-right: 110px;
-  }
-  .page-sidebar-medium .page-sidebar-menu > li > a,
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > a > .menu-text {
+  .page-sidebar-medium .page-sidebar-menu > li > a {
     padding: 10px;
     transition: none 0s ease 0s;
+  }
+  .page-sidebar-medium .page-sidebar-menu > li > a > .menu-text {
+    margin: 10px 0 0 0;
+    display: block;
   }
   .page-sidebar-medium .page-sidebar-menu > li > a > i {
     margin: 0;
     font-size: 20px;
     display: block;
   }
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li > a > .menu-text,
   .page-sidebar-medium .page-sidebar .page-sidebar-menu > li > a > .arrow {
     display: none;
   }
@@ -525,14 +425,12 @@
     display: block;
     text-align: center;
   }
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li > a > .menu-text {
-    display: block;
-    margin: 8px 0 0 0;
+  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow {
+    display: block !important;
   }
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-medium-arrow {
-    display: block;
+  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover.no-submenu > a > .arrow {
+    display: none !important;
   }
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > a > .menu-text,
   .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > .nav.in {
     width: 220px;
     position: absolute;
@@ -541,9 +439,6 @@
     margin-top: 0;
     top: 0;
     display: block;
-  }
-  .page-sidebar-medium .page-sidebar .page-sidebar-menu > li.open.hover > a > .menu-text {
-    background: inherit;
   }
 }
 .theme-panel {

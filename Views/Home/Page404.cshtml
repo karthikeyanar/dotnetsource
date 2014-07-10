@@ -1,9 +1,12 @@
 ﻿@{
 	Layout = "~/Views/Shared/_PublicLayout.cshtml";
 }
+@section styles {
+    <link href="/css/pages/error-page.css" rel="stylesheet" type="text/css" />
+}
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
-		<div class="panel panel-white fg-white">
+		<div class="panel error-panel">
 			<div class="panel-body">
 				<form method="post" action="/Home/Search">
 				<div class="form-group text-center">

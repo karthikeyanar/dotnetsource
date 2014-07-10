@@ -14,8 +14,7 @@
 
 .btn-social {
   position: relative;
-  padding-left: (@bs-height-base + @padding-base-horizontal);
-  text-align: left;
+  padding-left: 35px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -26,7 +25,6 @@
     bottom: 0;
     width: @bs-height-base;
     line-height: (@bs-height-base + 2);
-    font-size: 1.6em;
     text-align: center;
     border-right: 0;
   }
@@ -88,7 +86,7 @@
 
 .btn-social(@color-bg, @color: #fff) {
   background-color: @color-bg;
-  .button-variant(@color, @color-bg, rgba(0,0,0,.2));
+  .button-variant(@color, @color-bg,@color-bg);
 }
 
 

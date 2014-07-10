@@ -84,10 +84,11 @@
   .panel-variant(@panel-blue-border; @panel-blue-text; @panel-blue-heading-bg; @panel-blue-border);
 }
 .panel-white {
-  .panel-variant(@brand-white; @gray-dark; transparent; @gray-lighter);
+  .panel-variant(@brand-white; @gray-dark; transparent; #f5f5f5);
   color: @gray-dark;
 }
-.panel-white .panel-heading, .panel-white .panel-body {
+.panel-white .panel-heading, 
+.panel-white .panel-body {
 	padding-left: 0;
 	padding-right: 0;
 }

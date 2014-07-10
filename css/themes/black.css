@@ -271,8 +271,8 @@ body.page-boxed {
     border: solid 1px #363c46;
     border-top: 0;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:after,
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:before {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:after,
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:before {
     right: -1px;
     top: 50%;
     border: solid transparent;
@@ -282,24 +282,24 @@ body.page-boxed {
     position: absolute;
     pointer-events: none;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:after,
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:before {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:after,
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:before {
     border-color: transparent #24282f transparent transparent;
     border-right-color: #24282f;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:after {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:after {
     border-width: 8px;
     margin-top: -8px;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .ps-small-arrow:before {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover > a > .arrow:before {
     border-width: 10px;
     margin-top: -10px;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-small-arrow:after {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .arrow:after {
     border-color: transparent #2f343d transparent transparent;
     border-right-color: #2f343d;
   }
-  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .ps-small-arrow:before {
+  .page-sidebar-small .page-sidebar .page-sidebar-menu > li.open.hover.pull-up > a > .arrow:before {
     border-color: transparent #363c46 transparent transparent;
     border-right-color: #363c46;
   }
