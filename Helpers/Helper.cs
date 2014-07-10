@@ -21,53 +21,57 @@ namespace dotnetsource.Helpers {
 	public enum SubMenu {
 		DashBoard = 10,
 
-		General = 11,
-		Alerts = 12,
-		ToolTipAndPopover = 13,
-		Dropdowns = 14,
-		Buttons = 15,
-		Typography = 16,
-		Panels = 17,
-		Tiles = 18,
-		Icons = 19,
-		FileInput = 20,
 
-		BoxLayout = 21,
-		SidebarSmall = 22,
-        SidebarMedium = 49,
-		SidebarFixed = 23,
-		SidebarHorizontalMenu = 48,
+		Alerts = 11,
+		ToolTipAndPopover = 12,
+		Dropdowns = 13,
+		Buttons = 14,
+		ListGroup = 15,
+		ProgressBars = 16,
+		Tabs = 17,
+		Wells = 18,
+		Colors = 19,
+		LabelsAndBadges = 20,
+		Typography = 21,
+		Panels = 22,
+		Tiles = 23,
+		Icons = 24,
+		FileInput = 25,
 
-		Modal = 24,
-		DatePicker = 25,
-		DateRangePicker = 26,
-		ColorPicker = 27,
-		Editor = 28,
-		Slider = 29,
+		BoxLayout = 26,
+		SidebarSmall = 27,
+		SidebarMedium = 28,
+		SidebarFixed = 29,
+		SidebarHorizontalMenu = 30,
 
-		FlotChart = 30,
-		MorrisChart = 31,
+		Modal = 31,
+		DatePicker = 32,
+		DateRangePicker = 33,
+		ColorPicker = 34,
+		Editor = 35,
+		Slider = 36,
 
-		FormControls = 32,
-		FormComponents = 33,
-		FormLayouts = 34,
-		FormValidation = 35,
+		FlotChart = 37,
+		MorrisChart = 38,
 
-		Table = 36,
-		DataTable = 37,
+		FormControls = 39,
+		FormComponents = 40,
+		FormLayouts = 41,
+		FormValidation = 42,
 
-		SignIn = 38,
-		SignUp = 39,
-		Lock = 40,
-		Page404 = 41,
-		Page500 = 42,
-		Blank = 43,
-		Calendar = 44,
-		Timeline = 45,
-		Inbox = 46,
-		Invoice = 47,
-		
-		 
+		Table = 43,
+		DataTable = 44,
+
+		SignIn = 45,
+		SignUp = 46,
+		Lock = 47,
+		Page404 = 48,
+		Page500 = 49,
+		Blank = 50,
+		Calendar = 51,
+		Timeline = 52,
+		Inbox = 53,
+		Invoice = 54,
 
 	}
 
@@ -108,19 +112,24 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Forms, MenuName = "Forms", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-tasks" });
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Tables, MenuName = "Tables", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-table" });
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Pages, MenuName = "Pages", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-files-o" });
-	 
+
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.BoxLayout, TopMenuID = (int)TopMenu.Layouts, MenuName = "Boxed Page", MenuURL = "/Home/BoxLayout" });
-            Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarMedium, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Medium", MenuURL = "/Home/SidebarMedium" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarMedium, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Medium", MenuURL = "/Home/SidebarMedium" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarSmall, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Small", MenuURL = "/Home/SidebarSmall" });
-            Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarFixed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Fixed", MenuURL = "/Home/SidebarFixed" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarFixed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Fixed", MenuURL = "/Home/SidebarFixed" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarHorizontalMenu, TopMenuID = (int)TopMenu.Layouts, MenuName = "Horizontal & Sidebar Menu", MenuURL = "/Home/SidebarHorizontalMenu" });
-            
-			Menus.Add(new Menu { MenuID = (int)SubMenu.General, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "General", MenuURL = "/Home/General" });
+
+
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Alerts, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Alerts", MenuURL = "/Home/Alerts" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ToolTipAndPopover, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "ToolTip & Popover", MenuURL = "/Home/ToolTipAndPopover" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Dropdowns, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Dropdowns", MenuURL = "/Home/Dropdowns" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Buttons, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Buttons", MenuURL = "/Home/Buttons" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.ListGroup, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "List Group", MenuURL = "/Home/ListGroup" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.ProgressBars, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Progress Bars", MenuURL = "/Home/ProgressBars" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Tabs, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Tabs", MenuURL = "/Home/Tabs" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Colors, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Colors", MenuURL = "/Home/Colors" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.LabelsAndBadges, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Labels & Badges", MenuURL = "/Home/LabelsAndBadges" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Typography, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Typography", MenuURL = "/Home/Typography" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Panels, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Panels", MenuURL = "/Home/Panels" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Tiles, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Tiles", MenuURL = "/Home/Tiles" });
@@ -156,12 +165,12 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Inbox, TopMenuID = (int)TopMenu.Pages, MenuName = "Inbox", MenuURL = "/Home/Inbox" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Invoice, TopMenuID = (int)TopMenu.Pages, MenuName = "Invoice", MenuURL = "/Home/Invoice" });
 
-		 
 
-			 
+
+
 		}
 
-		 
+
 	}
 
 

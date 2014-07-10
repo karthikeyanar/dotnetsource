@@ -43,11 +43,7 @@ namespace dotnetsource.Controllers {
 
 		#region UIFeatures
 
-		public ActionResult General() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.General;
-			return View();
-		}
+	 
 
 		public ActionResult Alerts() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
@@ -73,9 +69,39 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+		public ActionResult ListGroup() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ListGroup;
+			return View();
+		}
+
+		public ActionResult ProgressBars() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ProgressBars;
+			return View();
+		}
+
+		public ActionResult Tabs() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Tabs;
+			return View();
+		}
+
 		public ActionResult Typography() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Typography;
+			return View();
+		}
+
+		public ActionResult Colors() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Colors;
+			return View();
+		}
+
+		public ActionResult LabelsAndBadges() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.LabelsAndBadges;
 			return View();
 		}
 
