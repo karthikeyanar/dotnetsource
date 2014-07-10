@@ -47,9 +47,14 @@ namespace dotnetsource.Helpers {
 		Modal = 31,
 		DatePicker = 32,
 		DateRangePicker = 33,
+		TimePicker = 56,
+		Switch = 57,
+		Select = 58,
+		Spinner = 59,
 		ColorPicker = 34,
 		Editor = 35,
 		Slider = 36,
+		
 
 		FlotChart = 37,
 		MorrisChart = 38,
@@ -58,6 +63,7 @@ namespace dotnetsource.Helpers {
 		FormComponents = 40,
 		FormLayouts = 41,
 		FormValidation = 42,
+		FormExamples = 55,
 
 		Table = 43,
 		DataTable = 44,
@@ -139,6 +145,10 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Modal, TopMenuID = (int)TopMenu.Plugins, MenuName = "Modal", MenuURL = "/Home/Modal" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.DatePicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Date Picker", MenuURL = "/Home/DatePicker" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.DateRangePicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Date Range Picker", MenuURL = "/Home/DateRangePicker" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.TimePicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Time Picker", MenuURL = "/Home/TimePicker" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Switch, TopMenuID = (int)TopMenu.Plugins, MenuName = "Switch", MenuURL = "/Home/Switch" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Select, TopMenuID = (int)TopMenu.Plugins, MenuName = "Select", MenuURL = "/Home/Select" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Spinner, TopMenuID = (int)TopMenu.Plugins, MenuName = "Spinner", MenuURL = "/Home/Spinner" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ColorPicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Color Picker", MenuURL = "/Home/ColorPicker" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Editor, TopMenuID = (int)TopMenu.Plugins, MenuName = "Editor", MenuURL = "/Home/Editor" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Slider, TopMenuID = (int)TopMenu.Plugins, MenuName = "Slider", MenuURL = "/Home/Slider" });
@@ -150,6 +160,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormComponents, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Components", MenuURL = "/Home/FormComponents" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormLayouts, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Layouts", MenuURL = "/Home/FormLayouts" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormValidation, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Validation", MenuURL = "/Home/FormValidation" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.FormExamples, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Examples", MenuURL = "/Home/FormExamples" });
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Table, TopMenuID = (int)TopMenu.Tables, MenuName = "Table", MenuURL = "/Home/Table" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.DataTable, TopMenuID = (int)TopMenu.Tables, MenuName = "DataTable", MenuURL = "/Home/DataTable" });

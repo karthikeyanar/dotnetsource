@@ -43,8 +43,6 @@ namespace dotnetsource.Controllers {
 
 		#region UIFeatures
 
-	 
-
 		public ActionResult Alerts() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Alerts;
@@ -147,6 +145,26 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.DateRangePicker;
 			return View();
 		}
+		public ActionResult TimePicker() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.TimePicker;
+			return View();
+		}
+		public ActionResult Switch() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Switch;
+			return View();
+		}
+		public ActionResult Select() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Select;
+			return View();
+		}
+		public ActionResult Spinner() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Spinner;
+			return View();
+		}
 		public ActionResult ColorPicker() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ColorPicker;
@@ -196,6 +214,12 @@ namespace dotnetsource.Controllers {
 		public ActionResult FormValidation() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormValidation;
+			return View();
+		}
+
+		public ActionResult FormExamples() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormExamples;
 			return View();
 		}
 		#endregion
