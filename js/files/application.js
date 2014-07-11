@@ -197,7 +197,7 @@
         var $footer = $('.footer');
         var $pageContainer = $('.page-container');
         var $pageContent = $('.page-content', $pageContainer);
-        var $pageSidebar = $('.page-sidebar-left', $pageContainer);
+        var $pageSidebar = $('.page-sidebar', $pageContainer);
 
         var windowHeight = this.getViewPort().height;
         var headerHeight = $header.outerHeight(true);
@@ -230,7 +230,7 @@
 
     this.closeSidebar = function () {
         var $body = $("body");
-        $body.removeClass("page-sidebar-left-open");
+        $body.removeClass("page-sidebar-open");
     };
 
     this.openSidebar = function () {
@@ -243,7 +243,7 @@
                 self.closeSidebar();
             });
         }
-        $body.toggleClass("page-sidebar-left-open");
+        $body.toggleClass("page-sidebar-open");
     };
 
     this.handleSidebar = function () {
@@ -435,10 +435,6 @@
                     wrapperClass: 'slimScrollDiv',
                     position: 'right',
                     height: height,
-                    color: ($sidebarContent.attr("data-scroll-handle-color") ? $sidebarContent.attr("data-scroll-handle-color") : '#000'),
-                    railColor: ($sidebarContent.attr("data-scroll-rail-color") ? $sidebarContent.attr("data-scroll-rail-color") : '#333'),
-                    railOpacity: ($sidebarContent.attr("data-scroll-rail-color") ? $sidebarContent.attr("data-scroll-rail-opacity") : '.2'),
-                    opacity: ($sidebarContent.attr("data-scroll-handle-color") ? $sidebarContent.attr("data-scroll-handle-opacity") : '.4'),
                     disableFadeOut: true
                 });
             }

@@ -506,7 +506,7 @@
     <Content Include="less\site\variables.less" />
     <Content Include="less\themes\black.less" />
     <Content Include="less\themes\blue.less" />
-    <Content Include="less\themes\components.less" />
+    <Content Include="less\themes\theme-components.less" />
     <Content Include="less\themes\dark-blue.less" />
     <Content Include="less\themes\green.less" />
     <Content Include="less\themes\red.less" />
