@@ -1,65 +1,42 @@
 ﻿<!-- page sidebar -->
 <div class="page-sidebar">
-	<div class="sidebar-content">
-		<div class="sidebar-user">
-			<div class="avatar">
-				<img src="/img/avatars/75/1.jpg" alt="photo" /></div>
-			<div class="info">
-				<div class="name">
-					Angelina Glory</div>
-				<div class="status">
-					<i class="fa fa-circle"></i>Online</div>
-				<ul>
-					<li><a href="#" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fa fa-user"></i></a></li>
-					<li><a href="/Home/Inbox" data-toggle="tooltip" data-placement="top" title="Mail"><i class="fa fa-envelope"></i></a></li>
-					<li><a href="#" data-toggle="tooltip" data-placement="top" title="Setting"><i class="fa fa-cog"></i></a></li>
-					<li><a href="/Home/SignIn" data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<ul class="nav page-sidebar-menu">
-			@{
-				var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
-			}
-			@foreach (dotnetsource.Helpers.Menu menu in topMenus) {
-	   int viewBagTopMenuID = (int)ViewBag.TopMenu;
-	   int viewBagSubMenuID = (int)ViewBag.Submenu;
-	   int menuID = menu.MenuID;
-	   var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
-				<li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span><span class="fa arrow @((subMenus.Count() <= 0 ? "hide" : ""))"></span></a>
-					@if (subMenus.Count() > 0) {
-						<ul class="nav sub-menu collapse @((viewBagTopMenuID == menuID) ? "in" : "")">
-							@foreach (dotnetsource.Helpers.Menu submenu in subMenus) {
-								<li class="@(viewBagSubMenuID == submenu.MenuID ? "active" : "")"><a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName</a></li>
-	   }
-						</ul>
-	 }
-				</li>
-   }
-			<li><a href="javascript:;"><i class="fa fa-sitemap"></i><span class="menu-text">Menu Levels</span><span class="fa arrow"></span></a>
-				<ul class="nav sub-menu collapse">
-					<li><a href="#">Menu Level 1.1</a>
-					<li><a href="#">Menu Level 1.2</a>
-					<li><a href="#">Menu Level 1.3<span class="fa arrow"></span></a>
-						<ul class="nav sub-menu collapse">
-							<li><a href="#">Menu Level 2.1</a>
-							<li><a href="#">Menu Level 2.2<span class="fa arrow"></span></a>
-								<ul class="nav sub-menu collapse">
-									<li><a href="#">Menu Level 3.1</a>
-										<ul class="nav sub-menu collapse">
-											<li><a href="#">Menu Level 4.1</a></li>
-											<li><a href="#">Menu Level 4.2</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Level 3.2</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Menu Level 2.3</a>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+    <div class="sidebar-content">
+        <div class="sidebar-user">
+            <div class="avatar">
+                <img src="/img/avatars/75/1.jpg" alt="photo" />
+            </div>
+            <div class="info">
+                <div class="name">
+                    Angelina Glory
+                </div>
+                <div class="status">
+                    <i class="fa fa-circle"></i>Online
+                </div>
+                <ul>
+                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fa fa-user"></i></a></li>
+                    <li><a href="/Home/Inbox" data-toggle="tooltip" data-placement="top" title="Mail"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Setting"><i class="fa fa-cog"></i></a></li>
+                    <li><a href="/Home/SignIn" data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="nav page-sidebar-menu">
+            @{
+                var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
+            }
+            @foreach (dotnetsource.Helpers.Menu menu in topMenus)
+            {
+                int viewBagTopMenuID = (int)ViewBag.TopMenu;
+                int viewBagSubMenuID = (int)ViewBag.Submenu;
+                int menuID = menu.MenuID;
+                var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
+                <li class="@((viewBagTopMenuID == menuID) ? "active open" : "")">
+                    <a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span><span class="fa arrow @((subMenus.Count() <= 0 ? "hide" : ""))"></span></a>
+                    @Html.Partial("_RenderSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = menu.MenuID, SubMenus = subMenus })
+                </li>
+            }
+
+        </ul>
+    </div>
 </div>
 <!-- end page-sidebar -->

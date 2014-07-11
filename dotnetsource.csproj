@@ -40,7 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -336,6 +337,10 @@
     <Content Include="less\themes\sky-blue.less" />
     <Content Include="less\themes\teal.less" />
     <Content Include="notes.txt" />
+    <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
+    <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.js" />
+    <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.min.js" />
+    <None Include="packages\jQuery.1.7.2\Tools\jquery-1.7.2.intellisense.js" />
     <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
     <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.xml" />
     <Content Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
@@ -359,8 +364,71 @@
     <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.xml" />
     <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.xml" />
     <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\repositories.config" />
+    <Content Include="packages\Select2.js.3.4.6\content\Content\css\select2-spinner.gif" />
+    <Content Include="packages\Select2.js.3.4.6\content\Content\css\select2.css" />
+    <Content Include="packages\Select2.js.3.4.6\content\Content\css\select2.png" />
+    <Content Include="packages\Select2.js.3.4.6\content\Content\css\select2x2.png" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ar.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_bg.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ca.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_cs.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_da.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_de.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_el.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_es.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_et.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_eu.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_fa.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_fi.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_fr.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_gl.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_he.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_hr.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_hu.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_id.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_is.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_it.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ja.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ka.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ko.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_lt.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_lv.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_mk.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ms.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_nl.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_no.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_pl.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_pt-BR.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_pt-PT.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ro.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_rs.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ru.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_sk.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_sv.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_th.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_tr.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_ua.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_uk.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_vi.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_zh-CN.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\Select2-locales\select2_locale_zh-TW.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\select2.js" />
+    <Content Include="packages\Select2.js.3.4.6\content\Scripts\select2.min.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -369,6 +437,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Views\Shared\_RenderSubMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -518,19 +587,26 @@
     <Content Include="js\plugins\ckeditor\plugins\wsc\README.md" />
     <Content Include="js\plugins\ckeditor\README.md" />
     <Content Include="js\plugins\ckeditor\skins\moono\readme.md" />
-    <None Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\Microsoft.AspNet.Mvc.4.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\Microsoft.AspNet.Razor.2.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.4.0.20710.0\Microsoft.AspNet.WebApi.4.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\Microsoft.AspNet.WebApi.Client.4.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\content\web.config.transform" />
-    <None Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\Microsoft.AspNet.WebApi.Core.4.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\Microsoft.AspNet.WebPages.2.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net45\_._" />
-    <None Include="packages\Microsoft.Net.Http.2.0.20710.0\Microsoft.Net.Http.2.0.20710.0.nupkg" />
-    <None Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
-    <None Include="packages\Newtonsoft.Json.4.5.6\Newtonsoft.Json.4.5.6.nupkg" />
-    <Content Include="packages\repositories.config" />
+    <Content Include="packages\jQuery.1.7.2\jQuery.1.7.2.nupkg" />
+    <Content Include="packages\jQuery.1.7.2\jQuery.1.7.2.nuspec" />
+    <Content Include="packages\jQuery.1.7.2\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.7.2\Tools\uninstall.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\Microsoft.AspNet.Mvc.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\Microsoft.AspNet.Razor.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.4.0.20710.0\Microsoft.AspNet.WebApi.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\Microsoft.AspNet.WebApi.Client.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\Microsoft.AspNet.WebApi.Core.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\Microsoft.AspNet.WebPages.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net45\_._" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\Microsoft.Net.Http.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\Newtonsoft.Json.6.0.3.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\Newtonsoft.Json.6.0.3.nuspec" />
+    <Content Include="packages\Newtonsoft.Json.6.0.3\tools\install.ps1" />
+    <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nupkg" />
+    <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nuspec" />
     <None Include="php\json_inbox.php" />
     <Content Include="Views\Home\Alerts.cshtml" />
     <Content Include="Views\Home\BoxLayout.cshtml" />

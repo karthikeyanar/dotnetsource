@@ -81,6 +81,18 @@ namespace dotnetsource.Helpers {
 		Inbox = 53,
 		Invoice = 54,
 
+        MenuLevel11 = 61,
+        MenuLevel12 = 62,
+        MenuLevel13 = 63,
+
+        MenuLevel21 = 64,
+        MenuLevel22 = 65,
+        MenuLevel23 = 66,
+
+        MenuLevel31 = 67,
+        MenuLevel32 = 68,
+        MenuLevel33 = 69,
+         
 	}
 
 	public class Menu {
@@ -96,6 +108,13 @@ namespace dotnetsource.Helpers {
 		public string IconName { get; set; }
 
 	}
+
+    public class RenderSubMenu
+    {
+        public int MenuID { get; set; }
+
+        public List<Menu> SubMenus { get; set; }
+    }
 
 	public class Common {
 
@@ -120,6 +139,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Forms, MenuName = "Forms", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-tasks" });
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Tables, MenuName = "Tables", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-table" });
 			Menus.Add(new Menu { MenuID = (int)TopMenu.Pages, MenuName = "Pages", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-files-o" });
+            Menus.Add(new Menu { MenuID = (int)TopMenu.MenuLevels, MenuName = "Menu Levels", MenuURL = string.Empty, TopMenuID = 0, IconName = "fa fa-sitemap" });
 
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.BoxLayout, TopMenuID = (int)TopMenu.Layouts, MenuName = "Boxed Page", MenuURL = "/Home/BoxLayout" });
@@ -179,9 +199,19 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Timeline, TopMenuID = (int)TopMenu.Pages, MenuName = "Timeline", MenuURL = "/Home/Timeline" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Inbox, TopMenuID = (int)TopMenu.Pages, MenuName = "Inbox", MenuURL = "/Home/Inbox" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Invoice, TopMenuID = (int)TopMenu.Pages, MenuName = "Invoice", MenuURL = "/Home/Invoice" });
+            
+            
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel11, TopMenuID = (int)TopMenu.MenuLevels, MenuName = "Menu Level 1.1", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel12, TopMenuID = (int)TopMenu.MenuLevels, MenuName = "Menu Level 1.2", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel13, TopMenuID = (int)TopMenu.MenuLevels, MenuName = "Menu Level 1.3", MenuURL = "#" });
 
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel21, TopMenuID = (int)SubMenu.MenuLevel13, MenuName = "Menu Level 2.1", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel22, TopMenuID = (int)SubMenu.MenuLevel13, MenuName = "Menu Level 2.2", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel23, TopMenuID = (int)SubMenu.MenuLevel13, MenuName = "Menu Level 2.3", MenuURL = "#" });
 
-
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel31, TopMenuID = (int)SubMenu.MenuLevel22, MenuName = "Menu Level 3.1", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel32, TopMenuID = (int)SubMenu.MenuLevel22, MenuName = "Menu Level 3.2", MenuURL = "#" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.MenuLevel33, TopMenuID = (int)SubMenu.MenuLevel22, MenuName = "Menu Level 3.3", MenuURL = "#" });
 
 		}
 

@@ -86,7 +86,7 @@
 @submenu-open-text-font-weight: 400;
 @submenu-open-text-color: #fff;
 
-@submenu-hover-bg-color:  darken(@menu-open-bg-color,3%);
+@submenu-hover-bg-color:  darken(@menu-open-bg-color,5%);
 @submenu-hover-border-width: 1px;
 @submenu-hover-border-color: @submenu-hover-bg-color;
 @submenu-hover-text-font-weight: 400;
@@ -227,6 +227,17 @@ body.page-boxed {
 .header .top-menu > ul > li > a:focus {
 	background: @horizontal-menu-hover-bg-color;
 	color: @horizontal-menu-hover-text-color;
+}
+/* sidebar-user*/
+.page-sidebar .sidebar-user {
+    color: #f5f5f5;
+}
+.page-sidebar .sidebar-user > .info > ul > li > a {
+	color: @menu-text-color;
+}
+.page-sidebar .sidebar-user > .info > ul > li > a:hover,
+.page-sidebar .sidebar-user > .info > ul > li > a:focus {
+	color: #fff;
 }
 /* page-sidebar */
 .page-sidebar {

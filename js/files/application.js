@@ -260,6 +260,16 @@
         var slideOffeset = -200;
 
 
+        $(".sidebar-user", $pageSidebar).off('mouseenter').off('mouseleave');
+
+        if ($body.hasClass("page-sidebar-fixed") == false) {
+            $(".sidebar-user", $pageSidebar).on('mouseenter', function () {
+                $(".info", this).addClass("show");
+            }).on('mouseleave', function () {
+                $(".info", this).removeClass("show");
+            });
+        }
+
         $pageSidebarMenu.find('li.open').has('ul').children('ul').addClass('collapse in');
         $pageSidebarMenu.find('li').not('.open').has('ul').children('ul').addClass('collapse');
 
@@ -313,6 +323,7 @@
                 });
             }
         });
+
         $pageSidebar.off("mouseenter").off("mouseleave");
         if ($body.hasClass("page-sidebar-fixed") && $body.hasClass("page-sidebar-small-fixed")) {
             $pageSidebar.on('mouseenter', function () {
@@ -494,7 +505,9 @@
     this.changeLayout = function () {
         self.applyLayoutClasses();
         self.handleSidebar();
-        self.responsive();
+        setTimeout(function () {
+            self.responsive();
+        }, 500);
     };
 
     this.applyLayoutClasses = function () {
@@ -547,6 +560,7 @@
     }
 
     this.themePanelSettings = function () {
+        var $body = $("body");
         var $themePanel = $(".theme-panel");
         if (!$themePanel.get(0)) return;
 
@@ -557,6 +571,16 @@
         var $chkHeader = $("#chkheader", $themePanel);
         var $chkSidebar = $("#chksidebar", $themePanel);
         var $chkLayout = $("#chklayout", $themePanel);
+        var $selectSidebarType = $("#selectSidebarType", $themePanel);
+        var sidebarType = "";
+        if ($body.hasClass("page-sidebar-small"))
+            sidebarType = "small";
+        else if ($body.hasClass("page-sidebar-medium"))
+            sidebarType = "medium";
+        else
+            sidebarType = "large";
+
+        $selectSidebarType.val(sidebarType);
 
         $chkLayout.get(0).checked = APP.isFixedLayout;
         $chkHeader.get(0).checked = APP.isHeaderFixed;
@@ -579,6 +603,17 @@
 		    APP.isSidebarFixed = this.checked;
 		    APP.changeLayout();
 		});
+
+        $selectSidebarType.change(function () {
+            var type = this.value;
+            $body.removeClass("page-sidebar-small").removeClass("page-sidebar-medium");
+            if (type == "small")
+                $body.addClass("page-sidebar-small");
+            else if (type == "medium")
+                $body.addClass("page-sidebar-medium");
+
+            self.changeLayout();
+        });
 
         $(".theme-group", $themePanel).find("a").click(function () {
             var $this = $(this);
@@ -626,7 +661,7 @@
             } else {
                 $body.toggleClass("page-sidebar-small");
             }
-            self.handleSidebar();
+            self.changeLayout();
         });
         $("[data-action='page-sidebar-medium-toggle']")
         .on("click", function () {
@@ -640,10 +675,10 @@
             } else {
                 $body.toggleClass("page-sidebar-medium");
             }
-            self.handleSidebar();
+            self.changeLayout();
         });
 
-        $("[data-action='page-sidebar-toggle']")
+        $("[data-action='page-sidebar-xs-toggle']")
         .on('touchend', function (e) {
             self.openSidebar();
             e.preventDefault();
@@ -653,16 +688,6 @@
             e.preventDefault();
             e.stopPropagation();
         });
-
-        $("#open-search")
-        .on("click", function () {
-            $pageSidebarSearch.addClass("open");
-        });
-        $("#close-search")
-        .on("click", function () {
-            $pageSidebarSearch.removeClass("open");
-        });
-
     };
 }
 

@@ -1,33 +1,39 @@
 ﻿<!-- navbar-collapse -->
 <div class="hor-menu navbar-collapse collapse">
-	<ul class="nav navbar-nav">
-		@{
-			var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
-		}
-		@foreach (dotnetsource.Helpers.Menu menu in topMenus) {
-	  int viewBagTopMenuID = (int)ViewBag.TopMenu;
-	  int viewBagSubMenuID = (int)ViewBag.Submenu;
-	  int menuID = menu.MenuID;
-	  var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
-			<li class="@((subMenus.Count() > 0 ? "dropdown " : ""))@((viewBagTopMenuID == menuID) ? "active" : "")">
-				@if (subMenus.Count() > 0) {
-					<a  data-toggle="dropdown" class="dropdown-toggle" href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)">
-						@menu.MenuName
-					</a>
-	} else {
-					<a  href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)">
-						@menu.MenuName
-					</a>
-	}
-				@if (subMenus.Count() > 0) {
-					<ul class="dropdown-menu @((viewBagTopMenuID == menuID) ? "in" : "")">
-						@foreach (dotnetsource.Helpers.Menu submenu in subMenus) {
-							<li class="@(viewBagSubMenuID == submenu.MenuID ? "active" : "")"><a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName</a></li>
-	  }
-					</ul>
-	}
-			</li>
-  }
-	</ul>
+    <ul class="nav navbar-nav">
+        @{
+            var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
+        }
+        @foreach (dotnetsource.Helpers.Menu menu in topMenus)
+        {
+            int viewBagTopMenuID = (int)ViewBag.TopMenu;
+            int viewBagSubMenuID = (int)ViewBag.Submenu;
+            int menuID = menu.MenuID;
+            var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
+            <li class="@((subMenus.Count() > 0 ? "dropdown " : ""))@((viewBagTopMenuID == menuID) ? "active" : "")">
+                @if (subMenus.Count() > 0)
+                {
+                    <a data-toggle="dropdown" data-close-others="true" data-hover="dropdown" class="dropdown-toggle" href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)">
+                        @menu.MenuName
+                    </a>
+                }
+                else
+                {
+                    <a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)">
+                        @menu.MenuName
+                    </a>
+                }
+                @if (subMenus.Count() > 0)
+                {
+                    <ul class="dropdown-menu @((viewBagTopMenuID == menuID) ? "in" : "")">
+                        @foreach (dotnetsource.Helpers.Menu submenu in subMenus)
+                        {
+                            <li class="@(viewBagSubMenuID == submenu.MenuID ? "active" : "")"><a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName</a></li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
 </div>
 <!-- end navbar-collapse -->

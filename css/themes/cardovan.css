@@ -125,6 +125,17 @@ body.page-boxed {
   background: #3e0000;
   color: #ffffff;
 }
+/* sidebar-user*/
+.page-sidebar .sidebar-user {
+  color: #f5f5f5;
+}
+.page-sidebar .sidebar-user > .info > ul > li > a {
+  color: #a8aebc;
+}
+.page-sidebar .sidebar-user > .info > ul > li > a:hover,
+.page-sidebar .sidebar-user > .info > ul > li > a:focus {
+  color: #fff;
+}
 /* page-sidebar */
 .page-sidebar {
   background: #2f343d;
@@ -324,8 +335,8 @@ body.page-boxed {
 /* hover */
 .page-sidebar-menu.nav > li .nav li a:hover,
 .page-sidebar-menu.nav > li .nav li a:focus {
-  background-color: #1d2126;
-  border-top: 1px solid #1d2126;
+  background-color: #191c21;
+  border-top: 1px solid #191c21;
   color: #ffffff;
   font-weight: 400;
 }

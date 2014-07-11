@@ -435,7 +435,7 @@
     padding: 10px;
     margin: 0;
     top: 0;
-    display: block;
+    display: none;
   }
   .page-sidebar-small .page-sidebar .sidebar-user > .avatar {
     float: none;
@@ -535,7 +535,7 @@
     padding: 10px;
     margin: 0;
     top: 0;
-    display: block;
+    display: none;
   }
   .page-sidebar-medium .page-sidebar .sidebar-user > .avatar {
     float: none;
@@ -559,7 +559,7 @@
 }
 .theme-panel > .theme-options {
   float: left;
-  width: 230px;
+  width: 250px;
   border: solid 2px #000;
   border-right: 0;
   display: none;

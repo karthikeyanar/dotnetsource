@@ -36,19 +36,19 @@
         <div class="header-content @headerContainerClassName">
             <!-- navbar-header -->
             <div class="navbar-header company-info">
-                <button type="button" class="navbar-toggle visible-sm visible-xs" data-action="page-sidebar-toggle">
+                <button type="button" class="navbar-toggle visible-sm visible-xs" data-action="page-sidebar-xs-toggle">
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="navbar-brand">@dotnetsource.Helpers.Common.SiteName</a>
                 @if (subMenuEnum == dotnetsource.Helpers.SubMenu.SidebarMedium)
-                {
-                    <button type="button" class="navbar-toggle visible-md" data-action="page-sidebar-medium-toggle">
-                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
-                }
-                else
-                {
-                    <button type="button" class="navbar-toggle visible-md" data-action="page-sidebar-small-toggle">
+{
+    <button type="button" class="navbar-toggle visible-md visible-lg" data-action="page-sidebar-medium-toggle">
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+    </button>
+}
+else
+{
+                    <button type="button" class="navbar-toggle visible-md visible-lg" data-action="page-sidebar-small-toggle">
                         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                 }
@@ -104,20 +104,32 @@
                             <li><a href="javascript:;" class="theme-black" data-theme-name="black"></a></li>
                         </ul>
                     </div>
-                    <div class="form-group">
-                        <label class="checkbox fancy-checkbox primary">
-                            <input type="checkbox" id="chklayout" />Box Layout
-                        </label>
+                    <div class="pull-left">
+                        <div class="form-group">
+                            <label class="checkbox fancy-checkbox primary">
+                                <input type="checkbox" id="chklayout" />Box Layout
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox fancy-checkbox primary">
+                                <input type="checkbox" id="chkheader" />Fixed Header
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox fancy-checkbox primary">
+                                <input type="checkbox" id="chksidebar" />Fixed Sidebar
+                            </label>
+                        </div><div class="clearfix"></div>
                     </div>
-                    <div class="form-group">
-                        <label class="checkbox fancy-checkbox primary">
-                            <input type="checkbox" id="chkheader" />Fixed Header
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label class="checkbox fancy-checkbox primary">
-                            <input type="checkbox" id="chksidebar" />Fixed Sidebar
-                        </label>
+                    <div class="pull-right">
+                        <div class="form-group">
+                            <label>SideBar</label>
+                            <select id="selectSidebarType" class="form-control input-sm">
+                                <option value="large">Large</option>
+                                <option value="medium">Medium</option>
+                                <option value="small">Small</option>
+                            </select>
+                        </div><div class="clearfix"></div>
                     </div>
                 </form>
             </div>
