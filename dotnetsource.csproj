@@ -498,7 +498,6 @@
     <Content Include="less\site\normalize.less" />
     <Content Include="less\site\page-container.less" />
     <Content Include="less\site\page-header.less" />
-    <Content Include="less\site\page-sidebar-closed.less" />
     <Content Include="less\site\page-sidebar-small.less" />
     <Content Include="less\site\page-sidebar.less" />
     <Content Include="less\site\site.less" />

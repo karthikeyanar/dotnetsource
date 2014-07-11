@@ -36,8 +36,8 @@ namespace LessConsole {
 				}
 			}
 
-			Console.WriteLine("Press any key to quit");
-			Console.ReadLine();
+			Console.WriteLine("END");
+			//Console.ReadLine();
 		}
 	}
 

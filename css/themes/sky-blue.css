@@ -176,6 +176,10 @@ body.page-boxed {
   font-weight: 400;
 }
 @media (min-width: 992px) {
+  /* sidebar-user */
+  .page-sidebar-small .page-sidebar .sidebar-user > .info {
+    background-color: #2f343d;
+  }
   /* hover */
   .page-sidebar-small .page-sidebar-menu.nav > li.open.hover > a,
   .page-sidebar-small .page-sidebar-menu.nav > li.open.hover > a:hover,
@@ -237,6 +241,10 @@ body.page-boxed {
   }
 }
 @media (min-width: 992px) {
+  /* sidebar-user */
+  .page-sidebar-medium .page-sidebar .sidebar-user > .info {
+    background-color: #2f343d;
+  }
   /* hover */
   .page-sidebar-medium .page-sidebar-menu.nav > li.open.hover > a,
   .page-sidebar-medium .page-sidebar-menu.nav > li.open.hover > a:hover,

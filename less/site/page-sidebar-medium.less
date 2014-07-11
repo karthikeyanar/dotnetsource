@@ -1,9 +1,11 @@
 @media (min-width: @screen-md-min) {
-    /* page sidebar small */
+    /* page sidebar medium */
     .page-sidebar-medium .page-sidebar {
         width: @page-sidebar-medium-width;
     }
-     
+     .page-sidebar-medium  .page-sidebar .page-sidebar-menu {
+		margin:0;
+	 }
 
     .page-sidebar-medium .page-container .page-content,
     .page-sidebar-medium .page-container .footer {
@@ -96,4 +98,20 @@
             top: 0;
             display: block;
         }
+	/* sidebar-user */
+	.page-sidebar-medium .page-sidebar .sidebar-user > .info {
+		position: absolute;
+        z-index: 999;
+        left: @page-sidebar-medium-width;
+		width: @page-sidebar-width;
+		padding:10px;
+        margin: 0;
+        top: 0;
+        display: block;
+	}
+	.page-sidebar-medium .page-sidebar .sidebar-user > .avatar {
+		float:none;
+		display: block;
+		text-align:center;
+	}
 }
