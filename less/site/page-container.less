@@ -12,6 +12,11 @@
 	.transition_property(margin-left);
 }
 @media (max-width: @screen-sm-max) {
+	.page-container-no-scroll .page-container .page-content {
+		position: fixed;
+		top: @header-min-height;
+		overflow:hidden;
+	}
 	.page-container .page-content-overlay {
 		position: fixed;
 		left: 0;

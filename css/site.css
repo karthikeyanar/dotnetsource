@@ -123,6 +123,11 @@
   transition-property: margin-left;
 }
 @media (max-width: 991px) {
+  .page-container-no-scroll .page-container .page-content {
+    position: fixed;
+    top: 44px;
+    overflow: hidden;
+  }
   .page-container .page-content-overlay {
     position: fixed;
     left: 0;
@@ -164,6 +169,7 @@
   padding-left: 0;
   padding-right: 0;
   float: left;
+  z-index: 3;
   width: 220px;
 }
 .page-sidebar:before {
@@ -299,16 +305,21 @@
 @media (max-width: 991px) {
   .page-sidebar {
     display: block;
+    top: 0;
+    left: -220px;
+    z-index: 3;
+  }
+  .page-sidebar:before {
+    top: 44px;
+    display: none;
+  }
+  .page-sidebar-open .page-sidebar:before {
+    display: block;
+  }
+  .page-sidebar-fixed .page-sidebar {
     top: 44px;
   }
-  .page-sidebar {
-    left: -220px;
-    bottom: 0;
-    overflow: auto;
-    position: fixed;
-    z-index: 2;
-  }
-  .page-sidebar {
+  .sidebar-animation .page-sidebar {
     -webkit-transition: none 0.4s ease;
     -moz-transition: none 0.4s ease;
     -ms-transition: none 0.4s ease;
@@ -382,9 +393,6 @@
     padding: 10px 15px 10px 78px;
   }
   /* page sidebar collapse fixed */
-  .page-sidebar-small-fixed .page-sidebar {
-    z-index: 1;
-  }
   .page-sidebar-small-fixed .page-container .page-content,
   .page-sidebar-small-fixed .page-container .footer {
     margin-left: 35px !important;
@@ -495,9 +503,6 @@
     padding: 10px 15px 10px 78px;
   }
   /* page sidebar collapse fixed */
-  .page-sidebar-medium-fixed .page-sidebar {
-    z-index: 1;
-  }
   .page-sidebar-medium-fixed .page-container .page-content,
   .page-sidebar-medium-fixed .page-container .footer {
     margin-left: 110px !important;

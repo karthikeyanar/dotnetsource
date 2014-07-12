@@ -124,7 +124,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\components.css" />
-    <Content Include="css\pages\Copy of timeline.css" />
     <Content Include="css\pages\error-page.css" />
     <Content Include="css\pages\fonts.css" />
     <Content Include="css\pages\inbox.css" />
@@ -152,9 +151,19 @@
     <Content Include="css\plugins\entypo\entypo.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.min.css" />
+    <Content Include="css\plugins\fonts\entypo.eot" />
     <Content Include="css\plugins\fonts\entypo.svg" />
+    <Content Include="css\plugins\fonts\entypo.ttf" />
+    <Content Include="css\plugins\fonts\entypo.woff" />
+    <Content Include="css\plugins\fonts\fontawesome-webfont.eot" />
     <Content Include="css\plugins\fonts\fontawesome-webfont.svg" />
+    <Content Include="css\plugins\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\plugins\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\plugins\fonts\FontAwesome.otf" />
+    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="css\plugins\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="css\plugins\fullcalendar\fullcalendar.css" />
     <Content Include="css\plugins\fullcalendar\fullcalendar.print.css" />
     <Content Include="css\plugins\jquery-inputlimiter\jquery.inputlimiter.1.0.css" />
@@ -171,7 +180,6 @@
     <Content Include="css\themes\blue.css" />
     <Content Include="css\themes\cardovan.css" />
     <Content Include="css\themes\dark-blue.css" />
-    <Content Include="css\themes\darkblue.css" />
     <Content Include="css\themes\green.css" />
     <Content Include="css\themes\orange.css" />
     <Content Include="css\themes\pink.css" />
@@ -183,16 +191,14 @@
     <Content Include="img\4.jpg" />
     <Content Include="img\alpha-horizontal.png" />
     <Content Include="img\alpha.png" />
-    <Content Include="img\avatars\1.jpg" />
-    <Content Include="img\avatars\10.jpg" />
-    <Content Include="img\avatars\2.jpg" />
-    <Content Include="img\avatars\3.jpg" />
-    <Content Include="img\avatars\4.jpg" />
-    <Content Include="img\avatars\5.jpg" />
-    <Content Include="img\avatars\6.jpg" />
-    <Content Include="img\avatars\7.jpg" />
-    <Content Include="img\avatars\8.jpg" />
-    <Content Include="img\avatars\9.jpg" />
+    <Content Include="img\avatars\150\1.jpg" />
+    <Content Include="img\avatars\150\2.jpg" />
+    <Content Include="img\avatars\150\3.jpg" />
+    <Content Include="img\avatars\150\4.jpg" />
+    <Content Include="img\avatars\75\1.jpg" />
+    <Content Include="img\avatars\75\2.jpg" />
+    <Content Include="img\avatars\75\3.jpg" />
+    <Content Include="img\avatars\75\4.jpg" />
     <Content Include="img\clear.png" />
     <Content Include="img\hue-horizontal.png" />
     <Content Include="img\hue.png" />
@@ -324,13 +330,9 @@
     <Content Include="js\plugins\select2\select2.min.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.min.js" />
-    <Content Include="less\components\lesscmd_syntax.txt" />
-    <Content Include="less\site\lesscmd_syntax.txt" />
     <Content Include="less\site\page-sidebar-medium.less" />
     <Content Include="less\themes\blue-green.less" />
     <Content Include="less\themes\cardovan.less" />
-    <Content Include="less\themes\lesscmd_syntax - Copy.txt" />
-    <Content Include="less\themes\lesscmd_syntax.txt" />
     <Content Include="less\themes\orange.less" />
     <Content Include="less\themes\pink.less" />
     <Content Include="less\themes\purple.less" />
@@ -441,8 +443,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\metro\black\" />
-    <Folder Include="img\metro\white\" />
     <Folder Include="less\pages\" />
     <Folder Include="less\plugins\" />
   </ItemGroup>
@@ -450,16 +450,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\plugins\fonts\entypo.eot" />
-    <Content Include="css\plugins\fonts\entypo.ttf" />
-    <Content Include="css\plugins\fonts\entypo.woff" />
-    <Content Include="css\plugins\fonts\fontawesome-webfont.eot" />
-    <Content Include="css\plugins\fonts\fontawesome-webfont.ttf" />
-    <Content Include="css\plugins\fonts\fontawesome-webfont.woff" />
-    <Content Include="css\plugins\fonts\FontAwesome.otf" />
-    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="css\plugins\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="less\bootstrap\.csscomb.json" />
     <Content Include="less\bootstrap\alerts.less" />
     <Content Include="less\bootstrap\badges.less" />
@@ -607,7 +597,7 @@
     <Content Include="packages\Newtonsoft.Json.6.0.3\tools\install.ps1" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nupkg" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nuspec" />
-    <None Include="php\json_inbox.php" />
+    <None Include="php\inbox.php" />
     <Content Include="Views\Home\Alerts.cshtml" />
     <Content Include="Views\Home\BoxLayout.cshtml" />
     <Content Include="Views\Home\Buttons.cshtml" />

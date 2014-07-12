@@ -142,7 +142,7 @@ $(function() {
 	}
 	_Inbox.types.push(new TypeModel(data));
 	ko.applyBindings(_Inbox);
-	$.getJSON("/php/json_inbox.php",function(data) {
+	$.getJSON("/php/inbox.php",function(data) {
 		$.each(data,function(i,mail) {
 			var message=new MessageModel(mail);
 			if(message.type_id()==1) {

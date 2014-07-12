@@ -67,7 +67,7 @@
 				var x=item.datapoint[0].toFixed(2),
 						y=item.datapoint[1].toFixed(2);
 
-				APP.chartToolTip(item.pageX,item.pageY,
+				chartToolTip(item.pageX,item.pageY,
 						    item.series.label+" of "+x+" = "+y);
 			}
 		} else {
@@ -77,7 +77,12 @@
 
 	});
 
-
+	function chartToolTip(x,y,contents) {
+		$('<div id="tooltip" class="chart-tooltip tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner">'+contents+'</div></div>').css({
+			top: y-43,
+			left: x-15
+		}).appendTo("body").fadeIn(200);
+	};
 
 	// generate data set from a parametric function with a fractal look
 

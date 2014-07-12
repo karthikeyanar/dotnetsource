@@ -2633,7 +2633,7 @@ fieldset[disabled] .btn-twitter.active {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 101;
+  z-index: 1;
 }
 .tile.selected:before {
   color: #fff;
@@ -2646,7 +2646,7 @@ fieldset[disabled] .btn-twitter.active {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 102;
+  z-index: 2;
 }
 .tile .tile-content h1,
 .tile .tile-content h2,
