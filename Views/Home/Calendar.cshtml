@@ -95,6 +95,8 @@
 
 	</script>
 }
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="row">
 	<div class="col-lg-3">
 		<h3 class="panel-title">
@@ -111,8 +113,8 @@
 			<div class='external-event bg-teal fg-white'>
 				My Event 5</div>
 		</div>
-		<label class='checkbox'>
-			<input type='checkbox' id='drop-remove' />Remove after drop
+		<label class="checkbox fancy-checkbox success">
+			<input type="checkbox" id="drop-remove" />Remove after drop
 		</label>
 	</div>
 	<div class="col-lg-9">

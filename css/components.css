@@ -1299,7 +1299,8 @@ fieldset[disabled] .btn-link:focus {
 .navbar-brand {
   float: left;
   padding: 13px 15px;
-  font-size: 17px;
+  font-size: 25px;
+  font-weight: 300;
   line-height: 18px;
   height: 44px;
 }
@@ -1315,12 +1316,13 @@ fieldset[disabled] .btn-link:focus {
 }
 .navbar-brand {
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .navbar-brand > i {
+  font-size: 25px;
+  left: 15px;
   position: absolute;
-  left: 0;
-  top: 3px;
+  top: 7px;
 }
 .navbar-nav {
   margin: 6.5px -15px;
