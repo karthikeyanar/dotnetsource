@@ -14,13 +14,13 @@
 			pageContainerClassName = "container";
 			break;
 		case dotnetsource.Helpers.SubMenu.SidebarSmall:
-			className = "header-fixed page-sidebar-small";
+			className = "header-fixed sidebar-sm";
 			break;
 		case dotnetsource.Helpers.SubMenu.SidebarMedium:
-			className = "header-fixed page-sidebar-medium";
+			className = "header-fixed sidebar-md";
 			break;
 		case dotnetsource.Helpers.SubMenu.SidebarFixed:
-			className = "header-fixed page-sidebar-fixed";
+			className = "header-fixed sidebar-fixed";
 			break;
 		default:
 			className = "header-fixed";
@@ -35,17 +35,17 @@
 		<div class="header-content @headerContainerClassName">
 			<!-- navbar-header -->
 			<div class="navbar-header company-info">
-				<button type="button" class="navbar-toggle visible-sm visible-xs" data-sidebar-action="page-sidebar-sm-toggle">
+				<button type="button" class="navbar-toggle visible-sm visible-xs" data-sidebar-action="sidebar-sm-toggle">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
-				<a href="/Home" class="navbar-brand">@dotnetsource.Helpers.Common.SiteName</a>
+				<a href="/Home" class="navbar-brand"><i class="fa fa-fire"></i>@dotnetsource.Helpers.Common.SiteName</a>
 				@{
-					string sidebarType = "small";
+					string sidebarType = "sm";
 				}
 				@if (subMenuEnum == dotnetsource.Helpers.SubMenu.SidebarMedium) {
-		sidebarType = "medium";
-	} 
-				<button type="button" class="navbar-toggle visible-md visible-lg" data-sidebar-action="page-sidebar-toggle" data-sidebar-type="@sidebarType">
+		sidebarType = "md";
+	}
+				<button type="button" class="navbar-toggle visible-md visible-lg" data-sidebar-action="sidebar-toggle" data-sidebar-type="@sidebarType">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
@@ -123,8 +123,8 @@
 							SideBar</label>
 						<select id="selectSidebarType" class="form-control input-sm">
 							<option value="large">Large</option>
-							<option value="medium">Medium</option>
-							<option value="small">Small</option>
+							<option value="md">Medium</option>
+							<option value="sm">Small</option>
 						</select>
 					</div>
 					<div class="clearfix">

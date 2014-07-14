@@ -1313,6 +1313,15 @@ fieldset[disabled] .btn-link:focus {
     margin-left: -15px;
   }
 }
+.navbar-brand {
+  position: relative;
+  padding-left: 30px;
+}
+.navbar-brand > i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
 .navbar-nav {
   margin: 6.5px -15px;
 }

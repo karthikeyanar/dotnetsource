@@ -330,7 +330,7 @@
     <Content Include="js\plugins\select2\select2.min.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.min.js" />
-    <Content Include="less\site\page-sidebar-medium.less" />
+    <Content Include="less\site\sidebar-md.less" />
     <Content Include="less\themes\blue-green.less" />
     <Content Include="less\themes\cardovan.less" />
     <Content Include="less\themes\orange.less" />
@@ -339,6 +339,7 @@
     <Content Include="less\themes\sky-blue.less" />
     <Content Include="less\themes\teal.less" />
     <Content Include="notes.txt" />
+    <Content Include="less\variables\variables.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.min.js" />
@@ -548,7 +549,6 @@
     <Content Include="less\components\tiles.less" />
     <Content Include="less\components\tooltip.less" />
     <Content Include="less\components\type.less" />
-    <Content Include="less\components\variables.less" />
     <Content Include="less\components\wells.less" />
     <Content Include="less\site\footer.less" />
     <Content Include="less\site\header.less" />
@@ -557,11 +557,10 @@
     <Content Include="less\site\normalize.less" />
     <Content Include="less\site\page-container.less" />
     <Content Include="less\site\page-header.less" />
-    <Content Include="less\site\page-sidebar-small.less" />
-    <Content Include="less\site\page-sidebar.less" />
+    <Content Include="less\site\sidebar-sm.less" />
+    <Content Include="less\site\sidebar.less" />
     <Content Include="less\site\site.less" />
     <Content Include="less\site\theme-panel.less" />
-    <Content Include="less\site\variables.less" />
     <Content Include="less\themes\black.less" />
     <Content Include="less\themes\blue.less" />
     <Content Include="less\themes\theme-components.less" />
@@ -666,6 +665,7 @@
     <Content Include="Views\Home\Tabs.cshtml" />
     <Content Include="Views\Home\TimePicker.cshtml" />
     <Content Include="Views\Home\Wells.cshtml" />
+    <Content Include="Views\Shared\_PublicLogo.cshtml" />
     <None Include="Views\Shared\_Entypoicons.cshtml" />
     <None Include="Views\Shared\_Glyphicons.cshtml" />
     <None Include="Views\Shared\_FontAweSome.cshtml" />

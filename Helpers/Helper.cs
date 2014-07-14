@@ -121,7 +121,7 @@ namespace dotnetsource.Helpers {
 
 		public static string SiteName {
 			get {
-				return "Pepper";
+				return "Fire";
 			}
 		}
 

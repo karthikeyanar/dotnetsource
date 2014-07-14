@@ -1,5 +1,5 @@
 ﻿<!-- page sidebar -->
-<div class="page-sidebar">
+<div class="sidebar">
     <div class="sidebar-content">
         <div class="sidebar-user">
             <div class="avatar">
@@ -20,7 +20,7 @@
                 </ul>
             </div>
         </div>
-        <ul class="nav page-sidebar-menu">
+        <ul class="nav sidebar-menu">
             @{
                 var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
             }
@@ -39,4 +39,4 @@
         </ul>
     </div>
 </div>
-<!-- end page-sidebar -->
+<!-- end sidebar -->

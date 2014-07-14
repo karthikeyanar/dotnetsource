@@ -3,34 +3,28 @@
 @RenderSection("styles", required: false)
 </head>
 @{
-    var className = "";
-    dotnetsource.Helpers.SubMenu subMenuEnum = ViewBag.Submenu;
-    switch (subMenuEnum)
-    {
-        case dotnetsource.Helpers.SubMenu.SignIn:
-            className = "bg-primary";
-            break;
-        case dotnetsource.Helpers.SubMenu.SignUp:
-            className = "bg-dark-blue";
-            break;
-        case dotnetsource.Helpers.SubMenu.Page404:
-            className = "bg-info";
-            break;
-        case dotnetsource.Helpers.SubMenu.Page500:
-            className = "bg-cardovan";
-            break;
-        default:
-            className = "bg-black";
-            break;
-    }
+	var className = "";
+	dotnetsource.Helpers.SubMenu subMenuEnum = ViewBag.Submenu;
+	switch (subMenuEnum) {
+		case dotnetsource.Helpers.SubMenu.SignIn:
+			className = "bg-primary";
+			break;
+		case dotnetsource.Helpers.SubMenu.SignUp:
+			className = "bg-dark-blue";
+			break;
+		case dotnetsource.Helpers.SubMenu.Page404:
+			className = "bg-info";
+			break;
+		case dotnetsource.Helpers.SubMenu.Page500:
+			className = "bg-cardovan";
+			break;
+		default:
+			className = "bg-black";
+			break;
+	}
 }
 <body class="@className">
-	<div class="container">
-		<div class="logo">
-			@dotnetsource.Helpers.Common.SiteName
-		</div>
-		@RenderBody()
-	</div>
+	@RenderBody()
 	<!-- jquery -->
 	<script src='/js/jquery/jquery-1.11.1.min.js' type='text/javascript'></script>
 	<!-- bootstrap -->
