@@ -42,6 +42,14 @@
 .header .top-menu > ul > li > a:hover, .header .top-menu > ul > li > a:focus {
 	text-decoration: none;
 }  
+.header .navbar-brand {
+	position:relative;
+}
+.header .navbar-brand > i {
+    font-size: 25px;
+    position: absolute;
+    top: 7px;
+}
 @media (min-width: @screen-md-min) {
 	.header > container {
 		padding-left: 20px;
@@ -56,14 +64,23 @@
 	}
 }
 @media (max-width: @screen-xs-max) {
-    .header .navbar-brand {
-		padding-left: 0; 
+    .header .navbar-brand > .name {
+		display:none;
 	}
+    .header .navbar-brand > i {
+        left: 5px;
+    }
 }
 @media (min-width: @screen-sm) {
+    .header .navbar-brand {
+        padding-left:40px;
+    }
     .header .navbar-toggle {
 		margin-left: -15px; 
 	}
+    .header .navbar-brand > i {
+        left: 15px;
+    }
 }
 @media (min-width: @screen-md) {
 	.header .visible-md.navbar-toggle {

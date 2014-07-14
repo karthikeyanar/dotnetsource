@@ -85,7 +85,7 @@
 						<tr>
 							<th colspan="6">
 								<div class="pull-left">
-									<label class="checkbox fancy-checkbox">
+									<label class="checkbox fa-checkbox">
 										<input type="checkbox" id="selectall" name="selectall" data-bind="click: selectAll, checked: all_selected" /><span class='check'></span>
 									</label>
 								</div>
@@ -126,7 +126,7 @@
 						<!-- ko foreach: mails -->
 						<tr data-bind="visible: is_show,css: { 'read' : is_read()==true, 'select': is_select()==true }">
 							<td data-bind="click:open" class="tiny-column">
-								<label class="checkbox fancy-checkbox">
+								<label class="checkbox fa-checkbox">
 									<input type="checkbox" id="select" name="select" data-bind="checked: is_select" /><span class='check'></span></label>
 							</td>
 							<td class="tiny-column" data-bind="click:setStar">

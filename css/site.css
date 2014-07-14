@@ -66,6 +66,14 @@
 .header .top-menu > ul > li > a:focus {
   text-decoration: none;
 }
+.header .navbar-brand {
+  position: relative;
+}
+.header .navbar-brand > i {
+  font-size: 25px;
+  position: absolute;
+  top: 7px;
+}
 @media (min-width: 992px) {
   .header > container {
     padding-left: 20px;
@@ -80,13 +88,22 @@
   }
 }
 @media (max-width: 767px) {
-  .header .navbar-brand {
-    padding-left: 0;
+  .header .navbar-brand > .name {
+    display: none;
+  }
+  .header .navbar-brand > i {
+    left: 5px;
   }
 }
 @media (min-width: 768px) {
+  .header .navbar-brand {
+    padding-left: 40px;
+  }
   .header .navbar-toggle {
     margin-left: -15px;
+  }
+  .header .navbar-brand > i {
+    left: 15px;
   }
 }
 @media (min-width: 992px) {
