@@ -62,6 +62,14 @@
   position: relative;
   padding: 12px 15px;
 }
+.header .top-menu > ul > li.profile-menu > a {
+  padding: 7px 5px;
+}
+.header .top-menu > ul > li.profile-menu > a > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
 .header .top-menu > ul > li > a:hover,
 .header .top-menu > ul > li > a:focus {
   text-decoration: none;
@@ -238,9 +246,6 @@
 .sidebar-fixed .sidebar.autofix_sb.fixed {
   top: 0;
 }
-.sidebar-menu {
-  margin: 20px 0;
-}
 .sidebar-menu.nav > li > a {
   display: block;
   padding: 10px 15px;
@@ -276,7 +281,9 @@
   padding: 10px 15px 10px 98px;
 }
 .sidebar .sidebar-user {
-  padding: 10px;
+  padding: 10px 10px 10px 95px;
+  position: relative;
+  height: 95px;
 }
 .sidebar .sidebar-user:after {
   clear: both;
@@ -284,7 +291,8 @@
   display: table;
 }
 .sidebar .sidebar-user > .avatar {
-  float: left;
+  position: absolute;
+  left: 10px;
 }
 .sidebar .sidebar-user > .avatar > img {
   width: 75px;
@@ -292,8 +300,7 @@
   border-radius: 50%;
 }
 .sidebar .sidebar-user > .info {
-  float: left;
-  margin: 10px 0 0 10px;
+  margin: 5px 0 0 0;
 }
 .sidebar .sidebar-user > .info > .name {
   font-size: 14px;
@@ -459,7 +466,11 @@
   }
   /* sidebar-user */
   .sidebar-sm .sidebar .sidebar-user {
-    padding: 10px 0;
+    height: 35px;
+    padding: 5px 0 0;
+  }
+  .sidebar-sm .sidebar .sidebar-user > .avatar {
+    left: 5px;
   }
   .sidebar-sm .sidebar .sidebar-user > .avatar > img {
     width: 25px;
@@ -562,6 +573,9 @@
     display: block;
   }
   /* sidebar-user */
+  .sidebar-md .sidebar .sidebar-user > .avatar {
+    left: 15px;
+  }
   .sidebar-md .sidebar .sidebar-user > .info {
     position: absolute;
     z-index: 999;

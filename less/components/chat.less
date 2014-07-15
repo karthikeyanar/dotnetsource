@@ -41,7 +41,8 @@
                 }
                 & > .name {
                     float:left;
-					font-size:14px;
+					font-size:13px;
+					font-weight:600;
                 }
             }
             & > .chat-body:after {
@@ -85,14 +86,15 @@
         }
     }
 }
-.chat-body {
+.chat-content > .chat-list > .chat > .chat-body {
     & > .datetime {
-        font-size: 12px;
+        font-size: 11px;
 		float:right;
 		margin-top: 5px;
     }
 	& > .message {
 		float:left;
+		font-size:13px;
 		padding-top:5px;
 		margin-bottom:0;
 	}
@@ -102,8 +104,48 @@
 		clear: both;
 	}
 }
-.chat-body:after {
+.chat-content > .chat-list > .chat > .chat-body:after {
 	content: " ";
 	display: table;
 	clear: both;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-default:after {
+	border-right-color: @gray-light;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-primary:after {
+	border-right-color: @brand-primary;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-success:after {
+	border-right-color: @brand-success;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-danger:after {
+	border-right-color: @brand-danger;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-warning:after {
+	border-right-color: @brand-warning;
+}
+.chat-content > .chat-list > .chat.in > .chat-body.notes-info:after {
+	border-right-color: @brand-info;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-default:after {
+	border-left-color: @gray-light;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-primary:after {
+	border-left-color: @brand-primary;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-success:after {
+	border-left-color: @brand-success;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-danger:after {
+	border-left-color: @brand-danger;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-warning:after {
+	border-left-color: @brand-warning;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-info:after {
+	border-left-color: @brand-info;
+}
+.chat-content > .chat-list > .chat.out > .chat-body.notes-primary {
+	border: 1px solid #eee;
+    border-right: 3px solid @brand-primary;
 }

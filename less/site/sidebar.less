@@ -31,9 +31,6 @@
 .sidebar-fixed .sidebar.autofix_sb.fixed {
 	top: 0;
 } 
-.sidebar-menu {
-    margin: 20px 0;
-}
 .sidebar-menu.nav > li > a {
 	display: block;
 	padding: @menu-padding;
@@ -70,7 +67,9 @@
 } 
 // sidebar user
 .sidebar .sidebar-user {
-	padding:10px;
+	padding:10px 10px 10px 95px;
+	position:relative;
+	height:95px;
 }
 .sidebar .sidebar-user:after {
 	clear:both;
@@ -78,7 +77,8 @@
 	display:table;
 }
 .sidebar .sidebar-user > .avatar {
-	float:left;
+	position:absolute;
+	left:10px;
 }
 .sidebar .sidebar-user > .avatar > img {
 	width:75px;
@@ -86,8 +86,7 @@
 	border-radius:50%;
 }
 .sidebar .sidebar-user > .info {
-	float:left;
-	margin: 10px 0 0 10px;
+	margin: 5px 0 0 0;
 }
 .sidebar .sidebar-user > .info > .name {
 	font-size:14px;

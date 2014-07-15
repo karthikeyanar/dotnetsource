@@ -1,5 +1,10 @@
-.note {
-    border-left: 3px solid;
+.notes-left(@background-color,@text-color,@border-left-width,@border-left-color,@border-width,@border-color) {
+	background-color: @background-color;
+	color: @text-color;
+	border: @border-width solid @border-color;
+    border-left: @border-left-width solid @border-left-color;
+} 
+.notes {
     margin: 10px 0;
     padding: 10px;
     h4 {
@@ -14,42 +19,21 @@
         border-radius: 3px;
     }
 }
-.note-right {
-    border-left:0;
-    border-right: 3px solid;
+.notes-default {
+	.notes-left(@brand-white,#333,3px,@gray-light,1px,#eee);
 }
-.note-default {
-    background-color: lighten(@gray-lighter, 5%);
-    border-color: darken(@gray-lighter, 20%);
-    h4 {
-        color: darken(@gray-lighter, 20%);
-    }
+.notes-primary {
+	.notes-left(@brand-white,#333,3px,@brand-primary,1px,#eee);
 }
-.note-success {
-    background-color: lighten(@brand-success, 50%);
-    border-color: @brand-success;
-    h4 {
-        color: @brand-success;
-    }
+.notes-success {
+	.notes-left(@brand-white,#333,3px,@brand-success,1px,#eee);
 }
-.note-danger {
-    background-color: lighten(@brand-danger, 45%);
-    border-color: @brand-danger;
-    h4 {
-        color: @brand-danger;
-    }
+.notes-danger {
+	.notes-left(@brand-white,#333,3px,@brand-danger,1px,#eee);
 }
-.note-warning {
-    background-color: lighten(@brand-warning, 40%);
-    border-color: @brand-warning;
-    h4 {
-        color: @brand-danger;
-    }
+.notes-warning {
+	.notes-left(@brand-white,#333,3px,@brand-warning,1px,#eee);    
 }
-.note-info {
-    background-color: lighten(@brand-info, 40%);
-    border-color: @brand-info;
-    h4 {
-        color: @brand-info;
-    }
+.notes-info {
+	.notes-left(@brand-white,#333,3px,@brand-info,1px,#eee);    
 }

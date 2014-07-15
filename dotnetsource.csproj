@@ -209,6 +209,7 @@
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\files\application.js" />
+    <Content Include="js\files\Copy of application.js" />
     <Content Include="js\files\notification.js" />
     <Content Include="js\jquery\additional-methods.js" />
     <Content Include="js\jquery\additional-methods.min.js" />
@@ -567,7 +568,6 @@
     <Content Include="less\themes\dark-blue.less" />
     <Content Include="less\themes\green.less" />
     <Content Include="less\themes\red.less" />
-    <Content Include="less\themes\variables.less" />
     <Content Include="js\plugins\ckeditor\CHANGES.md" />
     <Content Include="js\plugins\ckeditor\LICENSE.md" />
     <Content Include="js\plugins\ckeditor\plugins\scayt\LICENSE.md" />

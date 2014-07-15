@@ -85,9 +85,9 @@
 						<tr>
 							<th colspan="6">
 								<div class="pull-left">
-									<label class="checkbox fa-checkbox">
-										<input type="checkbox" id="selectall" name="selectall" data-bind="click: selectAll, checked: all_selected" /><span class='check'></span>
-									</label>
+									<div class="checkbox fa-checkbox table-view">
+										<input type="checkbox" id="selectall" name="selectall" data-bind="click: selectAll, checked: all_selected" /><label for="selectall"></label>
+									</div>
 								</div>
 								<div class="pull-left margin-left-10">
 									<span class="btn-group"><a data-toggle="dropdown" href="#" class="btn btn-primary btn-sm">Select <i class="fa fa-angle-down "></i></a>
@@ -125,9 +125,10 @@
 					<tbody>
 						<!-- ko foreach: mails -->
 						<tr data-bind="visible: is_show,css: { 'read' : is_read()==true, 'select': is_select()==true }">
-							<td data-bind="click:open" class="tiny-column">
-								<label class="checkbox fa-checkbox">
-									<input type="checkbox" id="select" name="select" data-bind="checked: is_select" /><span class='check'></span></label>
+							<td class="tiny-column">
+								<div class="checkbox fa-checkbox table-view">
+									<input type="checkbox" name="select" data-bind="checked: is_select,attr:{'id': 'select-' + $index()}" /><label data-bind="attr:{'for': 'select-' + $index()}"></label>
+								</div>
 							</td>
 							<td class="tiny-column" data-bind="click:setStar">
 								<span class="starred cursor-pointer"><i data-bind="css:starStatus"></i></span>
