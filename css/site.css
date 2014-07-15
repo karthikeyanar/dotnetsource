@@ -60,7 +60,7 @@
 .header .top-menu > ul > li > a {
   display: block;
   position: relative;
-  padding: 12px 15px;
+  padding: 12px 10px;
 }
 .header .top-menu > ul > li.profile-menu > a {
   padding: 7px 5px;
@@ -81,6 +81,54 @@
   font-size: 25px;
   position: absolute;
   top: 7px;
+}
+.header .tasks-menu > .dropdown-menu {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+.header .dropdown-menu > .dropdown-header {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+.header .dropdown-menu > .dropdown-footer {
+  padding: 0;
+  margin: 0;
+}
+.header .dropdown-menu > .dropdown-footer > a {
+  margin: 0;
+  padding: 10px;
+}
+.header .dropdown-menu > .dropdown-footer > a:hover,
+.header .dropdown-menu > .dropdown-footer > a:focus {
+  background-color: #e8e8e8;
+  color: #333;
+}
+.header .dropdown-menu .dropdown-menu-list {
+  margin: 0;
+  padding: 0;
+}
+.header .dropdown-menu .dropdown-menu-list > li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.header .dropdown-menu .dropdown-menu-list > li > a {
+  color: #333;
+  padding: 0 10px;
+  display: block;
+  border-bottom: 1px solid #e8e8e8;
+}
+.header .dropdown-menu .dropdown-menu-list > li > a > h5 {
+  margin: 0;
+  padding: 10px 0;
+}
+.header .dropdown-menu .dropdown-menu-list > li > a:hover,
+.header .dropdown-menu .dropdown-menu-list > li > a:focus {
+  background-color: #e8e8e8;
+}
+.header .dropdown-menu .dropdown-menu-list .progress {
+  margin-bottom: 10px;
 }
 @media (min-width: 992px) {
   .header > container {
