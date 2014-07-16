@@ -1419,13 +1419,14 @@ fieldset[disabled] .btn-link:focus {
 label,
 .label {
   font-weight: normal;
+  border-radius: 0;
 }
 .label-default {
-  background-color: #ffffff;
+  background-color: #999999;
 }
 .label-default[href]:hover,
 .label-default[href]:focus {
-  background-color: #e6e6e6;
+  background-color: #808080;
 }
 .label-primary {
   background-color: #007fff;
@@ -1462,15 +1463,32 @@ label,
 .label-danger[href]:focus {
   background-color: #a7381e;
 }
-.label {
-  border-radius: 0;
-}
 .badge {
   font-size: 12px;
   font-weight: bold;
   color: #ffffff;
-  background-color: #007fff;
+  background-color: #999999;
   border-radius: 10px;
+}
+.badge-primary {
+  background-color: #007fff;
+  color: #ffffff;
+}
+.badge-success {
+  background-color: #008a17;
+  color: #ffffff;
+}
+.badge-info {
+  background-color: #8c0095;
+  color: #ffffff;
+}
+.badge-warning {
+  background-color: #ff8f32;
+  color: #ffffff;
+}
+.badge-danger {
+  background-color: #d24726;
+  color: #ffffff;
 }
 a.badge:hover,
 a.badge:focus {
@@ -2855,6 +2873,9 @@ fieldset[disabled] .btn-twitter.active {
 }
 .chat-content {
   position: relative;
+}
+.slimScrollDiv .chat-content {
+  padding-right: 10px;
 }
 .chat-content:after {
   content: " ";

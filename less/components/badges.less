@@ -12,6 +12,28 @@
   border-radius: @badge-border-radius;
 }
 
+// Colors
+.badge-primary {
+  .badge-variant(@brand-primary,@brand-white);
+}
+
+.badge-success {
+  .badge-variant(@brand-success,@brand-white);
+}
+
+.badge-info {
+  .badge-variant(@brand-info,@brand-white);
+}
+
+.badge-warning {
+  .badge-variant(@brand-warning,@brand-white);
+}
+
+.badge-danger {
+  .badge-variant(@brand-danger,@brand-white);
+}
+
+
 // Hover state, but only for links
 a.badge {
   &:hover,

@@ -88,6 +88,10 @@ body.page-boxed {
   background: #3d149d;
   color: #ffffff;
 }
+.header .top-menu > ul > li > a.dropdown-toggle > .badge {
+  background: #230b5a;
+  color: #ffffff;
+}
 /* sidebar-user*/
 .sidebar .sidebar-user {
   color: #f5f5f5;

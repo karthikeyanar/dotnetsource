@@ -75,14 +75,8 @@
 		self.scrollTo();
 	}
 
-	this.handleMetroCheck=function(filter) {
-		var $elements;
-		if(filter)
-			$elements=$('.fa-checkbox,.fa-radio',filter);
-		else
-			$elements=$('.fa-checkbox,.fa-radio');
-
-		$elements.find(":input").each(function() {
+	this.handleMetroCheck=function() {
+		$('.fa-checkbox,.fa-radio').find(":input").each(function() {
 			var $this=$(this);
 			if($this.closest("label").size()==1) {
 				$this.closest("label").parent().prepend($this);
@@ -92,7 +86,7 @@
 			if($label.attr("for")==undefined)
 				$label.attr("for",$this.attr("id"));
 		});
-	};
+	}
 
 
 	this.handleBreadcrumb=function() {
@@ -101,7 +95,7 @@
 			var $breadcrumb=$(this).parents(".breadcrumb:first");
 			$breadcrumb.fadeOut();
 		});
-	};
+	}
 
 	this.handleFormValidation=function() {
 		if($.fn.validate) {
@@ -109,16 +103,16 @@
 				ignore: "input[type='text']:hidden"
 			});
 		}
-	};
+	}
 
 	this.handleToolTip=function() {
 		$("[data-toggle='tooltip']").tooltip();
 		$("[rel='tooltip']").tooltip();
-	};
+	}
 
 	this.handlePopover=function() {
 		$("[data-toggle='popover']").popover();
-	};
+	}
 
 	this.handlePanelTools=function() {
 
@@ -138,43 +132,66 @@
 			e.preventDefault();
 			$(this).closest(".panel").remove();
 		});
-	};
+	}
 
 	this.handleDropdownHoldClick=function() {
 		$('body').on('click','.dropdown-menu.hold-on-click',function(e) {
 			e.stopPropagation();
 		})
-	};
+	}
 
-	this.handleBootstrapSelect=function($target) {
+	this.handleBootstrapSelect=function() {
 		if($.fn.selectpicker) {
-			var $filter=$('.selectpicker')
-			if($target) {
-				$filter=$('.selectpicker',$target);
-			}
-			$filter.selectpicker();
+			$('.selectpicker').selectpicker();
 		}
-	};
+	}
 
-	this.handleSwitch=function($target) {
+	this.handleSwitch=function() {
 		if($.fn.bootstrapSwitch) {
-			var $filter=$('.switch')
-			if($target) {
-				$filter=$('.switch',$target);
-			}
-			$filter.bootstrapSwitch();
+			$('.switch').bootstrapSwitch();
 		}
-	};
+	}
 
-	this.handleSlider=function($target) {
+	this.handleSlider=function() {
 		if($.fn.slider) {
-			var $filter=$('.slider')
-			if($target) {
-				$filter=$('.slider',$target);
-			}
-			$filter.slider();
+			$('.slider').slider();
 		}
-	};
+	}
+
+	this.hadleSlimScroll=function() {
+		if($.fn.slimScroll) {
+			$('.slimscroll').each(function() {
+				var $this=$(this);
+				if($this.attr("data-initialized")=="1") return;
+				$this.slimScroll({
+					width: ($this.attr("data-width")?$this.attr("data-width"):'auto'),
+					height: ($this.attr("data-height")?$this.attr("data-height"):'250px'),
+					size: ($this.attr("data-size")?$this.attr("data-size"):'5px'),
+					color: ($this.attr("data-color")?$this.attr("data-color"):'#000'),
+					position: ($this.attr("data-position")?$this.attr("data-position"):'right'),
+					distance: ($this.attr("data-distance")?$this.attr("data-distance"):'1px'),
+					start: ($this.attr("data-start")?$this.attr("data-start"):'top'),
+					opacity: ($this.attr("data-opacity")?$this.attr("data-opacity"):'0.4'),
+					alwaysVisible: ($this.attr("data-always-visible")=="true"?true:false),
+					disableFadeOut: ($this.attr("data-disable-fade-out")=="true"?true:false),
+					railVisible: ($this.attr("data-rail-visible")=="true"?true:false),
+					railColor: ($this.attr("data-rail-color")?$this.attr("data-rail-color"):'#fff'),
+					railOpacity: ($this.attr("data-rail-opacity")?$this.attr("data-rail-opacity"):'.2'),
+					railDraggable: ($this.attr("data-rail-draggable")=="false"?false:true),
+					railClass: ($this.attr("data-rail-class")?$this.attr("data-rail-class"):'slimScrollRail'),
+					barClass: ($this.attr("data-bar-class")?$this.attr("data-bar-class"):'slimScrollBar'),
+					wrapperClass: ($this.attr("data-wrapper-class")?$this.attr("data-wrapper-class"):'slimScrollDiv'),
+					allowPageScroll: ($this.attr("data-allow-page-scroll")=="true"?true:false),
+					wheelStep: ($this.attr("data-wheel-step")?$this.attr("data-wheel-step"):'20'),
+					touchScrollStep: ($this.attr("data-touch-scroll-step")?$this.attr("data-touch-scroll-step"):'200'),
+					borderRadius: ($this.attr("data-border-radius")?$this.attr("data-border-radius"):'0'),
+					railBorderRadius: ($this.attr("data-rail-border-radius")?$this.attr("data-rail-border-radius"):'0'),
+					animate: ($this.attr("data-animate")=="false"?false:true)
+				});
+				$this.attr("data-initialized","1");
+			});
+		}
+	}
 
 	this.resizeContentHeight=function() {
 		var $body=$('body');
@@ -629,6 +646,7 @@
 		self.handleSwitch();
 		self.handleSlider();
 		self.handleMetroCheck();
+		self.hadleSlimScroll();
 
 		if(self.onAfterInit) {
 			self.onAfterInit();

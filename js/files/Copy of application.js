@@ -1,19 +1,25 @@
-﻿.chat-content > .chat-list > .chat.out > .chat-body.note-default:after {
-	border-left-color: @gray-light;
-}
-.chat-content > .chat-list > .chat.out > .chat-body.note-primary:after {
-	border-left-color: @brand-primary;
-}
-.chat-content > .chat-list > .chat.out > .chat-body.note-success:after {
-	border-left-color: @brand-success;
-}
-.chat-content > .chat-list > .chat.out > .chat-body.note-danger:after {
-	border-left-color: @brand-danger;
-}
-.chat-content > .chat-list > .chat.out > .chat-body.note-warning:after {
-	border-left-color: @brand-warning;
-}
-.chat-content > .chat-list > .chat.out > .chat-body.note-info:after {
-	border-left-color: @brand-info;
-}
- 
+﻿$this.slimScroll({
+	width: ($this.attr("data-width")?$this.attr("data-width"):'auto'),
+	height: ($this.attr("data-height")?$this.attr("data-height"):'250px'),
+	size: ($this.attr("data-size")?$this.attr("data-size"):'7px'),
+	color: ($this.attr("data-color")?$this.attr("data-color"):'#000'),
+	position: ($this.attr("data-position")?$this.attr("data-position"):'right'),
+	distance: ($this.attr("data-distance")?$this.attr("data-distance"):'1px'),
+	start: ($this.attr("data-start")?$this.attr("data-start"):'top'),
+	opacity: ($this.attr("data-opacity")?$this.attr("data-opacity"):'0.4'),
+	alwaysVisible: ($this.attr("data-always-visible")?$this.attr("data-always-visible"):'false'),
+	disableFadeOut: ($this.attr("data-disable-fade-out")?$this.attr("data-disable-fade-out"):'false'),
+	railVisible: ($this.attr("data-rail-visible")?$this.attr("data-rail-visible"):'false'),
+	railColor: ($this.attr("data-rail-color")?$this.attr("data-rail-color"):'#333'),
+	railOpacity: ($this.attr("data-rail-opacity")?$this.attr("data-rail-opacity"):'.2'),
+	railDraggable: ($this.attr("data-rail-draggable")?$this.attr("data-rail-draggable"):'true'),
+	railClass: ($this.attr("data-rail-class")?$this.attr("data-rail-class"):'slimScrollRail'),
+	barClass: ($this.attr("data-bar-class")?$this.attr("data-bar-class"):'slimScrollBar'),
+	wrapperClass: ($this.attr("data-wrapper-class")?$this.attr("data-wrapper-class"):'slimScrollDiv'),
+	allowPageScroll: ($this.attr("data-allow-page-scroll")?$this.attr("data-allow-page-scroll"):'false'),
+	wheelStep: ($this.attr("data-wheel-step")?$this.attr("data-wheel-step"):'20'),
+	touchScrollStep: ($this.attr("data-touch-scroll-step")?$this.attr("data-touch-scroll-step"):'200'),
+	borderRadius: ($this.attr("data-border-radius")?$this.attr("data-border-radius"):'7px'),
+	railBorderRadius: ($this.attr("data-rail-border-radius")?$this.attr("data-rail-border-radius"):'7px'),
+	animate: ($this.attr("data-animate")?$this.attr("data-animate"):'true')
+});

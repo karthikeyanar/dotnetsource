@@ -9,35 +9,49 @@ namespace LessConsole {
 	class Program {
 		static void Main(string[] args) {
 
-			string lessPath = System.Configuration.ConfigurationSettings.AppSettings["lesspath"];
-			string lessFileNames = System.Configuration.ConfigurationSettings.AppSettings["lessfilenames"];
-			
-			string[] targetFiles = lessFileNames.Split(("|").ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+			try {
+				string rootPath = System.Configuration.ConfigurationSettings.AppSettings["rootpath"];
+				string isCreateMinCss = System.Configuration.ConfigurationSettings.AppSettings["iscreatemincss"];
+				//string lessPath = System.Configuration.ConfigurationSettings.AppSettings["lesspath"];
+				string lessFileNames = System.Configuration.ConfigurationSettings.AppSettings["lessfilenames"];
 
-			DirectoryInfo dirInfo = new DirectoryInfo(lessPath);
-			FileInfo[] fileInfos = dirInfo.GetFiles("*.less", SearchOption.AllDirectories);
+				string[] targetFiles = lessFileNames.Split(("|").ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
-
-			StringBuilder batchFileContent = new StringBuilder();
-			string cmdformat = "lessc {0} > {1}";
-
-			ExecuteCmd execCmd = new ExecuteCmd();
+				//DirectoryInfo dirInfo = new DirectoryInfo(lessPath);
+				//FileInfo[] fileInfos = dirInfo.GetFiles("*.less", SearchOption.AllDirectories);
 
 
-			foreach (var fileInfo in fileInfos) {
+				StringBuilder batchFileContent = new StringBuilder();
+				string cmdformat = "lessc {0} > {1}";
+				string mincmdformat = "lessc -x {0} > {1}";
+				ExecuteCmd execCmd = new ExecuteCmd();
+
+
+				//foreach (var fileInfo in fileInfos) {
 				foreach (string lessFileName in targetFiles) {
 					string[] arr = lessFileName.Split((",").ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-					if (fileInfo.Name.ToLower() == arr[0].ToLower()) {
-						string descFileName = Path.Combine(lessPath, arr[1]);
-						string lesscCommand = string.Format(cmdformat, fileInfo.FullName, descFileName);
+					//\r\n\t\t\t 
+					arr[1] = arr[1].Replace("\r", "").Replace("\n", "").Replace("\t", "").Replace(" ", "");
+					//if (fileInfo.Name.ToLower() == arr[0].ToLower()) {
+					string lessFileFullName = Path.Combine(rootPath, arr[0]);
+					string descFileName = Path.Combine(rootPath, arr[1]);
+					string lesscCommand = string.Format(cmdformat, lessFileFullName, descFileName);
+					execCmd.ExecuteCommandSync(lesscCommand);
+					if (isCreateMinCss == "true") {
+						descFileName = descFileName.Replace(".css", ".min.css");
+						lesscCommand = string.Format(mincmdformat, lessFileFullName, descFileName);
 						execCmd.ExecuteCommandSync(lesscCommand);
-						//Thread.Sleep(1000);
 					}
+					//Thread.Sleep(1000);
+					//}
 				}
+				//}
+				Console.WriteLine("Completed");
+				//Console.ReadLine();
+			} catch (Exception ex) {
+				Console.WriteLine("Error =" + ex.Message);
+				Console.ReadLine();
 			}
-
-			Console.WriteLine("END");
-			//Console.ReadLine();
 		}
 	}
 
