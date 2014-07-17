@@ -146,6 +146,7 @@
     <Content Include="css\plugins\bootstrap-wysihtml5\wysiwyg-editor.css" />
     <Content Include="css\plugins\bootstrap\bootstrap.css" />
     <Content Include="css\plugins\bootstrap\bootstrap.min.css" />
+    <Content Include="css\plugins\c3\c3.css" />
     <Content Include="css\plugins\datatable\datatable-bs3.css" />
     <Content Include="css\plugins\daterangepicker\daterangepicker-bs3.css" />
     <Content Include="css\plugins\entypo\entypo.css" />
@@ -254,6 +255,9 @@
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.min.js" />
+    <Content Include="js\plugins\c3\c3.js" />
+    <Content Include="js\plugins\c3\c3.min.js" />
+    <Content Include="js\plugins\c3\d3.v3.min.js" />
     <Content Include="js\plugins\ckeditor\build-config.js" />
     <Content Include="js\plugins\ckeditor\ckeditor.js" />
     <Content Include="js\plugins\ckeditor\config.js" />
