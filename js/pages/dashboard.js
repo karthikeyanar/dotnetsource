@@ -128,4 +128,10 @@
 		}
 	});
 
+	APP.addResponsiveHandler(function () {
+	    c3SplineChart.resize();
+	    c3BarChart.resize();
+	    c3DonutChart.resize();
+	    c3PieChart.resize();
+	});
 });

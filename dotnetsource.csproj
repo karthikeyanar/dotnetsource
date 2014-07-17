@@ -349,6 +349,7 @@
     <Content Include="less\themes\teal.less" />
     <Content Include="notes.txt" />
     <Content Include="less\variables\variables.less" />
+    <Content Include="less\components\feed.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.min.js" />
