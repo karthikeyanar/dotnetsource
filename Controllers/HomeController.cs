@@ -195,6 +195,18 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+		public ActionResult MorrisChart() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Charts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.MorrisChart;
+			return View();
+		}
+
+		public ActionResult C3Chart() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Charts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.C3Chart;
+			return View();
+		}
+
 		#endregion
 
 		#region Forms

@@ -61,23 +61,94 @@
 	</div>
 </div>
 <div class="row">
-    <div class="col-md-6">
-        <div id="chart"></div>
-    </div>
-</div>
-<div class="row">
-	<div class="col-md-8">
-		<div class="panel panel-white">
+	<div class="col-md-6">
+		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					Area Chart
+					Order History - Spline Chart
 				</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<div id="morris-area-chart" class="morris-chart">
+				<div id="c3SplineChart">
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-dark-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Order History - Bar Chart
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div id="c3BarChart">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					General Stats
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
+								<span></span>
+							</div>
+							<div class="title">
+								New Visitors</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
+								<span></span>
+							</div>
+							<div class="title">
+								Bounce Rate</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
+								<span></span>
+							</div>
+							<div class="title">
+								Transactions</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Order History
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div id="c3PieChart">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div id="c3DonutChart">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -87,10 +158,9 @@
 			<div class="panel-body">
 				<div class="chat-content slimscroll" data-height="350">
 					<ul class="chat-list">
-						<li class="chat in">
-							<a href="#" class="img">
-								<img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
-							</a>	
+						<li class="chat in"><a href="#" class="img">
+							<img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
+						</a>
 							<div class="chat-body notes notes-success">
 								<div class="name">
 									Jarge
@@ -189,19 +259,6 @@
 							</button>
 						</span>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="panel panel-white">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Donut Chart Example
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div id="morris-donut-chart" class="morris-chart">
 				</div>
 			</div>
 		</div>

@@ -60,6 +60,7 @@ namespace dotnetsource.Helpers {
 
 		FlotChart = 37,
 		MorrisChart = 38,
+		C3Chart = 100,
 
 		FormControls = 39,
 		FormComponents = 40,
@@ -179,6 +180,7 @@ namespace dotnetsource.Helpers {
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FlotChart, TopMenuID = (int)TopMenu.Charts, MenuName = "Flot Chart", MenuURL = "/Home/FlotChart" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.MorrisChart, TopMenuID = (int)TopMenu.Charts, MenuName = "Morris Chart", MenuURL = "/Home/MorrisChart" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.C3Chart, TopMenuID = (int)TopMenu.Charts, MenuName = "C3 Chart", MenuURL = "/Home/C3Chart" });
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormControls, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Controls", MenuURL = "/Home/FormControls" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormComponents, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Components", MenuURL = "/Home/FormComponents" });

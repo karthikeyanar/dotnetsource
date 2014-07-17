@@ -151,4 +151,4 @@ $(function() {
 			_Inbox.mails.push(message);
 		});
 	});
-}); 
+});

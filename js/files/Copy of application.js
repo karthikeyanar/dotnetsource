@@ -1,25 +1,60 @@
-﻿$this.slimScroll({
-	width: ($this.attr("data-width")?$this.attr("data-width"):'auto'),
-	height: ($this.attr("data-height")?$this.attr("data-height"):'250px'),
-	size: ($this.attr("data-size")?$this.attr("data-size"):'7px'),
-	color: ($this.attr("data-color")?$this.attr("data-color"):'#000'),
-	position: ($this.attr("data-position")?$this.attr("data-position"):'right'),
-	distance: ($this.attr("data-distance")?$this.attr("data-distance"):'1px'),
-	start: ($this.attr("data-start")?$this.attr("data-start"):'top'),
-	opacity: ($this.attr("data-opacity")?$this.attr("data-opacity"):'0.4'),
-	alwaysVisible: ($this.attr("data-always-visible")?$this.attr("data-always-visible"):'false'),
-	disableFadeOut: ($this.attr("data-disable-fade-out")?$this.attr("data-disable-fade-out"):'false'),
-	railVisible: ($this.attr("data-rail-visible")?$this.attr("data-rail-visible"):'false'),
-	railColor: ($this.attr("data-rail-color")?$this.attr("data-rail-color"):'#333'),
-	railOpacity: ($this.attr("data-rail-opacity")?$this.attr("data-rail-opacity"):'.2'),
-	railDraggable: ($this.attr("data-rail-draggable")?$this.attr("data-rail-draggable"):'true'),
-	railClass: ($this.attr("data-rail-class")?$this.attr("data-rail-class"):'slimScrollRail'),
-	barClass: ($this.attr("data-bar-class")?$this.attr("data-bar-class"):'slimScrollBar'),
-	wrapperClass: ($this.attr("data-wrapper-class")?$this.attr("data-wrapper-class"):'slimScrollDiv'),
-	allowPageScroll: ($this.attr("data-allow-page-scroll")?$this.attr("data-allow-page-scroll"):'false'),
-	wheelStep: ($this.attr("data-wheel-step")?$this.attr("data-wheel-step"):'20'),
-	touchScrollStep: ($this.attr("data-touch-scroll-step")?$this.attr("data-touch-scroll-step"):'200'),
-	borderRadius: ($this.attr("data-border-radius")?$this.attr("data-border-radius"):'7px'),
-	railBorderRadius: ($this.attr("data-rail-border-radius")?$this.attr("data-rail-border-radius"):'7px'),
-	animate: ($this.attr("data-animate")?$this.attr("data-animate"):'true')
+﻿var chartGauge=c3.generate({
+	bindto: '#c3-gauge-chart',
+	data: {
+		columns: [
+            ['data',91.4]
+        ],
+		type: 'gauge'
+	},
+	gauge: {
+		//        label: {
+		//            format: function(value, ratio) {
+		//                return value;
+		//            },
+		//            show: false // to turn off the min/max labels.
+		//        },
+		//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+		//    max: 100, // 100 is default
+		//    units: ' %',
+		//    width: 39 // for adjusting arc thickness
+	},
+	color: {
+		pattern: ['#FF0000','#F97600','#F6C600','#60B044'], // the three color levels for the percentage values.
+		threshold: {
+			//            unit: 'value', // percentage is default
+			//            max: 200, // 100 is default
+			values: [30,60,90,100]
+		}
+	}
 });
+
+setTimeout(function() {
+	chartGauge.load({
+		columns: [['data',10]]
+	});
+},1000);
+
+setTimeout(function() {
+	chartGauge.load({
+		columns: [['data',50]]
+	});
+},2000);
+
+setTimeout(function() {
+	chartGauge.load({
+		columns: [['data',70]]
+	});
+},3000);
+
+setTimeout(function() {
+	chartGauge.load({
+		columns: [['data',0]]
+	});
+},4000);
+
+setTimeout(function() {
+	chartGauge.load({
+		columns: [['data',100]]
+	});
+},5000);
+

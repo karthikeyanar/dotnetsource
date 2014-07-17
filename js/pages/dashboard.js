@@ -1,97 +1,131 @@
 ﻿$(function() {
-    var chart = c3.generate({
-        data: {
-            columns: [
-              ['data1', 30, 200, 100, 400, 150, 250],
-              ['data2', 50, 20, 10, 40, 15, 25]
-            ],
-            onclick: function (d, element) { console.log("onclick", d, element); },
-            onmouseover: function (d) { console.log("onmouseover", d); },
-            onmouseout: function (d) { console.log("onmouseout", d); },
-        }
-    });
-
-
-	var areaChart=Morris.Area({
-		element: 'morris-area-chart',
-		data: [{
-			period: '2010 Q1',
-			iphone: 2666,
-			ipad: null,
-			itouch: 2647
-		},{
-			period: '2010 Q2',
-			iphone: 2778,
-			ipad: 2294,
-			itouch: 2441
-		},{
-			period: '2010 Q3',
-			iphone: 4912,
-			ipad: 1969,
-			itouch: 2501
-		},{
-			period: '2010 Q4',
-			iphone: 3767,
-			ipad: 3597,
-			itouch: 5689
-		},{
-			period: '2011 Q1',
-			iphone: 6810,
-			ipad: 1914,
-			itouch: 2293
-		},{
-			period: '2011 Q2',
-			iphone: 5670,
-			ipad: 4293,
-			itouch: 1881
-		},{
-			period: '2011 Q3',
-			iphone: 4820,
-			ipad: 3795,
-			itouch: 1588
-		},{
-			period: '2011 Q4',
-			iphone: 15073,
-			ipad: 5967,
-			itouch: 5175
-		},{
-			period: '2012 Q1',
-			iphone: 10687,
-			ipad: 4460,
-			itouch: 2028
-		},{
-			period: '2012 Q2',
-			iphone: 8432,
-			ipad: 5713,
-			itouch: 1791
-		}],
-		xkey: 'period',
-		ykeys: ['iphone','ipad','itouch'],
-		labels: ['iPhone','iPad','iPod Touch'],
-		pointSize: 2,
-		hideHover: 'auto',
-		resize: true,
-		redraw: true
+	var c3SplineChart=c3.generate({
+		bindto: '#c3SplineChart',
+		data: {
+			x: 'x',
+			columns: [
+            ['x','2009-01-01','2010-01-01','2011-01-01','2012-01-01','2013-01-01','2014-01-01'],
+            ['Desktop',1000,3000,4000,500,2500,4000],
+			['Mobile',1500,5050,7000,3245,5741,6845],
+			['Tablet',3264,1425,4021,5784,7015,2415],
+			],
+			type: 'spline'
+		},
+		axis: {
+			x: {
+				type: 'timeseries',
+				tick: {
+					format: function(x) { return x.getFullYear(); }
+					//format: '%Y' // format string is also available for timeseries data
+				}
+			}
+		}
+		/*
+		,onclick: function(d,element) {
+		//console.log("onclick",d,element); 
+		}
+		,onmouseover: function(d) {
+		//console.log("onmouseover",d); 
+		}
+		,onmouseout: function(d) {
+		//console.log("onmouseout",d); 
+		}
+		*/
 	});
 
-	var donutChart=Morris.Donut({
-		element: 'morris-donut-chart',
-		data: [{
-			label: "Download Sales",
-			value: 12
-		},{
-			label: "In-Store Sales",
-			value: 30
-		},{
-			label: "Mail-Order Sales",
-			value: 20
-		}],
-		resize: true,
-		redraw: true
+	var c3BarChart=c3.generate({
+		bindto: '#c3BarChart',
+		data: {
+			x: 'x',
+			columns: [
+            ['x','2009-01-01','2010-01-01','2011-01-01','2012-01-01','2013-01-01','2014-01-01'],
+            ['Desktop',1000,3000,4000,500,2500,4000],
+			['Mobile',1500,5050,7000,3245,5741,6845],
+			['Tablet',3264,1425,4021,5784,7015,2415],
+			]
+			,type: 'bar'
+			,colors: {
+				Computer: '#0072C6',
+				Mobile: '#D24726',
+				Labtop: '#8C0095'
+			}
+		},
+		axis: {
+			x: {
+				type: 'timeseries',
+				tick: {
+					format: function(x) { return x.getFullYear(); }
+					//format: '%Y' // format string is also available for timeseries data
+				}
+			}
+		}
+		/*
+		,onclick: function(d,element) {
+		//console.log("onclick",d,element); 
+		}
+		,onmouseover: function(d) {
+		//console.log("onmouseover",d); 
+		}
+		,onmouseout: function(d) {
+		//console.log("onmouseout",d); 
+		}
+		*/
+	});
+	var c3PieChart=c3.generate({
+		bindto: '#c3PieChart',
+		data: {
+			// iris data from R
+			columns: [
+				["Desktop",0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2],
+				["Mobile",1.4,1.5,1.5,1.3,1.5,1.3,1.6,1.0,1.3,1.4,1.0,1.5,1.0,1.4,1.3,1.4,1.5,1.0,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1.0,1.1,1.0,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1.0,1.3,1.2,1.3,1.3,1.1,1.3],
+				["Tablet",2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2.0,1.9,2.1,2.0,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2.0,2.0,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2.0,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2.0,2.3,1.8],
+		    ]
+			,type: 'pie'
+			,colors: {
+				Desktop: '#004B8B',
+				Mobile: '#008A17',
+				Tablet: '#8C0095'
+			}
+		}
+		/*
+		,pie: {
+		onclick: function(d,i) { console.log(d,i); },
+		onmouseover: function(d,i) { console.log(d,i); },
+		onmouseout: function(d,i) { console.log(d,i); }
+		}
+		*/
 	});
 
-	APP.addResponsiveHandler(function() {
-		areaChart.redraw();
-		donutChart.redraw();
+	var c3DonutChart=c3.generate({
+		bindto: '#c3DonutChart',
+		data: {
+			// iris data from R
+			columns: [
+				["Desktop",0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2],
+				["Mobile",1.4,1.5,1.5,1.3,1.5,1.3,1.6,1.0,1.3,1.4,1.0,1.5,1.0,1.4,1.3,1.4,1.5,1.0,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1.0,1.1,1.0,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1.0,1.3,1.2,1.3,1.3,1.1,1.3],
+				["Tablet",2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2.0,1.9,2.1,2.0,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2.0,2.0,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2.0,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2.0,2.3,1.8],
+		    ]
+			,type: 'donut'
+			,colors: {
+				Desktop: '#D24726',
+				Mobile: '#FF8F32',
+				Tablet: '#4617B4'
+			}
+		}
+		/*
+		,pie: {
+		onclick: function(d,i) { console.log(d,i); },
+		onmouseover: function(d,i) { console.log(d,i); },
+		onmouseout: function(d,i) { console.log(d,i); }
+		}
+		*/
 	});
+
+	$('.easy-pie-chart').easyPieChart({
+		animate: 1000,
+		onStep: function(from,to,percent) {
+			$(this.el).find('span').text(Math.round(percent)+"%");
+		}
+	});
+
 });

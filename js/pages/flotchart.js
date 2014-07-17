@@ -158,7 +158,7 @@
 	// panning arrows
 
 	function addArrow(dir,right,top,offset) {
-		$("<img class='button' src='img/arrow-"+dir+".gif' style='right:"+right+"px;top:"+top+"px'>")
+		$("<img class='button' src='/img/arrow-"+dir+".gif' style='right:"+right+"px;top:"+top+"px'>")
 				.appendTo(placeholder)
 				.click(function(e) {
 					e.preventDefault();

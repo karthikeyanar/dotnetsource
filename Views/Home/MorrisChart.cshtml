@@ -1,0 +1,76 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Morris Chart" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal", SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/MorrisChart", ThirdUrlName = "Morris Chart"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+	<link href="/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+}
+@section scripts {
+	<script src="/js/plugins/morris/raphael-2.1.0.min.js" type="text/javascript"></script>
+	<script src="/js/plugins/morris/morris.js" type="text/javascript"></script>
+	<script src="/js/pages/morrischart.js" type="text/javascript"></script>
+}
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Area Chart
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div id="morris-area-chart" class="morris-chart">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Donut Chart  
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div id="morris-donut-chart" class="morris-chart">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Bar Chart 
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div id="morris-bar-chart" class="morris-chart">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Line Chart
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div id="morris-line-chart" class="morris-chart">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -219,9 +219,11 @@
     <Content Include="js\jquery\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="js\jquery\jquery.validate.min.js" />
     <Content Include="js\knockout\knockout-3.1.0.js" />
+    <Content Include="js\pages\c3chart.js" />
+    <Content Include="js\pages\morrischart.js" />
     <Content Include="js\pages\dashboard.js" />
     <Content Include="js\pages\editable.js" />
-    <Content Include="js\pages\flot-chart.js" />
+    <Content Include="js\pages\flotchart.js" />
     <Content Include="js\pages\inbox.js" />
     <Content Include="js\plugins\autofix\jquery.autofix_anything.js" />
     <Content Include="js\plugins\autogrowtextarea\jquery.autogrowtextarea.js" />
@@ -312,6 +314,8 @@
     <Content Include="js\plugins\datatable\datatable-bs3.js" />
     <Content Include="js\plugins\datatable\datatable-bs3.min.js" />
     <Content Include="js\plugins\datatable\jquery.dataTables.min.js" />
+    <Content Include="js\plugins\easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="js\plugins\easy-pie-chart\jquery.easypiechart.min.js" />
     <Content Include="js\plugins\fileinput\fileinput.js" />
     <Content Include="js\plugins\flot\jquery.flot.js" />
     <Content Include="js\plugins\flot\jquery.flot.min.js" />
@@ -617,6 +621,8 @@
     <Content Include="Views\Home\Colors.cshtml" />
     <Content Include="Views\Home\Editable.cshtml" />
     <Content Include="Views\Home\FormExamples.cshtml" />
+    <Content Include="Views\Home\MorrisChart.cshtml" />
+    <Content Include="Views\Home\C3Chart.cshtml" />
     <None Include="Views\Home\Icons.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Modal.cshtml" />

@@ -17,14 +17,14 @@
 		title: 'Enter username'
 	});
 
-	
+
 
 	$('#firstname').editable({
 		validate: function(value) {
 			if($.trim(value)=='') return 'This field is required';
 		}
 	});
-	
+
 	$('#sex').editable({
 		prepend: "not selected",
 		source: [

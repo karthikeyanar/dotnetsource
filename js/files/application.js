@@ -14,7 +14,6 @@
 	this.addResponsiveHandler=function(func) {
 		this.responsiveHandlers.push(func);
 	};
-	this.onAfterInit=null;
 
 	this.isIE8=function() {
 		return self._IsIE8;
@@ -647,10 +646,6 @@
 		self.handleSlider();
 		self.handleMetroCheck();
 		self.hadleSlimScroll();
-
-		if(self.onAfterInit) {
-			self.onAfterInit();
-		}
 
 	};
 }

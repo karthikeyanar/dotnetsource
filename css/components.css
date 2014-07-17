@@ -3043,6 +3043,31 @@ fieldset[disabled] .btn-twitter.active {
 .morris-chart > svg {
   width: 100% !important;
 }
+.easy-pie-chart {
+  height: 110px;
+  line-height: 110px;
+  width: 110px;
+  position: relative;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.easy-pie-chart canvas {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.easy-pie-chart > span,
+.easy-pie-chart-box > .title {
+  color: #333;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.easy-pie-chart-box > .title {
+  font-size: 16px;
+  margin-top: 15px;
+}
 /* line */
 .line {
   background-color: transparent;
