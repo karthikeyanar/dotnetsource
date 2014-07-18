@@ -124,6 +124,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\components.css" />
+    <Content Include="css\pages\editable.css" />
     <Content Include="css\pages\error-page.css" />
     <Content Include="css\pages\fonts.css" />
     <Content Include="css\pages\inbox.css" />
@@ -236,8 +237,11 @@
     <Content Include="js\plugins\bootstrap-daterangepicker\daterangepicker.min.js" />
     <Content Include="js\plugins\bootstrap-daterangepicker\moment.js" />
     <Content Include="js\plugins\bootstrap-daterangepicker\moment.min.js" />
+    <Content Include="js\plugins\bootstrap-editable\address.js" />
     <Content Include="js\plugins\bootstrap-editable\bootstrap-editable.js" />
     <Content Include="js\plugins\bootstrap-editable\bootstrap-editable.min.js" />
+    <Content Include="js\plugins\bootstrap-editable\moment.min.js" />
+    <Content Include="js\plugins\bootstrap-editable\typeahead.js" />
     <Content Include="js\plugins\bootstrap-hover-dropdown\bootstrap-hover-dropdown.js" />
     <Content Include="js\plugins\bootstrap-modal\bootstrap-modal.js" />
     <Content Include="js\plugins\bootstrap-modal\bootstrap-modal.min.js" />
@@ -605,6 +609,7 @@
     <Content Include="packages\Newtonsoft.Json.6.0.3\tools\install.ps1" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nupkg" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nuspec" />
+    <None Include="php\get.php" />
     <None Include="php\inbox.php" />
     <Content Include="Views\Home\Alerts.cshtml" />
     <Content Include="Views\Home\BoxLayout.cshtml" />

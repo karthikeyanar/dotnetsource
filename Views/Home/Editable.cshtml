@@ -12,13 +12,24 @@
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
 	<link href="/css/plugins/select2/select2.css" rel="stylesheet" type="text/css" />
+	<!-- bootstrap datepicker -->
+	<link href="/css/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+	<!-- bootstrap editable -->
 	<link href="/css/plugins/bootstrap-editable/bootstrap-editable.css" rel="stylesheet" type="text/css" />
+	<!-- editable page -->
+	<link href="/css/pages/editable.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
-	<!-- select2 -->
-	<script src="/js/plugins/select2/select2.min.js" type="text/javascript"></script>
 	<!-- bootstrap editable -->
 	<script src="/js/plugins/bootstrap-editable/bootstrap-editable.js" type="text/javascript"></script>
+	<!-- address -->
+	<script src="/js/plugins/bootstrap-editable/address.js" type="text/javascript"></script>
+	<!-- select2 -->
+	<script src="/js/plugins/select2/select2.min.js" type="text/javascript"></script>
+	<!-- bootstrap datepicker -->
+	<script src="/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+	<!-- moment -->
+	<script src="/js/plugins/bootstrap-editable/moment.min.js" type="text/javascript"></script>
 	<script src="/js/pages/editable.js" type="text/javascript"></script>
 }
 <div class="row">
@@ -29,15 +40,37 @@
 					Editable</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<p>
-					Click to edit</p>
+				<div class="margin-bottom-10">
+					<div class="pull-left">
+						<p>
+							Click to edit</p>
+					</div>
+					<div class="pull-right margin-left-10">
+						<button class="btn btn-success" id="enable">
+							Enable / Disable</button>
+					</div>
+					<div class="pull-right margin-left-10">
+						<div class="checkbox fa-checkbox">
+							<input type="checkbox" id="autoopen" value="option1" /><label for="autoopen">
+								Auto-open next field</label>
+						</div>
+					</div>
+					<div class="pull-right">
+						<div class="checkbox fa-checkbox">
+							<input type="checkbox" id="inlineEdit" value="option1" @(Request["mode"] == "inline" ? "checked" : "") /><label for="inlineEdit">
+								Inline editing</label>
+						</div>
+					</div>
+					<div class="clearfix">
+						&nbsp;</div>
+				</div>
 				<table id="user" class="table table-bordered table-striped" style="clear: both">
 					<tbody>
 						<tr>
-							<td width="35%">
+							<td style="width: 35%">
 								Simple text field
 							</td>
-							<td width="65%">
+							<td style="width: 65%">
 								<a href="#" id="username" data-type="text" data-pk="1" data-title="Enter username">superuser</a>
 							</td>
 						</tr>
@@ -62,7 +95,7 @@
 								Select, remote array, no buttons
 							</td>
 							<td>
-								<a href="#" id="group" data-type="select" data-pk="1" data-value="5" data-source="/groups" data-title="Select group">Admin</a>
+								<a href="#" id="group" data-type="select" data-pk="1" data-value="5" data-source="/php/get.php?type=groups" data-title="Select group">Admin</a>
 							</td>
 						</tr>
 						<tr>
@@ -70,7 +103,7 @@
 								Select, error while loading
 							</td>
 							<td>
-								<a href="#" id="status" data-type="select" data-pk="1" data-value="0" data-source="/status" data-title="Select status">Active</a>
+								<a href="#" id="status" data-type="select" data-pk="1" data-value="0" data-source="status" data-title="Select status">Active</a>
 							</td>
 						</tr>
 						<tr>
@@ -78,7 +111,7 @@
 								Datepicker
 							</td>
 							<td>
-								<span class="notready">not implemented for Bootstrap 3 yet</span>
+								<a href="#" id="dp" data-type="date" data-pk="1" data-url="/php/post.php" data-title="Select date">15/05/1984</a>
 							</td>
 						</tr>
 						<tr>
@@ -103,14 +136,6 @@
 							</td>
 							<td>
 								<a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments">awesome user!</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								Twitter typeahead.js
-							</td>
-							<td>
-								<a href="#" id="state2" data-type="typeaheadjs" data-pk="1" data-placement="right" data-title="Start typing State.."></a>
 							</td>
 						</tr>
 						<tr>

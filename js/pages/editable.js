@@ -2,6 +2,19 @@
 
 	//defaults
 	$.fn.editable.defaults.url='/php/post.php';
+	if($("#inlineEdit").get(0).checked) {
+		$.fn.editable.defaults.mode='inline';
+	}
+
+	$("#inlineEdit").change(function() {
+		var mode="";
+		if(this.checked)
+			mode="inline";
+		if(mode=="inline")
+			window.location.href="/Home/Editable?mode="+mode;
+		else
+			window.location.href="/Home/Editable";
+	});
 
 	//enable / disable
 	$('#enable').click(function() {
@@ -44,6 +57,14 @@
 	});
 
 	$('#status').editable();
+
+	$('#dp').editable({
+		format: 'yyyy-mm-dd',
+		viewformat: 'dd/mm/yyyy',
+		datepicker: {
+			weekStart: 1
+		}
+	});
 
 	$('#group').editable({
 		showbuttons: false
@@ -89,14 +110,6 @@
 
 	$('#state').editable({
 		source: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
-	});
-
-	$('#state2').editable({
-		value: 'California',
-		typeahead: {
-			name: 'state',
-			local: ["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]
-		}
 	});
 
 	$('#fruits').editable({

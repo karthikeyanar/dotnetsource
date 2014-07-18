@@ -12,7 +12,7 @@
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
 	<!-- bootstrap datepicker -->
-	<link href="/css/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/plugins/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
 	<!-- bootstrap datepicker -->
@@ -99,7 +99,7 @@
 					<label for="textfield" class="col-md-4 control-label">
 						Today Button</label>
 					<div class="col-md-7">
-						<input type="text" id="Text10" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-today-btn="true" />
+						<input type="text" id="Text10" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-today-btn="linked" />
 					</div>
 				</div>
 				<div class="form-group">
@@ -111,7 +111,7 @@
 				</div>
 				<div class="form-group">
 					<label for="textfield" class="col-md-4 control-label">
-						Component</label>
+						Component (Start,End)</label>
 					<div class="col-md-8 input-xlarge">
 						<div class="input-group input-daterange" data-provide="datepicker">
 							<input type="text" class="form-control" name="start" placeholder="Start" />
@@ -124,19 +124,9 @@
 					<label for="textfield" class="col-md-4 control-label">
 						Component</label>
 					<div class="col-md-7 input-large">
-						<div id="component" class="input-group date" data-provide="datepicker">
+						<div class="input-group date" data-provide="datepicker">
 							<input type="text" class="form-control" placeholder="Select date" />
 							<span class="input-group-addon"><i class="fa fa-calendar cursor-pointer"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Component</label>
-					<div class="col-md-7 input-large">
-						<div id="component" class="input-group">
-							<input type="text" class="form-control" placeholder="Select date" data-provide="datepicker" />
-							<span class="input-group-addon " data-provide="datepicker-reset"><i class="fa fa-times cursor-pointer"></i></span><span class="input-group-addon" data-provide="datepicker-show"><i class="fa fa-calendar cursor-pointer"></i></span>
 						</div>
 					</div>
 				</div>
