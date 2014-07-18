@@ -150,13 +150,8 @@
     <Content Include="css\plugins\c3\c3.css" />
     <Content Include="css\plugins\datatable\datatable-bs3.css" />
     <Content Include="css\plugins\daterangepicker\daterangepicker-bs3.css" />
-    <Content Include="css\plugins\entypo\entypo.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.min.css" />
-    <Content Include="css\plugins\fonts\entypo.eot" />
-    <Content Include="css\plugins\fonts\entypo.svg" />
-    <Content Include="css\plugins\fonts\entypo.ttf" />
-    <Content Include="css\plugins\fonts\entypo.woff" />
     <Content Include="css\plugins\fonts\fontawesome-webfont.eot" />
     <Content Include="css\plugins\fonts\fontawesome-webfont.svg" />
     <Content Include="css\plugins\fonts\fontawesome-webfont.ttf" />
@@ -354,6 +349,7 @@
     <Content Include="notes.txt" />
     <Content Include="less\variables\variables.less" />
     <Content Include="less\components\feed.less" />
+    <Content Include="less\components\input-groups.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.js" />
     <Content Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2.min.js" />
@@ -682,7 +678,6 @@
     <Content Include="Views\Home\TimePicker.cshtml" />
     <Content Include="Views\Home\Wells.cshtml" />
     <Content Include="Views\Shared\_PublicLogo.cshtml" />
-    <None Include="Views\Shared\_Entypoicons.cshtml" />
     <None Include="Views\Shared\_Glyphicons.cshtml" />
     <None Include="Views\Shared\_FontAweSome.cshtml" />
   </ItemGroup>

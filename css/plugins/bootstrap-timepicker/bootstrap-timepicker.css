@@ -105,6 +105,9 @@
 .bootstrap-timepicker-widget .modal-content {
   padding: 4px;
 }
+.bootstrap-timepicker-widget.dropdown-menu {
+    min-width: 180px;
+}
 @media (min-width: 767px) {
   .bootstrap-timepicker-widget.modal {
     width: 200px;

@@ -57,24 +57,12 @@
 	});
 
 	$('#status').editable();
-
-	$('#dp').editable({
-		format: 'yyyy-mm-dd',
-		viewformat: 'dd/mm/yyyy',
-		datepicker: {
-			weekStart: 1
-		}
-	});
+     
 
 	$('#group').editable({
 		showbuttons: false
 	});
-
-	$('#vacation').editable({
-		datepicker: {
-			todayBtn: 'linked'
-		}
-	});
+     
 
 	$('#dob').editable();
 
