@@ -67,6 +67,7 @@ namespace dotnetsource.Helpers {
 		FormLayouts = 41,
 		FormValidation = 42,
 		FormExamples = 55,
+		FormWizard = 101,
 
 		Table = 43,
 		DataTable = 44,
@@ -187,6 +188,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormLayouts, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Layouts", MenuURL = "/Home/FormLayouts" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormValidation, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Validation", MenuURL = "/Home/FormValidation" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormExamples, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Examples", MenuURL = "/Home/FormExamples" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.FormWizard, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Wizard", MenuURL = "/Home/FormWizard" });
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Table, TopMenuID = (int)TopMenu.Tables, MenuName = "Table", MenuURL = "/Home/Table" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.DataTable, TopMenuID = (int)TopMenu.Tables, MenuName = "DataTable", MenuURL = "/Home/DataTable" });

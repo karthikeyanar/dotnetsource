@@ -481,6 +481,10 @@ a.bg-white:hover {
 .table-view.radio input[type="radio"] {
   margin: 0;
 }
+/* select block level */
+.select-block-level {
+  width: 100%;
+}
 .btn {
   border-radius: 0;
   transition: background-color 0.15s linear 0s;

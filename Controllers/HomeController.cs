@@ -239,6 +239,12 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormExamples;
 			return View();
 		}
+
+		public ActionResult FormWizard() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormWizard;
+			return View();
+		}
 		#endregion
 
 		#region Table
