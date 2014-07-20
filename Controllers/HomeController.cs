@@ -43,18 +43,12 @@ namespace dotnetsource.Controllers {
 
 		#region UIFeatures
 
-		public ActionResult Alerts() {
+		public ActionResult General() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Alerts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.General;
 			return View();
 		}
-
-        public ActionResult Elements()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Elements;
-            return View();
-        }
+         
 
         public ActionResult CheckBoxAndRadio()
         {
@@ -62,37 +56,14 @@ namespace dotnetsource.Controllers {
             ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.CheckBoxAndRadio;
             return View();
         }
-
-		public ActionResult ToolTipAndPopover() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ToolTipAndPopover;
-			return View();
-		}
-
-		public ActionResult Dropdowns() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Dropdowns;
-			return View();
-		}
+         
 
 		public ActionResult Buttons() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Buttons;
 			return View();
 		}
-
-		public ActionResult ListGroup() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ListGroup;
-			return View();
-		}
-
-		public ActionResult ProgressBars() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ProgressBars;
-			return View();
-		}
-
+          
 		public ActionResult Tabs() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Tabs;
@@ -110,13 +81,7 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Colors;
 			return View();
 		}
-
-		public ActionResult LabelsAndBadges() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.LabelsAndBadges;
-			return View();
-		}
-
+         
 		public ActionResult Panels() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Panels;

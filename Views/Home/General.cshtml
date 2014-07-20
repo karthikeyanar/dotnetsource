@@ -1,0 +1,870 @@
+﻿@{
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "General" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/General",
+        SecondUrlName = "UI Features",
+        ThirdUrl = "/Home/General",
+        ThirdUrlName = "General"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+    <!-- inputlimiter -->
+    <link href="/css/plugins/jquery-inputlimiter/jquery.inputlimiter.1.0.css" rel="stylesheet" type="text/css" />
+}
+@section scripts {
+    <!-- inputlimiter -->
+    <script src="/js/plugins/inputlimiter/jquery.inputlimiter.1.3.1.min.js" type="text/javascript"></script>
+    <!-- autogrow textarea -->
+    <script src="/js/plugins/autogrowtextarea/jquery.autogrowtextarea.min.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            // Make it more personal
+            $('#textareaCC').inputlimiter({
+                limit: 50,
+                remText: 'You only have %n character%s remaining...',
+                remFullText: 'Stop typing! You\'re not allowed any more characters!',
+                limitText: 'You\'re allowed to input %n character%s into this field.'
+            });
+            // auto grow text area
+            $('#textareaAR').autoGrow();
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Alerts
+                </h3>
+                @Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <h4>
+                    Alert Warning
+                </h4>
+                <div class="alert alert-warning alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert">
+                        &times;
+                    </button>
+                    <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                </div>
+                <h4>
+                    Alert Error
+                </h4>
+                <div class="alert alert-danger alert-dismissable">
+                    <button data-dismiss="alert" class="close" type="button">
+                        &times;
+                    </button>
+                    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                </div>
+                <h4>
+                    Alert Success
+                </h4>
+                <div class="alert alert-success alert-dismissable">
+                    <button data-dismiss="alert" class="close" type="button">
+                        &times;
+                    </button>
+                    <strong>Well done!</strong> You successfully read this important alert message.
+                </div>
+                <h4>
+                    Alert Info
+                </h4>
+                <div class="alert alert-info alert-dismissable">
+                    <button data-dismiss="alert" class="close" type="button">
+                        &times;
+                    </button>
+                    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Notes
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <h4 class="no-margin-top">
+                    Border
+                </h4>
+                <div class="notes notes-default">
+                    <h4>
+                        Default
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="notes notes-primary">
+                    <h4>
+                        Primary
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="notes notes-success">
+                    <h4>
+                        Success
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="notes notes-danger">
+                    <h4>
+                        Danger
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="notes notes-warning">
+                    <h4>
+                        Warning
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="notes notes-info">
+                    <h4>
+                        Info
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Tooltips
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-default margin-right-5" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                    Tooltip on left
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                    Tooltip on right
+                </button>
+            </div>
+        </div>
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Popovers
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-default margin-right-5" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on left
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on top
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus	sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on bottom
+                </button>
+                <button type="button" class="btn btn-default margin-right-5" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on right
+                </button>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">List Group</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <h3>
+                    Basic
+                </h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <h3>
+                    Badges
+                </h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="badge">14</span> Cras justo odio </li>
+                </ul>
+                <h3>
+                    Linked items
+                </h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Cras justo odio </a><a href="#" class="list-group-item">Dapibus ac facilisis in</a> <a href="#" class="list-group-item">Morbi leo risus</a> <a href="#" class="list-group-item">Porta ac consectetur ac</a> <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+                <h3>
+                    Linked items
+                </h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                </ul>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a> <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a> <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a> <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+                </div>
+                <h3>
+                    Custom content
+                </h3>
+                <div class="list-group">
+                    <a class="list-group-item active" href="#">
+                        <h4 class="list-group-item-heading">
+                            List group item heading
+                        </h4>
+                        <p class="list-group-item-text">
+                            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                        </p>
+                    </a><a class="list-group-item" href="#">
+                        <h4 class="list-group-item-heading">
+                            List group item heading
+                        </h4>
+                        <p class="list-group-item-text">
+                            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                        </p>
+                    </a><a class="list-group-item" href="#">
+                        <h4 class="list-group-item-heading">
+                            List group item heading
+                        </h4>
+                        <p class="list-group-item-text">
+                            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Pagination</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <h4>Default Pagination</h4>
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+                <h4>Disabled and active states</h4>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+                <h4>Sizing</h4>
+                <ul class="pagination pagination-lg">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+                <h4>Pager</h4>
+                <ul class="pager">
+                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+                <h4>Aligned links</h4>
+                <ul class="pager">
+                    <li class="previous"><a href="#">&larr; Older</a></li>
+                    <li class="next"><a href="#">Newer &rarr;</a></li>
+                </ul>
+                <h4>Optional disabled state</h4>
+                <ul class="pager">
+                    <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                    <li class="next"><a href="#">Newer &rarr;</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Thumbnails</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <h4>Default example</h4>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <a class="thumbnail" href="#">
+                            <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzIiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcyIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg2IiB5PSI5MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE3MngxODA8L3RleHQ+PC9zdmc+">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a class="thumbnail" href="#">
+                            <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzIiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcyIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg2IiB5PSI5MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE3MngxODA8L3RleHQ+PC9zdmc+">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a class="thumbnail" href="#">
+                            <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzIiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcyIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg2IiB5PSI5MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE3MngxODA8L3RleHQ+PC9zdmc+">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a class="thumbnail" href="#">
+                            <img alt="100%x180" data-src="holder.js/100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzIiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcyIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg2IiB5PSI5MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE3MngxODA8L3RleHQ+PC9zdmc+">
+                        </a>
+                    </div>
+                </div>
+                <h4>Custom content</h4>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img alt="100%x200" data-src="holder.js/100%x200" style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default" href="#">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img alt="100%x200" data-src="holder.js/100%x200" style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default" href="#">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img alt="100%x200" data-src="holder.js/100%x200" style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p><a role="button" class="btn btn-primary" href="#">Button</a> <a role="button" class="btn btn-default" href="#">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-warning">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Supported controls
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <span class="help-text">Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.</span>
+                <pre><code class="html">.form-control</code></pre>
+                <input type="text" class="form-control" placeholder="Text input" />
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Checkboxes and Radios
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" />
+                        Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />
+                        Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+                        Option two can be something else and selecting it will deselect option one
+                    </label>
+                </div>
+                <h3 class="panel-title">
+                    Inline checkboxes
+                </h3>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1" />
+                    1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2" />
+                    2
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option3" />
+                    3
+                </label>
+            </div>
+        </div>
+        <div class="panel panel-purple">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Control sizing
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <input class="form-control input-lg" type="text" placeholder="Input Large" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Default Input" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-sm" type="text" placeholder="Input Small" />
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-lg">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control input-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-cardovan">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Column sizing
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-md-2">
+                        <input type="text" class="form-control" placeholder=".col-xs-2 .col-sm-2 .col-md-2 .col-md-2" />
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-md-3">
+                        <input type="text" class="form-control" placeholder=".col-xs-3 .col-sm-3 .col-md-3 .col-md-3" />
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-md-4">
+                        <input type="text" class="form-control" placeholder=".col-xs-4 .col-sm-4 .col-md-4 .col-md-4" />
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-md-3">
+                        <input type="text" class="form-control" placeholder=".col-xs-3 .col-sm-3 .col-md-3 .col-md-4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-teal">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Help text
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <input type="text" class="form-control" />
+                <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+            </div>
+        </div>
+        <div class="panel panel-pink">
+            <div class="panel-heading panel-title">
+                <h3 class="panel-title">
+                    Textarea
+                </h3>
+            </div>
+            <div class="panel-body">
+                <form method="post" class="form-horizontal form-striped">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label font-normal">
+                            Textarea
+                        </label>
+                        <div class="col-md-9">
+                            <textarea rows="5" cols="80" class="form-control col-xs-2"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">
+                            Textarea with Auto Resize
+                        </label>
+                        <div class="col-md-9">
+                            <textarea rows="5" cols="80" id="textareaAR" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">
+                            Textarea with Character Count
+                        </label>
+                        <div class="col-md-9">
+                            <textarea id="textareaCC" rows="5" cols="80" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Dropdowns
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="btn-group">
+                    <button class="btn btn-default" type="button" data-toggle="dropdown">
+                        Dropdown <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Dropdown Alignment
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="btn-group">
+                    <button class="btn btn-default" type="button" data-toggle="dropdown">
+                        Dropdown Menu Left <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default" type="button" data-toggle="dropdown">
+                        Dropdown Menu Right <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Sub menus on dropdown
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="pull-left margin-right-10">
+                    <p class="muted">
+                        Default
+                    </p>
+                    <div class="dropdown clearfix">
+                        <ul aria-labelledby="dropdownMenu" style="display: block; position: static" role="menu" class="dropdown-menu">
+                            <li><a href="#" tabindex="-1">Action</a> </li>
+                            <li><a href="#" tabindex="-1">Another action</a> </li>
+                            <li><a href="#" tabindex="-1">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">More options</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-left margin-right-10">
+                    <p class="muted">
+                        Dropup
+                    </p>
+                    <div class="dropup">
+                        <ul aria-labelledby="dropdownMenu" style="display: block; position: static" role="menu" class="dropdown-menu">
+                            <li><a href="#" tabindex="-1">Action</a> </li>
+                            <li><a href="#" tabindex="-1">Another action</a> </li>
+                            <li><a href="#" tabindex="-1">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">More options</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-left margin-right-10">
+                    <p class="muted">
+                        Left submenu
+                    </p>
+                    <div class="dropdown">
+                        <ul aria-labelledby="dropdownMenu" style="display: block; position: static" role="menu" class="dropdown-menu">
+                            <li><a href="#" tabindex="-1">Action</a> </li>
+                            <li><a href="#" tabindex="-1">Another action</a> </li>
+                            <li><a href="#" tabindex="-1">Something else here</a> </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">More options</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                    <li><a href="#" tabindex="-1">Second level link</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-dark-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Badges
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <h4>
+                    Available variations
+                </h4>
+                <span class="badge margin-right-10">42</span><span class="badge badge-primary margin-right-10">42</span><span class="badge badge-success margin-right-10">42</span> <span class="badge badge-info margin-right-10">42</span> <span class="badge badge-warning margin-right-10">42</span> <span class="badge badge-danger">42</span>
+                <div class="clearfix">&nbsp;</div>
+                <a href="#">Inbox <span class="badge">42</span></a>
+                <h4>
+                    Adapts to active nav states
+                </h4>
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages <span class="badge">3</span></a></li>
+                </ul>
+                <br />
+                <ul style="max-width: 260px;" class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#"><span class="badge pull-right">42</span> Home </a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#"><span class="badge pull-right">3</span> Messages </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Progress bars</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <h3>
+                    Basic
+                </h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    Medium
+                </h3>
+                <div class="progress progress-md">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    Small
+                </h3>
+                <div class="progress progress-sm">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    Extra Small
+                </h3>
+                <div class="progress progress-xs">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    With Label
+                </h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        60%
+                    </div>
+                </div>
+                <h3>
+                    Contextual alternatives
+                </h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    Striped
+                </h3>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                </div>
+                <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete (danger)</span>
+                    </div>
+                </div>
+                <h3>
+                    Animated
+                </h3>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                        <span class="sr-only">45% Complete</span>
+                    </div>
+                </div>
+                <h3>
+                    Stacked
+                </h3>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width: 35%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" style="width: 10%">
+                        <span class="sr-only">10% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Responsive embed</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe allowfullscreen="" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" class="embed-responsive-item"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Media object</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="media">
+                    <a href="#" class="pull-left">
+                        <img alt="64x64" data-src="holder.js/64x64" class="media-object" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </div>
+                <div class="media">
+                    <a href="#" class="pull-left">
+                        <img alt="64x64" data-src="holder.js/64x64" class="media-object" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <div class="media">
+                            <a href="#" class="pull-left">
+                                <img alt="64x64" data-src="holder.js/64x64" class="media-object" style="width: 64px; height: 64px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Nested media heading</h4>
+                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

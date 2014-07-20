@@ -22,18 +22,12 @@ namespace dotnetsource.Helpers {
 		DashBoard = 10,
 
 
-		Alerts = 11,
-        Elements = 103,
+		General = 11,
         CheckBoxAndRadio = 104,
-		ToolTipAndPopover = 12,
-		Dropdowns = 13,
 		Buttons = 14,
-		ListGroup = 15,
-		ProgressBars = 16,
 		Tabs = 17,
 		Wells = 18,
 		Colors = 19,
-		LabelsAndBadges = 20,
 		Typography = 21,
 		Panels = 22,
 		Tiles = 23,
@@ -152,17 +146,11 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarHorizontalMenu, TopMenuID = (int)TopMenu.Layouts, MenuName = "Horizontal & Sidebar Menu", MenuURL = "/Home/SidebarHorizontalMenu" });
 
 
-			Menus.Add(new Menu { MenuID = (int)SubMenu.Alerts, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Alerts", MenuURL = "/Home/Alerts" });
-            Menus.Add(new Menu { MenuID = (int)SubMenu.Elements, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Elements", MenuURL = "/Home/Elements" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.General, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "General", MenuURL = "/Home/General" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.CheckBoxAndRadio, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "CheckBoxAndRadio", MenuURL = "/Home/CheckBoxAndRadio" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.ToolTipAndPopover, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "ToolTip & Popover", MenuURL = "/Home/ToolTipAndPopover" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.Dropdowns, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Dropdowns", MenuURL = "/Home/Dropdowns" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Buttons, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Buttons", MenuURL = "/Home/Buttons" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.ListGroup, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "List Group", MenuURL = "/Home/ListGroup" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.ProgressBars, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Progress Bars", MenuURL = "/Home/ProgressBars" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Tabs, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Tabs", MenuURL = "/Home/Tabs" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Colors, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Colors", MenuURL = "/Home/Colors" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.LabelsAndBadges, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Labels & Badges", MenuURL = "/Home/LabelsAndBadges" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Typography, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Typography", MenuURL = "/Home/Typography" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Panels, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Panels", MenuURL = "/Home/Panels" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Tiles, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Tiles", MenuURL = "/Home/Tiles" });

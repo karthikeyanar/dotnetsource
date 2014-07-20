@@ -1,13 +1,17 @@
 ﻿dashboard tab feeds - completed
-header top menu hover problem
-recreate general page
-widget ui
-navbar, nav pills
+header top menu hover problem - completed
+recreate general page - completed
+remove app.metroalert,app.confirm - completed
+pagination, thumbnail add in general page - completed
+widget ui page
+navbar, nav pills page
 tab page change
 wells
 masked input
 drag and drop file upload
 jquery file upload manager
+block ui page, apply blockui to panel refresh
+add popoverconfirm page
 select2 page
 jquery ui page
 search page

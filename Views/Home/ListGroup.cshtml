@@ -1,75 +1,21 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "List Group" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/", FirstUrlName = "Home",
-		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
-		ThirdUrl = "/Home/ListGroup", ThirdUrlName = "List Group"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "List Group" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/General",
+        SecondUrlName = "UI Features",
+        ThirdUrl = "/Home/ListGroup",
+        ThirdUrlName = "List Group"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-success">
-			<div class="panel-heading">
-                <h3 class="panel-title">List Group</h3>@Html.Partial("_PanelCloseTools")
-</div>
-			<!-- /.panel-heading -->
-			<div class="panel-body">
-				<h3>
-					Basic</h3>
-				<ul class="list-group">
-					<li class="list-group-item">Cras justo odio</li>
-					<li class="list-group-item">Dapibus ac facilisis in</li>
-					<li class="list-group-item">Morbi leo risus</li>
-					<li class="list-group-item">Porta ac consectetur ac</li>
-					<li class="list-group-item">Vestibulum at eros</li>
-				</ul>
-				<h3>
-					Badges</h3>
-				<ul class="list-group">
-					<li class="list-group-item"><span class="badge">14</span> Cras justo odio </li>
-				</ul>
-				<h3>
-					Linked items</h3>
-				<div class="list-group">
-					<a href="#" class="list-group-item active">Cras justo odio </a><a href="#" class="list-group-item">Dapibus ac facilisis in</a> <a href="#" class="list-group-item">Morbi leo risus</a> <a href="#" class="list-group-item">Porta ac consectetur ac</a> <a href="#" class="list-group-item">Vestibulum at eros</a>
-				</div>
-				<h3>
-					Linked items</h3>
-				<ul class="list-group">
-					<li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-					<li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-					<li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-					<li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
-				</ul>
-				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a> <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a> <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a> <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
-				</div>
-				<h3>
-					Custom content</h3>
-				<div class="list-group">
-					<a class="list-group-item active" href="#">
-						<h4 class="list-group-item-heading">
-							List group item heading</h4>
-						<p class="list-group-item-text">
-							Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-					</a><a class="list-group-item" href="#">
-						<h4 class="list-group-item-heading">
-							List group item heading</h4>
-						<p class="list-group-item-text">
-							Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-					</a><a class="list-group-item" href="#">
-						<h4 class="list-group-item-heading">
-							List group item heading</h4>
-						<p class="list-group-item-text">
-							Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-					</a>
-				</div>
-			</div>
-			<!-- /.panel-body -->
-		</div>
-	</div>
+    <div class="col-md-12">
+      
+    </div>
 </div>
