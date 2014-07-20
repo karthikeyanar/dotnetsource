@@ -63,12 +63,6 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Buttons;
 			return View();
 		}
-          
-		public ActionResult Tabs() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Tabs;
-			return View();
-		}
 
 		public ActionResult Typography() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
@@ -76,11 +70,25 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+        public ActionResult Navs()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Navs;
+            return View();
+        }
+
 		public ActionResult Colors() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Colors;
 			return View();
 		}
+
+        public ActionResult Wells()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Wells;
+            return View();
+        }
          
 		public ActionResult Panels() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;

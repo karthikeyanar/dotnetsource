@@ -3,10 +3,8 @@ header top menu hover problem - completed
 recreate general page - completed
 remove app.metroalert,app.confirm - completed
 pagination, thumbnail add in general page - completed
-widget ui page
-navbar, nav pills page
-tab page change
-wells
+navbar, nav pills page - completed
+wells - completed
 masked input
 drag and drop file upload
 jquery file upload manager

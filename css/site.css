@@ -21,14 +21,79 @@
 .logo .name {
   padding-left: 40px;
 }
-.header {
-  border: 0;
-  z-index: 10000;
-}
 .header.navbar {
   border-radius: 0;
   box-shadow: none;
   margin-bottom: 0;
+  border: 0;
+  z-index: 10000;
+  position: relative;
+  min-height: 44px;
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .header.navbar {
+    border-radius: 0;
+  }
+}
+.header.navbar-fixed-top,
+.header.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+@media (min-width: 768px) {
+  .header.navbar-fixed-top,
+  .header.navbar-fixed-bottom {
+    border-radius: 0;
+  }
+}
+.header .navbar-brand {
+  float: left;
+  padding: 13px 15px;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 18px;
+  height: 44px;
+}
+.header .navbar-brand:hover,
+.header .navbar-brand:focus {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .header.navbar > .container .header .navbar-brand,
+  .header.navbar > .container-fluid .header .navbar-brand {
+    margin-left: -15px;
+  }
+}
+.header .navbar-nav {
+  margin: 6.5px -15px;
+}
+.header .navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 18px;
+}
+@media (min-width: 768px) {
+  .header .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .header .navbar-nav > li {
+    float: left;
+  }
+  .header .navbar-nav > li > a {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .header .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+}
+.header .navbar-form {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .header .navbar-header {
   float: left;

@@ -1,41 +1,162 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Wells" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/", FirstUrlName = "Home",
-		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
-		ThirdUrl = "/Home/Wells", ThirdUrlName = "Wells"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Wells" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/General",
+        SecondUrlName = "UI Features",
+        ThirdUrl = "/Home/Wells",
+        ThirdUrlName = "Wells"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-pink">
-			<div class="panel-heading">
-				<h3 class="panel-title">Wells</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div class="well">
-					<h4>
-						Normal Well</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-				</div>
-				<div class="well well-lg">
-					<h4>
-						Large Well</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-				</div>
-				<div class="well well-sm">
-					<h4>
-						Small Well</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="col-md-6">
+        <div class="panel panel-pink">
+            <div class="panel-heading">
+                <h3 class="panel-title">Wells</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="well">
+                    <h4>
+                        Normal Well
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="well well-lg">
+                    <h4>
+                        Large Well
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+                <div class="well well-sm">
+                    <h4>
+                        Small Well
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Wells - Colors</h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="well bg-primary no-border">
+                            <h4>
+                                Primary
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-success no-border">
+                            <h4>
+                                Success
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-info no-border">
+                            <h4>
+                                Info
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-warning no-border">
+                            <h4>
+                                Warning
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-danger no-border">
+                            <h4>
+                                Danger
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div><div class="well bg-purple no-border">
+                            <h4>
+                                Purple
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="well bg-cardovan no-border">
+                            <h4>
+                                Cardovan
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-teal no-border">
+                            <h4>
+                                Teal
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-pink no-border">
+                            <h4>
+                                Pink
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-dark-blue no-border">
+                            <h4>
+                                Dark Blue
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-blue no-border">
+                            <h4>
+                                Blue
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                        <div class="well bg-black no-border">
+                            <h4>
+                                Black
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
