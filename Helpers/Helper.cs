@@ -47,6 +47,8 @@ namespace dotnetsource.Helpers {
 		TimePicker = 56,
 		Switch = 57,
 		Select = 58,
+        InputMask = 120,
+        DropZoneFileUpload = 121,
 		Spinner = 59,
 		Editable = 60,
 		ColorPicker = 34,
@@ -165,6 +167,8 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.TimePicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Time Picker", MenuURL = "/Home/TimePicker" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Switch, TopMenuID = (int)TopMenu.Plugins, MenuName = "Switch", MenuURL = "/Home/Switch" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Select, TopMenuID = (int)TopMenu.Plugins, MenuName = "Select", MenuURL = "/Home/Select" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.InputMask, TopMenuID = (int)TopMenu.Plugins, MenuName = "Input Mask", MenuURL = "/Home/InputMask" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.DropZoneFileUpload, TopMenuID = (int)TopMenu.Plugins, MenuName = "DropZone File Upload", MenuURL = "/Home/DropZoneFileUpload" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Spinner, TopMenuID = (int)TopMenu.Plugins, MenuName = "Spinner", MenuURL = "/Home/Spinner" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Editable, TopMenuID = (int)TopMenu.Plugins, MenuName = "Editable", MenuURL = "/Home/Editable" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ColorPicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Color Picker", MenuURL = "/Home/ColorPicker" });

@@ -151,6 +151,7 @@
     <Content Include="css\plugins\c3\c3.css" />
     <Content Include="css\plugins\datatable\datatable-bs3.css" />
     <Content Include="css\plugins\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="css\plugins\dropzone\dropzone.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.css" />
     <Content Include="css\plugins\font-awesome\font-awesome.min.css" />
     <Content Include="css\plugins\fonts\fontawesome-webfont.eot" />
@@ -217,6 +218,8 @@
     <Content Include="js\knockout\knockout-3.1.0.js" />
     <Content Include="js\pages\c3chart.js" />
     <Content Include="js\pages\formwizard.js" />
+    <Content Include="js\pages\dropzone.js" />
+    <Content Include="js\pages\inputmask.js" />
     <Content Include="js\pages\morrischart.js" />
     <Content Include="js\pages\dashboard.js" />
     <Content Include="js\pages\editable.js" />
@@ -316,6 +319,7 @@
     <Content Include="js\plugins\datatable\datatable-bs3.js" />
     <Content Include="js\plugins\datatable\datatable-bs3.min.js" />
     <Content Include="js\plugins\datatable\jquery.dataTables.min.js" />
+    <Content Include="js\plugins\dropzone\dropzone.js" />
     <Content Include="js\plugins\easy-pie-chart\jquery.easypiechart.js" />
     <Content Include="js\plugins\easy-pie-chart\jquery.easypiechart.min.js" />
     <Content Include="js\plugins\fileinput\fileinput.js" />
@@ -332,6 +336,8 @@
     <Content Include="js\plugins\fullcalendar\fullcalendar.min.js" />
     <Content Include="js\plugins\inputlimiter\jquery.inputlimiter.1.3.1.js" />
     <Content Include="js\plugins\inputlimiter\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="js\plugins\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="js\plugins\inputmask\jquery.inputmask.bundle.min.js" />
     <Content Include="js\plugins\morris\morris.js" />
     <Content Include="js\plugins\morris\morris.min.js" />
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
@@ -673,6 +679,7 @@
     <Content Include="packages\Newtonsoft.Json.6.0.3\tools\install.ps1" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nupkg" />
     <Content Include="packages\Select2.js.3.4.6\Select2.js.3.4.6.nuspec" />
+    <Content Include="php\upload.php" />
     <None Include="php\get.php" />
     <None Include="php\inbox.php" />
     <Content Include="php\post.php" />
@@ -699,6 +706,8 @@
     <Content Include="Views\Home\Elements.cshtml" />
     <Content Include="Views\Home\CheckBoxAndRadio.cshtml" />
     <Content Include="Views\Home\Navs.cshtml" />
+    <Content Include="Views\Home\InputMask.cshtml" />
+    <Content Include="Views\Home\DropZoneFileUpload.cshtml" />
     <None Include="Views\Shared\_Entypoicons.cshtml" />
     <None Include="Views\Shared\_Glyphicons.cshtml" />
     <None Include="Views\Shared\_FontAweSome.cshtml" />
