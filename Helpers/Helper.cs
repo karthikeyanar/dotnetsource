@@ -23,6 +23,8 @@ namespace dotnetsource.Helpers {
 
 
 		Alerts = 11,
+        Elements = 103,
+        CheckBoxAndRadio = 104,
 		ToolTipAndPopover = 12,
 		Dropdowns = 13,
 		Buttons = 14,
@@ -63,7 +65,6 @@ namespace dotnetsource.Helpers {
 		C3Chart = 100,
 
 		FormControls = 39,
-		FormComponents = 40,
 		FormLayouts = 41,
 		FormValidation = 42,
 		FormExamples = 55,
@@ -152,6 +153,8 @@ namespace dotnetsource.Helpers {
 
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Alerts, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Alerts", MenuURL = "/Home/Alerts" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.Elements, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Elements", MenuURL = "/Home/Elements" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.CheckBoxAndRadio, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "CheckBoxAndRadio", MenuURL = "/Home/CheckBoxAndRadio" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ToolTipAndPopover, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "ToolTip & Popover", MenuURL = "/Home/ToolTipAndPopover" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Dropdowns, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Dropdowns", MenuURL = "/Home/Dropdowns" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Buttons, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Buttons", MenuURL = "/Home/Buttons" });
@@ -184,7 +187,6 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.C3Chart, TopMenuID = (int)TopMenu.Charts, MenuName = "C3 Chart", MenuURL = "/Home/C3Chart" });
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormControls, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Controls", MenuURL = "/Home/FormControls" });
-			Menus.Add(new Menu { MenuID = (int)SubMenu.FormComponents, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Components", MenuURL = "/Home/FormComponents" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormLayouts, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Layouts", MenuURL = "/Home/FormLayouts" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormValidation, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Validation", MenuURL = "/Home/FormValidation" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormExamples, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Examples", MenuURL = "/Home/FormExamples" });

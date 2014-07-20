@@ -1,0 +1,15 @@
+﻿dashboard tab feeds - completed
+header top menu hover problem
+recreate general page
+widget ui
+navbar, nav pills
+tab page change
+wells
+masked input
+drag and drop file upload
+jquery file upload manager
+select2 page
+jquery ui page
+search page
+profile page
+

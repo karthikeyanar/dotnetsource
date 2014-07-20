@@ -4,7 +4,7 @@
 	//$("#credit").mask("9999-9999-9999-9999");
 	$("#expiration-date").datepicker();
 	$("#wizard").bootstrapWizard({
-		tabClass: 'nav nav-tabs nav-tab-custom',
+		tabClass: 'nav nav-tabs',
 		onTabShow: function(tab,navigation,index) {
 			var $total=navigation.find('li').length;
 			var $current=index+1;

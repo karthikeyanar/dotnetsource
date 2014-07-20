@@ -49,6 +49,20 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+        public ActionResult Elements()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Elements;
+            return View();
+        }
+
+        public ActionResult CheckBoxAndRadio()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.CheckBoxAndRadio;
+            return View();
+        }
+
 		public ActionResult ToolTipAndPopover() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ToolTipAndPopover;
@@ -215,13 +229,7 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormControls;
 			return View();
 		}
-
-		public ActionResult FormComponents() {
-			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
-			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormComponents;
-			return View();
-		}
-
+         
 		public ActionResult FormLayouts() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormLayouts;
