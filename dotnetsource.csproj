@@ -40,9 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -169,6 +168,7 @@
     <Content Include="css\plugins\jquery-ui\jquery-ui-1.10.3.custom.css" />
     <Content Include="css\plugins\morris\morris-0.4.3.min.css" />
     <Content Include="css\plugins\nanoscroller\nanoscroller.css" />
+    <Content Include="css\plugins\select2\select2-bootstrap.css" />
     <Content Include="css\plugins\select2\select2-spinner.gif" />
     <Content Include="css\plugins\select2\select2.css" />
     <Content Include="css\plugins\select2\select2.png" />
@@ -217,6 +217,7 @@
     <Content Include="js\jquery\jquery.validate.min.js" />
     <Content Include="js\knockout\knockout-3.1.0.js" />
     <Content Include="js\pages\c3chart.js" />
+    <Content Include="js\pages\select2.js" />
     <Content Include="js\pages\formwizard.js" />
     <Content Include="js\pages\dropzone.js" />
     <Content Include="js\pages\inputmask.js" />
@@ -225,7 +226,6 @@
     <Content Include="js\pages\editable.js" />
     <Content Include="js\pages\flotchart.js" />
     <Content Include="js\pages\inbox.js" />
-    <Content Include="js\plugins\autofix\jquery.autofix_anything.js" />
     <Content Include="js\plugins\autogrowtextarea\jquery.autogrowtextarea.js" />
     <Content Include="js\plugins\autogrowtextarea\jquery.autogrowtextarea.min.js" />
     <Content Include="js\plugins\bootstrap-colorpicker\bootstrap-colorpicker.js" />
@@ -708,6 +708,7 @@
     <Content Include="Views\Home\Navs.cshtml" />
     <Content Include="Views\Home\InputMask.cshtml" />
     <Content Include="Views\Home\DropZoneFileUpload.cshtml" />
+    <Content Include="Views\Home\Select2.cshtml" />
     <None Include="Views\Shared\_Entypoicons.cshtml" />
     <None Include="Views\Shared\_Glyphicons.cshtml" />
     <None Include="Views\Shared\_FontAweSome.cshtml" />

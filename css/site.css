@@ -407,10 +407,7 @@
   position: fixed;
   top: 44px;
   bottom: 0;
-}
-.sidebar-fixed .sidebar.autofix_sb.fixed {
-  top: 0;
-}
+} 
 .sidebar-menu.nav > li > a {
   display: block;
   padding: 10px 15px;

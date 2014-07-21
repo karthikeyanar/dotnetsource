@@ -147,6 +147,11 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Select;
 			return View();
 		}
+		public ActionResult Select2() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Select2;
+			return View();
+		}
         public ActionResult InputMask()
         {
             ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;

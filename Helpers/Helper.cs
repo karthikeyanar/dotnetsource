@@ -47,6 +47,7 @@ namespace dotnetsource.Helpers {
 		TimePicker = 56,
 		Switch = 57,
 		Select = 58,
+		Select2 = 122,
         InputMask = 120,
         DropZoneFileUpload = 121,
 		Spinner = 59,
@@ -167,6 +168,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.TimePicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Time Picker", MenuURL = "/Home/TimePicker" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Switch, TopMenuID = (int)TopMenu.Plugins, MenuName = "Switch", MenuURL = "/Home/Switch" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Select, TopMenuID = (int)TopMenu.Plugins, MenuName = "Select", MenuURL = "/Home/Select" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Select2, TopMenuID = (int)TopMenu.Plugins, MenuName = "Select2", MenuURL = "/Home/Select2" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.InputMask, TopMenuID = (int)TopMenu.Plugins, MenuName = "Input Mask", MenuURL = "/Home/InputMask" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.DropZoneFileUpload, TopMenuID = (int)TopMenu.Plugins, MenuName = "DropZone File Upload", MenuURL = "/Home/DropZoneFileUpload" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Spinner, TopMenuID = (int)TopMenu.Plugins, MenuName = "Spinner", MenuURL = "/Home/Spinner" });
