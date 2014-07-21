@@ -181,6 +181,9 @@ body.page-boxed {
 	border-color: @horizontal-menu-border-color;
 	border-top: 0;
 }
+.header .dropdown-menu .dropdown-submenu > .dropdown-menu {
+    border: solid @horizontal-menu-border-width  @horizontal-menu-border-color !important;
+}
 /* dropdown-menu */
 .header .dropdown-menu > li > a:hover, 
 .header .dropdown-menu > li > a:focus, 
@@ -189,6 +192,9 @@ body.page-boxed {
 .header .dropdown-menu > .active > a:focus {
 	background: @dropdown-hover-bg-color;
 	color: @dropdown-hover-text-color;
+}
+.header .dropdown-submenu > a:after, .header .dropdown-submenu:hover > a:after {
+    border-color: transparent transparent transparent #333;
 }
 .header .dropdown-menu > li > a  {
 	padding: @horizontal-menu-padding; 

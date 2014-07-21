@@ -54,6 +54,9 @@ body.page-boxed {
   border-color: #008299;
   border-top: 0;
 }
+.header .dropdown-menu .dropdown-submenu > .dropdown-menu {
+  border: solid 2px #008299 !important;
+}
 /* dropdown-menu */
 .header .dropdown-menu > li > a:hover,
 .header .dropdown-menu > li > a:focus,
@@ -62,6 +65,10 @@ body.page-boxed {
 .header .dropdown-menu > .active > a:focus {
   background: #006c80;
   color: #ffffff;
+}
+.header .dropdown-submenu > a:after,
+.header .dropdown-submenu:hover > a:after {
+  border-color: transparent transparent transparent #333;
 }
 .header .dropdown-menu > li > a {
   padding: 6px 15px;

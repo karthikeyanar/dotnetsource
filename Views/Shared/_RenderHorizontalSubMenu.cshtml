@@ -1,0 +1,26 @@
+﻿@model dotnetsource.Helpers.RenderSubMenu
+@{
+	int viewBagTopMenuID = (int)ViewBag.TopMenu;
+	int viewBagSubMenuID = (int)ViewBag.Submenu;
+}
+@if (Model.SubMenus.Count() > 0)
+{
+    <ul class="dropdown-menu @((viewBagTopMenuID == Model.MenuID) ? "in" : "")">
+        @foreach (dotnetsource.Helpers.Menu submenu in Model.SubMenus)
+        {
+            var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == submenu.MenuID).ToList();
+            string className = "";
+            if (viewBagSubMenuID == submenu.MenuID)
+            {
+                className += "active";
+            }
+            if(subMenus.Count()>0){
+                className += " dropdown-submenu";
+            }
+            <li class="@className">
+                <a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName</a>
+                @Html.Partial("_RenderHorizontalSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = submenu.MenuID, SubMenus = subMenus })
+            </li>
+        }
+    </ul>
+}

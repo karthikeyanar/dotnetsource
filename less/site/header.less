@@ -5,8 +5,8 @@
     border: 0;
     z-index: @header-zindex;
     position: relative;
-    min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    margin-bottom: @navbar-margin-bottom;
+    min-height: @navbar-height; 
+    margin-bottom: 0;
 
     @media (min-width: @grid-float-breakpoint) {
         border-radius: @navbar-border-radius;
@@ -218,7 +218,10 @@ padding: 10px;
     width: 50px;
     height: 50px;
 }
-
+.header .dropdown-menu .dropdown-submenu > .dropdown-menu {
+    margin-top:0;
+    margin-left:0;
+}
 .header .tasks-menu > .dropdown-menu {
     width: @tasks-menu-width;
 }

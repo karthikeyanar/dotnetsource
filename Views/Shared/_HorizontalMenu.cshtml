@@ -2,7 +2,7 @@
 <div class="hor-menu navbar-collapse collapse">
     <ul class="nav navbar-nav">
         @{
-            var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0).ToList();
+            var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0 && q.MenuName != "Charts" && q.MenuName != "Tables" && q.MenuName != "Forms").ToList();
         }
         @foreach (dotnetsource.Helpers.Menu menu in topMenus)
         {
@@ -23,15 +23,7 @@
                         @menu.MenuName
                     </a>
                 }
-                @if (subMenus.Count() > 0)
-                {
-                    <ul class="dropdown-menu @((viewBagTopMenuID == menuID) ? "in" : "")">
-                        @foreach (dotnetsource.Helpers.Menu submenu in subMenus)
-                        {
-                            <li class="@(viewBagSubMenuID == submenu.MenuID ? "active" : "")"><a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName</a></li>
-                        }
-                    </ul>
-                }
+                @Html.Partial("_RenderHorizontalSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = menu.MenuID, SubMenus = subMenus })
             </li>
         }
     </ul>

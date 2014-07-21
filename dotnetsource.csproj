@@ -641,6 +641,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Shared\_RenderSubMenu.cshtml" />
+    <Content Include="Views\Shared\_RenderHorizontalSubMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
