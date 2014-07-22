@@ -373,6 +373,13 @@
   content: '';
   display: table;
 }
+@media (max-width: 991px) {
+  .hor-menu,
+  .hor-menu.navbar-collapse,
+  .hor-menu.navbar-collapse.collapse {
+    display: none !important;
+  }
+}
 .sidebar {
   position: absolute;
   padding-left: 0;
@@ -852,5 +859,5 @@
   background-color: #0072c6;
 }
 .theme-black {
-  background-color: #24282f;
+  background-color: #1a1a1a;
 }

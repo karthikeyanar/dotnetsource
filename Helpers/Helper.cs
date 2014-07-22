@@ -50,10 +50,12 @@ namespace dotnetsource.Helpers {
 		Select2 = 122,
         InputMask = 120,
         DropZoneFileUpload = 121,
+		MultipleFileUpload = 123,
 		Spinner = 59,
 		Editable = 60,
 		ColorPicker = 34,
 		Editor = 35,
+		jQueryUISlider = 124,
 		Slider = 36,
 
 		
@@ -171,10 +173,12 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Select2, TopMenuID = (int)TopMenu.Plugins, MenuName = "Select2", MenuURL = "/Home/Select2" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.InputMask, TopMenuID = (int)TopMenu.Plugins, MenuName = "Input Mask", MenuURL = "/Home/InputMask" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.DropZoneFileUpload, TopMenuID = (int)TopMenu.Plugins, MenuName = "DropZone File Upload", MenuURL = "/Home/DropZoneFileUpload" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.MultipleFileUpload, TopMenuID = (int)TopMenu.Plugins, MenuName = "Multiple File Upload", MenuURL = "/Home/MultipleFileUpload" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Spinner, TopMenuID = (int)TopMenu.Plugins, MenuName = "Spinner", MenuURL = "/Home/Spinner" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Editable, TopMenuID = (int)TopMenu.Plugins, MenuName = "Editable", MenuURL = "/Home/Editable" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.ColorPicker, TopMenuID = (int)TopMenu.Plugins, MenuName = "Color Picker", MenuURL = "/Home/ColorPicker" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Editor, TopMenuID = (int)TopMenu.Plugins, MenuName = "Editor", MenuURL = "/Home/Editor" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.jQueryUISlider, TopMenuID = (int)TopMenu.Plugins, MenuName = "jQuery UI Slider", MenuURL = "/Home/jQueryUISlider" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Slider, TopMenuID = (int)TopMenu.Plugins, MenuName = "Slider", MenuURL = "/Home/Slider" });
 
 

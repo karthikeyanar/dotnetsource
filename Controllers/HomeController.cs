@@ -164,6 +164,11 @@ namespace dotnetsource.Controllers {
             ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.DropZoneFileUpload;
             return View();
         }
+		public ActionResult MultipleFileUpload() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.MultipleFileUpload;
+			return View();
+		}
 		public ActionResult Spinner() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Spinner;
@@ -182,6 +187,11 @@ namespace dotnetsource.Controllers {
 		public ActionResult Editor() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Editor;
+			return View();
+		}
+		public ActionResult jQueryUISlider() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.jQueryUISlider;
 			return View();
 		}
 		public ActionResult Slider() {
