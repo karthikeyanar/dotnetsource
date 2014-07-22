@@ -127,9 +127,52 @@
             }
         });
 
+        $('body').on('click.panel > .btn-group > a', "[data-action='refresh']", function (e) {
+            e.preventDefault();
+            var el = $(this).closest(".panel").children(".panel-body");
+            // for demo purpose
+            self.handleBlockUI({ "target": el });
+            setTimeout(function () {
+                self.unblockUI(el);
+            }, 1000)
+        });
+
         $('body').on('click.panel > .btn-group > a', "[data-action='remove']", function (e) {
             e.preventDefault();
             $(this).closest(".panel").remove();
+        });
+    }
+
+    this.unblockUI = function (target) {
+        $(target).unblock({
+            onUnblock: function () {
+                $(target).css('position', '').css('zoom', '');
+            }
+        });
+    }
+
+    this.handleBlockUI = function (options) {
+        var options = $.extend(true, {}, options);
+        var message = (options.message ? options.message : "<i class='fa fa-circle-o-notch fa-spin'></i>&nbsp;&nbsp;Loading...");
+        var color = (options.bgColor ? options.bgColor : "bg-primary");
+        var centery = (options.verticalCenter == "true" ? true : false);
+        var basez = (options.zindex ? options.zindex : "1000");
+        message = '<div class="blockUI-message ' + color + '"><span>' + message + '</span></div>';
+        $(options.target).block({
+            message: message,
+            baseZ: basez,
+            centerY: centery,
+            css: {
+                top: '10%',
+                border: '0',
+                padding: '0',
+                backgroundColor: 'none'
+            },
+            overlayCSS: {
+                backgroundColor: '#000',
+                opacity: 0.2,
+                cursor: 'wait'
+            }
         });
     }
 
@@ -396,8 +439,8 @@
                 }
             })
         } else {
-           $(window).off('.affix')
-           $sidebar.removeData('bs.affix').removeClass('affix affix-top affix-bottom')
+            $(window).off('.affix')
+            $sidebar.removeData('bs.affix').removeClass('affix affix-top affix-bottom')
         }
 
         self.handleSidebarSlimScroll();
