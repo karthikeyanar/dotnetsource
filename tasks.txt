@@ -15,4 +15,6 @@ add popoverconfirm page - completed
 
 search page
 profile page
+pie chat page
+sidebar right positon
 

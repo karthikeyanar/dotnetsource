@@ -338,7 +338,8 @@
 					if($body.hasClass("sidebar-fixed")==false) {
 						self.scrollTo($this,slideOffeset);
 					} else {
-						$sidebarContent.slimScroll({ 'scrollTo': ($this.position()).top });
+						var offsetTop=$this.offset().top-$(window).scrollTop();
+						$sidebarContent.slimScroll({ 'scrollTo': offsetTop });
 					}
 				}
 				self.resizeContentHeight();
@@ -488,7 +489,7 @@
 					height=height-$header.outerHeight(true);
 
 				$sidebarContent.slimScroll({
-					allowPageScroll: true,
+					allowPageScroll: false,
 					size: '5px',
 					color: '#000',
 					opacity: 1,
