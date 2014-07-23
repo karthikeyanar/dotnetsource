@@ -85,6 +85,7 @@ namespace dotnetsource.Helpers {
 		Timeline = 52,
 		Inbox = 53,
 		Invoice = 54,
+        Search = 140,
 
         MenuLevel11 = 61,
         MenuLevel12 = 62,
@@ -207,6 +208,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Blank, TopMenuID = (int)TopMenu.Pages, MenuName = "Blank", MenuURL = "/Home/Blank" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Calendar, TopMenuID = (int)TopMenu.Pages, MenuName = "Calendar", MenuURL = "/Home/Calendar" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Timeline, TopMenuID = (int)TopMenu.Pages, MenuName = "Timeline", MenuURL = "/Home/Timeline" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.Search, TopMenuID = (int)TopMenu.Pages, MenuName = "Search", MenuURL = "/Home/Search" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Inbox, TopMenuID = (int)TopMenu.Pages, MenuName = "Inbox", MenuURL = "/Home/Inbox" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Invoice, TopMenuID = (int)TopMenu.Pages, MenuName = "Invoice", MenuURL = "/Home/Invoice" });
             

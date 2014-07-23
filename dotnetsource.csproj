@@ -133,6 +133,7 @@
     <Content Include="css\pages\lock.css" />
     <Content Include="css\pages\signin.css" />
     <Content Include="css\pages\signup.css" />
+    <Content Include="css\pages\search.css" />
     <Content Include="css\pages\timeline.css" />
     <Content Include="css\plugins\bootstrap-colorpicker\bootstrap-colorpicker.css" />
     <Content Include="css\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.css" />
@@ -816,6 +817,7 @@
     <Content Include="Views\Shared\_Glyphicons.cshtml" />
     <Content Include="Views\Home\BlockUI.cshtml" />
     <Content Include="Views\Home\PopoverConfirm.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1381,6 +1381,7 @@ label,
 .label {
   font-weight: normal;
   border-radius: 0;
+  font-size: 13px;
 }
 .label-default {
   background-color: #999999;

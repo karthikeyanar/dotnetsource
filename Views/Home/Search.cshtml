@@ -1,0 +1,195 @@
+﻿@{
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Search" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/SignIn",
+        SecondUrlName = "Pages",
+        ThirdUrl = "/Home/Search",
+        ThirdUrlName = "Search"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles {
+    <!-- bootstrap datatable -->
+    <link href="/css/plugins/datatable/datatable-bs3.css" rel="stylesheet" type="text/css" />
+    <link href="/css/pages/search.css" rel="stylesheet" />
+}
+@section scripts {
+    	<!-- data-table -->
+<script src="/js/plugins/datatable/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="/js/plugins/datatable/datatable-bs3.js" type="text/javascript"></script>
+<script>
+    /* Table initialisation */
+    $(document).ready(function () {
+        $('#users').dataTable({
+            "sPaginationType": "bs_normal"
+        });
+        $('.datatable').each(function () {
+            var datatable = $(this);
+            // SEARCH - Add the placeholder for Search and Turn this into in-line form control
+            var search_input = datatable.closest('.dataTables_wrapper').find('div[id$=_filter] input');
+            search_input.attr('placeholder', 'Search');
+            search_input.addClass('form-control');
+            // LENGTH - Inline-Form control
+            var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
+            length_sel.addClass('form-control input-sm');
+            datatable.bind('page', function (e) {
+                window.console && console.log('pagination event:', e) //this event must be fired whenever you paginate
+            });
+        });
+    });
+</script>
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<div class="row">
+    <div class="col-md-12">
+        <div class="tab-fancy">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#search">Search</a> </li>
+                <li><a data-toggle="tab" href="#usersearch">User Search</a> </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content no-border no-padding">
+                <div id="search" class="tab-pane fade active in search-box">
+                    <form action="#" role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="button">Search</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="search-result">
+                        <div class="search-item">
+                            <h4><a href="/Home/General">UI Features</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/Modal">Plugins</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/FlotChart">Charts</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/FormControls">Forms</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/Table">Tables</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/Inbox">Inbox</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                        <div class="search-item">
+                            <h4><a href="/Home/Invoice">Invoice</a></h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="usersearch" class="tab-pane fade search-box">
+                    <table class="datatable table table-hover" id="users">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Photo
+                                </th>
+                                <th>
+                                    Full Name
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                                <th>
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td>
+                                    <img src="/img/avatars/75/1.jpg" />
+                                </td>
+                                <td>
+                                    Angelina Glory
+                                </td>
+                                <td>
+                                    angelinaglory@email.com
+                                </td>
+                                <td class="center">
+                                    <span class="label label-success">Approve</span>
+                                </td>
+                                <td class="center">
+                                    Product Designer
+                                </td>
+                                <td class="text-right"><i class="fa fa-pencil fa-lg"></i><i class="fa fa-times fa-lg margin-left-10"></i></td>
+                            </tr>
+                            <tr class="even">
+                                <td>
+                                    <img src="/img/avatars/75/2.jpg" />
+                                </td>
+                                <td>
+                                    Angelina Glory
+                                </td>
+                                <td>
+                                    angelinaglory@email.com
+                                </td>
+                                <td class="center">
+                                    <span class="label label-success">Approve</span>
+                                </td>
+                                <td class="center">
+                                    Product Designer
+                                </td>
+                                <td class="text-right"><i class="fa fa-pencil fa-lg"></i><i class="fa fa-times fa-lg margin-left-10"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

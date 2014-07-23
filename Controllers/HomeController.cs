@@ -322,6 +322,13 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+        public ActionResult Search()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Search;
+            return View();
+        }
+
 		public ActionResult Inbox() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Inbox;
