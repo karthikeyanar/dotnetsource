@@ -280,6 +280,7 @@
     <Content Include="js\plugins\blockUI\jquery.blockUI.js" />
     <Content Include="js\plugins\bootstrap-colorpicker\bootstrap-colorpicker.js" />
     <Content Include="js\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="js\plugins\bootstrap-confirmation\bootstrap-confirmation.min.js" />
     <Content Include="js\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
     <Content Include="js\plugins\bootstrap-datepicker\bootstrap-datepicker.min.js" />
     <Content Include="js\plugins\bootstrap-daterangepicker\daterangepicker.js" />
@@ -814,6 +815,7 @@
     <Content Include="Views\Shared\_FontAweSome.cshtml" />
     <Content Include="Views\Shared\_Glyphicons.cshtml" />
     <Content Include="Views\Home\BlockUI.cshtml" />
+    <Content Include="Views\Home\PopoverConfirm.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

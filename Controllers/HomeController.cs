@@ -168,6 +168,11 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.BlockUI;
 			return View();
 		}
+		public ActionResult PopoverConfirm() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.PopoverConfirm;
+			return View();
+		}
 		public ActionResult Spinner() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Spinner;

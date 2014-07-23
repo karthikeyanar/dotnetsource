@@ -11,8 +11,8 @@ select2 page completed
 jquery file upload manager - completed
 jquery ui page - completed
 block ui page, apply blockui to panel refresh - completed
+add popoverconfirm page - completed
 
-add popoverconfirm page
 search page
 profile page
 
