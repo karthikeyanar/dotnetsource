@@ -1,0 +1,136 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Block UI" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal", SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/BlockUI", ThirdUrlName = "Block UI"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+}
+@section scripts {
+	<script>
+		$(function() {
+			var $panelBody=$("#panelBody");
+			var $news=$("#news");
+			$("#block").click(function() {
+				APP.handleBlockUI({
+					"target": $panelBody
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI($panelBody);
+				},1000)
+			});
+			$("#blockCustom").click(function() {
+				APP.handleBlockUI({
+					"target": $panelBody,
+					"message": $("#blockMessage").val()
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI($panelBody);
+				},1000)
+			});
+			$("#blockVerticalTop").click(function() {
+				APP.handleBlockUI({
+					"target": $panelBody,
+					"message": $("#blockMessage").val(),
+					"verticalTop": true
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI($panelBody);
+				},1000)
+			});
+			$("#blockNews").click(function() {
+				APP.handleBlockUI({
+					"target": $news
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI($news);
+				},1000)
+			});
+			$(".block-colors").click(function() {
+				var bgColor=$(this).attr("data-color");
+				APP.handleBlockUI({
+					"target": $panelBody,
+					"bgColor": bgColor
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI($panelBody);
+				},1000)
+			});
+			$("#pageBlock").click(function() {
+				APP.handleBlockUI({
+					"zindex": "9999999",
+					"overlayOpacity": "0.5"
+				});
+				// for demo purpose
+				setTimeout(function() {
+					APP.unblockUI();
+				},1000)
+			});
+		});
+	</script>
+}
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Block UI</h3>
+			</div>
+			<div class="panel-body" id="panelBody">
+				<div id="news">
+					<h3 class="no-margin-top">
+						News</h3>
+					<p>
+						Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo
+					</p>
+				</div>
+				<form action="#" method="POST" onsubmit="return false">
+				<div class="form-group">
+					<button id="block" class="btn btn-primary">
+						Block Panel With Default Message</button>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control input-medium" id="blockMessage" value="Please wait..." />
+				</div>
+				<div class="form-group">
+					<button id="blockCustom" class="btn btn-success">
+						Block Panel With Custom Message</button>
+				</div>
+				<div class="form-group">
+					<button id="blockVerticalTop" class="btn btn-danger">
+						Block Panel With Vertical Top Message</button>
+				</div>
+				<div class="form-group">
+					<button id="blockNews" class="btn btn-warning">
+						Block News</button>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary block-colors" data-color="bg-primary">
+						Block Color (bg-primary)</button>
+					<button class="btn btn-success block-colors" data-color="bg-success">
+						Block Color (bg-success)</button>
+					<button class="btn btn-info block-colors" data-color="bg-info">
+						Block Color (bg-info)</button>
+					<button class="btn btn-dark-blue block-colors" data-color="bg-dark-blue">
+						Block Color (bg-dark-blue)</button>
+				</div>
+				<div class="form-group">
+					<button id="pageBlock" class="btn btn-primary">
+						Block Page</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -23,12 +23,11 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarSmall;
 			return View();
 		}
-        public ActionResult SidebarMedium()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarMedium;
-            return View();
-        }
+		public ActionResult SidebarMedium() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarMedium;
+			return View();
+		}
 		public ActionResult SidebarFixed() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarFixed;
@@ -48,15 +47,14 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.General;
 			return View();
 		}
-         
 
-        public ActionResult CheckBoxAndRadio()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.CheckBoxAndRadio;
-            return View();
-        }
-         
+
+		public ActionResult CheckBoxAndRadio() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.CheckBoxAndRadio;
+			return View();
+		}
+
 
 		public ActionResult Buttons() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
@@ -70,12 +68,11 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
-        public ActionResult Navs()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Navs;
-            return View();
-        }
+		public ActionResult Navs() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Navs;
+			return View();
+		}
 
 		public ActionResult Colors() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
@@ -83,13 +80,12 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
-        public ActionResult Wells()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Wells;
-            return View();
-        }
-         
+		public ActionResult Wells() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Wells;
+			return View();
+		}
+
 		public ActionResult Panels() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Panels;
@@ -152,21 +148,24 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Select2;
 			return View();
 		}
-        public ActionResult InputMask()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.InputMask;
-            return View();
-        }
-        public ActionResult DropZoneFileUpload()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.DropZoneFileUpload;
-            return View();
-        }
+		public ActionResult InputMask() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.InputMask;
+			return View();
+		}
+		public ActionResult DropZoneFileUpload() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.DropZoneFileUpload;
+			return View();
+		}
 		public ActionResult MultipleFileUpload() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.MultipleFileUpload;
+			return View();
+		}
+		public ActionResult BlockUI() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Plugins;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.BlockUI;
 			return View();
 		}
 		public ActionResult Spinner() {
@@ -229,7 +228,7 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormControls;
 			return View();
 		}
-         
+
 		public ActionResult FormLayouts() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Forms;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.FormLayouts;

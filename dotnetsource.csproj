@@ -813,6 +813,7 @@
     <Content Include="php\jqueryfileupload\UploadHandler.php" />
     <Content Include="Views\Shared\_FontAweSome.cshtml" />
     <Content Include="Views\Shared\_Glyphicons.cshtml" />
+    <Content Include="Views\Home\BlockUI.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
