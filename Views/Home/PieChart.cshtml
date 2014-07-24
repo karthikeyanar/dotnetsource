@@ -1,0 +1,72 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Pie Chart" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal", SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/PieChart", ThirdUrlName = "Pie Chart"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@section styles {
+}
+@section scripts {
+	<script src="/js/plugins/easy-pie-chart/jquery.easypiechart.min.js" type="text/javascript"></script>
+	<script>
+		$(function() {
+			$('.easy-pie-chart').easyPieChart({
+				animate: 1000,
+				onStep: function(from,to,percent) {
+					$(this.el).find('span').text(Math.round(percent)+"%");
+				}
+			});
+		});
+	</script>
+}
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					General Stats
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
+								<span></span>
+							</div>
+							<div class="title">
+								New Visitors
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
+								<span></span>
+							</div>
+							<div class="title">
+								Bounce Rate
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
+								<span></span>
+							</div>
+							<div class="title">
+								Transactions
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

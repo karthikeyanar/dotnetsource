@@ -375,6 +375,46 @@ a.bg-white:hover {
 .table  > tfoot  > tr  > .no-line {
   border: 0;
 }
+.table.table-primary.table-bordered {
+  border: 1px solid #007fff;
+}
+.table.table-primary.table-bordered > thead > tr > th {
+  background-color: #007fff;
+  border-color: #1a8cff;
+  color: #fff;
+}
+.table.table-success.table-bordered {
+  border: 1px solid #008a17;
+}
+.table.table-success.table-bordered > thead > tr > th {
+  background-color: #008a17;
+  border-color: #00a31b;
+  color: #fff;
+}
+.table.table-info.table-bordered {
+  border: 1px solid #8c0095;
+}
+.table.table-info.table-bordered > thead > tr > th {
+  background-color: #8c0095;
+  border-color: #a400af;
+  color: #fff;
+}
+.table.table-warning.table-bordered {
+  border: 1px solid #ff8f32;
+}
+.table.table-warning.table-bordered > thead > tr > th {
+  background-color: #ff8f32;
+  border-color: #ff9d4c;
+  color: #fff;
+}
+.table.table-danger.table-bordered {
+  border: 1px solid #d24726;
+}
+.table.table-danger.table-bordered > thead > tr > th {
+  background-color: #d24726;
+  border-color: #db5637;
+  color: #fff;
+}
 .form-control {
   font-size: 13px;
   color: #333333;

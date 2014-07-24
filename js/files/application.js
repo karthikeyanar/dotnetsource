@@ -43,26 +43,6 @@
 		return ('ontouchstart' in document.documentElement);
 	}
 
-	this.isExtraSmallDevice=function() {
-		var width=this.getViewPort().width;
-		return (width<768);
-	}
-
-	this.isSmallDevice=function() {
-		var width=this.getViewPort().width;
-		return (width>=768&&width<992);
-	}
-
-	this.isMediumDevice=function() {
-		var width=this.getViewPort().width;
-		return (width>=992&&width<1200);
-	}
-
-	this.isLargeDevice=function() {
-		var width=this.getViewPort().width;
-		return (width>=1200);
-	}
-
 	this.scrollTo=function(el,offeset) {
 		pos=el?el.offset().top:0;
 		$('html,body').animate({
@@ -568,8 +548,15 @@
 				$body.addClass("sidebar-sm-fixed")
 			else if($body.hasClass("sidebar-md"))
 				$body.addClass("sidebar-md-fixed")
+
+			if(self.getViewPort().width<992&&$body.hasClass("sidebar-open")) {
+				$body.addClass("page-container-no-scroll");
+			}
 		} else {
-			$body.removeClass("sidebar-fixed");
+			$body.removeClass("sidebar-fixed")
+			.removeClass("sidebar-sm-fixed")
+			.removeClass("sidebar-md-fixed")
+			.removeClass("page-container-no-scroll");
 		}
 
 		if(this.isHeaderFixed) {
@@ -725,17 +712,7 @@
 			$body.toggleClass("sidebar-open");
 			if($body.hasClass("sidebar-fixed")&&$body.hasClass("sidebar-open")) {
 				$body.addClass("page-container-no-scroll");
-				var $pageContentOverlay=$(".page-content-overlay");
-				if(!$pageContentOverlay.get(0)) {
-					$pageContentOverlay=$("<div class='page-content-overlay'></div>");
-					$(".page-container").append($pageContentOverlay);
-					$pageContentOverlay.unbind("click").click(function() {
-						$(".page-content-overlay").remove();
-						$body.removeClass("sidebar-open").removeClass("page-container-no-scroll");
-					});
-				}
 			} else {
-				$(".page-content-overlay").remove();
 				$body.removeClass("page-container-no-scroll");
 			}
 		});

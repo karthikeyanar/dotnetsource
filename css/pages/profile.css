@@ -1,0 +1,14 @@
+﻿.profile-container > .profile-photo, .profile-container > .profile-content {
+	float: left;
+}
+.profile-container:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.profile-name {
+	margin-top:0;
+}
+.profile-location, .profile-position , .profile-share {
+	margin-bottom:8px;
+}

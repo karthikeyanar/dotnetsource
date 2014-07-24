@@ -65,6 +65,7 @@ namespace dotnetsource.Helpers {
 		FlotChart = 37,
 		MorrisChart = 38,
 		C3Chart = 100,
+		PieChart = 150,
 
 		FormControls = 39,
 		FormLayouts = 41,
@@ -86,6 +87,7 @@ namespace dotnetsource.Helpers {
 		Inbox = 53,
 		Invoice = 54,
         Search = 140,
+		Profile = 151,
 
         MenuLevel11 = 61,
         MenuLevel12 = 62,
@@ -190,6 +192,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FlotChart, TopMenuID = (int)TopMenu.Charts, MenuName = "Flot Chart", MenuURL = "/Home/FlotChart" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.MorrisChart, TopMenuID = (int)TopMenu.Charts, MenuName = "Morris Chart", MenuURL = "/Home/MorrisChart" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.C3Chart, TopMenuID = (int)TopMenu.Charts, MenuName = "C3 Chart", MenuURL = "/Home/C3Chart" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.PieChart, TopMenuID = (int)TopMenu.Charts, MenuName = "Pie Chart", MenuURL = "/Home/PieChart" });
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormControls, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Controls", MenuURL = "/Home/FormControls" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.FormLayouts, TopMenuID = (int)TopMenu.Forms, MenuName = "Form Layouts", MenuURL = "/Home/FormLayouts" });
@@ -209,6 +212,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Calendar, TopMenuID = (int)TopMenu.Pages, MenuName = "Calendar", MenuURL = "/Home/Calendar" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Timeline, TopMenuID = (int)TopMenu.Pages, MenuName = "Timeline", MenuURL = "/Home/Timeline" });
             Menus.Add(new Menu { MenuID = (int)SubMenu.Search, TopMenuID = (int)TopMenu.Pages, MenuName = "Search", MenuURL = "/Home/Search" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.Profile, TopMenuID = (int)TopMenu.Pages, MenuName = "Profile", MenuURL = "/Home/Profile" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Inbox, TopMenuID = (int)TopMenu.Pages, MenuName = "Inbox", MenuURL = "/Home/Inbox" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Invoice, TopMenuID = (int)TopMenu.Pages, MenuName = "Invoice", MenuURL = "/Home/Invoice" });
             

@@ -17,4 +17,4 @@ search page
 profile page
 pie chat page
 sidebar right positon
-
+form validation addtional methods

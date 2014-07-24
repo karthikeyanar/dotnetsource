@@ -337,23 +337,8 @@
     top: 44px;
     overflow: hidden;
   }
-  .page-container .page-content-overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 44px;
-    z-index: 1;
-    background: #000;
-    display: none;
-  }
   .page-container .page-content {
     margin-left: 0;
-  }
-}
-@media (min-width: 992px) {
-  .page-container .page-content-overlay {
-    display: none;
   }
 }
 .page-header {
@@ -543,11 +528,6 @@
     -ms-transition-property: left;
     -o-transition-property: left;
     transition-property: left;
-  }
-  .sidebar-open .page-container .page-content-overlay {
-    display: block;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
   }
   .sidebar-open .page-container .sidebar {
     left: 0;

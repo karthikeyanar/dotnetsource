@@ -8,4 +8,43 @@
 .table &>thead &>tr &>.no-line,.table &>tbody &>tr &>.no-line,.table &>tfoot &>tr &>.no-line {
     border: 0;
 }
- 
+.table.table-primary.table-bordered {
+    border: 1px solid @brand-primary;
+}
+.table.table-primary.table-bordered > thead > tr > th {
+	background-color: @brand-primary;
+	border-color: lighten(@brand-primary,5%);
+	color: #fff;
+}
+.table.table-success.table-bordered {
+    border: 1px solid @brand-success;
+}
+.table.table-success.table-bordered > thead > tr > th {
+	background-color: @brand-success;
+	border-color: lighten(@brand-success,5%);
+	color: #fff;
+}
+.table.table-info.table-bordered {
+    border: 1px solid @brand-info;
+}
+.table.table-info.table-bordered > thead > tr > th {
+	background-color: @brand-info;
+	border-color: lighten(@brand-info,5%);
+	color: #fff;
+}
+.table.table-warning.table-bordered {
+    border: 1px solid @brand-warning;
+}
+.table.table-warning.table-bordered > thead > tr > th {
+	background-color: @brand-warning;
+	border-color: lighten(@brand-warning,5%);
+	color: #fff;
+}
+.table.table-danger.table-bordered {
+    border: 1px solid @brand-danger;
+}
+.table.table-danger.table-bordered > thead > tr > th {
+	background-color: @brand-danger;
+	border-color: lighten(@brand-danger,5%);
+	color: #fff;
+}

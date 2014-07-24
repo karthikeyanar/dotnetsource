@@ -124,6 +124,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\components.css" />
     <Content Include="css\components.min.css" />
+    <Content Include="css\pages\profile.css" />
     <Content Include="css\pages\editable.css" />
     <Content Include="css\pages\error-page.css" />
     <Content Include="css\pages\fonts.css" />
@@ -271,6 +272,7 @@
     <Content Include="js\pages\editable.js" />
     <Content Include="js\pages\flotchart.js" />
     <Content Include="js\pages\formwizard.js" />
+    <Content Include="js\pages\holder.js" />
     <Content Include="js\pages\inbox.js" />
     <Content Include="js\pages\inputmask.js" />
     <Content Include="js\pages\jqueryuislider.js" />
@@ -818,6 +820,8 @@
     <Content Include="Views\Home\BlockUI.cshtml" />
     <Content Include="Views\Home\PopoverConfirm.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Home\PieChart.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

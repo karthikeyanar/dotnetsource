@@ -225,6 +225,12 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+		public ActionResult PieChart() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Charts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.PieChart;
+			return View();
+		}
+
 		#endregion
 
 		#region Forms
@@ -322,12 +328,17 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
-        public ActionResult Search()
-        {
-            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
-            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Search;
-            return View();
-        }
+		public ActionResult Search() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Search;
+			return View();
+		}
+
+		public ActionResult Profile() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Profile;
+			return View();
+		}
 
 		public ActionResult Inbox() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;

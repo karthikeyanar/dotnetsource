@@ -191,18 +191,21 @@ table.dataTable thead .sorting_desc_disabled {
 table.dataTable thead .sorting_asc:after {
     content: "\f0de";
     float: right;
-    font-family: fontawesome; font-size: 16px;
+    font-family: fontawesome; 
+    font-size: 12px;
 }
 
 table.dataTable thead .sorting_desc:after {
     content: "\f0dd";
     float: right;
-    font-family: fontawesome; font-size: 16px;
+    font-family: fontawesome; 
+    font-size: 12px;
 }
 
 table.dataTable thead .sorting:after {
     content: "\f0dc";
     float: right;
     font-family: fontawesome;
-    color: rgba(50,50,50,.5); font-size: 16px;
+    font-size: 14px;
 }
+ 
