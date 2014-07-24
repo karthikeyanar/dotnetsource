@@ -1,712 +1,455 @@
 ﻿<div class="row">
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-primary">
-			<div class="icon">
-				<i class="fa fa-calendar"></i>
-			</div>
-			<div class="description">
-				<strong>14</strong> meetings
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-danger">
-			<div class="big-text">
-				3.28%
-			</div>
-			<div class="description">
-				<i class="fa fa-user"></i>User Growth
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-success">
-			<div class="icon">
-				<i class="fa fa-user"></i>
-			</div>
-			<div class="description">
-				<strong>643</strong> customers
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-warning">
-			<div class="big-text">
-				+512
-			</div>
-			<div class="description">
-				<i class="fa fa-comments"></i>Comments
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-purple">
-			<div class="icon">
-				<i class="fa fa-shopping-cart"></i>
-			</div>
-			<div class="description">
-				<strong>410</strong> orders
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-		<div class="box bg-primary">
-			<div class="big-text">
-				6.42%
-			</div>
-			<div class="description">
-				<i class="fa fa-arrow-right"></i>Traffic Growth
-			</div>
-		</div>
-	</div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-primary">
+            <div class="icon">
+                <i class="fa fa-calendar"></i>
+            </div>
+            <div class="description">
+                <strong>14</strong> meetings
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-danger">
+            <div class="big-text">
+                3.28%
+            </div>
+            <div class="description">
+                <i class="fa fa-user"></i>User Growth
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-success">
+            <div class="icon">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="description">
+                <strong>643</strong> customers
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-warning">
+            <div class="big-text">
+                +512
+            </div>
+            <div class="description">
+                <i class="fa fa-comments"></i>Comments
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-purple">
+            <div class="icon">
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div class="description">
+                <strong>410</strong> orders
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+        <div class="box bg-primary">
+            <div class="big-text">
+                6.42%
+            </div>
+            <div class="description">
+                <i class="fa fa-arrow-right"></i>Traffic Growth
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row">
-	<div class="col-lg-6 col-md-12">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Order History - Spline Chart
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div id="c3SplineChart">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-12">
-		<div class="panel panel-dark-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Order History - Bar Chart
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div id="c3BarChart">
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Order History - Spline Chart
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div id="c3SplineChart">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-dark-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Order History - Bar Chart
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div id="c3BarChart">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row">
-	<div class="col-lg-6 col-md-12">
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					General Stats
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
-								<span></span>
-							</div>
-							<div class="title">
-								New Visitors
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
-								<span></span>
-							</div>
-							<div class="title">
-								Bounce Rate
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
-								<span></span>
-							</div>
-							<div class="title">
-								Transactions
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Order History
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<div id="c3PieChart">
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div id="c3DonutChart">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Feed
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body no-padding">
-				<div class="feed slimscroll" data-height="500">
-					<ul>
-						<li class="feed-row">
-							<div class="feed-icon bg-primary">
-								<i class="fa fa-comment"></i>
-							</div>
-							<div class="feed-time">
-								Yesterday</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Jimmy Bennett</a> commented
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-success">
-								<i class="fa fa-user"></i>
-							</div>
-							<div class="feed-time">
-								9:00 AM</div>
-							<div class="feed-content">
-								<p>
-									<img src="/img/avatars/75/3.jpg" class="pull-left margin-right-10" /><a href="#">Carlos Miller</a> new user registered
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-info">
-								<i class="fa fa-file"></i>
-							</div>
-							<div class="feed-time">
-								9:30 AM</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Carlos Miller</a> create new article
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-warning">
-								<i class="fa fa-user"></i>
-							</div>
-							<div class="feed-time">
-								9:45 AM</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Angelina Glory</a> changed profile photo
-								</p>
-								<p>
-									<img src="/img/avatars/75/1.jpg" />
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-danger">
-								<i class="fa fa-user"></i>
-							</div>
-							<div class="feed-time">
-								10:30 AM</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Wayne Young</a> uploaded new photos
-								</p>
-								<p>
-									<img src="/img/1.jpg" />
-									<img src="/img/2.jpg" />
-									<img src="/img/3.jpg" />
-									<img src="/img/4.jpg" />
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-purple">
-								<i class="fa fa-group"></i>
-							</div>
-							<div class="feed-time">
-								11:30 AM</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Event Celebrations</a>
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet
-								</p>
-							</div>
-						</li>
-						<li class="feed-row">
-							<div class="feed-icon bg-cardovan">
-								<i class="fa fa-youtube"></i>
-							</div>
-							<div class="feed-time">
-								12:00 PM</div>
-							<div class="feed-content">
-								<p>
-									<a href="#">Kelly King</a> shared a video
-								</p>
-								<p>
-									<iframe width="300" height="169" src="http://www.youtube.com/embed/fLe_qO4AE-M" frameborder="0" allowfullscreen></iframe>
-								</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-12">
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					<i class="fa fa-comment-o"></i>Chats
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<div class="chat-content slimscroll" data-height="480">
-					<ul class="chat-list">
-						<li class="chat in"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
-						</a>
-							<div class="chat-body notes notes-success">
-								<div class="name">
-									Carlos Miller
-								</div>
-								<div class="datetime">
-									May 25, 2013 10:00 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-						<li class="chat out"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
-						</a>
-							<div class="chat-body notes notes-primary">
-								<div class="name">
-									Wayne Young
-								</div>
-								<div class="datetime">
-									May 25, 2013 10:02 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-						<li class="chat in"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
-						</a>
-							<div class="chat-body notes notes-success">
-								<div class="name">
-									Carlos Miller
-								</div>
-								<div class="datetime">
-									May 25, 2013 10:05 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-						<li class="chat out"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
-						</a>
-							<div class="chat-body notes notes-primary">
-								<div class="name">
-									Wayne Young
-								</div>
-								<div class="datetime">
-									May 25, 2013 10:10 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-						<li class="chat in"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
-						</a>
-							<div class="chat-body notes notes-success">
-								<div class="name">
-									Carlos Miller
-								</div>
-								<div class="datetime">
-									May 25, 2013 11:05 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-						<li class="chat out"><a href="#" class="img">
-							<img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
-						</a>
-							<div class="chat-body notes notes-primary">
-								<div class="name">
-									Wayne Young
-								</div>
-								<div class="datetime">
-									May 25, 2013 11:10 AM
-								</div>
-								<p class="message">
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="chat-send">
-					<div class="input-group">
-						<input type="text" id="msg" name="msg" class="form-control" placeholder="Message" />
-						<span class="input-group-btn">
-							<button id="send" class="btn btn-primary">
-								<i class="fa fa-check"></i>
-							</button>
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="tab-fancy">
-			<!-- Nav tabs -->
-			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="tab" href="#users">Users</a></li>
-				<li><a data-toggle="tab" href="#favorites">Favorites</a></li>
-				<li><a data-toggle="tab" href="#commenters">Commenters</a></li>
-			</ul>
-			<!-- Tab panes -->
-			<div class="tab-content border">
-				<div id="users" class="tab-pane fade in active">
-					<h5 class="news-heading">
-						<i class="fa fa-group"></i>&nbsp;Last logged-in users</h5>
-					<ul class="users-list slimscroll" data-height="480">
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<div class="status">
-									Product Designer</div>
-								<div class="time">
-									Last logged-in: Mar 20, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<div class="status">
-									Manager</div>
-								<div class="time">
-									Last logged-in: Mar 21, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<div class="status">
-									Admin</div>
-								<div class="time">
-									Last logged-in: Mar 22, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<div class="status">
-									Sales Manager</div>
-								<div class="time">
-									Last logged-in: Mar 23, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<div class="status">
-									Product Designer</div>
-								<div class="time">
-									Last logged-in: Mar 20, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<div class="status">
-									Manager</div>
-								<div class="time">
-									Last logged-in: Mar 21, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<div class="status">
-									Admin</div>
-								<div class="time">
-									Last logged-in: Mar 22, 18:46</div>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<div class="status">
-									Sales Manager</div>
-								<div class="time">
-									Last logged-in: Mar 23, 18:46</div>
-							</div>
-						</a></li>
-					</ul>
-				</div>
-				<div id="favorites" class="tab-pane fade">
-					<h5 class="news-heading">
-						<i class="fa fa-star"></i>&nbsp;Popular Contacts</h5>
-					<ul class="users-list slimscroll" data-height="480">
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<button type="button" id="call" class="btn btn-danger btn-xs margin-top-10 margin-right-10">
-									<i class="fa fa-phone"></i>&nbsp;Call
-								</button>
-								<button class="btn btn-xs btn-warning margin-top-10">
-									<i class="fa fa-envelope-o"></i>&nbsp;Message
-								</button>
-							</div>
-						</a></li>
-					</ul>
-				</div>
-				<div id="commenters" class="tab-pane fade">
-					<h5 class="news-heading">
-						<i class="fa fa-comments"></i>&nbsp;Top Commenters</h5>
-					<ul class="users-list slimscroll" data-height="480">
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Wayne Young</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Carlos Miller</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Angelina Glory</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-						<li><a href="#">
-							<div class="img-box">
-								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" /></div>
-							<div class="news-item-content">
-								<div class="name">
-									Susan Hernandez</div>
-								<p>
-									Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-								</p>
-							</div>
-						</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    General Stats
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="easy-pie-chart-box">
+                            <div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                New Visitors
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="easy-pie-chart-box">
+                            <div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                Bounce Rate
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="easy-pie-chart-box">
+                            <div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
+                                <span></span>
+                            </div>
+                            <div class="title">
+                                Transactions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Order History
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="c3PieChart">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="c3DonutChart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Feed
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body no-padding">
+                <div class="feed slimscroll" data-height="500">
+                    @Html.Partial("_Feed")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i class="fa fa-comment-o"></i>Chats
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <div class="chat-content slimscroll" data-height="480">
+                    <ul class="chat-list">
+                        <li class="chat in">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
+                            </a>
+                            <div class="chat-body notes notes-success">
+                                <div class="name">
+                                    Carlos Miller
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 10:00 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="chat out">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
+                            </a>
+                            <div class="chat-body notes notes-primary">
+                                <div class="name">
+                                    Wayne Young
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 10:02 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="chat in">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
+                            </a>
+                            <div class="chat-body notes notes-success">
+                                <div class="name">
+                                    Carlos Miller
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 10:05 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="chat out">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
+                            </a>
+                            <div class="chat-body notes notes-primary">
+                                <div class="name">
+                                    Wayne Young
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 10:10 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="chat in">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/3.jpg">
+                            </a>
+                            <div class="chat-body notes notes-success">
+                                <div class="name">
+                                    Carlos Miller
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 11:05 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="chat out">
+                            <a href="#" class="img">
+                                <img class="chat-img img-circle" src="/img/avatars/75/4.jpg">
+                            </a>
+                            <div class="chat-body notes notes-primary">
+                                <div class="name">
+                                    Wayne Young
+                                </div>
+                                <div class="datetime">
+                                    May 25, 2013 11:10 AM
+                                </div>
+                                <p class="message">
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-send">
+                    <div class="input-group">
+                        <input type="text" id="msg" name="msg" class="form-control" placeholder="Message" />
+                        <span class="input-group-btn">
+                            <button id="send" class="btn btn-primary">
+                                <i class="fa fa-check"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-fancy">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#users">Users</a></li>
+                <li><a data-toggle="tab" href="#favorites">Favorites</a></li>
+                <li><a data-toggle="tab" href="#commenters">Commenters</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content border">
+                <div id="users" class="tab-pane fade in active">
+                    <h5 class="news-heading">
+                        <i class="fa fa-group"></i>&nbsp;Last logged-in users
+                    </h5>
+                    <ul class="users-list slimscroll" data-height="480">
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Angelina Glory
+                                    </div>
+                                    <div class="status">
+                                        Product Designer
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 20, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Carlos Miller
+                                    </div>
+                                    <div class="status">
+                                        Manager
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 21, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Wayne Young
+                                    </div>
+                                    <div class="status">
+                                        Admin
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 22, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Susan Hernandez
+                                    </div>
+                                    <div class="status">
+                                        Sales Manager
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 23, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Angelina Glory
+                                    </div>
+                                    <div class="status">
+                                        Product Designer
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 20, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Carlos Miller
+                                    </div>
+                                    <div class="status">
+                                        Manager
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 21, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Wayne Young
+                                    </div>
+                                    <div class="status">
+                                        Admin
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 22, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
+                                </div>
+                                <div class="news-item-content">
+                                    <div class="name">
+                                        Susan Hernandez
+                                    </div>
+                                    <div class="status">
+                                        Sales Manager
+                                    </div>
+                                    <div class="time">
+                                        Last logged-in: Mar 23, 18:46
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="favorites" class="tab-pane fade">
+                    @Html.Partial("_Favorites")
+                </div>
+                <div id="commenters" class="tab-pane fade">
+                    @Html.Partial("_Commenters")
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

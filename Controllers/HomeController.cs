@@ -292,6 +292,13 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+        public ActionResult ForgotPassword()
+        {
+            ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
+            ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.ForgotPassword;
+            return View();
+        }
+
 		public ActionResult Lock() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Pages;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Lock;

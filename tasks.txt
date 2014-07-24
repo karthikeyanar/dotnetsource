@@ -12,9 +12,10 @@ jquery file upload manager - completed
 jquery ui page - completed
 block ui page, apply blockui to panel refresh - completed
 add popoverconfirm page - completed
+search page - completed
+profile page - completed
+pie chat page - completed
 
-search page
-profile page
-pie chat page
-sidebar right positon
 form validation addtional methods
+sidebar right positon
+

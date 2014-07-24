@@ -78,6 +78,7 @@ namespace dotnetsource.Helpers {
 
 		SignIn = 45,
 		SignUp = 46,
+        ForgotPassword = 152,
 		Lock = 47,
 		Page404 = 48,
 		Page500 = 49,
@@ -205,6 +206,7 @@ namespace dotnetsource.Helpers {
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SignIn, TopMenuID = (int)TopMenu.Pages, MenuName = "Sign In", MenuURL = "/Home/SignIn" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SignUp, TopMenuID = (int)TopMenu.Pages, MenuName = "Sign Up", MenuURL = "/Home/SignUp" });
+            Menus.Add(new Menu { MenuID = (int)SubMenu.ForgotPassword, TopMenuID = (int)TopMenu.Pages, MenuName = "Forgot Password", MenuURL = "/Home/ForgotPassword" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Lock, TopMenuID = (int)TopMenu.Pages, MenuName = "Lock", MenuURL = "/Home/Lock" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Page404, TopMenuID = (int)TopMenu.Pages, MenuName = "404", MenuURL = "/Home/Page404" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.Page500, TopMenuID = (int)TopMenu.Pages, MenuName = "500", MenuURL = "/Home/Page500" });

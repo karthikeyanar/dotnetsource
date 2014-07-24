@@ -1,14 +1,31 @@
-﻿.profile-container > .profile-photo, .profile-container > .profile-content {
-	float: left;
+﻿.profile-container > .profile-photo, .profile-container > .profile-info {
+    float: left;
 }
+
+.profile-container > .profile-info {
+    margin-left: 20px;
+}
+
 .profile-container:after {
-	clear: both;
-	content: "";
-	display: table;
+    clear: both;
+    content: "";
+    display: table;
 }
+
 .profile-name {
-	margin-top:0;
+    margin-top: 0;
 }
-.profile-location, .profile-position , .profile-share {
-	margin-bottom:8px;
+
+.profile-location, .profile-position, .profile-share {
+    margin-bottom: 8px;
+}
+
+@media(max-width:639px) {
+    .profile-container > .profile-photo, .profile-container > .profile-info {
+        float: none;
+    }
+
+    .profile-container > .profile-info {
+        margin-left: 0px;
+    }
 }
