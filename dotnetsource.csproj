@@ -805,6 +805,7 @@
     <Content Include="logo\fruits.docx" />
     <Content Include="logo\KR Fruitsy.TTF" />
     <Content Include="less\components\blockUI.less" />
+    <Content Include="less\site\sidebar-right.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <None Include="packages\jQuery.1.7.2\Tools\jquery-1.7.2.intellisense.js" />
     <Content Include="packages\Newtonsoft.Json.4.5.6\Newtonsoft.Json.4.5.6.nupkg" />

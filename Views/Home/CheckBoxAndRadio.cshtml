@@ -1,232 +1,284 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "General" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/",
-		FirstUrlName = "Home",
-		SecondUrl = "/Home/General",
-		SecondUrlName = "UI Features",
-		ThirdUrl = "/Home/General",
-		ThirdUrlName = "General"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "General" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/General",
+        SecondUrlName = "UI Features",
+        ThirdUrl = "/Home/General",
+        ThirdUrlName = "General"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<!-- inputlimiter -->
-	<link href="/css/plugins/jquery-inputlimiter/jquery.inputlimiter.1.0.css" rel="stylesheet" type="text/css" />
+    <!-- inputlimiter -->
+    <link href="/css/plugins/jquery-inputlimiter/jquery.inputlimiter.1.0.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
-	<!-- inputlimiter -->
-	<script src="/js/plugins/inputlimiter/jquery.inputlimiter.1.3.1.min.js" type="text/javascript"></script>
-	<!-- autogrow textarea -->
-	<script src="/js/plugins/autogrowtextarea/jquery.autogrowtextarea.min.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-			// Make it more personal
-			$('#textareaCC').inputlimiter({
-				limit: 50,
-				remText: 'You only have %n character%s remaining...',
-				remFullText: 'Stop typing! You\'re not allowed any more characters!',
-				limitText: 'You\'re allowed to input %n character%s into this field.'
-			});
-			// auto grow text area
-			$('#textareaAR').autoGrow();
-		});
-	</script>
+    <!-- inputlimiter -->
+    <script src="/js/plugins/inputlimiter/jquery.inputlimiter.1.3.1.min.js" type="text/javascript"></script>
+    <!-- autogrow textarea -->
+    <script src="/js/plugins/autogrowtextarea/jquery.autogrowtextarea.min.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            // Make it more personal
+            $('#textareaCC').inputlimiter({
+                limit: 50,
+                remText: 'You only have %n character%s remaining...',
+                remFullText: 'Stop typing! You\'re not allowed any more characters!',
+                limitText: 'You\'re allowed to input %n character%s into this field.'
+            });
+            // auto grow text area
+            $('#textareaAR').autoGrow();
+        });
+    </script>
 }
 <div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-pink">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Checkbox
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<form action="#" method="POST">
-				<div class="row">
-					<div class="col-md-4">
-						<h3 class="no-margin-top">
-							Basic
-						</h3>
-						<p>
-							Supports bootstrap brand colors: .checkbox-primary, .checkbox-info etc.
-						</p>
-						<div class="checkbox metro-checkbox">
-							<label class="checkbox-inline">
-								<input type="checkbox" />Default
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox">
-							<label>
-								<input type="checkbox" />Default
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-primary">
-							<label>
-								<input type="checkbox" checked />Primary
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-success">
-							<label>
-								<input type="checkbox" checked />Success
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-info">
-							<label>
-								<input type="checkbox" checked />Info
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-warning">
-							<label>
-								<input type="checkbox" checked />Warning
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-danger">
-							<label>
-								<input type="checkbox" checked />Danger
-							</label>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h3 class="no-margin-top">
-							Circled
-						</h3>
-						<p>
-							Supports bootstrap brand colors: .checkbox-primary, .checkbox-info etc.
-						</p>
-						<div class="checkbox metro-checkbox metro-checkbox-circle">
-							<label>
-								<input type="checkbox" />Default
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-primary">
-							<label>
-								<input type="checkbox" checked />Primary
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-success">
-							<label>
-								<input type="checkbox" checked />Success
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-info">
-							<label>
-								<input type="checkbox" checked />Info
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-warning">
-							<label>
-								<input type="checkbox" checked />Warning
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-danger">
-							<label>
-								<input type="checkbox" checked />Danger
-							</label>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h3 class="no-margin-top">
-							Disabled
-						</h3>
-						<p>
-							.checkbox-circle for roundness.
-						</p>
-						<div class="checkbox metro-checkbox">
-							<label>
-								<input type="checkbox" disabled="" id="checkbox13" />Can't check this
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-success">
-							<label>
-								<input type="checkbox" disabled="" checked />This too
-							</label>
-						</div>
-						<div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-success">
-							<label>
-								<input type="checkbox" disabled="" checked />And this
-							</label>
-						</div>
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="col-md-12">
+        <div class="panel panel-pink">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Checkbox
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Basic
+                            </h3>
+                            <p>
+                                Supports bootstrap brand colors: .checkbox-primary, .checkbox-info etc.
+                            </p>
+                            <div class="checkbox metro-checkbox">
+                                <label>
+                                    <input type="checkbox" />Default
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-primary">
+                                <label>
+                                    <input type="checkbox" checked />Primary
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-success">
+                                <label>
+                                    <input type="checkbox" checked />Success
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-info">
+                                <label>
+                                    <input type="checkbox" checked />Info
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-warning">
+                                <label>
+                                    <input type="checkbox" checked />Warning
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-danger">
+                                <label>
+                                    <input type="checkbox" checked />Danger
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Circled
+                            </h3>
+                            <p>
+                                Supports bootstrap brand colors: .checkbox-primary, .checkbox-info etc.
+                            </p>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle">
+                                <label>
+                                    <input type="checkbox" />Default
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-primary">
+                                <label>
+                                    <input type="checkbox" checked />Primary
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-success">
+                                <label>
+                                    <input type="checkbox" checked />Success
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-info">
+                                <label>
+                                    <input type="checkbox" checked />Info
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-warning">
+                                <label>
+                                    <input type="checkbox" checked />Warning
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-danger">
+                                <label>
+                                    <input type="checkbox" checked />Danger
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Disabled
+                            </h3>
+                            <p>
+                                .checkbox-circle for roundness.
+                            </p>
+                            <div class="checkbox metro-checkbox">
+                                <label>
+                                    <input type="checkbox" disabled="" id="checkbox13" />Can't check this
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-success">
+                                <label>
+                                    <input type="checkbox" disabled="" checked />This too
+                                </label>
+                            </div>
+                            <div class="checkbox metro-checkbox metro-checkbox-circle metro-checkbox-success">
+                                <label>
+                                    <input type="checkbox" disabled="" checked />And this
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Checkbox Inline
+                            </h3>
+                            <p>
+                                Supports bootstrap brand colors: .checkbox-primary, .checkbox-info etc.
+                            </p>
+                            <label class="checkbox-inline metro-checkbox">
+                                <input type="checkbox" />Default
+                            </label>
+                            <label class="checkbox-inline metro-checkbox metro-checkbox-primary">
+                                <input type="checkbox" checked />Primary
+                            </label>
+                            <label class="checkbox-inline metro-checkbox metro-checkbox-success">
+                                <input type="checkbox" checked />Success
+                            </label>
+                            <label class="checkbox-inline metro-checkbox metro-checkbox-info">
+                                <input type="checkbox" checked />Info
+                            </label>
+                            <label class="checkbox-inline metro-checkbox metro-checkbox-warning">
+                                <input type="checkbox" checked />Warning
+                            </label>
+                            <label class="checkbox-inline metro-checkbox metro-checkbox-danger">
+                                <input type="checkbox" checked />Danger
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row">
-	<div class="col-md-12">
-		<div class="panel panel-dark-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Radio
-				</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<form action="#" method="POST">
-				<div class="row">
-					<div class="col-md-4">
-						<h3 class="no-margin-top">
-							Basic
-						</h3>
-						<p>
-							Supports bootstrap brand colors: .radio-primary, .radio-info etc.
-						</p>
-						<div class="radio metro-radio">
-							<label>
-								<input type="radio" />Default
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-primary">
-							<label>
-								<input type="radio" checked />Primary
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-success">
-							<label>
-								<input type="radio" checked />Success
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-info">
-							<label>
-								<input type="radio" checked />Info
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-warning">
-							<label>
-								<input type="radio" checked />Warning
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-danger">
-							<label>
-								<input type="radio" checked />Danger
-							</label>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h3 class="no-margin-top">
-							Disabled
-						</h3>
-						<p>
-							.radio-circle for roundness.
-						</p>
-						<div class="radio metro-radio">
-							<label>
-								<input type="radio" disabled="" id="checkbox13" />Can't check this
-							</label>
-						</div>
-						<div class="radio metro-radio metro-radio-success">
-							<label>
-								<input type="radio" disabled="" checked />This too
-							</label>
-						</div>
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="col-md-12">
+        <div class="panel panel-dark-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Radio
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Basic
+                            </h3>
+                            <p>
+                                Supports bootstrap brand colors: .radio-primary, .radio-info etc.
+                            </p>
+                            <div class="radio metro-radio">
+                                <label>
+                                    <input type="radio" />Default
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-primary">
+                                <label>
+                                    <input type="radio" checked />Primary
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-success">
+                                <label>
+                                    <input type="radio" checked />Success
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-info">
+                                <label>
+                                    <input type="radio" checked />Info
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-warning">
+                                <label>
+                                    <input type="radio" checked />Warning
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-danger">
+                                <label>
+                                    <input type="radio" checked />Danger
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Disabled
+                            </h3>
+                            <p>
+                                .radio-circle for roundness.
+                            </p>
+                            <div class="radio metro-radio">
+                                <label>
+                                    <input type="radio" disabled="" id="checkbox13" />Can't check this
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-success">
+                                <label>
+                                    <input type="radio" disabled="" checked />This too
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="no-margin-top">
+                                Radio Inline
+                            </h3>
+                            <p>
+                                Supports bootstrap brand colors: .radio-primary, .radio-info etc.
+                            </p>
+                            <label class="radio-inline metro-radio">
+                                <input type="radio" />Default
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-primary">
+                                <input type="radio" checked />Primary
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-success">
+                                <input type="radio" checked />Success
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-info">
+                                <input type="radio" checked />Info
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-warning">
+                                <input type="radio" checked />Warning
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-danger">
+                                <input type="radio" checked />Danger
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

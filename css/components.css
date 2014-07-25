@@ -2256,19 +2256,25 @@ fieldset[disabled] .btn-twitter.active {
   width: 530px !important;
 }
 .metro-checkbox  > label  > input,
-.metro-radio  > label  > input {
+.metro-radio  > label  > input,
+.checkbox-inline.metro-checkbox  > input,
+.radio-inline.metro-radio  > input {
   position: absolute;
   opacity: 0;
   width: 1px;
   height: 1px;
 }
 .metro-checkbox  > label,
-.metro-radio  > label {
+.metro-radio  > label,
+.checkbox-inline.metro-checkbox,
+.radio-inline.metro-radio {
   position: relative;
   padding-left: 23px;
 }
 .metro-checkbox  > label  > span.check,
-.metro-radio  > label  > span.check {
+.metro-radio  > label  > span.check,
+.checkbox-inline.metro-checkbox  > span.check,
+.radio-inline.metro-radio  > span.check {
   background-color: inherit;
   border: 1px solid #ccc;
   display: inline-block;
@@ -2280,17 +2286,20 @@ fieldset[disabled] .btn-twitter.active {
   position: absolute;
   vertical-align: middle;
 }
-.metro-checkbox-circle  > label  > span.check {
-  border-radius: 50%;
-}
-.metro-radio  > label  > span.check {
+.metro-checkbox-circle  > label  > span.check,
+.checkbox-inline.metro-checkbox-circle  > span.check,
+.metro-radio  > label  > span.check,
+.radio-inline.metro-radio  > span.check {
   border-radius: 100%;
 }
 .metro-checkbox  > label  > input[type="checkbox"]:hover ~ span.check,
-.metro-radio  > label  > input[type="radio"]:hover ~ span.check {
+.metro-radio  > label  > input[type="radio"]:hover ~ span.check,
+.checkbox-inline.metro-checkbox  > input[type="checkbox"]:hover ~ span.check,
+.radio-inline.metro-radio  > input[type="radio"]:hover ~ span.check {
   border-color: #a9a9a9;
 }
-.metro-radio  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio  > input[type="radio"]:checked ~ span.check:after {
   background-color: #555;
   border-radius: 100%;
   content: "" !important;
@@ -2299,7 +2308,8 @@ fieldset[disabled] .btn-twitter.active {
   margin: 3px;
   width: 9px;
 }
-.metro-checkbox  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox  > input[type="checkbox"]:checked ~ span.check:after {
   color: #555;
   content: "\f00c";
   font-family: 'FontAwesome';
@@ -2308,101 +2318,120 @@ fieldset[disabled] .btn-twitter.active {
   top: 0;
 }
 .metro-checkbox  > label  > input[type="checkbox"]:disabled ~ span.check,
-.metro-radio  > label  > input[type="radio"]:disabled ~ span.check {
+.metro-radio  > label  > input[type="radio"]:disabled ~ span.check,
+.checkbox-inline.metro-checkbox  > input[type="checkbox"]:disabled ~ span.check,
+.radio-inline.metro-radio  > input[type="radio"]:disabled ~ span.check {
   opacity: 0.5;
   filter: alpha(opacity=50);
   cursor: not-allowed;
 }
 .metro-checkbox  > label  > input[type="checkbox"]:disabled ~ span.check,
-.metro-radio  > label  > input[type="radio"]:disabled ~ span.check {
+.metro-radio  > label  > input[type="radio"]:disabled ~ span.check,
+.checkbox-inline.metro-checkbox  > input[type="checkbox"]:disabled ~ span.check,
+.radio-inline.metro-radio  > input[type="radio"]:disabled ~ span.check {
   cursor: not-allowed;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check {
+.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check,
+.checkbox-inline.metro-checkbox-primary  > input[type="checkbox"]:checked ~ span.check {
   background-color: #007fff;
   border-color: #007fff;
 }
-.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox-primary  > input[type="checkbox"]:checked ~ span.check:after {
   color: #ffffff;
 }
-.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check {
+.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check,
+.checkbox-inline.metro-checkbox-success  > input[type="checkbox"]:checked ~ span.check {
   background-color: #008a17;
   border-color: #008a17;
 }
-.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox-success  > input[type="checkbox"]:checked ~ span.check:after {
   color: #ffffff;
 }
-.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check {
+.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check,
+.checkbox-inline.metro-checkbox-info  > input[type="checkbox"]:checked ~ span.check {
   background-color: #8c0095;
   border-color: #8c0095;
 }
-.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox-info  > input[type="checkbox"]:checked ~ span.check:after {
   color: #ffffff;
 }
-.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check {
+.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check,
+.checkbox-inline.metro-checkbox-warning  > input[type="checkbox"]:checked ~ span.check {
   background-color: #ff8f32;
   border-color: #ff8f32;
 }
-.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox-warning  > input[type="checkbox"]:checked ~ span.check:after {
   color: #ffffff;
 }
-.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check {
+.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check,
+.checkbox-inline.metro-checkbox-danger  > input[type="checkbox"]:checked ~ span.check {
   background-color: #d24726;
   border-color: #d24726;
 }
-.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check:after {
+.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check:after,
+.checkbox-inline.metro-checkbox-danger  > input[type="checkbox"]:checked ~ span.check:after {
   color: #ffffff;
 }
-.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check {
+.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check,
+.radio-inline.metro-radio-primary  > input[type="radio"]:checked ~ span.check {
   border-color: #007fff;
 }
-.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio-primary  > input[type="radio"]:checked ~ span.check:after {
   background-color: #007fff;
 }
-.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check {
+.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check,
+.radio-inline.metro-radio-success  > input[type="radio"]:checked ~ span.check {
   border-color: #008a17;
 }
-.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio-success  > input[type="radio"]:checked ~ span.check:after {
   background-color: #008a17;
 }
-.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check {
+.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check,
+.radio-inline.metro-radio-info  > input[type="radio"]:checked ~ span.check {
   border-color: #8c0095;
 }
-.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio-info  > input[type="radio"]:checked ~ span.check:after {
   background-color: #8c0095;
 }
-.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check {
+.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check,
+.radio-inline.metro-radio-warning  > input[type="radio"]:checked ~ span.check {
   border-color: #ff8f32;
 }
-.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio-warning  > input[type="radio"]:checked ~ span.check:after {
   background-color: #ff8f32;
 }
-.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check {
+.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check,
+.radio-inline.metro-radio-danger  > input[type="radio"]:checked ~ span.check {
   border-color: #d24726;
 }
-.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check:after {
+.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check:after,
+.radio-inline.metro-radio-danger  > input[type="radio"]:checked ~ span.check:after {
   background-color: #d24726;
 }
-.table-view.metro-checkbox label:before,
-.table-view.metro-radio label:before,
-.table-view.metro-checkbox label:before,
-.table-view.metro-radio label:before {
-  top: -15px;
-}
-.table-view.metro-checkbox label:after,
-.table-view.metro-radio label:after,
-.table-view.metro-checkbox label:after,
-.table-view.metro-radio label:after {
-  top: -16px;
+.table-view.metro-checkbox  > label  > span.check,
+.table-view.metro-radio  > label  > span.check,
+.table-view.checkbox-inline.metro-checkbox  > span.check,
+.table-view.radio-inline.metro-radio  > span.check {
+  position: relative;
 }
 .input-group-addon > .metro-checkbox {
   min-height: 0px;
   padding: 0;
   margin: 0;
 }
-.input-group-addon > .metro-checkbox > label .input-group-addon > .metro-checkbox > span.check {
+.input-group-addon > .metro-checkbox > span.check {
   margin: 0;
+  position: relative;
 }
 .notes {
   margin: 10px 0;

@@ -15,7 +15,7 @@ add popoverconfirm page - completed
 search page - completed
 profile page - completed
 pie chat page - completed
+form validation addtional methods - completed
 
-form validation addtional methods
 sidebar right positon
-
+search

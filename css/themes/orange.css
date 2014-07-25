@@ -20,7 +20,8 @@ body.page-boxed {
   background: #ff8f32;
   color: #ffffff;
 }
-.theme-panel > .theme-options {
+.theme-panel > .theme-options,
+.sidebar-right .theme-panel > .theme-options {
   border-color: #ff8f32;
 }
 /* header */

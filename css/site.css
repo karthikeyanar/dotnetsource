@@ -25,8 +25,8 @@
   border-radius: 0;
   box-shadow: none;
   border: 0;
-  z-index: 10000;
   position: relative;
+  z-index: 1030;
   min-height: 44px;
   margin-bottom: 0;
 }
@@ -370,7 +370,7 @@
   padding-left: 0;
   padding-right: 0;
   float: left;
-  z-index: 3;
+  z-index: 1029;
   width: 220px;
 }
 .sidebar:before {
@@ -537,6 +537,75 @@
   .sidebar {
     display: block !important;
   }
+}
+.sidebar-right .sidebar-wrapper {
+  float: right;
+  position: relative;
+}
+.sidebar-right .sidebar-wrapper {
+  margin-right: 220px;
+}
+.sidebar-right.sidebar-md .sidebar-wrapper {
+  margin-right: 110px;
+}
+.sidebar-right.sidebar-sm .sidebar-wrapper {
+  margin-right: 35px;
+}
+.sidebar-right.sidebar-animation .sidebar-wrapper {
+  -webkit-transition: none 0.4s ease;
+  -moz-transition: none 0.4s ease;
+  -ms-transition: none 0.4s ease;
+  -o-transition: none 0.4s ease;
+  transition: none 0.4s ease;
+  -webkit-transition-property: margin-right;
+  -moz-transition-property: margin-right;
+  -ms-transition-property: margin-right;
+  -o-transition-property: margin-right;
+  transition-property: margin-right;
+}
+.sidebar-right .page-container .page-content,
+.sidebar-right .page-container .footer {
+  margin-right: 220px;
+  margin-left: 0;
+}
+.sidebar-right.sidebar-md .page-container .page-content,
+.sidebar-right.sidebar-md .page-container .footer {
+  margin-right: 110px;
+  margin-left: 0;
+}
+.sidebar-right.sidebar-md-fixed .page-container .page-content,
+.sidebar-right.sidebar-md-fixed .page-container .footer {
+  margin-right: 110px !important;
+  margin-left: 0 !important;
+}
+.sidebar-right.sidebar-sm .page-container .page-content,
+.sidebar-right.sidebar-sm .page-container .footer {
+  margin-right: 35px;
+  margin-left: 0;
+}
+.sidebar-right.sidebar-sm-fixed .page-container .page-content,
+.sidebar-right.sidebar-sm-fixed .page-container .footer {
+  margin-right: 35px !important;
+  margin-left: 0 !important;
+}
+.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
+  right: 110px;
+  left: auto;
+}
+.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > .nav.in {
+  right: 35px;
+  left: auto;
+}
+.sidebar-right .theme-panel {
+  right: auto;
+  left: 0;
+}
+.sidebar-right .theme-panel > .toggler {
+  float: right;
+}
+.sidebar-right .theme-panel > .theme-options {
+  border: solid 2px #000;
+  border-left: 0;
 }
 @media (min-width: 992px) {
   /* page sidebar small */
