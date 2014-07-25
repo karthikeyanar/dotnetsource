@@ -2196,47 +2196,6 @@ fieldset[disabled] .btn-google-plus.active {
   color: #dd4b39;
   background-color: #ffffff;
 }
-.btn-microsoft {
-  color: #ffffff;
-  background-color: #2672ec;
-  border-color: #2672ec;
-}
-.btn-microsoft:hover,
-.btn-microsoft:focus,
-.btn-microsoft:active,
-.btn-microsoft.active,
-.open .dropdown-toggle.btn-microsoft {
-  color: #ffffff;
-  background-color: #135ed6;
-  border-color: #135ed6;
-}
-.btn-microsoft:active,
-.btn-microsoft.active,
-.open .dropdown-toggle.btn-microsoft {
-  background-image: none;
-}
-.btn-microsoft.disabled,
-.btn-microsoft[disabled],
-fieldset[disabled] .btn-microsoft,
-.btn-microsoft.disabled:hover,
-.btn-microsoft[disabled]:hover,
-fieldset[disabled] .btn-microsoft:hover,
-.btn-microsoft.disabled:focus,
-.btn-microsoft[disabled]:focus,
-fieldset[disabled] .btn-microsoft:focus,
-.btn-microsoft.disabled:active,
-.btn-microsoft[disabled]:active,
-fieldset[disabled] .btn-microsoft:active,
-.btn-microsoft.disabled.active,
-.btn-microsoft[disabled].active,
-fieldset[disabled] .btn-microsoft.active {
-  background-color: #2672ec;
-  border-color: #2672ec;
-}
-.btn-microsoft .badge {
-  color: #2672ec;
-  background-color: #ffffff;
-}
 .btn-twitter {
   color: #ffffff;
   background-color: #55acee;
@@ -2296,194 +2255,154 @@ fieldset[disabled] .btn-twitter.active {
 .input-xxlarge {
   width: 530px !important;
 }
-.fa-checkbox label {
-  display: inline-block;
+.metro-checkbox  > label  > input,
+.metro-radio  > label  > input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.metro-checkbox  > label,
+.metro-radio  > label {
   position: relative;
   padding-left: 23px;
 }
-.fa-checkbox label:before {
-  content: "";
+.metro-checkbox  > label  > span.check,
+.metro-radio  > label  > span.check {
+  background-color: inherit;
+  border: 1px solid #ccc;
   display: inline-block;
-  position: absolute;
-  width: 17px;
   height: 17px;
-  left: 0;
-  border: 1px solid #cccccc;
-  border-radius: 0;
-  background-color: #fff;
-  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-.fa-checkbox label:after {
-  display: inline-block;
+  width: 17px;
+  line-height: 12px;
+  margin-left: -23px;
+  padding: 0;
   position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 0;
-  top: 0;
-  padding-left: 3px;
-  padding-top: 1px;
-  font-size: 11px;
-  color: #555555;
+  vertical-align: middle;
 }
-.fa-checkbox input[type=checkbox] {
-  display: none;
-}
-.fa-checkbox input[type=checkbox]:checked + label:after {
-  font-family: 'FontAwesome';
-  content: "\f00c";
-}
-.fa-checkbox input[type=checkbox]:disabled + label {
-  opacity: 0.65;
-}
-.fa-checkbox input[type=checkbox]:disabled + label:before {
-  background-color: #e6e6e6;
-  cursor: not-allowed;
-}
-.fa-checkbox.fa-checkbox-circle label:before {
+.metro-checkbox-circle  > label  > span.check {
   border-radius: 50%;
 }
-.fa-checkbox-primary input[type=checkbox]:checked + label:before {
-  background-color: #007fff;
-  border-color: #007fff;
+.metro-radio  > label  > span.check {
+  border-radius: 100%;
 }
-.fa-checkbox-primary input[type=checkbox]:checked + label:after {
-  color: #ffffff;
+.metro-checkbox  > label  > input[type="checkbox"]:hover ~ span.check,
+.metro-radio  > label  > input[type="radio"]:hover ~ span.check {
+  border-color: #a9a9a9;
 }
-.fa-checkbox-danger input[type=checkbox]:checked + label:before {
-  background-color: #d24726;
-  border-color: #d24726;
-}
-.fa-checkbox-danger input[type=checkbox]:checked + label:after {
-  color: #ffffff;
-}
-.fa-checkbox-info input[type=checkbox]:checked + label:before {
-  background-color: #8c0095;
-  border-color: #8c0095;
-}
-.fa-checkbox-info input[type=checkbox]:checked + label:after {
-  color: #ffffff;
-}
-.fa-checkbox-warning input[type=checkbox]:checked + label:before {
-  background-color: #ff8f32;
-  border-color: #ff8f32;
-}
-.fa-checkbox-warning input[type=checkbox]:checked + label:after {
-  color: #ffffff;
-}
-.fa-checkbox-success input[type=checkbox]:checked + label:before {
-  background-color: #008a17;
-  border-color: #008a17;
-}
-.fa-checkbox-success input[type=checkbox]:checked + label:after {
-  color: #ffffff;
-}
-.fa-radio label {
-  display: inline-block;
-  position: relative;
-  padding-left: 23px;
-}
-.fa-radio label:before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  left: 0;
-  border: 1px solid #cccccc;
-  border-radius: 50%;
-  background-color: #fff;
-  -webkit-transition: border 0.15s ease-in-out;
-  transition: border 0.15s ease-in-out;
-}
-.fa-radio label:after {
-  display: inline-block;
-  position: absolute;
-  content: " ";
-  width: 9px;
+.metro-radio  > label  > input[type="radio"]:checked ~ span.check:after {
+  background-color: #555;
+  border-radius: 100%;
+  content: "" !important;
+  display: block;
   height: 9px;
-  left: 4px;
-  top: 4px;
-  border-radius: 50%;
-  background-color: #555555;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
-  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
-  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
-  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  margin: 3px;
+  width: 9px;
 }
-.fa-radio input[type=radio] {
-  display: none;
+.metro-checkbox  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #555;
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-size: 11px;
+  margin: 2px;
+  top: 0;
 }
-.fa-radio input[type=radio]:checked + label:after {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-.fa-radio input[type=radio]:disabled + label {
-  opacity: 0.65;
-}
-.fa-radio input[type=radio]:disabled + label:before {
+.metro-checkbox  > label  > input[type="checkbox"]:disabled ~ span.check,
+.metro-radio  > label  > input[type="radio"]:disabled ~ span.check {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
   cursor: not-allowed;
 }
-.fa-radio-primary input[type=radio] + label:after {
-  background-color: #007fff;
+.metro-checkbox  > label  > input[type="checkbox"]:disabled ~ span.check,
+.metro-radio  > label  > input[type="radio"]:disabled ~ span.check {
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
-.fa-radio-primary input[type=radio]:checked + label:before {
+.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check {
+  background-color: #007fff;
   border-color: #007fff;
 }
-.fa-radio-primary input[type=radio]:checked + label:after {
-  background-color: #007fff;
+.metro-checkbox-primary  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #ffffff;
 }
-.fa-radio-danger input[type=radio] + label:after {
-  background-color: #d24726;
-}
-.fa-radio-danger input[type=radio]:checked + label:before {
-  border-color: #d24726;
-}
-.fa-radio-danger input[type=radio]:checked + label:after {
-  background-color: #d24726;
-}
-.fa-radio-info input[type=radio] + label:after {
-  background-color: #8c0095;
-}
-.fa-radio-info input[type=radio]:checked + label:before {
-  border-color: #8c0095;
-}
-.fa-radio-info input[type=radio]:checked + label:after {
-  background-color: #8c0095;
-}
-.fa-radio-warning input[type=radio] + label:after {
-  background-color: #ff8f32;
-}
-.fa-radio-warning input[type=radio]:checked + label:before {
-  border-color: #ff8f32;
-}
-.fa-radio-warning input[type=radio]:checked + label:after {
-  background-color: #ff8f32;
-}
-.fa-radio-success input[type=radio] + label:after {
+.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check {
   background-color: #008a17;
-}
-.fa-radio-success input[type=radio]:checked + label:before {
   border-color: #008a17;
 }
-.fa-radio-success input[type=radio]:checked + label:after {
+.metro-checkbox-success  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #ffffff;
+}
+.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check {
+  background-color: #8c0095;
+  border-color: #8c0095;
+}
+.metro-checkbox-info  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #ffffff;
+}
+.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check {
+  background-color: #ff8f32;
+  border-color: #ff8f32;
+}
+.metro-checkbox-warning  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #ffffff;
+}
+.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check {
+  background-color: #d24726;
+  border-color: #d24726;
+}
+.metro-checkbox-danger  > label  > input[type="checkbox"]:checked ~ span.check:after {
+  color: #ffffff;
+}
+.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check {
+  border-color: #007fff;
+}
+.metro-radio-primary  > label  > input[type="radio"]:checked ~ span.check:after {
+  background-color: #007fff;
+}
+.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check {
+  border-color: #008a17;
+}
+.metro-radio-success  > label  > input[type="radio"]:checked ~ span.check:after {
   background-color: #008a17;
 }
-.table-view.fa-checkbox label:before,
-.table-view.fa-radio label:before,
-.table-view.fa-checkbox label:before,
-.table-view.fa-radio label:before {
+.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check {
+  border-color: #8c0095;
+}
+.metro-radio-info  > label  > input[type="radio"]:checked ~ span.check:after {
+  background-color: #8c0095;
+}
+.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check {
+  border-color: #ff8f32;
+}
+.metro-radio-warning  > label  > input[type="radio"]:checked ~ span.check:after {
+  background-color: #ff8f32;
+}
+.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check {
+  border-color: #d24726;
+}
+.metro-radio-danger  > label  > input[type="radio"]:checked ~ span.check:after {
+  background-color: #d24726;
+}
+.table-view.metro-checkbox label:before,
+.table-view.metro-radio label:before,
+.table-view.metro-checkbox label:before,
+.table-view.metro-radio label:before {
   top: -15px;
 }
-.table-view.fa-checkbox label:after,
-.table-view.fa-radio label:after,
-.table-view.fa-checkbox label:after,
-.table-view.fa-radio label:after {
+.table-view.metro-checkbox label:after,
+.table-view.metro-radio label:after,
+.table-view.metro-checkbox label:after,
+.table-view.metro-radio label:after {
   top: -16px;
+}
+.input-group-addon > .metro-checkbox {
+  min-height: 0px;
+  padding: 0;
+  margin: 0;
+}
+.input-group-addon > .metro-checkbox > label .input-group-addon > .metro-checkbox > span.check {
+  margin: 0;
 }
 .notes {
   margin: 10px 0;

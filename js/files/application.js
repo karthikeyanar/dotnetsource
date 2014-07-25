@@ -55,15 +55,12 @@
 	}
 
 	this.handleMetroCheck=function() {
-		$('.fa-checkbox,.fa-radio').find(":input").each(function() {
+		$('.metro-checkbox,.metro-radio').find(":input").each(function() {
 			var $this=$(this);
 			if($this.closest("label").size()==1) {
-				$this.closest("label").parent().prepend($this);
+				if($this.closest("label").find(".check").size()==0)
+					$this.after("<span class='check'></span>");
 			}
-			var $parent=$this.parent();
-			var $label=$("label",$parent);
-			if($label.attr("for")==undefined)
-				$label.attr("for",$this.attr("id"));
 		});
 	}
 

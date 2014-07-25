@@ -1,60 +1,23 @@
-﻿var chartGauge=c3.generate({
-	bindto: '#c3-gauge-chart',
-	data: {
-		columns: [
-            ['data',91.4]
-        ],
-		type: 'gauge'
-	},
-	gauge: {
-		//        label: {
-		//            format: function(value, ratio) {
-		//                return value;
-		//            },
-		//            show: false // to turn off the min/max labels.
-		//        },
-		//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-		//    max: 100, // 100 is default
-		//    units: ' %',
-		//    width: 39 // for adjusting arc thickness
-	},
-	color: {
-		pattern: ['#FF0000','#F97600','#F6C600','#60B044'], // the three color levels for the percentage values.
-		threshold: {
-			//            unit: 'value', // percentage is default
-			//            max: 200, // 100 is default
-			values: [30,60,90,100]
-		}
-	}
-});
-
-setTimeout(function() {
-	chartGauge.load({
-		columns: [['data',10]]
-	});
-},1000);
-
-setTimeout(function() {
-	chartGauge.load({
-		columns: [['data',50]]
-	});
-},2000);
-
-setTimeout(function() {
-	chartGauge.load({
-		columns: [['data',70]]
-	});
-},3000);
-
-setTimeout(function() {
-	chartGauge.load({
-		columns: [['data',0]]
-	});
-},4000);
-
-setTimeout(function() {
-	chartGauge.load({
-		columns: [['data',100]]
-	});
-},5000);
-
+﻿<div class="col-md-4">
+						<h3 class="no-margin-top">
+							Disabled
+						</h3>
+						<p>
+							.radio-circle for roundness.
+						</p>
+						<div class="radio metro-radio">
+							<label>
+								<input type="radio" disabled="" id="checkbox13" /><span></span>Can't check this
+							</label>
+						</div>
+						<div class="radio metro-radio metro-radio-success">
+							<label>
+								<input type="radio" disabled="" checked /><span></span>This too
+							</label>
+						</div>
+						<div class="radio metro-radio metro-radio-circle metro-radio-success">
+							<label>
+								<input type="radio" disabled="" checked /><span></span>And this
+							</label>
+						</div>
+					</div>

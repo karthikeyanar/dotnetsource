@@ -261,10 +261,10 @@
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\files\application.js" />
     <Content Include="js\files\Copy of application.js" />
-    <Content Include="js\jquery\additional-methods.js" />
-    <Content Include="js\jquery\additional-methods.min.js" />
-    <Content Include="js\jquery\jquery-1.11.1.min.js" />
-    <Content Include="js\jquery\jquery.validate.min.js" />
+    <Content Include="js\jquery\jquery-2.1.1.min.js" />
+    <Content Include="js\plugins\jqueryvalidation\additional-methods.js" />
+    <Content Include="js\plugins\jqueryvalidation\additional-methods.min.js" />
+    <Content Include="js\plugins\jqueryvalidation\jquery.validate.min.js" />
     <Content Include="js\knockout\knockout-3.1.0.js" />
     <Content Include="js\pages\c3chart.js" />
     <Content Include="js\pages\dashboard.js" />
@@ -513,7 +513,6 @@
     <Content Include="less\components\chat.less" />
     <Content Include="less\components\components.less" />
     <Content Include="less\components\dropdowns.less" />
-    <Content Include="less\components\fancy-inputs.less" />
     <Content Include="less\components\feed.less" />
     <Content Include="less\components\fileinput.less" />
     <Content Include="less\components\forms.less" />

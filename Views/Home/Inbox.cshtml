@@ -85,8 +85,9 @@
 						<tr>
 							<th colspan="6">
 								<div class="pull-left">
-									<div class="checkbox fa-checkbox table-view">
-										<input type="checkbox" id="selectall" name="selectall" data-bind="click: selectAll, checked: all_selected" /><label for="selectall"></label>
+									<div class="checkbox metro-checkbox table-view">
+										<label class="checkbox-inline" for="selectall">
+											<input type="checkbox" id="selectall" name="selectall" data-bind="click: selectAll, checked: all_selected" /></label>
 									</div>
 								</div>
 								<div class="pull-left margin-left-10">
@@ -126,8 +127,10 @@
 						<!-- ko foreach: mails -->
 						<tr data-bind="visible: is_show,css: { 'read' : is_read()==true, 'select': is_select()==true }">
 							<td class="tiny-column">
-								<div class="checkbox fa-checkbox table-view">
-									<input type="checkbox" name="select" data-bind="checked: is_select,attr:{'id': 'select-' + $index()}" /><label data-bind="attr:{'for': 'select-' + $index()}"></label>
+								<div class="checkbox metro-checkbox1 table-view1">
+									<label>
+										<input type="checkbox" name="select" data-bind="checked: is_select,attr:{'id': 'select-' + $index()}" />
+									</label>
 								</div>
 							</td>
 							<td class="tiny-column" data-bind="click:setStar">
