@@ -329,11 +329,6 @@ body.page-boxed {
 		width: 0; 
 		position: absolute; 
 		pointer-events: none; 
-	} 
-	.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
-	.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
-		border-color: transparent @sidebar-sm-menu-hover-menu-text-bg-color transparent transparent; 
-		border-right-color:@sidebar-sm-menu-hover-menu-text-bg-color; 
 	}
 	.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after {
 		border-width: 8px; 
@@ -343,6 +338,11 @@ body.page-boxed {
 		border-width: 10px; 
 		margin-top: -10px;
 	}
+	.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
+		border-color: transparent @sidebar-sm-menu-hover-menu-text-bg-color transparent transparent; 
+		border-right-color:@sidebar-sm-menu-hover-menu-text-bg-color; 
+	}
 	.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after { 
 		border-color: transparent @submenu-bg-color transparent transparent; 
 		border-right-color: @submenu-bg-color;
@@ -350,6 +350,25 @@ body.page-boxed {
 	.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before { 
 		border-color: transparent @sidebar-sm-submenu-border-color transparent transparent; 
 		border-right-color: @sidebar-sm-submenu-border-color;
+	}
+	// sidebar right
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before { 
+		left: -1px; 
+		right: auto;
+	}
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
+		border-right-color: transparent;
+		border-left-color:@sidebar-sm-menu-hover-menu-text-bg-color; 
+	}
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after { 
+		border-right-color: transparent;
+		border-left-color: @submenu-bg-color;
+	} 
+	.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before { 
+		border-right-color: transparent;
+		border-left-color: @sidebar-sm-submenu-border-color;
 	}
 }
 @media (min-width: @screen-md-min) {
@@ -383,11 +402,6 @@ body.page-boxed {
 		width: 0; 
 		position: absolute; 
 		pointer-events: none; 
-	} 
-	.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
-	.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
-		border-color: transparent @sidebar-md-submenu-bg-color transparent transparent; 
-		border-right-color:@sidebar-md-submenu-bg-color; 
 	}
 	.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after {
 		border-width: 8px; 
@@ -397,6 +411,11 @@ body.page-boxed {
 		border-width: 10px; 
 		margin-top: -10px;
 	}
+	.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
+		border-color: transparent @sidebar-md-submenu-bg-color transparent transparent; 
+		border-right-color:@sidebar-md-submenu-bg-color; 
+	}
 	.sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after { 
 		border-color: transparent @sidebar-md-submenu-bg-color transparent transparent; 
 		border-right-color: @sidebar-md-submenu-bg-color;
@@ -405,8 +424,26 @@ body.page-boxed {
 		border-color: transparent @sidebar-md-submenu-border-color transparent transparent; 
 		border-right-color: @sidebar-md-submenu-border-color;
 	}
+	// sidebar right
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before { 
+		left: -1px; 
+		right: auto;
+	}
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after, 
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before	{ 
+		border-right-color: transparent;
+		border-left-color: @sidebar-md-submenu-bg-color; 
+	}
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after { 
+		border-right-color: transparent;
+		border-left-color: @sidebar-md-submenu-bg-color;
+	} 
+	.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before { 
+		border-right-color: transparent;
+		border-left-color: @sidebar-md-submenu-border-color;
+	}
 }
-
 /* sidebar sub menu */
 .sidebar-menu.nav > li > .nav li a {
     background-color: @submenu-bg-color;

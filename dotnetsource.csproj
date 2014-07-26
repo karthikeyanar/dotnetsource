@@ -826,6 +826,7 @@
     <Content Include="Views\Shared\_Favorites.cshtml" />
     <Content Include="Views\Shared\_Commenters.cshtml" />
     <Content Include="Views\Home\ForgotPassword.cshtml" />
+    <Content Include="Views\Home\RightSidebar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

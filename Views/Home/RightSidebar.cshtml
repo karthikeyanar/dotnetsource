@@ -1,0 +1,16 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Right Sidebar" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/", FirstUrlName = "Home",
+		SecondUrl = "/Home/BoxLayout", SecondUrlName = "Layout",
+		ThirdUrl = "/Home/RightSidebar", ThirdUrlName = "Right Sidebar"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles {
+}
+@section scripts {
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)

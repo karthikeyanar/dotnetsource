@@ -38,6 +38,11 @@ namespace dotnetsource.Controllers {
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.SidebarHorizontalMenu;
 			return View();
 		}
+		public ActionResult RightSidebar() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.Layouts;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.RightSidebar;
+			return View();
+		}
 		#endregion
 
 		#region UIFeatures

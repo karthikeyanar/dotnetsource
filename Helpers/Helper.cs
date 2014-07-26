@@ -40,6 +40,7 @@ namespace dotnetsource.Helpers {
 		SidebarMedium = 28,
 		SidebarFixed = 29,
 		SidebarHorizontalMenu = 30,
+		RightSidebar = 500,
 
 		Modal = 31,
 		DatePicker = 32,
@@ -156,6 +157,7 @@ namespace dotnetsource.Helpers {
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarSmall, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Small", MenuURL = "/Home/SidebarSmall" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarFixed, TopMenuID = (int)TopMenu.Layouts, MenuName = "Sidebar Fixed", MenuURL = "/Home/SidebarFixed" });
 			Menus.Add(new Menu { MenuID = (int)SubMenu.SidebarHorizontalMenu, TopMenuID = (int)TopMenu.Layouts, MenuName = "Horizontal & Sidebar Menu", MenuURL = "/Home/SidebarHorizontalMenu" });
+			Menus.Add(new Menu { MenuID = (int)SubMenu.RightSidebar, TopMenuID = (int)TopMenu.Layouts, MenuName = "Right Sidebar", MenuURL = "/Home/RightSidebar" });
 
 
 			Menus.Add(new Menu { MenuID = (int)SubMenu.General, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "General", MenuURL = "/Home/General" });

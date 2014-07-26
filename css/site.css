@@ -316,6 +316,7 @@
   position: relative;
 }
 .page-container .page-content {
+  position: relative;
   margin-left: 220px;
   padding: 20px;
 }
@@ -545,12 +546,6 @@
 .sidebar-right .sidebar-wrapper {
   margin-right: 220px;
 }
-.sidebar-right.sidebar-md .sidebar-wrapper {
-  margin-right: 110px;
-}
-.sidebar-right.sidebar-sm .sidebar-wrapper {
-  margin-right: 35px;
-}
 .sidebar-right.sidebar-animation .sidebar-wrapper {
   -webkit-transition: none 0.4s ease;
   -moz-transition: none 0.4s ease;
@@ -568,15 +563,8 @@
   margin-right: 220px;
   margin-left: 0;
 }
-.sidebar-right.sidebar-md .page-container .page-content,
-.sidebar-right.sidebar-md .page-container .footer {
-  margin-right: 110px;
-  margin-left: 0;
-}
-.sidebar-right.sidebar-md-fixed .page-container .page-content,
-.sidebar-right.sidebar-md-fixed .page-container .footer {
-  margin-right: 110px !important;
-  margin-left: 0 !important;
+.sidebar-right.sidebar-sm .sidebar-wrapper {
+  margin-right: 35px;
 }
 .sidebar-right.sidebar-sm .page-container .page-content,
 .sidebar-right.sidebar-sm .page-container .footer {
@@ -588,24 +576,27 @@
   margin-right: 35px !important;
   margin-left: 0 !important;
 }
-.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
-  right: 110px;
-  left: auto;
-}
+.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .menu-text,
 .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > .nav.in {
   right: 35px;
   left: auto;
 }
-.sidebar-right .theme-panel {
-  right: auto;
-  left: 0;
+.sidebar-right.sidebar-md .sidebar-wrapper {
+  margin-right: 110px;
 }
-.sidebar-right .theme-panel > .toggler {
-  float: right;
+.sidebar-right.sidebar-md .page-container .page-content,
+.sidebar-right.sidebar-md .page-container .footer {
+  margin-right: 110px;
+  margin-left: 0;
 }
-.sidebar-right .theme-panel > .theme-options {
-  border: solid 2px #000;
-  border-left: 0;
+.sidebar-right.sidebar-md-fixed .page-container .page-content,
+.sidebar-right.sidebar-md-fixed .page-container .footer {
+  margin-right: 110px !important;
+  margin-left: 0 !important;
+}
+.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
+  right: 110px;
+  left: auto;
 }
 @media (min-width: 992px) {
   /* page sidebar small */

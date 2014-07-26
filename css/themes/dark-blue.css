@@ -204,11 +204,6 @@ body.page-boxed {
     position: absolute;
     pointer-events: none;
   }
-  .sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
-  .sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
-    border-color: transparent #004b8b transparent transparent;
-    border-right-color: #004b8b;
-  }
   .sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after {
     border-width: 8px;
     margin-top: -8px;
@@ -217,6 +212,11 @@ body.page-boxed {
     border-width: 10px;
     margin-top: -10px;
   }
+  .sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    border-color: transparent #004b8b transparent transparent;
+    border-right-color: #004b8b;
+  }
   .sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after {
     border-color: transparent #272930 transparent transparent;
     border-right-color: #272930;
@@ -224,6 +224,24 @@ body.page-boxed {
   .sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before {
     border-color: transparent #2e3038 transparent transparent;
     border-right-color: #2e3038;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    left: -1px;
+    right: auto;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    border-right-color: transparent;
+    border-left-color: #004b8b;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after {
+    border-right-color: transparent;
+    border-left-color: #272930;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before {
+    border-right-color: transparent;
+    border-left-color: #2e3038;
   }
 }
 @media (min-width: 992px) {
@@ -258,11 +276,6 @@ body.page-boxed {
     position: absolute;
     pointer-events: none;
   }
-  .sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
-  .sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
-    border-color: transparent #272930 transparent transparent;
-    border-right-color: #272930;
-  }
   .sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after {
     border-width: 8px;
     margin-top: -8px;
@@ -271,6 +284,11 @@ body.page-boxed {
     border-width: 10px;
     margin-top: -10px;
   }
+  .sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    border-color: transparent #272930 transparent transparent;
+    border-right-color: #272930;
+  }
   .sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after {
     border-color: transparent #272930 transparent transparent;
     border-right-color: #272930;
@@ -278,6 +296,24 @@ body.page-boxed {
   .sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before {
     border-color: transparent #2e3038 transparent transparent;
     border-right-color: #2e3038;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    left: -1px;
+    right: auto;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:after,
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .arrow:before {
+    border-right-color: transparent;
+    border-left-color: #272930;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:after {
+    border-right-color: transparent;
+    border-left-color: #272930;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover.pull-up > a > .arrow:before {
+    border-right-color: transparent;
+    border-left-color: #2e3038;
   }
 }
 /* sidebar sub menu */
