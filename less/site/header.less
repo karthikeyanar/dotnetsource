@@ -115,7 +115,7 @@ position: relative;
 .header .top-menu > ul > li > a {
 display: block;
 position: relative;
-padding: 17px 10px 8px;
+padding: 17px 12px 8px;
 }
 
 .header .top-menu > ul > li.profile-menu > a {
@@ -129,7 +129,7 @@ padding: 7px 5px;
 }
 
 .header .top-menu > ul > li > a:hover, .header .top-menu > ul > li > a:focus {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .header .navbar-brand {
@@ -154,8 +154,8 @@ text-decoration: none;
 }
 
 .header .dropdown-menu > .dropdown-footer > a {
-margin: 0;
-padding: 10px;
+    margin: 0;
+    padding: 10px;
 }
 
 .header .dropdown-menu > .dropdown-footer > a:hover,
@@ -169,18 +169,18 @@ padding: 10px;
     padding: 0;
 }
 
-    .header .dropdown-menu .dropdown-menu-list > li {
-        margin: 0;
-        padding: 0;
-        display: block;
-    }
+.header .dropdown-menu .dropdown-menu-list > li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
 
-        .header .dropdown-menu .dropdown-menu-list > li > a {
-            color: #333;
-            padding: 10px;
-            display: block;
-            border-top: 1px solid #e8e8e8;
-        }
+.header .dropdown-menu .dropdown-menu-list > li > a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    border-top: 1px solid #e8e8e8;
+}
 
 .header .top-menu > ul > li > a.dropdown-toggle > i {
     font-size: 17px;
@@ -221,41 +221,57 @@ padding: 10px;
     margin-top:0;
     margin-left:0;
 }
-.header .tasks-menu > .dropdown-menu {
-    width: @tasks-menu-width;
+.header .dropdown-tasks > .dropdown-menu {
+    width: @dropdown-tasks-width;
 }
 
-.header .messages-menu > .dropdown-menu {
+.header .dropdown-messages > .dropdown-menu {
     width: @message-menu-width;
 }
 
-.header .notifications-menu > .dropdown-menu {
-    width: @notifications-menu-width;
+.header .dropdown-notifications > .dropdown-menu {
+    width: @dropdown-notifications-width;
 }
 
-.header .messages-menu .dropdown-menu-list > li > a > .avatar {
+.header .dropdown-messages .dropdown-menu-list > li > a > .avatar {
     float: left;
     margin: 3px 10px 0 0;
 }
 
-.header .messages-menu .dropdown-menu-list > li > a > h5 {
+.header .dropdown-messages .dropdown-menu-list > li > a > h5 {
     margin: 0;
     padding: 5px 0;
 }
 
-    .header .messages-menu .dropdown-menu-list > li > a > h5 > small {
-        float: right;
-    }
+.header .dropdown-messages .dropdown-menu-list > li > a > h5 > small {
+    float: right;
+}
 
-.header .notifications-menu .dropdown-menu-list > li > a {
+.header .dropdown-notifications .dropdown-menu-list > li > a {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-    .header .notifications-menu .dropdown-menu-list > li > a > .btn {
-        margin-right: 8px;
-    }
-
+.header .dropdown-notifications .dropdown-menu-list > li > a > .btn {
+    margin-right: 8px;
+}
+.header .search-form-toggle {
+    display: none !important;
+}
+/* header search form */
+.header .search-form {
+    background: transparent;
+    margin: 0 10px !important;
+    padding: 4px !important;
+    float: right !important;
+    width: 200px !important;
+}
+.header .search-form .form-control {
+    background: transparent;
+    border: transparent;
+}
+.header .search-form .input-icon i {
+    margin-top: 8px;
+}
 @media (min-width: @screen-md-min) {
     .header > container {
         padding-left: 20px;
@@ -266,7 +282,6 @@ padding: 10px;
         width: @sidebar-width;
     }
 }
-
 @media (max-width: @screen-xs-max) {
     .header .navbar-brand > .name {
         display: none;
@@ -276,19 +291,14 @@ padding: 10px;
         left: 5px;
     }
 
-    .header .tasks-menu > .dropdown-menu {
-        margin-right: -(@tasks-menu-width / 2.5);
+    .header .dropdown-messages > .dropdown-menu {
+        margin-right: -(@message-menu-width / 8);
     }
 
-    .header .messages-menu > .dropdown-menu {
-        margin-right: -(@message-menu-width / 1.9);
-    }
-
-    .header .notifications-menu > .dropdown-menu {
-        margin-right: -(@notifications-menu-width / 1.6);
+    .header .dropdown-notifications > .dropdown-menu {
+        margin-right: -(@dropdown-notifications-width / 12);
     }
 }
-
 @media (min-width: @screen-sm) {
     .header .navbar-brand {
         padding-left: 40px;
@@ -302,9 +312,37 @@ padding: 10px;
         left: 15px;
     }
 }
-
 @media (min-width: @screen-md) {
     .header .visible-md.navbar-toggle {
         margin-left: -44px;
+    }
+}
+@media (max-width: 580px) {
+    .header .navbar-form.search-form {
+        left: 0;
+        margin: 0 !important;
+        padding: 10px !important;
+        position: absolute;
+        right: 0;
+        top: @header-min-height;
+        width: auto !important;
+        background: #333 !important;
+        border: 0 !important;
+        display: none !important;
+    }
+    .header .navbar-form.search-form.show {
+        display: block !important;
+    }
+    .header .search-form .form-control {
+        background: #fff !important;
+        color: #333 !important;
+    }
+    .header .search-form-toggle {
+        display: block !important;
+        font-size: 17px;
+        padding: 10px 12px !important;
+    }
+    .header .profile-menu > .dropdown-toggle > .profile-name {
+        display: none !important;
     }
 }

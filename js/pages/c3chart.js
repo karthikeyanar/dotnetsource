@@ -335,7 +335,7 @@
         });
     }, 5000);
 
-    APP.addResponsiveHandler(function () {
+    App.addResponsiveHandler(function () {
         chartArea.resize();
         chartBar.resize();
         chartDonut.resize();

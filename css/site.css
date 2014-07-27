@@ -21,6 +21,22 @@
 .logo .name {
   padding-left: 40px;
 }
+.back-to-top {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  padding: 9px 12px;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+}
+.back-to-top:hover,
+.back-to-top:focus {
+  color: #fff;
+  text-decoration: none;
+}
 .header.navbar {
   border-radius: 0;
   box-shadow: none;
@@ -130,7 +146,7 @@
 .header .top-menu > ul > li > a {
   display: block;
   position: relative;
-  padding: 17px 10px 8px;
+  padding: 17px 12px 8px;
 }
 .header .top-menu > ul > li.profile-menu > a {
   padding: 7px 5px;
@@ -218,32 +234,50 @@
   margin-top: 0;
   margin-left: 0;
 }
-.header .tasks-menu > .dropdown-menu {
+.header .dropdown-tasks > .dropdown-menu {
   width: 300px;
 }
-.header .messages-menu > .dropdown-menu {
+.header .dropdown-messages > .dropdown-menu {
   width: 300px;
 }
-.header .notifications-menu > .dropdown-menu {
+.header .dropdown-notifications > .dropdown-menu {
   width: 300px;
 }
-.header .messages-menu .dropdown-menu-list > li > a > .avatar {
+.header .dropdown-messages .dropdown-menu-list > li > a > .avatar {
   float: left;
   margin: 3px 10px 0 0;
 }
-.header .messages-menu .dropdown-menu-list > li > a > h5 {
+.header .dropdown-messages .dropdown-menu-list > li > a > h5 {
   margin: 0;
   padding: 5px 0;
 }
-.header .messages-menu .dropdown-menu-list > li > a > h5 > small {
+.header .dropdown-messages .dropdown-menu-list > li > a > h5 > small {
   float: right;
 }
-.header .notifications-menu .dropdown-menu-list > li > a {
+.header .dropdown-notifications .dropdown-menu-list > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.header .notifications-menu .dropdown-menu-list > li > a > .btn {
+.header .dropdown-notifications .dropdown-menu-list > li > a > .btn {
   margin-right: 8px;
+}
+.header .search-form-toggle {
+  display: none !important;
+}
+/* header search form */
+.header .search-form {
+  background: transparent;
+  margin: 0 10px !important;
+  padding: 4px !important;
+  float: right !important;
+  width: 200px !important;
+}
+.header .search-form .form-control {
+  background: transparent;
+  border: transparent;
+}
+.header .search-form .input-icon i {
+  margin-top: 8px;
 }
 @media (min-width: 992px) {
   .header > container {
@@ -261,14 +295,11 @@
   .header .navbar-brand > i {
     left: 5px;
   }
-  .header .tasks-menu > .dropdown-menu {
-    margin-right: -120px;
+  .header .dropdown-messages > .dropdown-menu {
+    margin-right: -37.5px;
   }
-  .header .messages-menu > .dropdown-menu {
-    margin-right: -157.89473684px;
-  }
-  .header .notifications-menu > .dropdown-menu {
-    margin-right: -187.5px;
+  .header .dropdown-notifications > .dropdown-menu {
+    margin-right: -25px;
   }
 }
 @media (min-width: 768px) {
@@ -285,6 +316,35 @@
 @media (min-width: 992px) {
   .header .visible-md.navbar-toggle {
     margin-left: -44px;
+  }
+}
+@media (max-width: 580px) {
+  .header .navbar-form.search-form {
+    left: 0;
+    margin: 0 !important;
+    padding: 10px !important;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    width: auto !important;
+    background: #333 !important;
+    border: 0 !important;
+    display: none !important;
+  }
+  .header .navbar-form.search-form.show {
+    display: block !important;
+  }
+  .header .search-form .form-control {
+    background: #fff !important;
+    color: #333 !important;
+  }
+  .header .search-form-toggle {
+    display: block !important;
+    font-size: 17px;
+    padding: 10px 12px !important;
+  }
+  .header .profile-menu > .dropdown-toggle > .profile-name {
+    display: none !important;
   }
 }
 .page-container .footer {
@@ -336,6 +396,8 @@
   .page-container-no-scroll .page-container .page-content {
     position: fixed;
     top: 44px;
+    left: 0;
+    right: 0;
     overflow: hidden;
   }
   .page-container .page-content {
@@ -506,7 +568,6 @@
     display: block;
     top: 0;
     left: -220px;
-    z-index: 3;
   }
   .sidebar:before {
     top: 44px;
@@ -539,64 +600,79 @@
     display: block !important;
   }
 }
-.sidebar-right .sidebar-wrapper {
-  float: right;
-  position: relative;
-}
-.sidebar-right .sidebar-wrapper {
-  margin-right: 220px;
-}
-.sidebar-right.sidebar-animation .sidebar-wrapper {
-  -webkit-transition: none 0.4s ease;
-  -moz-transition: none 0.4s ease;
-  -ms-transition: none 0.4s ease;
-  -o-transition: none 0.4s ease;
-  transition: none 0.4s ease;
-  -webkit-transition-property: margin-right;
-  -moz-transition-property: margin-right;
-  -ms-transition-property: margin-right;
-  -o-transition-property: margin-right;
-  transition-property: margin-right;
-}
-.sidebar-right .page-container .page-content,
-.sidebar-right .page-container .footer {
-  margin-right: 220px;
-  margin-left: 0;
-}
-.sidebar-right.sidebar-sm .sidebar-wrapper {
-  margin-right: 35px;
-}
-.sidebar-right.sidebar-sm .page-container .page-content,
-.sidebar-right.sidebar-sm .page-container .footer {
-  margin-right: 35px;
-  margin-left: 0;
-}
-.sidebar-right.sidebar-sm-fixed .page-container .page-content,
-.sidebar-right.sidebar-sm-fixed .page-container .footer {
-  margin-right: 35px !important;
-  margin-left: 0 !important;
-}
-.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .menu-text,
-.sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > .nav.in {
-  right: 35px;
-  left: auto;
-}
-.sidebar-right.sidebar-md .sidebar-wrapper {
-  margin-right: 110px;
-}
-.sidebar-right.sidebar-md .page-container .page-content,
-.sidebar-right.sidebar-md .page-container .footer {
-  margin-right: 110px;
-  margin-left: 0;
-}
-.sidebar-right.sidebar-md-fixed .page-container .page-content,
-.sidebar-right.sidebar-md-fixed .page-container .footer {
-  margin-right: 110px !important;
-  margin-left: 0 !important;
-}
-.sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
-  right: 110px;
-  left: auto;
+@media (min-width: 992px) {
+  .sidebar-right .sidebar-wrapper {
+    float: right;
+    position: relative;
+  }
+  .sidebar-right .sidebar-wrapper {
+    margin-right: 220px;
+  }
+  .sidebar-right.sidebar-animation .sidebar-wrapper {
+    -webkit-transition: none 0.4s ease;
+    -moz-transition: none 0.4s ease;
+    -ms-transition: none 0.4s ease;
+    -o-transition: none 0.4s ease;
+    transition: none 0.4s ease;
+    -webkit-transition-property: margin-right;
+    -moz-transition-property: margin-right;
+    -ms-transition-property: margin-right;
+    -o-transition-property: margin-right;
+    transition-property: margin-right;
+  }
+  .sidebar-right .page-container .page-content,
+  .sidebar-right .page-container .footer {
+    margin-right: 220px;
+    margin-left: 0;
+  }
+  .sidebar-right.sidebar-sm .sidebar-wrapper {
+    margin-right: 35px;
+  }
+  .sidebar-right.sidebar-sm .page-container .page-content,
+  .sidebar-right.sidebar-sm .page-container .footer {
+    margin-right: 35px;
+    margin-left: 0;
+  }
+  .sidebar-right.sidebar-sm-fixed .page-container .page-content,
+  .sidebar-right.sidebar-sm-fixed .page-container .footer {
+    margin-right: 35px !important;
+    margin-left: 0 !important;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > a > .menu-text,
+  .sidebar-right.sidebar-sm .sidebar .sidebar-menu > li.open.hover > .nav.in {
+    right: 35px;
+    left: auto;
+  }
+  .sidebar-right.sidebar-sm .sidebar .sidebar-user > .info {
+    left: auto;
+    right: 35px;
+  }
+  .sidebar-right.sidebar-md .sidebar-wrapper {
+    margin-right: 110px;
+  }
+  .sidebar-right.sidebar-md .page-container .page-content,
+  .sidebar-right.sidebar-md .page-container .footer {
+    margin-right: 110px;
+    margin-left: 0;
+  }
+  .sidebar-right.sidebar-md-fixed .page-container .page-content,
+  .sidebar-right.sidebar-md-fixed .page-container .footer {
+    margin-right: 110px !important;
+    margin-left: 0 !important;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
+    right: 110px;
+    left: auto;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > a > .menu-text,
+  .sidebar-right.sidebar-md .sidebar .sidebar-menu > li.open.hover > .nav.in {
+    right: 110px;
+    left: auto;
+  }
+  .sidebar-right.sidebar-md .sidebar .sidebar-user > .info {
+    left: auto;
+    right: 110px;
+  }
 }
 @media (min-width: 992px) {
   /* page sidebar small */

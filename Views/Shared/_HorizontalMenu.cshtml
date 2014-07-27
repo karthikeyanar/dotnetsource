@@ -2,7 +2,12 @@
 <div class="hor-menu navbar-collapse collapse">
     <ul class="nav navbar-nav">
         @{
-            var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0 && q.MenuName != "Charts" && q.MenuName != "Tables" && q.MenuName != "Forms").ToList();
+            var topMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == 0 
+                && q.MenuName != "Charts" 
+                && q.MenuName != "Tables"
+                && q.MenuName != "Forms"
+                && q.MenuName != "Pages"
+                ).ToList();
         }
         @foreach (dotnetsource.Helpers.Menu menu in topMenus)
         {

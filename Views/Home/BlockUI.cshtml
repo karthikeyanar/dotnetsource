@@ -18,63 +18,63 @@
 			var $panelBody=$("#panelBody");
 			var $news=$("#news");
 			$("#block").click(function() {
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"target": $panelBody
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI($panelBody);
+					App.unblockUI($panelBody);
 				},1000)
 			});
 			$("#blockCustom").click(function() {
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"target": $panelBody,
 					"message": $("#blockMessage").val()
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI($panelBody);
+					App.unblockUI($panelBody);
 				},1000)
 			});
 			$("#blockVerticalTop").click(function() {
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"target": $panelBody,
 					"message": $("#blockMessage").val(),
 					"verticalTop": true
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI($panelBody);
+					App.unblockUI($panelBody);
 				},1000)
 			});
 			$("#blockNews").click(function() {
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"target": $news
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI($news);
+					App.unblockUI($news);
 				},1000)
 			});
 			$(".block-colors").click(function() {
 				var bgColor=$(this).attr("data-color");
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"target": $panelBody,
 					"bgColor": bgColor
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI($panelBody);
+					App.unblockUI($panelBody);
 				},1000)
 			});
 			$("#pageBlock").click(function() {
-				APP.handleBlockUI({
+				App.handleBlockUI({
 					"zindex": "9999999",
 					"overlayOpacity": "0.5"
 				});
 				// for demo purpose
 				setTimeout(function() {
-					APP.unblockUI();
+					App.unblockUI();
 				},1000)
 			});
 		});

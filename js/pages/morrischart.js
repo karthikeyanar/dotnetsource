@@ -113,7 +113,7 @@
 		redraw: true
 	});
 
-	APP.addResponsiveHandler(function() {
+	App.addResponsiveHandler(function() {
 		areaChart.redraw();
 		donutChart.redraw();
 		barChart.redraw();

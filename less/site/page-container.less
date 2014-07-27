@@ -13,13 +13,14 @@
 	.transition_property(margin-left);
 }
 @media (max-width: @screen-sm-max) {
-	.page-container-no-scroll .page-container .page-content {
+    .page-container-no-scroll .page-container .page-content {
 		position: fixed;
 		top: @header-min-height;
+        left:0;
+        right:0;
 		overflow:hidden;
 	}
 	.page-container .page-content  {
 		margin-left: 0;
 	}
 }
- 
