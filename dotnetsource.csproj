@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DocumentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -124,6 +125,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="css\components.css" />
     <Content Include="css\components.min.css" />
+    <Content Include="css\Document\document.css" />
     <Content Include="css\pages\profile.css" />
     <Content Include="css\pages\editable.css" />
     <Content Include="css\pages\error-page.css" />
@@ -827,6 +829,73 @@
     <Content Include="Views\Shared\_Commenters.cshtml" />
     <Content Include="Views\Home\ForgotPassword.cshtml" />
     <Content Include="Views\Home\RightSidebar.cshtml" />
+    <Content Include="Views\Document\Blank.cshtml" />
+    <Content Include="Views\Document\BlockUI.cshtml" />
+    <Content Include="Views\Document\BoxLayout.cshtml" />
+    <Content Include="Views\Document\Buttons.cshtml" />
+    <Content Include="Views\Document\C3Chart.cshtml" />
+    <Content Include="Views\Document\Calendar.cshtml" />
+    <Content Include="Views\Document\CheckBoxAndRadio.cshtml" />
+    <Content Include="Views\Document\ColorPicker.cshtml" />
+    <Content Include="Views\Document\Colors.cshtml" />
+    <Content Include="Views\Document\DataTable.cshtml" />
+    <Content Include="Views\Document\DatePicker.cshtml" />
+    <Content Include="Views\Document\DateRangePicker.cshtml" />
+    <Content Include="Views\Document\Dropdowns.cshtml" />
+    <Content Include="Views\Document\DropZoneFileUpload.cshtml" />
+    <Content Include="Views\Document\Editable.cshtml" />
+    <Content Include="Views\Document\Editor.cshtml" />
+    <Content Include="Views\Document\Elements.cshtml" />
+    <Content Include="Views\Document\FileInput.cshtml" />
+    <Content Include="Views\Document\FlotChart.cshtml" />
+    <Content Include="Views\Document\ForgotPassword.cshtml" />
+    <Content Include="Views\Document\FormControls.cshtml" />
+    <Content Include="Views\Document\FormExamples.cshtml" />
+    <Content Include="Views\Document\FormLayouts.cshtml" />
+    <Content Include="Views\Document\FormValidation.cshtml" />
+    <Content Include="Views\Document\FormWizard.cshtml" />
+    <Content Include="Views\Document\General.cshtml" />
+    <Content Include="Views\Document\Icons.cshtml" />
+    <Content Include="Views\Document\Inbox.cshtml" />
+    <Content Include="Views\Document\Index.cshtml" />
+    <Content Include="Views\Document\InputMask.cshtml" />
+    <Content Include="Views\Document\Invoice.cshtml" />
+    <Content Include="Views\Document\jQueryUISlider.cshtml" />
+    <Content Include="Views\Document\LabelsAndBadges.cshtml" />
+    <Content Include="Views\Document\ListGroup.cshtml" />
+    <Content Include="Views\Document\Lock.cshtml" />
+    <Content Include="Views\Document\Modal.cshtml" />
+    <Content Include="Views\Document\MorrisChart.cshtml" />
+    <Content Include="Views\Document\MultipleFileUpload.cshtml" />
+    <Content Include="Views\Document\Navs.cshtml" />
+    <Content Include="Views\Document\Page404.cshtml" />
+    <Content Include="Views\Document\Page500.cshtml" />
+    <Content Include="Views\Document\Panels.cshtml" />
+    <Content Include="Views\Document\PieChart.cshtml" />
+    <Content Include="Views\Document\PopoverConfirm.cshtml" />
+    <Content Include="Views\Document\Profile.cshtml" />
+    <Content Include="Views\Document\ProgressBars.cshtml" />
+    <Content Include="Views\Document\RightSidebar.cshtml" />
+    <Content Include="Views\Document\Search.cshtml" />
+    <Content Include="Views\Document\Select.cshtml" />
+    <Content Include="Views\Document\Select2.cshtml" />
+    <Content Include="Views\Document\SidebarFixed.cshtml" />
+    <Content Include="Views\Document\SidebarHorizontalMenu.cshtml" />
+    <Content Include="Views\Document\SidebarMedium.cshtml" />
+    <Content Include="Views\Document\SidebarSmall.cshtml" />
+    <Content Include="Views\Document\SignIn.cshtml" />
+    <Content Include="Views\Document\SignUp.cshtml" />
+    <Content Include="Views\Document\Slider.cshtml" />
+    <Content Include="Views\Document\Spinner.cshtml" />
+    <Content Include="Views\Document\Switch.cshtml" />
+    <Content Include="Views\Document\Table.cshtml" />
+    <Content Include="Views\Document\Tiles.cshtml" />
+    <Content Include="Views\Document\Timeline.cshtml" />
+    <Content Include="Views\Document\TimePicker.cshtml" />
+    <Content Include="Views\Document\TooltipAndPopover.cshtml" />
+    <Content Include="Views\Document\Typography.cshtml" />
+    <Content Include="Views\Document\Wells.cshtml" />
+    <Content Include="Views\Shared\_DocumentStyles.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

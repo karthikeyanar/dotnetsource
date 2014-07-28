@@ -1,0 +1,39 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "DashBoard" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/Home/Index", FirstUrlName = "Home",
+		SecondUrl = "/Home/Index", SecondUrlName = "DashBoard",
+		ThirdUrl = "", ThirdUrlName = ""
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles {
+}
+@section scripts {
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<h2>
+	About Template</h2>
+<p>
+	@dotnetsource.Helpers.Common.SiteName Admin Template is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next web application or admin entrance for it. It's base on super powerful Bootstrap front-end framework which uses 12-column responsive grid layout.
+</p>
+<h2>
+	Less</h2>
+<p>
+	Light Blue uses <a href="http://lesscss.org/">less</a> to generate css. This choice has been made because of significant boost <a href="http://lesscss.org/">less</a> gives when developing front-end apps like this one. I used compass to compile <a href="http://lesscss.org/">less</a> to css, but what to use is absolutely up to your choice. Anyway editing css is a good old way, right? :)
+</p>
+<p>
+	The main less file is /less/site/site.less. It includes all libraries and partial files.
+</p>
+<ul>
+	<li><a href="/less/components/components.less">less/components/components.less</a> - all components styles. Only element styles (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</li>
+	<li><a href="/less/site/site.less">less/site/site.less</a> - all layout styles. Only layout styles (<code>header</code>, <code>footer</code>, <code>page container</code>, etc).</li>
+	<li><a href="/less/variables/variables.less">less/variables/variables.less</a> - all template variables like colors, button sizes, etc.</li>
+	<li><a href="#">less/themes/sky-blue.less,less/themes/green.less,less/themes/red.less etc.</a> - all themes styles.</li>
+</ul>
+<h2>
+	Support</h2>
+<p>
+	If you have any questions or problems when installing template feel free to contact me via email - <a href="mailto:kptemplates@gmail.com">kptemplates@gmail.com</a>. I will provide as much help as possible.</p>

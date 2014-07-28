@@ -1,0 +1,35 @@
+﻿@{
+	Layout = "~/Views/Shared/_PublicLayout.cshtml";
+}
+@section styles {
+	<link href="/css/pages/error-page.css" rel="stylesheet" type="text/css" />
+}
+<div class="error-page-container">
+	<div class="error-page-content">
+		@Html.Partial("_PublicLogo")
+		<div class="panel error-panel">
+			<div class="panel-body">
+				<form method="post" action="/Home/Search">
+				<div class="form-group text-center">
+					<h1 class="error-code">
+						500
+					</h1>
+				</div>
+				<div class="form-group text-center">
+					<h3>
+						OUCH!
+					</h3>
+				</div>
+				<div class="form-group text-center">
+					<h4>
+						SOMETHING IS NOT QUITE RIGHT
+					</h4>
+					<h4>
+						We hope to solve it shortly
+					</h4>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

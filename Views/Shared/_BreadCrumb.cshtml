@@ -1,6 +1,16 @@
 ﻿@model dotnetsource.Models.BreadCrumbModel
 @{
+	string controllerName = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();
+}
+@{
 	Layout = null;
+}
+@{
+	if (controllerName == "Document") {
+		Model.FirstUrl = Model.FirstUrl.Replace("/Home", "/Document");
+		Model.SecondUrl = Model.SecondUrl.Replace("/Home", "/Document");
+		Model.ThirdUrl = Model.ThirdUrl.Replace("/Home", "/Document");
+	}
 }
 <ul class="breadcrumb">
 	<li><i class="fa fa-home"></i><a href="@Model.FirstUrl">@Model.FirstUrlName</a><i class="fa fa-angle-right"></i></li>
