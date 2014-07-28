@@ -11,8 +11,8 @@
 		@foreach (dotnetsource.Helpers.Menu submenu in Model.SubMenus) {
 	  if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
 		  submenu.MenuURL = submenu.MenuURL.Replace("/Home", "/Document");
-	  }
-	  var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == submenu.MenuID).ToList();
+      }
+      var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == submenu.MenuID).ToList();
 			<li class="@(viewBagSubMenuID == submenu.MenuID ? "active" : "")"><a href="@(string.IsNullOrEmpty(submenu.MenuURL) ? "javascript:;" : submenu.MenuURL)">@submenu.MenuName@if (subMenus.Count() > 0) {<span class="fa arrow"></span>}</a>
 				@Html.Partial("_RenderSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = submenu.MenuID, SubMenus = subMenus })
 			</li>

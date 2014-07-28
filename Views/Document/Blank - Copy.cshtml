@@ -1,26 +1,4 @@
-﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Sidebar Horizontal Menu" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/Home/Index", FirstUrlName = "Home",
-		SecondUrl = "/Home/BoxLayout", SecondUrlName = "Layout",
-		ThirdUrl = "/Home/SidebarHorizontalMenu", ThirdUrlName = "Sidebar Horizontal Menu"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
-}
-@section styles {
-	@Html.Partial("_IndexStyles")
-}
-@section scripts {
-	@Html.Partial("_IndexScripts")
-}
-@Html.Partial("_PageHeader", _PageHeaderModel)
-@Html.Partial("_BreadCrumb", _BreadCrumbModel)
-<div class="notes notes-primary">
-    Horizontal menu is based on <a href="http://getbootstrap.com/components/#navbar-default" target="_blank">bootstrap navbar</a>,<a href="http://getbootstrap.com/components/#dropdowns">dropdowns</a></div>
-<h3>Code</h3>
-<pre>
-<code>&lt;div class="hor-menu navbar-collapse collapse"&gt;
+﻿&lt;div class="hor-menu navbar-collapse collapse"&gt;
     &lt;ul class="nav navbar-nav"&gt;
         &lt;li class="dropdown active"&gt;
             &lt;a href="javascript:;" class="dropdown-toggle" data-hover="dropdown" data-close-others="true" data-toggle="dropdown"&gt;
@@ -29,25 +7,29 @@
             &lt;ul class="dropdown-menu in"&gt;
                 &lt;li class=""&gt;
                     &lt;a href="/Document/BoxLayout"&gt;Boxed Page&lt;/a&gt;
+
                 &lt;/li&gt;
                 &lt;li class=""&gt;
                     &lt;a href="/Document/SidebarMedium"&gt;Sidebar Medium&lt;/a&gt;
+
                 &lt;/li&gt;
                 &lt;li class=""&gt;
                     &lt;a href="/Document/SidebarSmall"&gt;Sidebar Small&lt;/a&gt;
+
                 &lt;/li&gt;
                 &lt;li class=""&gt;
                     &lt;a href="/Document/SidebarFixed"&gt;Sidebar Fixed&lt;/a&gt;
+
                 &lt;/li&gt;
                 &lt;li class="active"&gt;
                     &lt;a href="/Document/SidebarHorizontalMenu"&gt;Horizontal &amp; Sidebar Menu&lt;/a&gt;
+
                 &lt;/li&gt;
                 &lt;li class=""&gt;
                     &lt;a href="/Document/RightSidebar"&gt;Right Sidebar&lt;/a&gt;
+
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
-</code>
-</pre>

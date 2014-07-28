@@ -8,7 +8,7 @@
     <ul class="dropdown-menu @((viewBagTopMenuID == Model.MenuID) ? "in" : "")">
         @foreach (dotnetsource.Helpers.Menu submenu in Model.SubMenus)
         {
-            var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == submenu.MenuID).ToList();
+            var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == submenu.MenuID).ToList();
             string className = "";
             if (viewBagSubMenuID == submenu.MenuID)
             {

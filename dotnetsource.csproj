@@ -808,6 +808,7 @@
     <Content Include="logo\KR Fruitsy.TTF" />
     <Content Include="less\components\blockUI.less" />
     <Content Include="less\site\sidebar-right.less" />
+    <Content Include="less\components\code.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <None Include="packages\jQuery.1.7.2\Tools\jquery-1.7.2.intellisense.js" />
     <Content Include="packages\Newtonsoft.Json.4.5.6\Newtonsoft.Json.4.5.6.nupkg" />
@@ -896,6 +897,7 @@
     <Content Include="Views\Document\Typography.cshtml" />
     <Content Include="Views\Document\Wells.cshtml" />
     <Content Include="Views\Shared\_DocumentStyles.cshtml" />
+    <Content Include="Views\Document\Blank - Copy.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

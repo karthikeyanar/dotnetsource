@@ -16,4 +16,13 @@
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
-@Html.Partial("_Index")
+<div class="notes notes-primary">
+    Just apply sidebar-fixed class to the body element.
+</div>
+<h4>Via CSS</h4>
+<pre>
+<code>&lt;body class="sidebar-fixed"&gt;</code>
+</pre>
+<h4>Via Javascript</h4>
+<pre><code>App.isSidebarFixed = true;</code>
+<code>App.changeLayout();</code></pre>

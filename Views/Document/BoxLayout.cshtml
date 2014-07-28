@@ -16,11 +16,15 @@
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
-<div class="notes">
+<div class="notes notes-primary">
 	Just apply page-boxed class to the body element and container class to the header,pagecontainer element.
 </div>
+<h4>Via CSS</h4>
 <pre>
 <code>&lt;body class="page-boxed"&gt;</code>
 <code>&lt;div class="header container"&gt;</code>
 <code>&lt;div class="page-container container"&gt;</code>
 </pre>
+<h4>Via Javascript</h4>
+<pre><code>App.isFixedLayout = true;</code>
+<code>App.changeLayout();</code></pre>
