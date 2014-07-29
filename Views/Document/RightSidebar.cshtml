@@ -15,9 +15,19 @@
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="notes notes-primary">
-    Just apply sidebar-right class to the body element.
+	Just apply <strong>sidebar-right</strong> class to the body element.
 </div>
-<h4>Via CSS</h4>
+<h4>
+	Via CSS</h4>
 <pre>
 <code>&lt;body class="sidebar-right"&gt;</code>
 </pre>
+<h4>
+	Less</h4>
+<pre>
+<code>less/site/sidebar-right.less</code>
+</pre>
+<h4>
+	Via Javascript</h4>
+<pre><code>App.sidebarPosition = "right";</code>
+<code>App.changeLayout();</code></pre>
