@@ -56,8 +56,10 @@
 		self.scrollTo();
 	}
 
-	this.handleMetroCheck=function() {
-		$('.metro-checkbox,.metro-radio').find(":input").each(function() {
+	this.handleMetroCheck=function(target) {
+		if(!target) target=$("body");
+		
+		$('.metro-checkbox,.metro-radio', $(target)).find(":input").each(function() {
 			var $this=$(this);
 			if($this.closest("label").size()==1) {
 				if($this.closest("label").find(".check").size()==0)

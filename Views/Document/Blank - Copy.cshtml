@@ -1,9 +1,129 @@
-﻿&lt;div class="notes notes-info"&gt;
-	&lt;h4&gt;
-		Info
-	&lt;/h4&gt;
-	&lt;p&gt;
-		Content...
-	&lt;/p&gt;
-&lt;/div&gt;
-	 
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-pink">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Radio
+                </h3>@Html.Partial("_PanelCloseTools")
+            </div>
+            <div class="panel-body">
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+							<div class="notes notes-primary">
+								<p>@dotnetsource.Helpers.Common.SiteName introduces new fancy radio, radio styles.</p>
+								<p>
+									Supports bootstrap brand colors: primary,success,danger,warning and info.
+								</p>
+							</div>
+                            <div class="radio metro-radio">
+                                <label>
+                                    <input type="radio" />Default
+                                </label>
+                            </div>
+							<pre><code>&lt;div class="radio metro-radio"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" /&gt;Default
+	&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+							<h4>Via JS</h4>
+							<div class="notes notes-primary">
+								<p>To apply the radio style to dynamic content (e.x content from ajax).</p>
+							</div>
+							<pre>
+<code>$(function(){
+	var $content = $("#content");
+	$.get("/api/content",function(data){
+		$content.html(data);
+		App.handleMetroCheck($content);
+	});
+});
+</code></pre>
+							<div class="notes notes-primary">
+								<p>
+									Supports bootstrap brand colors: primary,success,danger,warning and info.
+								</p>
+							</div>
+                            <pre><code>&lt;div class="radio metro-radio metro-radio-primary"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" /&gt;Default
+	&lt;/label&gt;
+&lt;/div&gt;</code></pre> 
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="no-margin-top">
+                                Circled
+                            </h3>
+                            <div class="radio metro-radio metro-radio-circle">
+                                <label>
+                                    <input type="radio" />Default
+                                </label>
+                            </div><pre><code>&lt;div class="radio metro-radio metro-radio-circle"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" /&gt;Default
+	&lt;/label&gt;
+&lt;/div&gt;</code></pre> 
+                        </div>
+                        <div class="col-md-12">
+                            <h3 class="no-margin-top">
+                                Disabled
+                            </h3>
+                            <p>
+                                .radio-circle for roundness.
+                            </p>
+                            <div class="radio metro-radio">
+                                <label>
+                                    <input type="radio" disabled="" id="radio13" />Can't check this
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-success">
+                                <label>
+                                    <input type="radio" disabled="" checked />This too
+                                </label>
+                            </div>
+                            <div class="radio metro-radio metro-radio-circle metro-radio-success">
+                                <label>
+                                    <input type="radio" disabled="" checked />And this
+                                </label>
+                            </div>
+							<pre><code>&lt;div class="radio metro-radio"&gt;
+	&lt;label&gt;
+		&lt;input type="radio" disabled /&gt;Default
+	&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="no-margin-top">
+                                Radio Inline
+                            </h3>
+                            <label class="radio-inline metro-radio">
+                                <input type="radio" />Default
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-primary">
+                                <input type="radio" checked />Primary
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-success">
+                                <input type="radio" checked />Success
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-info">
+                                <input type="radio" checked />Info
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-warning">
+                                <input type="radio" checked />Warning
+                            </label>
+                            <label class="radio-inline metro-radio metro-radio-danger">
+                                <input type="radio" checked />Danger
+                            </label>
+							<div class="clearfix">&nbsp;</div>
+							<pre><code>&lt;label class="radio-inline metro-radio metro-radio-danger"&gt;
+	&lt;input type="radio" checked /&gt;Danger
+&lt;/label&gt;</code></pre>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
