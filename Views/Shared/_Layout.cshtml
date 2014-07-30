@@ -49,10 +49,10 @@
 		<div class="header-content @headerContainerClassName">
 			<!-- navbar-header -->
 			<div class="navbar-header company-info">
+                <button type="button" class="navbar-toggle visible-sm visible-xs" data-sidebar-action="sidebar-sm-toggle">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
 				@if (controllerName != "Document") {
-					<button type="button" class="navbar-toggle visible-sm visible-xs" data-sidebar-action="sidebar-sm-toggle">
-						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button>
 					<a href="/Home" class="navbar-brand"><i class="fa fa-fire"></i><span class="name">@dotnetsource.Helpers.Common.SiteName</span></a>
 	} else {
 					<a href="/Document" class="navbar-brand"><i class="fa fa-fire"></i><span class="name">@dotnetsource.Helpers.Common.SiteName - Documentation</span></a>

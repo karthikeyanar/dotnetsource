@@ -1,303 +1,104 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Panels" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/Home/Index", FirstUrlName = "Home",
-		SecondUrl = "/Home/General", SecondUrlName = "UI Features",
-		ThirdUrl = "/Home/Panels", ThirdUrlName = "Panels"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Panels" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/Home/Index",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/General",
+        SecondUrlName = "UI Features",
+        ThirdUrl = "/Home/Panels",
+        ThirdUrlName = "Panels"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel With Buttons
-				</h3>
-				<div class="panel-tools">
-					<div class="btn-group">
-						<a class="btn btn-danger btn-xs" href="#" data-toggle="dropdown">Action <i class='fa fa-angle-down'></i></a>
-						<ul class="dropdown-menu pull-right" role="menu">
-							<li><a href="#">Action</a> </li>
-							<li><a href="#">Another action</a> </li>
-							<li><a href="#">Something else here</a> </li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a> </li>
-						</ul>
-					</div>
-					<div class="btn-group">
-						<a class="btn btn-xs btn-primary" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">Filter By <i class="fa fa-angle-down"></i></a>
-						<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
-							<div class="checkbox metro-checkbox">
-								<label for="Finance">
-									<input type="checkbox" id="Finance" value="option1" />Finance</label>
-							</div>
-							<div class="checkbox metro-checkbox">
-								<label for="Membership">
-									<input type="checkbox" id="Membership" value="option1" />Membership</label>
-							</div>
-							<div class="checkbox metro-checkbox">
-								<label for="CustomerSupport">
-									<input type="checkbox" id="CustomerSupport" value="option1" />Customer Support</label>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Panel heading without title
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				Panel content
-			</div>
-			<div class="panel-footer">
-				Panel footer
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Panel header
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-default">
-			<div class="panel-heading no-padding">
-				<h3 class="panel-title pull-left padding-10">
-					Panel With Tabs
-				</h3>
-				<div class="panel-tools">
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-						<li><a href="#profile" data-toggle="tab">Profile</a></li>
-						<li><a href="#messages" data-toggle="tab">Messages</a></li>
-						<li><a href="#settings" data-toggle="tab">Settings</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="panel-body">
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane active" id="home">
-						Home</div>
-					<div class="tab-pane" id="profile">
-						Profile</div>
-					<div class="tab-pane" id="messages">
-						Messages</div>
-					<div class="tab-pane" id="settings">
-						Settings</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Success
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Info
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Warning
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-danger">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Danger
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Primary
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-white">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel White
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-purple">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Purple
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-cardovan">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Cardoavan
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-teal">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Teal
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-pink">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Pink
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-dark-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Dark Blue
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="panel panel-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Blue
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-6">
-		<div class="panel panel-black">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Panel Black
-				</h3>
-				@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-	</div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Panel
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="notes notes-primary">
+                    <p>
+                        Panel are based on <a href="http://getbootstrap.com/components/#panels" target="_blank">bootstrap panels</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Panel With Buttons
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="notes notes-primary">
+                    <p>
+                        To create panel with buttons you can add <code>.panel-tools</code> code to <code>panel-heading</code> container element.
+                    </p>
+                </div>
+                    <pre><code>&lt;div class="panel-tools"&gt;
+    &lt;div class="btn-group"&gt;
+        &lt;a class="btn btn-danger btn-xs" href="#" data-toggle="dropdown"&gt;Action &lt;i class='fa fa-angle-down'&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;ul class="dropdown-menu pull-right" role="menu"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt; &lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt; &lt;/li&gt;
+            &lt;li class="divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt; &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="btn-group"&gt;
+        &lt;a class="btn btn-xs btn-primary" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"&gt;Filter By &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right"&gt;
+            &lt;div class="checkbox metro-checkbox"&gt;
+                &lt;label for="Finance"&gt;
+                    &lt;input type="checkbox" id="Finance" value="option1" /&gt;Finance
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="checkbox metro-checkbox"&gt;
+                &lt;label for="Membership"&gt;
+                    &lt;input type="checkbox" id="Membership" value="option1" /&gt;Membership
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="checkbox metro-checkbox"&gt;
+                &lt;label for="CustomerSupport"&gt;
+                    &lt;input type="checkbox" id="CustomerSupport" value="option1" /&gt;Customer Support
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading no-padding">
+                <h3 class="panel-title pull-left padding-10">
+                    Panels with different colors
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="notes notes-primary">
+                    <p>
+                        Panels with different colors<code>.panel-primary,.panel-success etc...</code>
+                    </p>
+                </div>
+                    <pre><code>&lt;div class="panel panel-success"&gt;
+    &lt;div class="panel-heading"&gt;
+        &lt;h3 class="panel-title"&gt;
+            Panel Success
+        &lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="panel-body"&gt;
+        Panel content
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+        </div>
+    </div>
 </div>

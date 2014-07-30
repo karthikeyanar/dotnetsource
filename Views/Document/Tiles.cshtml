@@ -11,159 +11,144 @@
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 <div class="row">
-	<div class="col-lg-12">
-		<div class="tile vertical bg-primary">
-			<div class="tile-content icon">
-				<i class="fa fa-bell-o fa-4x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Notifications</span>
-				<div class="badge">
-					3</div>
-			</div>
-		</div>
-		<div class="tile selected bg-purple">
-			<div class="tile-content icon">
-				<i class="fa fa-cogs fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Settings</span>
-			</div>
-		</div>
-		<div class="tile bg-warning">
-			<div class="tile-content icon">
-				<i class="fa fa-shopping-cart fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Orders</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile double bg-primary">
-			<div class="tile-content padding5">
-				<h4>
-					KPThemes</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet...</p>
-			</div>
-		</div>
-		<div class="tile bg-purple">
-			<div class="tile-content icon">
-				<i class="fa fa-user fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Members</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile tile-box">
-			<div class="tile half bg-danger">
+    <div class="col-md-12">
+        <div class="notes notes-primary">
+            <p>The content shown on your tile can, and ideally should, change regularly, especially if your tile can communicate new, real-time information to your user. Tiles can show a combination of text and images, and a badge to show status.</p>
+        </div>
+        <h4>Tile Sizes</h4>
+        <div class="notes notes-primary">
+            <p class="description">
+                @dotnetsource.Helpers.Common.SiteName CSS is supported any tiles sizes: <strong>half, default, double, triple, quadro</strong>.
+                You can set sizing of tile with build-in tile subclasses: <code>half</code>, <code>double</code> and <code>triple</code>.
+            </p>
+        </div>
+        <div class="tile bg-primary">
+            <div class="tile-content icon">
+                <i class="fa fa-bell-o fa-4x"></i>
+            </div>
+            <div class="tile-status"><span class="name">Tile</span></div>
+        </div><div class="clearfix"></div>
+        <div class="tile half bg-success">
+            <div class="tile-status"><span class="name">Half</span></div>
+        </div><div class="clearfix"></div>
+        <div class="tile double bg-warning">
+            <div class="tile-content icon">
+                <i class="fa fa-bell-o fa-4x"></i>
+            </div>
+            <div class="tile-status"><span class="name">Double</span></div>
+        </div><div class="clearfix"></div>
+        <div class="tile trible bg-danger">
+            <div class="tile-content icon">
+                <i class="fa fa-bell-o fa-4x"></i>
+            </div>
+            <div class="tile-status"><span class="name">Trible</span></div>
+        </div><div class="clearfix"></div>
+        <pre><code>&lt;div class="tile"&gt;
+&lt;div class="tile half"&gt;
+&lt;div class="tile double"&gt;
+&lt;div class="tile trible"&gt;</code></pre>
+        <div class="clearfix"></div>
+        <h4>Tile Selected</h4>
+        <pre><code>&lt;div class="tile selected bg-purple"&gt;
+    &lt;div class="tile-content icon"&gt;
+        &lt;i class="fa fa-cogs fa-3x"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="tile-status"&gt;
+        &lt;span class="name"&gt;Settings&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div class="tile selected bg-purple">
+            <div class="tile-content icon">
+                <i class="fa fa-cogs fa-3x"></i>
+            </div>
+            <div class="tile-status">
+                <span class="name">Settings</span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <h4>Tile content</h4>
+        <p class="description">
+            Tile content can be placed in sub container with class <code>.tile-content</code>.Tiles content can be organized with built-in subclasses: <code>icon</code>, <code>image</code>, <code>image-set</code>.
+        </p>
+        <pre><code>&lt;div class="tile half bg-primary"&gt;
+    &lt;div class="tile-content icon"&gt;
+        &lt;i class="fa fa-print fa-3x"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<div class="tile half bg-danger">
 				<div class="tile-content icon">
 					<i class="fa fa-bell-o fa-3x"></i>
 				</div>
 			</div>
-			<div class="tile half bg-primary">
-				<div class="tile-content icon">
-					<i class="fa fa-print fa-3x"></i>
-				</div>
-			</div>
-			<div class="tile half bg-warning">
-				<div class="tile-content icon">
-					<i class="fa fa-inbox fa-3x"></i>
-				</div>
-			</div>
-			<div class="tile half bg-purple">
-				<div class="tile-content icon">
-					<i class="fa fa-group fa-3x"></i>
-				</div>
-			</div>
-		</div>
+        <div class="clearfix"></div>
+        <pre><code>&lt;div class="tile no-border"&gt;
+    &lt;div class="tile-content image no-padding"&gt;
+        &lt;img src="/img/4.jpg"&gt;
+    &lt;/div&gt;
+    &lt;div class="brand bg-dark-purple opacity"&gt;
+        &lt;span class="text"&gt;Test image.&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div class="clearfix"></div>
+        <div class="tile no-border">
+            <div class="tile-content image no-padding">
+                <img src="/img/4.jpg">
+            </div>
+            <div class="brand bg-dark-purple opacity">
+                <span class="text">Test image</span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <pre><code>&lt;div class="tile double"&gt;
+    &lt;div class="tile-content image-set"&gt;
+        &lt;img src="/img/1.jpg"&gt;
+        &lt;img src="/img/2.jpg"&gt;
+        &lt;img src="/img/3.jpg"&gt;
+        &lt;img src="/img/4.jpg"&gt;
+        &lt;img src="/img/1.jpg"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div class="clearfix"></div>
+        <div class="tile double">
+            <div class="tile-content image-set">
+                <img src="/img/1.jpg">
+                <img src="/img/2.jpg">
+                <img src="/img/3.jpg">
+                <img src="/img/4.jpg">
+                <img src="/img/1.jpg">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <h4>Tile Status</h4>
+        <p class="description">
+            Status provides additional information for tile. This may be: name, label, text or badge. Tile status container can be created with <code>tile-status</code>.
+        </p>
+        <div class="clearfix"></div>
+        <pre><code>&lt;div class="tile double bg-primary"&gt;
+    &lt;div class="tile-content padding5"&gt;
+        &lt;h4&gt;
+            Annoncements
+        &lt;/h4&gt;
+        &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tile-status"&gt;
+        &lt;span class="name"&gt;John&lt;/span&gt;
+        &lt;div class="badge"&gt;
+            05/02/2013
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <div class="clearfix"></div>
 		<div class="tile double bg-primary">
 			<div class="tile-content padding5">
 				<h4>
 					Annoncements</h4>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh ut laoreet...</p>
+				<p>Content...</p>
 			</div>
 			<div class="tile-status">
 				<span class="name">John</span>
 				<div class="badge">
 					05/02/2013</div>
-			</div>
-		</div>
-		<div class="tile bg-success">
-			<div class="tile-content icon">
-				<i class="fa fa-bar-chart-o fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Reports</span>
-			</div>
-		</div>
-		<div class="tile double bg-danger no-border">
-			<div class="tile-content icon">
-				<i class="fa fa-play-circle fa-4x"></i>
-			</div>
-			<div class="brand bg-black">
-				<span class="label fg-white">Player</span>
-				<div class="badge bg-black">
-					<i class="fa fa-pause"></i>
-				</div>
-			</div>
-		</div>
-		<div class="tile bg-teal">
-			<div class="tile-content icon">
-				<i class="fa fa-briefcase fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Documents</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile double no-border">
-			<div class="tile-content image no-padding">
-				<img src="/img/4.jpg">
-			</div>
-			<div class="brand bg-dark-purple opacity">
-				<span class="text">This is a desert eagle. He is very hungry and angry bird.</span>
-			</div>
-		</div>
-		<div class="tile bg-warning">
-			<div class="tile-content icon">
-				<i class="fa fa-plane fa-4x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Projects</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile bg-purple">
-			<div class="tile-content icon">
-				<i class="fa fa-briefcase fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Events</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile bg-teal">
-			<div class="tile-content icon">
-				<i class="fa fa-group fa-3x"></i>
-			</div>
-			<div class="tile-status">
-				<span class="name">Meetings</span>
-				<div class="badge">
-					10</div>
-			</div>
-		</div>
-		<div class="tile double bg-primary">
-			<div class="tile-content padding5">
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, sed diam nonummy consectetuer adipiscing elit, nibh ut laoreet...</p>
 			</div>
 		</div>
 	</div>
