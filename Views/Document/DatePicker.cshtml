@@ -11,17 +11,8 @@
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<!-- bootstrap datepicker -->
-	<link href="/css/plugins/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
-	<!-- bootstrap datepicker -->
-	<script src="/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-			$(".date-picker").datepicker({});
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
@@ -31,114 +22,18 @@
 					Date Pickers</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<form method="post" class="form-horizontal form-striped" onsubmit="return false">
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Default</label>
-					<div class="col-md-4">
-						<input type="text" id="Text1" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Auto Close</label>
-					<div class="col-md-4">
-						<input type="text" id="Text2" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-autoclose="true" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Calendar Weeks</label>
-					<div class="col-md-4">
-						<input type="text" id="Text3" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-calendar-weeks="true" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Disable Past Dates</label>
-					<div class="col-md-4">
-						<input type="text" id="Text4" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-start-date="+0d" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Today Highlight</label>
-					<div class="col-md-4">
-						<input type="text" id="Text5" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-today-highlight="true" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Months Only</label>
-					<div class="col-md-4">
-						<input type="text" id="Text6" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-format="mm/yyyy" data-date-min-view-mode="1" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Year Only</label>
-					<div class="col-md-4">
-						<input type="text" id="Text7" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-format="yyyy" data-date-min-view-mode="2" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Start View - Year</label>
-					<div class="col-md-4">
-						<input type="text" id="Text8" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-start-view="1" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Start View - Decade</label>
-					<div class="col-md-7">
-						<input type="text" id="Text9" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-start-view="2" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Today Button</label>
-					<div class="col-md-7">
-						<input type="text" id="Text10" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-today-btn="linked" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Week End Disable</label>
-					<div class="col-md-7">
-						<input type="text" id="Text11" placeholder="Select date" class="form-control input-medium" data-provide="datepicker" data-date-days-of-week-disabled="0,6" />
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Component (Start,End)</label>
-					<div class="col-md-8 input-xlarge">
-						<div class="input-group input-daterange" data-provide="datepicker">
-							<input type="text" class="form-control" name="start" placeholder="Start" />
-							<span class="input-group-addon  ">to</span>
-							<input type="text" class="form-control" name="end" placeholder="End" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Component</label>
-					<div class="col-md-7 input-large">
-						<div class="input-group date" data-provide="datepicker">
-							<input type="text" class="form-control" placeholder="Select date" />
-							<span class="input-group-addon"><i class="fa fa-calendar cursor-pointer"></i></span>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="textfield" class="col-md-4 control-label">
-						Calendar</label>
-					<div class="col-md-8">
-						<div class="date-picker" data-date-format="mm/dd/yyyy">
-						</div>
-					</div>
-				</div>
-				</form>
+                <h4>Date Pickers</h4>
+                <div class="notes notes-primary">
+                    <p>
+                        Date picker is a jQuery plugin allows you to create a date picker input widgets. Read more about it on <a href="http://eternicode.github.io/bootstrap-datepicker/">Date picker plugin website</a>.
+                    </p>
+                </div>
+                <h4>CSS Files</h4>
+                <pre><code>css/plugins/bootstrap-datepicker/bootstrap-datepicker.css</code></pre>
+                <h4>Js Files</h4>
+                <pre>
+<code>js/plugins/bootstrap-datepicker/bootstrap-datepicker.js</code>
+</pre>
 			</div>
 		</div>
 	</div>
