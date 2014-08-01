@@ -18,35 +18,58 @@
 					Background Colors</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
+				<div class="notes notes-primary">
+					<p>@dotnetsource.Helpers.Common.SiteName CSS provides access to the main colors. You can sets: background, foreground for any elements. </p>
+					<p class="description">
+						To set background color: use prefix <code>bg</code>, to set foreground color: use prefix <code>fg</code>.
+						Also you can set colors with classes <code>bg-*</code>, <code>fg-*</code>.
+					</p>
+					<h4>Background Color</h4>
+					<pre>
+						<code>&lt;div class="bg-primary"&gt;</code>
+					</pre>
+					<div class="bg-primary" style="width:10px;height:10px">.bg-primary</div>
+					<pre>
+						<code>&lt;div class="bg-success"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-info"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-warning"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-danger"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-purple"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-cardovan"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-teal"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-pink"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-dark-blue"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-blue"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-black"&gt;</code>
+					</pre>
+					<pre>
+						<code>&lt;div class="bg-white"&gt;</code>
+					</pre>
+					<h4>Foreground Color</h4>
+				</div>
 				<div class="row">
-					<div class="col-md-2">
-						<div class="well bg-primary text-center">
-							Primary</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-success text-center">
-							Success</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-info text-center">
-							Info</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-warning text-center">
-							Warning</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-danger text-center">
-							Danger</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-purple text-center">
-							Purple</div>
-					</div>
-					<div class="col-md-2">
-						<div class="well bg-cardovan text-center">
-							Cardovan</div>
-					</div>
+					 
+					  
 					<div class="col-md-2">
 						<div class="well bg-teal text-center">
 							Teal</div>
@@ -60,7 +83,7 @@
 							Dark Blue</div>
 					</div>
 					<div class="col-md-2">
-						<div class="well bg-dark-blue text-center">
+						<div class="well bg-blue text-center">
 							Blue</div>
 					</div>
 				</div>

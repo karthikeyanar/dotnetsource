@@ -11,22 +11,8 @@
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<!-- bootstrap timepicker -->
-	<link href="/css/plugins/bootstrap-timepicker/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
-	<!-- bootstrap timepicker -->
-	<script src="/js/plugins/bootstrap-timepicker/bootstrap-timepicker.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-			$('#timepicker1').timepicker();
-			$('#timepicker2').timepicker({
-				minuteStep: 1,
-				showSeconds: true,
-				showMeridian: false
-			});
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
@@ -37,28 +23,21 @@
 				</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<form action="#" method="POST" class="form-horizontal">
-				<div class="form-group">
-					<label class="col-md-4 control-label">
-						Default Time Picker
-					</label>
-					<div class="col-md-4">
-						<div class="input-group bootstrap-timepicker input-medium">
-							<input id="timepicker1" class="form-control" type="text" /><span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-						</div>
-					</div>
+				<h4>
+					Time Pickers</h4>
+				<div class="notes notes-primary">
+					<p>
+						Time picker is a jQuery plugin allows you to create a time picker input widgets. Read more about it on <a href="http://jdewit.github.io/bootstrap-timepicker/index.html">Time picker plugin website</a>.
+					</p>
 				</div>
-				<div class="form-group">
-					<label class="col-md-4 control-label">
-						24hr Time Picker
-					</label>
-					<div class="col-md-4">
-						<div class="input-group bootstrap-timepicker input-medium">
-							<input id="timepicker2" class="form-control" type="text" /><span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-						</div>
-					</div>
-				</div>
-				</form>
+				<h4>
+					CSS Files</h4>
+				<pre><code>css/plugins/bootstrap-timepicker/bootstrap-timepicker.css</code></pre>
+				<h4>
+					Js Files</h4>
+				<pre>
+<code>js/plugins/bootstrap-timepicker/bootstrap-timepicker.js</code>
+</pre>
 			</div>
 		</div>
 	</div>

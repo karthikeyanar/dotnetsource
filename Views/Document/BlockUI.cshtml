@@ -13,72 +13,6 @@
 @section styles {
 }
 @section scripts {
-	<script>
-		$(function() {
-			var $panelBody=$("#panelBody");
-			var $news=$("#news");
-			$("#block").click(function() {
-				App.handleBlockUI({
-					"target": $panelBody
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI($panelBody);
-				},1000)
-			});
-			$("#blockCustom").click(function() {
-				App.handleBlockUI({
-					"target": $panelBody,
-					"message": $("#blockMessage").val()
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI($panelBody);
-				},1000)
-			});
-			$("#blockVerticalTop").click(function() {
-				App.handleBlockUI({
-					"target": $panelBody,
-					"message": $("#blockMessage").val(),
-					"verticalTop": true
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI($panelBody);
-				},1000)
-			});
-			$("#blockNews").click(function() {
-				App.handleBlockUI({
-					"target": $news
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI($news);
-				},1000)
-			});
-			$(".block-colors").click(function() {
-				var bgColor=$(this).attr("data-color");
-				App.handleBlockUI({
-					"target": $panelBody,
-					"bgColor": bgColor
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI($panelBody);
-				},1000)
-			});
-			$("#pageBlock").click(function() {
-				App.handleBlockUI({
-					"zindex": "9999999",
-					"overlayOpacity": "0.5"
-				});
-				// for demo purpose
-				setTimeout(function() {
-					App.unblockUI();
-				},1000)
-			});
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
@@ -88,48 +22,16 @@
 					Block UI</h3>
 			</div>
 			<div class="panel-body" id="panelBody">
-				<div id="news">
-					<h3 class="no-margin-top">
-						News</h3>
+				<h4>
+					Block UI</h4>
+				<div class="notes notes-primary">
 					<p>
-						Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle quora plaxo ideeli hulu weebly balihoo
+						The jQuery BlockUI Plugin lets you simulate synchronous behavior when using AJAX, without locking the browser[1]. When activated, it will prevent user activity with the page (or part of the page) until it is deactivated. BlockUI adds elements to the DOM to give it both the appearance and behavior of blocking user interaction. Read more about it on <a href="http://malsup.com/jquery/block/">Block UI plugin website</a>.
 					</p>
 				</div>
-				<form action="#" method="POST" onsubmit="return false">
-				<div class="form-group">
-					<button id="block" class="btn btn-primary">
-						Block Panel With Default Message</button>
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control input-medium" id="blockMessage" value="Please wait..." />
-				</div>
-				<div class="form-group">
-					<button id="blockCustom" class="btn btn-success">
-						Block Panel With Custom Message</button>
-				</div>
-				<div class="form-group">
-					<button id="blockVerticalTop" class="btn btn-danger">
-						Block Panel With Vertical Top Message</button>
-				</div>
-				<div class="form-group">
-					<button id="blockNews" class="btn btn-warning">
-						Block News</button>
-				</div>
-				<div class="form-group">
-					<button class="btn btn-primary block-colors" data-color="bg-primary">
-						Block Color (bg-primary)</button>
-					<button class="btn btn-success block-colors" data-color="bg-success">
-						Block Color (bg-success)</button>
-					<button class="btn btn-info block-colors" data-color="bg-info">
-						Block Color (bg-info)</button>
-					<button class="btn btn-dark-blue block-colors" data-color="bg-dark-blue">
-						Block Color (bg-dark-blue)</button>
-				</div>
-				<div class="form-group">
-					<button id="pageBlock" class="btn btn-primary">
-						Block Page</button>
-				</div>
-				</form>
+				<h4>
+					Js Files</h4>
+				<pre><code>js/plugins/blockUI/jquery.blockUI.js</code></pre>
 			</div>
 		</div>
 	</div>

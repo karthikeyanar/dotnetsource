@@ -1,45 +1,45 @@
 ﻿@{
-    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "DropZone File Upload" };
-    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
-    {
-        FirstUrl = "/Home/Index",
-        FirstUrlName = "Home",
-        SecondUrl = "/Home/Modal",
-        SecondUrlName = "Plugins",
-        ThirdUrl = "/Home/DropZoneFileUpload",
-        ThirdUrlName = "DropZone File Upload"
-    };
-    ViewBag.Title = _PageHeaderModel.Title;
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "DropZone File Upload" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/Home/Index",
+		FirstUrlName = "Home",
+		SecondUrl = "/Home/Modal",
+		SecondUrlName = "Plugins",
+		ThirdUrl = "/Home/DropZoneFileUpload",
+		ThirdUrlName = "DropZone File Upload"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-    <link href="/css/plugins/dropzone/dropzone.css" rel="stylesheet" />
 }
 @section scripts {
-    <script src="/js/plugins/dropzone/dropzone.js"></script>
-    <script src="/js/pages/dropzone.js"></script>
 }
 <div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-pink">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    DropZone File Upload
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body">
-                <p>
-                    <span class="label label-danger">
-                        NOTE:
-                    </span>
-                    &nbsp; This plugins works only on Latest Chrome, Firefox, Safari, Opera &amp; Internet Explorer 10.
-                </p>
-                <form id="my-dropzone" class="dropzone dz-clickable" action="/php/upload.php">
-                    <div class="dz-default dz-message"><span>Drop files here to upload</span></div>
-                </form>
-            </div>
-        </div>
-    </div>
+	<div class="col-md-12">
+		<div class="panel panel-pink">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					DropZone File Upload
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<h4>
+					DropZone File Upload</h4>
+				<div class="notes notes-primary">
+					<p>
+						DropZone File Upload is a light weight JavaScript library that turns an HTML element into a dropzone. This means that a user can drag and drop a file onto it, and the file gets uploaded to the server via AJAX. Read more about it on <a href="http://www.dropzonejs.com/">DropZone File Upload plugin website</a>.
+					</p>
+				</div>
+				<h4>
+					CSS Files</h4>
+				<pre><code>css/plugins/dropzone/dropzone.css</code></pre>
+				<h4>
+					Js Files</h4>
+				<pre><code>js/plugins/dropzone/dropzone.js</code></pre>
+			</div>
+		</div>
+	</div>
 </div>
