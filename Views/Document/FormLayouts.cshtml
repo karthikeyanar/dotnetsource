@@ -38,99 +38,31 @@
                         Form Sample
                     </h3>@Html.Partial("_PanelCloseTools")
                 </div>
-                <div class="panel-body no-padding">
-                    <form action="#" method="POST" class='form-horizontal form-row-separated'>
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                Text input
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" placeholder="Text input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                Password
-                            </label>
-                            <div class="col-md-4">
-                                <input type="password" name="password" id="password2" placeholder="Password input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                File Input
-                            </label>
-                            <div class="col-md-10">
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span> <span class="fileinput-filename"></span><a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Dropdown
-                            </label>
-                            <div class="col-md-4">
-                                <select class="form-control">
-                                    <option value="">Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Check Box
-                            </label>
-                            <div class="col-md-10">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />Choice
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />
-                                        Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Radio Button
-                            </label>
-                            <div class="col-md-10">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />Choice
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />
-                                        Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="textarea" class="col-md-2 control-label">
-                                Textarea
-                            </label>
-                            <div class="col-md-10">
-                                <textarea name="textarea" id="textarea2" rows="5" cols="10" class="form-control">test content</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group form-actions">
-                            <div class="col-md-10 col-md-offset-2">
-                                <button type="submit" class="btn btn-primary margin-right-10">
-                                    Save
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="panel-body">
+                    <h4>Row Separated</h4>
+                    <div class="notes notes-primary">
+                        <p>@dotnetsource.Helpers.Common.SiteName introduces row separated form.</p>
+                    </div>
+                    <pre><code>&lt;form action="#" method="POST" class='form-horizontal form-row-separated'&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="textfield" class="col-md-2 control-label"&gt;
+            Text input
+        &lt;/label&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;input type="text" placeholder="Text input" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group form-actions"&gt;
+        &lt;div class="col-md-10 col-md-offset-2"&gt;
+            &lt;button type="submit" class="btn btn-primary margin-right-10"&gt;
+                Save
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger"&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                 </div>
             </div>
         </div>
@@ -143,98 +75,31 @@
                         Form Sample
                     </h3>@Html.Partial("_PanelCloseTools")
                 </div>
-                <div class="panel-body no-padding">
-                    <form action="#" method="POST" class='form-horizontal form-row-separated form-bordered form-row-stripped'>
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                Text input
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" placeholder="Text input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                Password
-                            </label>
-                            <div class="col-md-4">
-                                <input type="password" name="password" id="password1" placeholder="Password input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                File Input
-                            </label>
-                            <div class="col-md-10">
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span> <span class="fileinput-filename"></span><a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Dropdown
-                            </label>
-                            <div class="col-md-4">
-                                <select class="form-control">
-                                    <option value="">Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Check Box
-                            </label>
-                            <div class="col-md-10">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />Choice
-                                    </label>
-                                </div>
-                                <div class='checkbox'>
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Radio Button
-                            </label>
-                            <div class="col-md-10">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />Choice
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />
-                                        Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="textarea" class="col-md-2 control-label">
-                                Textarea
-                            </label>
-                            <div class="col-md-10">
-                                <textarea name="textarea" id="textarea1" rows="5" cols="10" class="form-control">test content</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group form-actions">
-                            <div class="col-md-10 col-md-offset-2">
-                                <button type="submit" class="btn btn-primary margin-right-10">
-                                    Save
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="panel-body">
+                    <h4>Row Stripped</h4>
+                    <div class="notes notes-primary">
+                        <p>@dotnetsource.Helpers.Common.SiteName introduces row stripped form.</p>
+                    </div>
+                    <pre><code>&lt;form action="#" method="POST" class='form-horizontal form-row-separated form-bordered form-row-stripped'&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="textfield" class="col-md-2 control-label"&gt;
+            Text input
+        &lt;/label&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;input type="text" placeholder="Text input" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group form-actions"&gt;
+        &lt;div class="col-md-10 col-md-offset-2"&gt;
+            &lt;button type="submit" class="btn btn-primary margin-right-10"&gt;
+                Save
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger"&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                 </div>
             </div>
         </div>
@@ -247,98 +112,31 @@
                         Form Sample
                     </h3>@Html.Partial("_PanelCloseTools")
                 </div>
-                <div class="panel-body no-padding">
-                    <form action="#" method="POST" class='form-horizontal form-row-separated form-bordered'>
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                Text input
-                            </label>
-                            <div class="col-md-4">
-                                <input type="text" placeholder="Text input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                Password
-                            </label>
-                            <div class="col-md-4">
-                                <input type="password" name="password" id="password1" placeholder="Password input" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-2 control-label">
-                                File Input
-                            </label>
-                            <div class="col-md-10">
-                                <div class="fileinput fileinput-new" data-provides="fileinput">
-                                    <span class="btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span> <span class="fileinput-filename"></span><a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Dropdown
-                            </label>
-                            <div class="col-md-4">
-                                <select class="form-control">
-                                    <option value="">Select</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Check Box
-                            </label>
-                            <div class="col-md-10">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />Choice
-                                    </label>
-                                </div>
-                                <div class='checkbox'>
-                                    <label>
-                                        <input type="checkbox" name="checkbox" />Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">
-                                Radio Button
-                            </label>
-                            <div class="col-md-10">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />Choice
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="radio" />
-                                        Choice2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="textarea" class="col-md-2 control-label">
-                                Textarea
-                            </label>
-                            <div class="col-md-10">
-                                <textarea name="textarea" id="textarea2" rows="5" cols="10" class="form-control">test content</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group form-actions">
-                            <div class="col-md-10 col-md-offset-2">
-                                <button type="submit" class="btn btn-primary margin-right-10">
-                                    Save
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="panel-body">
+                    <h4>Bordered</h4>
+                    <div class="notes notes-primary">
+                        <p>@dotnetsource.Helpers.Common.SiteName introduces bordered form.</p>
+                    </div>
+                    <pre><code>&lt;form action="#" method="POST" class='form-horizontal form-row-separated form-bordered'&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="textfield" class="col-md-2 control-label"&gt;
+            Text input
+        &lt;/label&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;input type="text" placeholder="Text input" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group form-actions"&gt;
+        &lt;div class="col-md-10 col-md-offset-2"&gt;
+            &lt;button type="submit" class="btn btn-primary margin-right-10"&gt;
+                Save
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger"&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                 </div>
             </div>
         </div>
@@ -352,111 +150,38 @@
                     </h3>@Html.Partial("_PanelCloseTools")
                 </div>
                 <div class="panel-body">
-                    <form action="#" method="POST" class='form-horizontal'>
-                        <h3 class="form-section">
-                            Personal Info
-                        </h3>
-
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                First Name
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                Last Name
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Gender" class="col-md-2 control-label">
-                                Gender
-                            </label>
-                            <div class="col-md-10">
-                                <select class="form-control">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="textfield" class="col-md-2 control-label">
-                                Date Of Birth
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" placeholder="mm/dd/yyyy" class="form-control" />
-                            </div>
-                        </div>
-
-
-                        <h3 class="form-section">
-                            Address
-                        </h3>
-
-                        <div class="form-group">
-                            <label for="Address1" class="col-md-2 control-label">
-                                Address 1
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="City" class="col-md-2 control-label">
-                                City
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="State" class="col-md-2 control-label">
-                                State
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Zip" class="col-md-2 control-label">
-                                Zip
-                            </label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="State" class="col-md-2 control-label">
-                                Country
-                            </label>
-                            <div class="col-md-10">
-                                <select class="form-control"></select>
-                            </div>
-                        </div>
-
-                        <div class="form-group form-actions">
-                            <div class="col-md-10 col-md-offset-2">
-                                <button type="submit" class="btn btn-primary margin-right-10">
-                                    Save
-                                </button>
-                                <button type="button" class="btn btn-danger">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <h4>2 Columns</h4>
+                    <div class="notes notes-primary">
+                        <p>@dotnetsource.Helpers.Common.SiteName introduces 2 columns form.</p>
+                    </div>
+                    <pre><code>&lt;form action="#" method="POST" class='form-horizontal'&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="textfield" class="col-md-2 control-label"&gt;
+            First Name
+        &lt;/label&gt;
+        &lt;div class="col-md-10"&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="textfield" class="col-md-2 control-label"&gt;
+            Last Name
+        &lt;/label&gt;
+        &lt;div class="col-md-10"&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;div class="col-md-10 col-md-offset-2"&gt;
+            &lt;button type="submit" class="btn btn-primary margin-right-10"&gt;
+                Save
+            &lt;/button&gt;
+            &lt;button type="button" class="btn btn-danger"&gt;
+                Cancel
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                 </div>
             </div>
         </div>

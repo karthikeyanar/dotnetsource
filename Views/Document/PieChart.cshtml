@@ -13,59 +13,35 @@
 @section styles {
 }
 @section scripts {
-	<script src="/js/plugins/easy-pie-chart/jquery.easypiechart.min.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-			$('.easy-pie-chart').easyPieChart({
-				animate: 1000,
-				onStep: function(from,to,percent) {
-					$(this.el).find('span').text(Math.round(percent)+"%");
-				}
-			});
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-success">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					General Stats
+					Pie Chart
 				</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
-								<span></span>
-							</div>
-							<div class="title">
-								New Visitors
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
-								<span></span>
-							</div>
-							<div class="title">
-								Bounce Rate
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="easy-pie-chart-box">
-							<div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
-								<span></span>
-							</div>
-							<div class="title">
-								Transactions
-							</div>
-						</div>
-					</div>
-				</div>
+                <h4>
+                    Pie Chart
+                </h4>
+                <div class="notes notes-primary">
+                    <p>
+                        Easy pie chart is a jQuery plugin that uses the canvas element to render simple pie charts for single values. These charts are highly customizable, very easy to implement, scale to the resolution of the display of the client to provide sharp charts even on retina displays, and use requestAnimationFrame for smooth animations on modern devices. Read more about it on <a href="http://rendro.github.io/easy-pie-chart/" target="_blank">Pie Chart plugin website</a>.
+                    </p>
+                </div>
+                <h4>
+                    CSS Files
+                </h4>
+                <pre>
+<code>css/plugins/c3/c3.css</code></pre>
+                <h4>
+                    Js Files
+                </h4>
+                <pre>
+<code>js/plugins/easy-pie-chart/jquery.easypiechart.min.js</code>
+</pre>
 			</div>
 		</div>
 	</div>

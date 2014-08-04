@@ -490,7 +490,7 @@ a.bg-white:hover {
 }
 /* form bordered */
 .form-bordered .form-group > div {
-  border-left: 1px solid #f5f5f5;
+  border-left: 1px solid #ddd;
 }
 /* form section, form action */
 .form-section {
@@ -500,6 +500,9 @@ a.bg-white:hover {
 }
 .form-actions {
   background-color: #f5f5f5 !important;
+}
+.form-bordered .form-group.form-actions > div {
+  border-left: 1px solid #f5f5f5;
 }
 /* form horizontal */
 .form-horizontal .form-actions {

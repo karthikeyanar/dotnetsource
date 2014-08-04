@@ -1,349 +1,110 @@
 ﻿@{
-	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Form Layouts" };
-	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
-		FirstUrl = "/Home/Index", FirstUrlName = "Home",
-		SecondUrl = "/Home/FormControls", SecondUrlName = "Forms",
-		ThirdUrl = "/Home/FormLayouts", ThirdUrlName = "Form Layouts"
-	};
-	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Form Layouts" };
+    var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel
+    {
+        FirstUrl = "/Home/Index",
+        FirstUrlName = "Home",
+        SecondUrl = "/Home/FormControls",
+        SecondUrlName = "Forms",
+        ThirdUrl = "/Home/FormLayouts",
+        ThirdUrlName = "Form Layouts"
+    };
+    ViewBag.Title = _PageHeaderModel.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<!-- bootstrap fileupload -->
-	<link href="/css/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css" rel="stylesheet" />
 }
 @section scripts {
-	<!-- Bootstrap FileUpload -->
-	<script src="/js/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js" type="text/javascript"></script>
-	<!-- Bootstrap FileUpload -->
-	<script src="../../js/plugins/jqueryvalidation/additional-methods.min.js" type="text/javascript"></script>
 }
 <div class="tab-fancy">
-	<!-- Nav tabs -->
-	<ul class="nav nav-tabs">
-		<li class="active"><a href="#form1" data-toggle="tab">Form Validation</a></li>
-		<li><a href="#form2" data-toggle="tab">Validation States</a></li>
-		<li><a href="#form3" data-toggle="tab">Validation States With Icons</a></li>
-		<li><a href="#form4" data-toggle="tab">Horizontal Form Validation States</a></li>
-	</ul>
-	<!-- Tab panes -->
-	<div class="tab-content padding-top-10">
-		<!-- Row Separated tab -->
-		<div class="tab-pane active" id="form1">
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Form Validation
-					</h3>@Html.Partial("_PanelCloseTools")
-				</div>
-				<div class="panel-body">
-					<form action="#" method="POST" class="form-horizontal form-validate">
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Email
-						</label>
-						<div class="col-md-4">
-							<input type="text" name="email" id="email" data-rule-required="true" data-rule-email="true" data-msg-required="Required" data-placement="bottom" data-msg-email="Invalid Email" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="password" class="col-md-2 control-label">
-							Password
-						</label>
-						<div class="col-md-4">
-							<input type="password" name="password" id="password" class="form-control" data-rule-minlength="6" data-msg-required="Required" data-rule-required="true" data-placement="bottom" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="password" class="col-md-2 control-label">
-							Cofirm Password
-						</label>
-						<div class="col-md-4">
-							<input type="password" name="confirm_password" id="confirm_password" class="form-control" data-msg-required="Required" data-rule-required="true" data-rule-equalto="#password" data-msg-equalto="These passwords don't match. Try again?" data-placement="bottom" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							First Name
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="first_name" data-rule-required="true" data-msg-required="Required" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Last Name
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="last_name" data-rule-required="true" data-msg-required="Required" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Max Words
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="maxwords" data-rule-maxwords="2" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Min Words
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="minwords" data-rule-minwords="2" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Range Words
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="rangewords" data-rule-rangewords="[2,5]" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							URL
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="url" data-rule-url="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Number
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="number" data-rule-number="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Digits
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="number" data-rule-digits="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Letters Only
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="lettersonly" data-rule-lettersonly="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Phone US
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="phoneus" data-rule-phoneus="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							IPV4
-						</label>
-						<div class="col-md-4">
-							<input type="text" id="ipv4" data-rule-ipv4="true" data-placement="bottom" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Gender
-						</label>
-						<div class="col-md-4">
-							<select name="sex" id="sex" class="form-control" data-rule-required="true" data-msg-required="Required" data-placement="bottom">
-								<option value="">--Select One--</option>
-								<option value="Male">Male</option>
-								<option value="Female">Female</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="textfield" class="col-md-2 control-label">
-							Birthday
-						</label>
-						<div class="col-md-10">
-							<div class="pull-left margin-right-10">
-								<select name="Month" id="Month" class="form-control" data-rule-required="true" data-msg-required="Required" data-placement="bottom">
-									<option value="">Month</option>
-									<option value="1">January</option>
-									<option value="2">February</option>
-									<option value="3">March</option>
-									<option value="4">April</option>
-									<option value="5">May</option>
-									<option value="6">June</option>
-									<option value="7">July</option>
-									<option value="8">August</option>
-									<option value="9">September</option>
-									<option value="10">October</option>
-									<option value="11">November</option>
-									<option value="12">December</option>
-								</select>
-							</div>
-							<div class="pull-left margin-right-10">
-								<input type="text" name="day" id="day" class="form-control" style="width: 100px" placeholder="Day" data-rule-required="true" data-msg-required="Required" data-placement="bottom" />
-							</div>
-							<div class="pull-left">
-								<input type="text" name="year" id="year" class="form-control" style="width: 100px" placeholder="Year" data-rule-required="true" data-msg-required="Required" data-placement="bottom" />
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-md-10 col-md-offset-2">
-							<button type="submit" class="btn btn-primary margin-right-10">
-								Save
-							</button>
-							<button type="button" class="btn btn-danger">
-								Cancel
-							</button>
-						</div>
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane" id="form2">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Validation States
-					</h3>@Html.Partial("_PanelCloseTools")
-				</div>
-				<div class="panel-body">
-					<form action="#" method="POST">
-					<div class="form-group has-success">
-						<label class="control-label" for="inputSuccess">
-							Input with success
-						</label>
-						<input type="text" class="form-control" id="inputSuccess" />
-					</div>
-					<div class="form-group has-warning">
-						<label class="control-label" for="inputWarning">
-							Input with warning
-						</label>
-						<input type="text" class="form-control" id="inputWarning" />
-					</div>
-					<div class="form-group has-error">
-						<label class="control-label" for="inputError">
-							Input with error
-						</label>
-						<input type="text" class="form-control" id="inputError" />
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane" id="form3">
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Validation States With Icons
-					</h3>@Html.Partial("_PanelCloseTools")
-				</div>
-				<div class="panel-body">
-					<form action="#" method="POST">
-					<div class="form-group">
-						<label class="control-label" for="inputSuccess">
-							Default input
-						</label>
-						<div class="input-icon right">
-							<i class="fa fa-info-circle tooltips" data-original-title="Email address" data-container="body"></i>
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group has-success">
-						<label class="control-label" for="inputSuccess">
-							Input with success
-						</label>
-						<div class="input-icon right">
-							<i class="fa fa-check tooltips" data-original-title="You look OK!" data-container="body"></i>
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group has-warning">
-						<label class="control-label" for="inputWarning">
-							Input with warning
-						</label>
-						<div class="input-icon right">
-							<i class="fa fa-warning tooltips" data-original-title="please provide an email" data-container="body"></i>
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					<div class="form-group has-error">
-						<label class="control-label" for="inputError">
-							Input with error
-						</label>
-						<div class="input-icon right">
-							<i class="fa fa-exclamation tooltips" data-original-title="please write a valid email" data-container="body"></i>
-							<input type="text" class="form-control" />
-						</div>
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane" id="form4">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Horizontal Form Validation States
-					</h3>@Html.Partial("_PanelCloseTools")
-				</div>
-				<div class="panel-body">
-					<form action="#" class="form-horizontal" method="POST">
-					<div class="form-group">
-						<label class="col-md-3 control-label" for="inputSuccess">
-							Default input
-						</label>
-						<div class="col-md-9">
-							<div class="input-icon right">
-								<i class="fa fa-info-circle tooltips" data-original-title="Email address" data-container="body"></i>
-								<input type="text" class="form-control" />
-							</div>
-						</div>
-					</div>
-					<div class="form-group has-success">
-						<label class="col-md-3 control-label" for="inputSuccess">
-							Input with success
-						</label>
-						<div class="col-md-9">
-							<div class="input-icon right">
-								<i class="fa fa-check tooltips" data-original-title="You look OK!" data-container="body"></i>
-								<input type="text" class="form-control" />
-							</div>
-						</div>
-					</div>
-					<div class="form-group has-warning">
-						<label class="col-md-3 control-label" for="inputWarning">
-							Input with warning
-						</label>
-						<div class="col-md-9">
-							<div class="input-icon right">
-								<i class="fa fa-warning tooltips" data-original-title="please provide an email" data-container="body"></i>
-								<input type="text" class="form-control" />
-							</div>
-						</div>
-					</div>
-					<div class="form-group has-error">
-						<label class="col-md-3 control-label" for="inputError">
-							Input with error
-						</label>
-						<div class="col-md-9">
-							<div class="input-icon right">
-								<i class="fa fa-exclamation tooltips" data-original-title="please write a valid email" data-container="body"></i>
-								<input type="text" class="form-control" />
-							</div>
-						</div>
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#form1" data-toggle="tab">Form Validation</a></li>
+        <li><a href="#form2" data-toggle="tab">Validation States</a></li>
+        <li><a href="#form3" data-toggle="tab">Validation States With Icons</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content padding-top-10">
+        <!-- Row Separated tab -->
+        <div class="tab-pane active" id="form1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Form Validation
+                    </h3>@Html.Partial("_PanelCloseTools")
+                </div>
+                <div class="panel-body">
+                    <h4>jQuery Validation Plugin</h4>
+                    <p>This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. It makes a good choice if you’re building something new from scratch, but also when you’re trying to integrate something into an existing application with lots of existing markup. The plugin comes bundled with a useful set of validation methods, including URL and email validation, while providing an API to write your own methods. All bundled methods come with default error messages in english and translations into 37 other languages.</p>
+                    <p>Read more about it on <a href="http://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin website</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="form2">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Validation States
+                    </h3>@Html.Partial("_PanelCloseTools")
+                </div>
+                <div class="panel-body">
+                    <h4>Validation States</h4>
+                    <p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
+                    <p>Read more about it on <a href="http://getbootstrap.com/css/#forms-control-validation" target="_blank">Bootstrap Validation States website</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="form3">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Validation States With Icons
+                    </h3>@Html.Partial("_PanelCloseTools")
+                </div>
+                <div class="panel-body">
+                    <h4>Validation States With Icon</h4>
+                    <pre><code>&lt;form action="#" method="POST"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label class="control-label" for="inputSuccess"&gt;
+            Default input
+        &lt;/label&gt;
+        &lt;div class="input-icon right"&gt;
+            &lt;i class="fa fa-info-circle tooltips" data-original-title="Email address" data-container="body"&gt;&lt;/i&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group has-success"&gt;
+        &lt;label class="control-label" for="inputSuccess"&gt;
+            Input with success
+        &lt;/label&gt;
+        &lt;div class="input-icon right"&gt;
+            &lt;i class="fa fa-check tooltips" data-original-title="You look OK!" data-container="body"&gt;&lt;/i&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group has-warning"&gt;
+        &lt;label class="control-label" for="inputWarning"&gt;
+            Input with warning
+        &lt;/label&gt;
+        &lt;div class="input-icon right"&gt;
+            &lt;i class="fa fa-warning tooltips" data-original-title="please provide an email" data-container="body"&gt;&lt;/i&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group has-error"&gt;
+        &lt;label class="control-label" for="inputError"&gt;
+            Input with error
+        &lt;/label&gt;
+        &lt;div class="input-icon right"&gt;
+            &lt;i class="fa fa-exclamation tooltips" data-original-title="please write a valid email" data-container="body"&gt;&lt;/i&gt;
+            &lt;input type="text" class="form-control" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>    
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
