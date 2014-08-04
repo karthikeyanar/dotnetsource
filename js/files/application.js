@@ -1,4 +1,4 @@
-﻿function Application() {
+﻿var App=new function() {
 
 	var self=this;
 
@@ -58,8 +58,8 @@
 
 	this.handleMetroCheck=function(target) {
 		if(!target) target=$("body");
-		
-		$('.metro-checkbox,.metro-radio', $(target)).find(":input").each(function() {
+
+		$('.metro-checkbox,.metro-radio',$(target)).find(":input").each(function() {
 			var $this=$(this);
 			if($this.closest("label").size()==1) {
 				if($this.closest("label").find(".check").size()==0)
@@ -85,13 +85,16 @@
 		}
 	}
 
-	this.handleToolTip=function() {
-		$("[data-toggle='tooltip']").tooltip();
-		$("[rel='tooltip']").tooltip();
+	this.handleToolTip=function(target) {
+		if(!target) target=$("body");
+
+		$("[data-toggle='tooltip']",target).tooltip();
+		$("[rel='tooltip']",target).tooltip();
 	}
 
-	this.handlePopover=function() {
-		$("[data-toggle='popover']").popover();
+	this.handlePopover=function(target) {
+		if(!target) target=$("body");
+		$("[data-toggle='popover']",target).popover();
 	}
 
 	this.handlePanelTools=function() {
@@ -186,25 +189,28 @@
 		})
 	}
 
-	this.handleBootstrapSelect=function() {
+	this.handleBootstrapSelect=function(target) {
+		if(!target) target=$("body");
 		if($.fn.selectpicker) {
-			$('.selectpicker').selectpicker();
+			$('.selectpicker',target).selectpicker();
 		}
 	}
 
-	this.handleSwitch=function() {
+	this.handleSwitch=function(target) {
+		if(!target) target=$("body");
 		if($.fn.bootstrapSwitch) {
-			$('.switch').bootstrapSwitch();
+			$('.switch',target).bootstrapSwitch();
 		}
 	}
 
-	this.handleSlider=function() {
+	this.handleSlider=function(target) {
+		if(!target) target=$("body");
 		if($.fn.slider) {
-			$('.slider').slider();
+			$('.slider',target).slider();
 		}
 	}
 
-	this.hadleSlimScroll=function() {
+	this.handleSlimScroll=function() {
 		if($.fn.slimScroll) {
 			$('.slimscroll').each(function() {
 				var $this=$(this);
@@ -582,10 +588,6 @@
 			$body.addClass("sidebar-md");
 		}
 
-		$("[data-sidebar-action='sidebar-toggle']").each(function() {
-			$(this).attr("data-sidebar-type",self.sidebarType);
-		});
-
 		if(this.isSidebarFixed) {
 			$body.addClass("sidebar-fixed");
 			if($body.hasClass("sidebar-sm"))
@@ -676,6 +678,11 @@
 
 		$selectSidebarType.change(function() {
 			self.sidebarType=$(this).val();
+			$("[data-sidebar-action='sidebar-toggle']").each(function() {
+				var type=self.sidebarType;
+				if(type=="large"||type=="") type="sm";
+				$(this).attr("data-sidebar-type",type);
+			});
 			self.changeLayout();
 		});
 
@@ -730,17 +737,12 @@
 		// Apply sidebar toggle event
 		$("body").addClass("sidebar-animation");
 		$("[data-sidebar-action='sidebar-toggle']").on("click",function() {
-			var $body=$("body");
-			var sidebarType=$(this).attr("data-sidebar-type");
-			if(sidebarType!="md") sidebarType="sm";
-			if($body.hasClass("sidebar-fixed")) {
-				$body.toggleClass("sidebar-"+sidebarType+"-fixed");
-				if($body.hasClass("sidebar-"+sidebarType+"-fixed"))
-					$body.addClass("sidebar-"+sidebarType);
-				else
-					$body.removeClass("sidebar-"+sidebarType);
+			var type=$(this).attr("data-sidebar-type");
+			if(type=="") type="sm";
+			if(self.sidebarType==type) {
+				self.sidebarType="";
 			} else {
-				$body.toggleClass("sidebar-"+sidebarType);
+				self.sidebarType=type;
 			}
 			self.changeLayout();
 		});
@@ -773,11 +775,10 @@
 		self.handleSwitch();
 		self.handleSlider();
 		self.handleMetroCheck();
-		self.hadleSlimScroll();
+		self.handleSlimScroll();
 		self.handleBackToTop();
 	}
 }
-var App=new Application();
 $(function() {
 	App.init();
 });

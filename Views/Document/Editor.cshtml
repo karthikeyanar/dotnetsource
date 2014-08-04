@@ -11,38 +11,8 @@
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<!-- bootstrap wysihtml5 -->
-	<link href="/css/plugins/bootstrap-wysihtml5/wysiwyg-editor.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
-	<!-- wysihtml5 editor -->
-	<script src="/js/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js" type="text/javascript"></script>
-	<script src="/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.js" type="text/javascript"></script>
-	<!-- ckeditor -->
-	<script src="/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		/**** Specific JS for this page ****/
-		$(function() {
-			$('textarea.wysihtml5').wysihtml5();
-		});
-	</script>
-	<script>
-		CKEDITOR.replace('ckeditor',{
-			uiColor: '#F5F5F5',
-			on: {
-				//focus: onFocus,
-				//blur: onBlur,
-				// Check for availability of corresponding plugins.
-				pluginsLoaded: function(evt) {
-					var doc=CKEDITOR.document,ed=evt.editor;
-					if(!ed.getCommand('bold'))
-						doc.getById('exec-bold').hide();
-					if(!ed.getCommand('link'))
-						doc.getById('exec-link').hide();
-				}
-			}
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
@@ -52,15 +22,20 @@
 					WYSIHTML5 Editor</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<div class="row">
-					<form action="#" method="POST">
-					<div class="form-group">
-						<div class="col-md-12">
-							<textarea id="wysihtml5" name="wysihtml5" class="wysihtml5 form-control" rows="10"></textarea>
-						</div>
-					</div>
-					</form>
+				<h4>
+					WYSIHTML5 Editor</h4>
+				<div class="notes notes-primary">
+					<p>
+						Bootstrap3-wysihtml5 is a javascript plugin that makes it easy to create simple, beautiful wysiwyg editors with the help of <a href="https://github.com/xing/wysihtml5">wysihtml5</a> and <a href="http://getbootstrap.com/">Twitter Bootstrap 3</a>. It based on the Project <a href="http://jhollingworth.github.io/bootstrap-wysihtml5/">http://jhollingworth.github.io/bootstrap-wysihtml5/</a></p>
 				</div>
+				<h4>
+					CSS Files</h4>
+				<pre><code>css/plugins/bootstrap-wysihtml5/wysiwyg-editor.css</code></pre>
+				<h4>
+					Js Files</h4>
+				<pre>
+<code>js/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.min.js</code>
+<code>js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.js</code></pre>
 			</div>
 		</div>
 	</div>
@@ -73,15 +48,17 @@
 					CK Editor</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<div class="row">
-					<form action="#" method="POST">
-					<div class="form-group">
-						<div class="col-md-12">
-							<textarea id="ckeditor" name="ckeditor" class="form-control" rows="10"></textarea>
-						</div>
-					</div>
-					</form>
+				<h4>
+					CK Editor</h4>
+				<div class="notes notes-primary">
+					<p>
+						Bring rich editor features to your products and websites, providing your users with powerful tools to make creating Web content easier than ever and accessible to anyone. Read more about it on <a href="http://ckeditor.com/">CK Editor plugin website</a>.
+					</p>
 				</div>
+				<h4>
+					Js Files</h4>
+				<pre>
+<code>js/plugins/ckeditor/ckeditor.js</code></pre>
 			</div>
 		</div>
 	</div>

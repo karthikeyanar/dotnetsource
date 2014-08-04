@@ -13,35 +13,6 @@
 @section styles {
 }
 @section scripts {
-	<!-- bootstrap spinner -->
-	<script src="/js/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-
-			$("#spinner1").TouchSpin();
-			$("#spinner2").TouchSpin({
-				min: 0,
-				max: 100,
-				step: 0.1,
-				decimals: 2,
-				boostat: 5,
-				maxboostedstep: 10,
-				postfix: '%',
-				buttondown_class: 'btn btn-primary',
-				buttonup_class: 'btn btn-success'
-			});
-			$("#spinner3").TouchSpin({
-				min: -1000000000,
-				max: 1000000000,
-				stepinterval: 50,
-				maxboostedstep: 10000000,
-				prefix: '$',
-				buttondown_class: 'btn btn-primary',
-				buttonup_class: 'btn btn-success'
-			});
-			$("#spinner4").TouchSpin();
-		});
-	</script>
 }
 <div class="row">
 	<div class="col-md-12">
@@ -51,40 +22,16 @@
 					Spinner</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<form action="#" method="POST" class="form-horizontal">
-				<div class="form-group">
-					<label class="col-md-2 control-label">
-						Spinner 1</label>
-					<div class="col-md-10">
-						<input id="spinner1" type="text" value="0" name="spinner1" class="col-md-8 form-control" />
-						<span class="help-text margin-top-10 pull-left">basic example</span>
-					</div>
+				<h4>
+					Popover Confirm</h4>
+				<div class="notes notes-primary">
+					<p>
+						A mobile and touch friendly input spinner component for Bootstrap 3. It supports the mousewheel and the up/down keys. Read more about it on <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/">Spinner plugin website</a>.
+					</p>
 				</div>
-				<div class="form-group">
-					<label class="col-md-2 control-label">
-						Spinner 2</label>
-					<div class="col-md-10">
-						<input id="spinner2" type="text" value="0" name="spinner2" class="col-md-8 form-control " />
-						<span class="help-text margin-top-10 pull-left">example with decimal steps</span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-2 control-label">
-						Spinner 3</label>
-					<div class="col-md-10">
-						<input id="spinner3" type="text" value="0" name="spinner3" class="col-md-8 form-control " />
-						<span class="help-text margin-top-10 pull-left">example with currency steps</span>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-2 control-label">
-						Spinner 4</label>
-					<div class="col-md-10">
-						<input id="spinner4" type="text" value="0" name="spinner4" class="col-md-8 form-control" readonly />
-						<span class="help-text margin-top-10 pull-left">basic example with read only</span>
-					</div>
-				</div>
-				</form>
+				<h4>
+					Js Files</h4>
+				<pre><code>js/plugins/bootstrap-touchspin/bootstrap.touchspin.js</code></pre>
 			</div>
 		</div>
 	</div>

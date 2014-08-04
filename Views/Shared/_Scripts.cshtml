@@ -1,7 +1,11 @@
-﻿<!-- jquery -->
+﻿@{
+	string controllerName = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();
+}
+<!-- jquery -->
 <script src='/js/jquery/jquery-2.1.1.min.js' type='text/javascript'></script>
 <!-- bootstrap -->
 <script src="/js/bootstrap/bootstrap.min.js" type='text/javascript'></script>
+@if (controllerName != "Document") {
 <!-- jquery validation -->
 <script src="/js/plugins/jqueryvalidation/jquery.validate.min.js" type="text/javascript"></script>
 <!-- bootstrap hover dropdown -->
@@ -9,6 +13,7 @@
 <!-- slim scroll -->
 <script src="/js/plugins/slimscroll/jquery.slimscroll.js" type="text/javascript"></script>
 <!-- blockUI -->
-<script src="/js/plugins/blockUI/jquery.blockUI.js"></script>
+<script src="/js/plugins/blockUI/jquery.blockUI.js" type="text/javascript"></script>
+}
 <!-- application -->
 <script src="/js/files/application.js" type="text/javascript"></script>
