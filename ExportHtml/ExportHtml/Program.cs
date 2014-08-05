@@ -38,6 +38,11 @@ namespace ExportHtml {
 			Console.ReadLine();
 		}
 
+        public static void DownloadHTML(string url)
+        {
+
+        }
+
 		public static void ProcessHTMLDirectory(string dirName) {
 			string descPath = Path.Combine(DestinationPath, dirName);
 			if (Directory.Exists(descPath) == false) {

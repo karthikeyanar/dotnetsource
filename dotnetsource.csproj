@@ -261,8 +261,7 @@
     <Content Include="img\spritemap.png" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
-    <Content Include="js\files\application.js" />
-    <Content Include="js\files\Copy of application.js" />
+    <Content Include="js\app\app.js" />
     <Content Include="js\jquery\jquery-2.1.1.min.js" />
     <Content Include="js\plugins\jqueryvalidation\additional-methods.js" />
     <Content Include="js\plugins\jqueryvalidation\additional-methods.min.js" />
@@ -709,11 +708,9 @@
     <Content Include="Views\Home\DataTable.cshtml" />
     <Content Include="Views\Home\DatePicker.cshtml" />
     <Content Include="Views\Home\DateRangePicker.cshtml" />
-    <Content Include="Views\Home\Dropdowns.cshtml" />
     <Content Include="Views\Home\DropZoneFileUpload.cshtml" />
     <Content Include="Views\Home\Editable.cshtml" />
     <Content Include="Views\Home\Editor.cshtml" />
-    <Content Include="Views\Home\Elements.cshtml" />
     <Content Include="Views\Home\FileInput.cshtml" />
     <Content Include="Views\Home\FlotChart.cshtml" />
     <Content Include="Views\Home\FormControls.cshtml" />
@@ -732,8 +729,6 @@
     <Content Include="Views\Home\InputMask.cshtml" />
     <Content Include="Views\Home\Invoice.cshtml" />
     <Content Include="Views\Home\jQueryUISlider.cshtml" />
-    <Content Include="Views\Home\LabelsAndBadges.cshtml" />
-    <Content Include="Views\Home\ListGroup.cshtml" />
     <Content Include="Views\Home\Lock.cshtml" />
     <Content Include="Views\Home\Modal.cshtml" />
     <Content Include="Views\Home\MorrisChart.cshtml" />
@@ -742,7 +737,6 @@
     <Content Include="Views\Home\Page404.cshtml" />
     <Content Include="Views\Home\Page500.cshtml" />
     <Content Include="Views\Home\Panels.cshtml" />
-    <Content Include="Views\Home\ProgressBars.cshtml" />
     <Content Include="Views\Home\Select.cshtml" />
     <Content Include="Views\Home\Select2.cshtml" />
     <Content Include="Views\Home\SidebarFixed.cshtml" />
@@ -758,7 +752,6 @@
     <Content Include="Views\Home\Tiles.cshtml" />
     <Content Include="Views\Home\Timeline.cshtml" />
     <Content Include="Views\Home\TimePicker.cshtml" />
-    <Content Include="Views\Home\TooltipAndPopover.cshtml" />
     <Content Include="Views\Home\Typography.cshtml" />
     <Content Include="Views\Home\Wells.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -842,11 +835,9 @@
     <Content Include="Views\Document\DataTable.cshtml" />
     <Content Include="Views\Document\DatePicker.cshtml" />
     <Content Include="Views\Document\DateRangePicker.cshtml" />
-    <Content Include="Views\Document\Dropdowns.cshtml" />
     <Content Include="Views\Document\DropZoneFileUpload.cshtml" />
     <Content Include="Views\Document\Editable.cshtml" />
     <Content Include="Views\Document\Editor.cshtml" />
-    <Content Include="Views\Document\Elements.cshtml" />
     <Content Include="Views\Document\FileInput.cshtml" />
     <Content Include="Views\Document\FlotChart.cshtml" />
     <Content Include="Views\Document\ForgotPassword.cshtml" />
@@ -862,8 +853,6 @@
     <Content Include="Views\Document\InputMask.cshtml" />
     <Content Include="Views\Document\Invoice.cshtml" />
     <Content Include="Views\Document\jQueryUISlider.cshtml" />
-    <Content Include="Views\Document\LabelsAndBadges.cshtml" />
-    <Content Include="Views\Document\ListGroup.cshtml" />
     <Content Include="Views\Document\Lock.cshtml" />
     <Content Include="Views\Document\Modal.cshtml" />
     <Content Include="Views\Document\MorrisChart.cshtml" />
@@ -875,7 +864,6 @@
     <Content Include="Views\Document\PieChart.cshtml" />
     <Content Include="Views\Document\PopoverConfirm.cshtml" />
     <Content Include="Views\Document\Profile.cshtml" />
-    <Content Include="Views\Document\ProgressBars.cshtml" />
     <Content Include="Views\Document\RightSidebar.cshtml" />
     <Content Include="Views\Document\Search.cshtml" />
     <Content Include="Views\Document\Select.cshtml" />
@@ -893,7 +881,6 @@
     <Content Include="Views\Document\Tiles.cshtml" />
     <Content Include="Views\Document\Timeline.cshtml" />
     <Content Include="Views\Document\TimePicker.cshtml" />
-    <Content Include="Views\Document\TooltipAndPopover.cshtml" />
     <Content Include="Views\Document\Typography.cshtml" />
     <Content Include="Views\Document\Wells.cshtml" />
     <Content Include="Views\Shared\_DocumentStyles.cshtml" />
