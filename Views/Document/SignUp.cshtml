@@ -6,87 +6,19 @@
 		ThirdUrl = "/Home/SignUp", ThirdUrlName = "Sign Up"
 	};
 	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_PublicLayout.cshtml";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<link href="/css/pages/signup.css" rel="stylesheet" type="text/css" />
 }
-<div class="signup-container">
-	<div class="signup-content">
-		@Html.Partial("_PublicLogo")
-		<div class="panel panel-white ">
-			<div class="panel-heading padding-15">
-				<h3 class="panel-title">
-					Sign Up</h3>
-			</div>
-			<div class="panel-body padding-15">
-				<form action="#" method="POST" id="registerForm" class="form-horizontal form-validate">
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="input-icon">
-							<i class="fa fa-font"></i>
-							<input type="text" name="first_name" id="first_name" placeholder="First Name" data-rule-required="true" data-msg-required="Required" class="form-control" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="input-icon">
-							<i class="fa fa-font"></i>
-							<input type="text" name="last_name" id="last_name" placeholder="Last Name" data-rule-required="true" data-msg-required="Required" class="form-control" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="input-icon">
-							<i class="fa fa-envelope"></i>
-							<input type="text" name="email" id="email" placeholder="Email" data-rule-required="true" data-rule-email="true" data-msg-required="Required" data-msg-email="Invalid Email" class="form-control" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="input-icon">
-							<i class="fa fa-lock"></i>
-							<input type="password" name="password" id="password" placeholder="Password" class="form-control" data-rule-minlength="6" data-msg-required="Required" data-rule-required="true" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="input-icon">
-							<i class="fa fa-check"></i>
-							<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control" data-msg-required="Required" data-rule-required="true" data-rule-equalto="#password" data-msg-equalto="These passwords don't match. Try again?" />
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<div class="checkbox metro-checkbox metro-checkbox-success">
-							<label>
-								<input type="checkbox" name="policy" id="policy" class="form-control" data-msg-required="Required" data-rule-required="true" />I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12">
-						<button type="submit" class="btn btn-success margin-right-10">
-							Sign Up</button>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12 text-center">
-						<span>Already have an account?</span>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-12 text-center">
-						<a href="/Home/SignIn" class="btn btn-primary btn-block">Sign In</a>
-					</div>
-				</div>
-				</form>
-			</div>
+<div class="row">
+	<div class="col-md-12">
+		<h4>
+			Sign Up</h4>
+		<div class="notes notes-primary">
+			<p>
+				Sign Up page contains lots of components so you may want to check out <a href="/Document/Panels" target="_blank">Panels</a> , <a href="/Document/Buttons" target="_blank">Buttons</a> , <a href="/Document/FormControls" target="_blank">Form Controls</a> , <a href="/Document/FormValidation" target="_blank">Form Validation</a> pages.</p>
 		</div>
 	</div>
 </div>

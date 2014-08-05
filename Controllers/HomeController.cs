@@ -85,6 +85,12 @@ namespace dotnetsource.Controllers {
 			return View();
 		}
 
+		public ActionResult Widget() {
+			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
+			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Widget;
+			return View();
+		}
+
 		public ActionResult Wells() {
 			ViewBag.TopMenu = dotnetsource.Helpers.TopMenu.UIFeatures;
 			ViewBag.SubMenu = dotnetsource.Helpers.SubMenu.Wells;

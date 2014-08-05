@@ -1,4 +1,111 @@
-﻿&lt;div class="feed"&gt;
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Widget" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/Home/Index",
+		FirstUrlName = "Home",
+		SecondUrl = "/Home/General",
+		SecondUrlName = "UI Features",
+		ThirdUrl = "/Home/Widget",
+		ThirdUrlName = "Widget"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Box - Widget</h3>
+		<div class="notes notes-primary">
+			<p><strong>@dotnetsource.Helpers.Common.SiteName</strong> introduces box widget class</p>
+		</div>
+		<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-lg-2 col-md-4 col-sm-4 col-xs-6"&gt;
+        &lt;div class="box bg-primary"&gt;
+            &lt;div class="icon"&gt;
+                &lt;i class="fa fa-calendar"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class="description"&gt;
+                &lt;strong&gt;14&lt;/strong&gt; meetings
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-lg-2 col-md-4 col-sm-4 col-xs-6"&gt;
+        &lt;div class="box bg-primary"&gt;
+            &lt;div class="big-text"&gt;
+                6.42%
+            &lt;/div&gt;
+            &lt;div class="description"&gt;
+                &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;Traffic Growth
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Chat - Widget</h3>
+		<div class="notes notes-primary">
+			<p><strong>@dotnetsource.Helpers.Common.SiteName</strong> introduces chat widget class</p>
+		</div>
+		<pre><code>&lt;div class="chat-content slimscroll" data-height="480"&gt;
+	&lt;ul class="chat-list"&gt;
+		&lt;li class="chat in"&gt;&lt;a href="#" class="img"&gt;
+			&lt;img class="chat-img img-circle" src="/img/avatars/75/3.jpg"&gt;
+		&lt;/a&gt;
+			&lt;div class="chat-body notes notes-success"&gt;
+				&lt;div class="name"&gt;
+					Carlos Miller
+				&lt;/div&gt;
+				&lt;div class="datetime"&gt;
+					May 25, 2013 10:00 AM
+				&lt;/div&gt;
+				&lt;p class="message"&gt;
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li class="chat out"&gt;&lt;a href="#" class="img"&gt;
+			&lt;img class="chat-img img-circle" src="/img/avatars/75/4.jpg"&gt;
+		&lt;/a&gt;
+			&lt;div class="chat-body notes notes-primary"&gt;
+				&lt;div class="name"&gt;
+					Wayne Young
+				&lt;/div&gt;
+				&lt;div class="datetime"&gt;
+					May 25, 2013 10:02 AM
+				&lt;/div&gt;
+				&lt;p class="message"&gt;
+					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="chat-send"&gt;
+	&lt;div class="input-group"&gt;
+		&lt;input type="text" id="msg" name="msg" class="form-control" placeholder="Message" /&gt;
+		&lt;span class="input-group-btn"&gt;
+			&lt;button id="send" class="btn btn-primary"&gt;
+				&lt;i class="fa fa-check"&gt;&lt;/i&gt;
+			&lt;/button&gt;
+		&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Feed - Widget</h3>
+		<div class="notes notes-primary">
+			<p><strong>@dotnetsource.Helpers.Common.SiteName</strong> introduces feed widget class</p>
+		</div>
+		<pre><code>&lt;div class="feed"&gt;
 	&lt;ul&gt;
 		&lt;li class="feed-row"&gt;
 			&lt;div class="feed-icon bg-primary"&gt;
@@ -114,3 +221,6 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;/div&gt;
+</code></pre>
+	</div>
+</div>

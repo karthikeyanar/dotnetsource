@@ -70,149 +70,25 @@
 		<div class="panel panel-dark-blue">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					Size</h3>@Html.Partial("_PanelCloseTools")
+					Switch</h3>@Html.Partial("_PanelCloseTools")
 			</div>
 			<div class="panel-body">
-				<input type="checkbox" checked class="switch switch-large" />
-				<input type="checkbox" checked class="switch" />
-				<input type="checkbox" checked class="switch switch-small" />
-				<input type="checkbox" checked class="switch switch-mini" />
-			</div>
-		</div>
-		<div class="panel panel-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Colors</h3>
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked class="switch" data-on="primary" data-off="info" />
-				<input type="checkbox" checked class="switch" data-on="info" data-off="success" />
-				<input type="checkbox" checked class="switch" data-on="success" data-off="warning" />
-				<input type="checkbox" checked class="switch" data-on="warning" data-off="danger" />
-				<input type="checkbox" checked class="switch" data-on="danger" data-off="primary" />
-			</div>
-		</div>
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Disable Animation</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked class="switch" data-animated="false" />
-			</div>
-		</div>
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Disabled</h3>
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked disabled class="switch" data-animated="false" />
-			</div>
-		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Text</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked class="switch" data-on-label="Yes" data-off-label="No" />
-			</div>
-		</div>
-		<div class="panel panel-danger">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					HTML text</h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked class="switch" data-on-label="<i class='icon-ok icon-white'></i>" data-off-label="<i class='icon-remove'></i>" />
-			</div>
-		</div>
-		<div class="panel panel-purple">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Event handler <small>javascript</small></h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input id="mySwitch" type="checkbox" checked class="switch" />
-				<pre>$('#mySwitch').on('switch-change', function (e, data) {
-							var $el = $(data.el),
-							value = data.value;	
-							console.log(e, $el, value);
-						});</pre>
-			</div>
-		</div>
-		<div class="panel panel-cardovan">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Toggle State <small>javascript</small></h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked id="toggle-state-switch" class="switch" />
-				<br />
-				<br />
-				<div id="toggle-state-switch-button-on" class="btn btn-primary">
-					ON!</div>
-				<div id="toggle-state-switch-button" class="btn btn-primary">
-					Toggle me!</div>
-				<div id="toggle-state-switch-button-off" class="btn btn-primary">
-					OFF!</div>
-				<pre class="prettyprint linenums">$('#toggle-state-switch').bootstrapSwitch('toggleState');$('#toggle-state-switch').bootstrapSwitch('setState', false); // true || false
-						</pre>
-			</div>
-		</div>
-		<div class="panel panel-teal">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Destroy <small>javascript</small></h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" checked id="destroy-switch" class="switch" />
-				<br />
-				<br />
-				<button id="btn-destroy-switch" class="btn btn-danger">
-					Destroy me!</button>
-				<pre class="prettyprint linenums">$('#destroy-switch').bootstrapSwitch('destroy');</pre>
-			</div>
-		</div>
-		<div class="panel panel-pink">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Create <small>javascript</small></h3>
-			</div>
-			<div class="panel-body">
-				<input id="create-switch" type="checkbox" checked />
-				<br />
-				<br />
-				<div id="btn-create" class="btn btn-default">
-					Create</div>
-				<pre class="prettyprint linenums">$('#create-switch').bootstrapSwitch();</pre>
-			</div>
-		</div>
-		<div class="panel panel-dark-blue">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Disabled <small>javascript</small></h3>@Html.Partial("_PanelCloseTools")
-			</div>
-			<div class="panel-body">
-				<input type="checkbox" id="disable-switch" checked>
-				<br />
-				<br />
-				<button id="btn-disable-is" class="btn btn-default">
-					Is disabled?</button>
-				<button id="btn-disable-toggle" class="btn btn-default">
-					Toggle Disable</button>
-				<button id="btn-disable-set" class="btn btn-default">
-					Set Disable</button>
-				<button id="btn-disable-remove" class="btn btn-default">
-					Remove Disable</button>
-				<br />
-				<br />
-				<pre class="prettyprint linenums">
-							$('#disable-switch').bootstrapSwitch('isDisabled');
-							$('#disable-switch').bootstrapSwitch('toggleDisabled'); $('#disable-switch').bootstrapSwitch('setDisabled',	true); // true || false $('#readonly-switch').bootstrapSwitch('isReadOnly'); $('#readonly-switch').bootstrapSwitch('toggleReadOnly');
-							$('#readonly-switch').bootstrapSwitch('setReadOnly', true); // true || false
-						</pre>
+				<h4>
+					Switch</h4>
+				<div class="notes notes-primary">
+					<p>
+						Switch is a jQuery based replacement for check boxes. Read more about it on <a href="http://www.bootstrap-switch.org/documentation-2.html" target="_blank">Switch plugin website</a>.
+					</p>
+				</div>
+				<h4>
+					CSS Files</h4>
+				<pre>
+<code>css/plugins/bootstrap-switch/bootstrap-switch.min.css</code></pre>
+				<h4>
+					Js Files</h4>
+				<pre>
+<code>js/plugins/bootstrap-switch/bootstrap-switch.min.js</code>
+</pre>
 			</div>
 		</div>
 	</div>

@@ -898,6 +898,10 @@
     <Content Include="Views\Document\Wells.cshtml" />
     <Content Include="Views\Shared\_DocumentStyles.cshtml" />
     <Content Include="Views\Document\Blank - Copy.cshtml" />
+    <Content Include="Views\Home\Widget.cshtml" />
+    <Content Include="Views\Shared\_Box.cshtml" />
+    <Content Include="Views\Shared\_Chat.cshtml" />
+    <Content Include="Views\Document\Widget.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

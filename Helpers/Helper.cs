@@ -24,6 +24,7 @@ namespace dotnetsource.Helpers {
 		General = 11,
         CheckBoxAndRadio = 104,
 		Buttons = 14,
+		Widget = 601,
 		Wells = 18,
 		Colors = 19,
 		Typography = 21,
@@ -165,6 +166,7 @@ namespace dotnetsource.Helpers {
 			menus.Add(new Menu { MenuID = (int)SubMenu.Buttons, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Buttons", MenuURL = "/Home/Buttons" });
             menus.Add(new Menu { MenuID = (int)SubMenu.Navs, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Navs", MenuURL = "/Home/Navs" });
 			menus.Add(new Menu { MenuID = (int)SubMenu.Typography, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Typography", MenuURL = "/Home/Typography" });
+			menus.Add(new Menu { MenuID = (int)SubMenu.Widget, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Widget", MenuURL = "/Home/Widget" });
             menus.Add(new Menu { MenuID = (int)SubMenu.Wells, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Wells", MenuURL = "/Home/Wells" });
 			menus.Add(new Menu { MenuID = (int)SubMenu.Panels, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Panels", MenuURL = "/Home/Panels" });
 			menus.Add(new Menu { MenuID = (int)SubMenu.Tiles, TopMenuID = (int)TopMenu.UIFeatures, MenuName = "Tiles", MenuURL = "/Home/Tiles" });

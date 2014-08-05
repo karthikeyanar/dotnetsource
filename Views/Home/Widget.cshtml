@@ -1,0 +1,38 @@
+﻿@{
+	var _PageHeaderModel = new dotnetsource.Models.PageHeaderModel { Title = "Widget" };
+	var _BreadCrumbModel = new dotnetsource.Models.BreadCrumbModel {
+		FirstUrl = "/Home/Index",
+		FirstUrlName = "Home",
+		SecondUrl = "/Home/General",
+		SecondUrlName = "UI Features",
+		ThirdUrl = "/Home/Widget",
+		ThirdUrlName = "Widget"
+	};
+	ViewBag.Title = _PageHeaderModel.Title;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Box - Widget</h3>
+		@Html.Partial("_Box")
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Chat - Widget</h3>
+		@Html.Partial("_Chat")
+		<div class="clearfix">
+			&nbsp;</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h3>
+			Feed - Widget</h3>
+		@Html.Partial("_Feed")
+	</div>
+</div>

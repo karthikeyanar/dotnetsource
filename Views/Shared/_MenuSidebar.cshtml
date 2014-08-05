@@ -28,7 +28,10 @@
    }
 			<ul class="nav sidebar-menu">
 				@{
-                    var topMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == 0).ToList();
+					var topMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == 0).ToList();
+					if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
+						topMenus = topMenus.Where(q => q.MenuID != (int)dotnetsource.Helpers.TopMenu.MenuLevels).ToList();
+					}
 				}
 				@foreach (dotnetsource.Helpers.Menu menu in topMenus) {
 		if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
@@ -36,8 +39,8 @@
 		}
 		int viewBagTopMenuID = (int)ViewBag.TopMenu;
 		int viewBagSubMenuID = (int)ViewBag.Submenu;
-        int menuID = menu.MenuID;
-        var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == menuID).ToList();
+		int menuID = menu.MenuID;
+		var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == menuID).ToList();
 					<li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span><span class="fa arrow @((subMenus.Count() <= 0 ? "hide" : ""))"></span></a>
 						@Html.Partial("_RenderSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = menu.MenuID, SubMenus = subMenus })
 					</li>

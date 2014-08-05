@@ -9,66 +9,21 @@
 		ThirdUrlName = "Sign In"
 	};
 	ViewBag.Title = _PageHeaderModel.Title;
-	Layout = "~/Views/Shared/_PublicLayout.cshtml";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Html.Partial("_PageHeader", _PageHeaderModel)
+@Html.Partial("_BreadCrumb", _BreadCrumbModel)
 @section styles {
-	<link href="/css/pages/signin.css" rel="stylesheet" type="text/css" />
 }
 @section scripts {
 }
-<div class="signin-container">
-	<div class="signin-content">
-		@Html.Partial("_PublicLogo")
-		<div class="panel panel-white">
-			<div class="panel-heading padding-15">
-				<h3 class="panel-title">
-					Sign In
-				</h3>
-			</div>
-			<div class="panel-body padding-15">
-				<form method="post" action="/Home/Index">
-				<div class="form-group">
-					<div class="input-icon">
-						<i class="fa fa-user"></i>
-						<input type="text" class="form-control" name="username" placeholder="Username" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="input-icon">
-						<i class="fa fa-lock"></i>
-						<input type="password" class="form-control" name="password" placeholder="Password" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox metro-checkbox metro-checkbox-success">
-						<label>
-							<input type="checkbox" />Remember me</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="pull-left">
-						<button id="submit" name="submit" class="btn btn-success">
-							Sign In
-						</button>
-					</div>
-					<div class="pull-right margin-top-10">
-						<a href="/Home/ForgotPassword" class="link">Forgot Password</a>
-					</div>
-					<div class="clearfix">
-					</div>
-				</div>
-				<div class="form-group line line-dashed">
-				</div>
-				<div class="form-group text-center">
-					<a class="btn btn-social-icon btn-facebook margin-right-10"><i class="fa fa-facebook"></i></a><a class="btn btn-social-icon btn-google-plus margin-right-10"><i class="fa fa-google-plus"></i></a><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
-				</div>
-				<div class="form-group line line-dashed">
-				</div>
-				<div class="form-group text-center">
-					<a href="/Home/SignUp" class="btn btn-info btn-block">Create New Account</a>
-				</div>
-				</form>
-			</div>
+<div class="row">
+	<div class="col-md-12">
+		<h4>
+			Sign In</h4>
+		<div class="notes notes-primary">
+			<p>
+				Sign In page contains lots of components so you may want to check out <a href="/Document/Panels" target="_blank">Panels</a> , <a href="/Document/Buttons" target="_blank">Buttons</a> , <a href="/Document/FormControls" target="_blank">Form Controls</a> , <a href="/Document/FormValidation" target="_blank">Form Validation</a> pages.</p>
 		</div>
 	</div>
 </div>
