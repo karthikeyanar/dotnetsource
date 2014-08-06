@@ -1,4 +1,4 @@
-﻿<!-- navbar-collapse -->
+﻿<!-- navbar-collapse horizontal menu -->
 <div class="hor-menu navbar-collapse collapse">
     <ul class="nav navbar-nav">
         @{
@@ -14,7 +14,7 @@
             int viewBagTopMenuID = (int)ViewBag.TopMenu;
             int viewBagSubMenuID = (int)ViewBag.Submenu;
             int menuID = menu.MenuID;
-            var subMenus = dotnetsource.Helpers.Common.Menus.Where(q => q.TopMenuID == menuID).ToList();
+            var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == menuID).ToList();
             <li class="@((subMenus.Count() > 0 ? "dropdown " : ""))@((viewBagTopMenuID == menuID) ? "active" : "")">
                 @if (subMenus.Count() > 0)
                 {
@@ -33,4 +33,4 @@
         }
     </ul>
 </div>
-<!-- end navbar-collapse -->
+<!-- end navbar-collapse horizontal menu -->

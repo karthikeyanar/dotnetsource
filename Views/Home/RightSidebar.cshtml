@@ -9,8 +9,12 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section styles {
+	@Html.Partial("_IndexStyles")
 }
 @section scripts {
+	@Html.Partial("_IndexScripts")
 }
 @Html.Partial("_PageHeader", _PageHeaderModel)
 @Html.Partial("_BreadCrumb", _BreadCrumbModel)
+@Html.Partial("_Index")
+
