@@ -14,12 +14,20 @@ namespace ExportHtml {
 
 		public static string[] CopyFolders = { "css", "js", "img", "less", "php" };
 
-		public static string[] DocumentationFolders = { "css\\plugins\\bootstrap", "css\\plugins\\font-awesome", "css\\document", "js\\bootstrap", "js\\jquery", "js\\app" };
+		public static string[] DocumentationFolders = { "css\\plugins\\bootstrap"
+														  , "css\\plugins\\font-awesome"
+														  , "css\\plugins\\fonts"
+														  , "css\\document"
+														  , "js\\bootstrap"
+														  , "js\\jquery"
+														  , "js\\app" };
 
 		public static string[] DocumentationFiles = { "css\\components.css", 
-														"css\\components.min.css", 
-														"css\\site.css", 
-														"css\\site.min.css",
+													"css\\components.min.css", 
+													"css\\site.css", 
+													"css\\site.min.css",
+                                                    "css\\themes\\black.css",
+                                                    "css\\themes\\black.min.css",
 													};
 
 		public static string HTMLFolderName = "HTML";
@@ -42,7 +50,7 @@ namespace ExportHtml {
 				string viewPath = Path.Combine(SourcePath, "Views/Home");
 				string[] viewFiles = Directory.GetFiles(viewPath);
 
-				foreach (string viewFile in viewFiles) {
+				foreach(string viewFile in viewFiles) {
 					CreateHTMLFile(viewFile, "Home", HTMLFolderName);
 					CreateHTMLFile(viewFile, "Document", DocumentationFolderName);
 				}
@@ -52,7 +60,10 @@ namespace ExportHtml {
 				CheckJSFiles(descPath, "");
 				descPath = Path.Combine(DestinationPath, HTMLFolderName, "js", "plugins", "jqueryfileupload");
 				CheckJSFiles(descPath, "main.js");
-			} catch (Exception ex) {
+
+				
+
+			} catch(Exception ex) {
 				Console.WriteLine("Exception =" + ex.Message);
 			}
 			Console.WriteLine("Press any key to exit");
@@ -60,16 +71,16 @@ namespace ExportHtml {
 		}
 
 		private static void CheckJSFiles(string folderPath, string targetFileName) {
-			if (Directory.Exists(folderPath)) {
-				if (targetFileName != "") {
-					if(File.Exists(Path.Combine(folderPath, targetFileName))){
+			if(Directory.Exists(folderPath)) {
+				if(targetFileName != "") {
+					if(File.Exists(Path.Combine(folderPath, targetFileName))) {
 						string result = File.ReadAllText(Path.Combine(folderPath, targetFileName));
 						result = ReplaceContent(result);
 						File.WriteAllText(Path.Combine(folderPath, targetFileName), result);
 					}
 				} else {
 					string[] jsFiles = Directory.GetFiles(folderPath, "*.js", SearchOption.AllDirectories);
-					foreach (string fileName in jsFiles) {
+					foreach(string fileName in jsFiles) {
 						string result = File.ReadAllText(fileName);
 						result = ReplaceContent(result);
 						File.WriteAllText(fileName, result);
@@ -88,7 +99,7 @@ namespace ExportHtml {
 				htmlFileName = htmlFileName.ToLower() + ".html";
 				string descPath = Path.Combine(DestinationPath, folderName, htmlFileName);
 				File.WriteAllText(descPath, html);
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("CreateHTMLFile Exception =" + ex.Message);
 			}
 		}
@@ -101,20 +112,21 @@ namespace ExportHtml {
 			result = result.Replace("/php/", "php/");
 			result = result.Replace(" class=\"\"", "");
 			result = result.Replace("class=\"\"", "");
+			result = result.Replace("this.themesPath=\"/css/themes/\";", "this.themesPath=\"css/themes/\";");
 			return result;
 		}
 
 		public static string DownloadHTML(string url) {
 			string result = string.Empty;
 			try {
-				using (WebClient webClient = new WebClient()) {
+				using(WebClient webClient = new WebClient()) {
 					result = webClient.DownloadString(url);
 				}
 				result = ReplaceContent(result);
-				if (result.StartsWith("\r\n")) {
+				if(result.StartsWith("\r\n")) {
 					result = result.Substring(2);
 				}
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("DownloadHTML Exception =" + ex.Message);
 			}
 			return result;
@@ -129,10 +141,10 @@ namespace ExportHtml {
    | RegexOptions.Compiled
    );
 			MatchCollection matches = regex.Matches(result);
-			foreach (Match m in matches) {
-				if (m.Value.Contains("/Home") || m.Value.Contains("/Document")) {
+			foreach(Match m in matches) {
+				if(m.Value.Contains("/Home") || m.Value.Contains("/Document")) {
 					string href = m.Groups["href"].Value.Replace("/Home", "").Replace("/Document", "");
-					if (href == "") {
+					if(href == "") {
 						href = "/";
 					} else {
 						href = href.Replace("/", "");
@@ -207,15 +219,15 @@ namespace ExportHtml {
 		public static void ProcessHTMLDirectory(string dirName) {
 			try {
 				string descPath = Path.Combine(DestinationPath, dirName);
-				if (Directory.Exists(descPath) == false) {
+				if(Directory.Exists(descPath) == false) {
 					Directory.CreateDirectory(descPath);
 				}
-				foreach (string copyFolder in CopyFolders) {
+				foreach(string copyFolder in CopyFolders) {
 					string sourceDir = Path.Combine(SourcePath, copyFolder);
 					string descDir = Path.Combine(descPath, copyFolder);
 					CopyDirectory(sourceDir, descDir);
 				}
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("ProcessHTMLDirectory Exception=" + ex.Message);
 			}
 		}
@@ -223,27 +235,39 @@ namespace ExportHtml {
 		public static void ProcessDOCDirectory(string dirName) {
 			try {
 				string descPath = Path.Combine(DestinationPath, dirName);
-				if (Directory.Exists(descPath) == false) {
+				if(Directory.Exists(descPath) == false) {
 					Directory.CreateDirectory(descPath);
 				}
-				foreach (string copyFolder in DocumentationFolders) {
+				string subdirpath = Path.Combine(descPath, "css");
+				if(Directory.Exists(subdirpath) == false) {
+					Directory.CreateDirectory(subdirpath);
+				}
+				subdirpath = Path.Combine(descPath, "js");
+				if(Directory.Exists(subdirpath) == false) {
+					Directory.CreateDirectory(subdirpath);
+				}
+				subdirpath = Path.Combine(descPath, "css", "themes");
+				if(Directory.Exists(subdirpath) == false) {
+					Directory.CreateDirectory(subdirpath);
+				}
+				foreach(string copyFolder in DocumentationFolders) {
 					string sourceDir = Path.Combine(SourcePath, copyFolder);
 					string descDir = Path.Combine(descPath, copyFolder);
 					CopyDirectory(sourceDir, descDir);
 				}
 
-				foreach (string copyFile in DocumentationFiles) {
+				foreach(string copyFile in DocumentationFiles) {
 					string sourceFile = Path.Combine(SourcePath, copyFile);
 					string descFile = Path.Combine(descPath, copyFile);
-					if (File.Exists(sourceFile)) {
+					if(File.Exists(sourceFile)) {
 						FileInfo sourceFileInfo = new FileInfo(sourceFile);
-						if (File.Exists(descFile)) {
+						if(File.Exists(descFile)) {
 							File.Delete(descFile);
 						}
 						File.Copy(sourceFile, descFile);
 					}
 				}
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("ProcessDOCDirectory Exception=" + ex.Message);
 			}
 		}
@@ -251,15 +275,15 @@ namespace ExportHtml {
 		public static void CleanDirectory(string dirPath) {
 			try {
 				//Console.WriteLine("CleanDirectory = " + dirPath);
-				if (Directory.Exists(dirPath)) {
+				if(Directory.Exists(dirPath)) {
 					string[] files = Directory.GetFiles(dirPath);
-					foreach (string fileName in files) {
-						if (File.Exists(fileName)) {
+					foreach(string fileName in files) {
+						if(File.Exists(fileName)) {
 							File.Delete(fileName);
 						}
 					}
 				}
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("CleanDirectory Exception=" + ex.Message);
 			}
 		}
@@ -267,30 +291,30 @@ namespace ExportHtml {
 		public static void CopyDirectory(string sourceDirectory, string destinationDirectory) {
 			try {
 				//Console.WriteLine("File copy directory = " + sourceDirectory + " desc =" + sourceDirectory);
-				if (Directory.Exists(sourceDirectory)) {
+				if(Directory.Exists(sourceDirectory)) {
 					DirectoryInfo sourceDirInfo = new DirectoryInfo(sourceDirectory);
 					CleanDirectory(destinationDirectory);
-					if (Directory.Exists(destinationDirectory) == false) {
+					if(Directory.Exists(destinationDirectory) == false) {
 						Directory.CreateDirectory(destinationDirectory.ToLower());
 					}
 					string[] files = Directory.GetFiles(sourceDirectory);
-					foreach (string fileName in files) {
+					foreach(string fileName in files) {
 						FileInfo fileInfo = new FileInfo(fileName);
 						string descFileName = Path.Combine(destinationDirectory, fileInfo.Name);
-						if (File.Exists(descFileName)) {
+						if(File.Exists(descFileName)) {
 							File.Delete(descFileName);
 						}
 						//Console.WriteLine("File copy file = " + fileName + " desc =" + descFileName);
 						File.Copy(fileName, descFileName);
 					}
 					string[] dirs = Directory.GetDirectories(sourceDirectory);
-					foreach (string dirName in dirs) {
+					foreach(string dirName in dirs) {
 						DirectoryInfo dirInfo = new DirectoryInfo(dirName);
 						string descDirName = Path.Combine(destinationDirectory, dirInfo.Name);
 						CopyDirectory(dirInfo.FullName, descDirName);
 					}
 				}
-			} catch (Exception ex) {
+			} catch(Exception ex) {
 				Console.WriteLine("CopyDirectory Exception=" + ex.Message);
 			}
 		}

@@ -2868,7 +2868,6 @@ fieldset[disabled] .btn-twitter.active {
   list-style: none;
   margin: 0;
   padding: 0;
-  float: left;
   position: relative;
 }
 .chat-content  > .chat-list  > .chat {
@@ -2885,7 +2884,6 @@ fieldset[disabled] .btn-twitter.active {
 }
 .chat-content > .chat-list > .chat > .chat-body {
   padding: 10px;
-  float: left;
 }
 .chat-content > .chat-list > .chat > .chat-body > .chat-heading:after {
   clear: both;
@@ -2937,12 +2935,13 @@ fieldset[disabled] .btn-twitter.active {
   margin-top: 5px;
 }
 .chat-content > .chat-list > .chat > .chat-body > .message {
-  float: left;
+  clear: both;
   font-size: 13px;
   padding-top: 5px;
   margin-bottom: 0;
 }
-.chat-content > .chat-list > .chat > .chat-body > .message:after {
+.chat-content > .chat-list > .chat > .chat-body > .message:after,
+.chat-content > .chat-list > .chat > .chat-body > .message:before {
   content: " ";
   display: table;
   clear: both;
