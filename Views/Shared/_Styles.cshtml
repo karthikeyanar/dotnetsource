@@ -1,20 +1,18 @@
-﻿	<!-- google open sans -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic' rel='stylesheet' type='text/css' />
-	<!-- font awesome -->
-	<link href="/css/plugins/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<!-- bootstrap 3.2.0 -->
-	<link href="/css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
-	<!-- components style -->
-	<link href="/css/components.css" rel="stylesheet" type="text/css" />
-	<!-- site -->
-	<link href="/css/site.css" rel="stylesheet" type="text/css" />
-	<!-- theme -->
-	@if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Document")
-	{
+﻿<!-- google open sans -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic' rel='stylesheet' type='text/css' />
+<!-- font awesome -->
+<link href="/css/plugins/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!-- bootstrap 3.2.0 -->
+<link href="/css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<!-- nanoscroller -->
+<link href="/css/plugins/nanoscroller/nanoscroller.css" rel="stylesheet" type="text/css" />
+<!-- components style -->
+<link href="/css/components.css" rel="stylesheet" type="text/css" />
+<!-- site -->
+<link href="/css/site.css" rel="stylesheet" type="text/css" />
+<!-- theme -->
+@if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Document") {
 	<link href="/css/themes/sky-blue.css" rel="stylesheet" type="text/css" id="theme-link" />
-	}
-	else
-	{
+} else {
 	<link href="/css/themes/black.css" rel="stylesheet" type="text/css" id="theme-link" />
-	}
-
+}
