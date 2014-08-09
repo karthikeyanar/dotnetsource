@@ -1,18 +1,16 @@
-﻿<!-- jquery -->
-<script src="/js/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!-- bootstrap -->
-<script src="/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-@if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Document") {
+﻿	<!-- jquery -->
+	<script src="/js/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<!-- bootstrap -->
+	<script src="/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	@if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Document") {
 	<!-- jquery validation -->
 	<script src="/js/plugins/jqueryvalidation/jquery.validate.min.js" type="text/javascript"></script>
 	<!-- bootstrap hover dropdown -->
 	<script src="/js/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js" type="text/javascript"></script>
 	<!-- slim scroll -->
 	<script src="/js/plugins/slimscroll/jquery.slimscroll.js" type="text/javascript"></script>
-	<!-- nanoscroller -->
-	<script src="/js/plugins/nanoscroller/jquery.nanoscroller.min.js" type="text/javascript"></script>
 	<!-- blockUI -->
 	<script src="/js/plugins/blockUI/jquery.blockUI.js" type="text/javascript"></script>
-}
-<!-- application -->
-<script src="/js/app/app.js" type="text/javascript"></script>
+	}
+	<!-- application -->
+	<script src="/js/app/app.js" type="text/javascript"></script>

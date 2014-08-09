@@ -316,6 +316,7 @@
 		var slideSpeed=200;
 		var slideOffeset= -200;
 
+
 		// Sidebar User  
 		$(".sidebar-user",$sidebar).off('click').off('mouseenter').off('mouseleave');
 		if($body.hasClass("sidebar-fixed")==false) {
@@ -346,11 +347,8 @@
 					if($body.hasClass("sidebar-fixed")==false) {
 						self.scrollTo($this,slideOffeset);
 					} else {
-						var pos=$this?$this.offset().top:0;
-						var wintop=window.pageYOffset||document.documentElement.scrollTop
-						pos=pos-wintop-$header.outerHeight(true);
-						window.console.log("nanoScroller scrollTop=",pos,wintop);
-						$sidebar.nanoScroller({ scrollTop: pos });
+						var offsetTop=$this.offset().top-$(window).scrollTop();
+						$sidebarContent.slimScroll({ 'scrollTo': offsetTop });
 					}
 				}
 				self.resizeContentHeight();
@@ -487,30 +485,31 @@
 		var $header=$(".header");
 		var $sidebar=$(".sidebar");
 		var $sidebarContent=$(".sidebar-content",$sidebar);
-		if($body.hasClass("sidebar-fixed")) {
+		// Sidebar Fixed Custom Scroll
+		if($.fn.slimScroll) {
 			var windowHeight=$(window).height();
-			var height=0;
+			if($sidebarContent.parent('.slimScrollDiv').size()===1) { // destroy existing instance  
+				$sidebarContent.slimScroll({ destroy: true });
+				$sidebarContent.css({ 'height': '','overflow': '','width': '' });
+			}
 			if($body.hasClass("sidebar-fixed")) {
 				var height=windowHeight;
 				if($body.hasClass("header-fixed")||$sidebar.hasClass("affix-top"))
 					height=height-$header.outerHeight(true);
+
+				$sidebarContent.slimScroll({
+					allowPageScroll: false,
+					size: '5px',
+					color: '#000',
+					opacity: 1,
+					borderRadius: '0px',
+					railBorderRadius: '0px',
+					wrapperClass: 'slimScrollDiv',
+					position: 'right',
+					height: height,
+					disableFadeOut: true
+				});
 			}
-			window.console.log("Apply nano scroller at sidebar",height);
-			$sidebar
-			.addClass("nano")
-			.height(height);
-			$(".sidebar-content",$sidebar).addClass("nano-content");
-			$sidebar.bind("scrollend",function(e) {
-				console.log("current HTMLDivElement",e.currentTarget);
-			});
-			//$sidebar.nanoScroller({ destroy: true });
-			$sidebar.nanoScroller({ preventPageScrolling: true });
-		} else {
-			$sidebar.css("height","");
-			$sidebar
-			.nanoScroller({ destroy: true })
-			.removeClass("nano");
-			$(".sidebar-content",$sidebar).removeClass("nano-content");
 		}
 	}
 

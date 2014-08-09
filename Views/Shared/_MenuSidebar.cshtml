@@ -1,47 +1,47 @@
 ﻿@{string controllerName = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();}
-<!-- page sidebar -->
-<div class="sidebar-wrapper">
-	<div class="sidebar">
-		<div class="sidebar-content">
-			@if (controllerName != "Document") {
-				<div class="sidebar-user">
-					<div class="avatar">
-						<img src="/img/avatars/75/1.jpg" alt="photo" />
-					</div>
-					<div class="info">
-						<div class="name">
-							Angelina Glory
+		<!-- page sidebar -->
+		<div class="sidebar-wrapper">
+			<div class="sidebar">
+				<div class="sidebar-content">
+					@if (controllerName != "Document") {
+					<div class="sidebar-user">
+						<div class="avatar">
+							<img src="/img/avatars/75/1.jpg" alt="photo" />
 						</div>
-						<div class="status">
-							<i class="fa fa-circle"></i>Online
+						<div class="info">
+							<div class="name">
+								Angelina Glory
+							</div>
+							<div class="status">
+								<i class="fa fa-circle"></i>Online
+							</div>
+							<ul>
+								<li><a href="#" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fa fa-user"></i></a></li>
+								<li><a href="/Home/Inbox" data-toggle="tooltip" data-placement="top" title="Mail"><i class="fa fa-envelope"></i></a></li>
+								<li><a href="#" data-toggle="tooltip" data-placement="top" title="Setting"><i class="fa fa-cog"></i></a></li>
+								<li><a href="/Home/SignIn" data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+							</ul>
 						</div>
-						<ul>
-							<li><a href="#" data-toggle="tooltip" data-placement="top" title="Profile"><i class="fa fa-user"></i></a></li>
-							<li><a href="/Home/Inbox" data-toggle="tooltip" data-placement="top" title="Mail"><i class="fa fa-envelope"></i></a></li>
-							<li><a href="#" data-toggle="tooltip" data-placement="top" title="Setting"><i class="fa fa-cog"></i></a></li>
-							<li><a href="/Home/SignIn" data-toggle="tooltip" data-placement="top" title="Logout"><i class="fa fa-sign-out"></i></a></li>
-						</ul>
 					</div>
+					}<ul class="nav sidebar-menu">
+						@{var topMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == 0).ToList();
+						if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
+						topMenus = topMenus.Where(q => q.MenuID != (int)dotnetsource.Helpers.TopMenu.MenuLevels).ToList();
+						}}
+						@foreach (dotnetsource.Helpers.Menu menu in topMenus) {
+						if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
+						menu.MenuURL = menu.MenuURL.Replace("/Home", "/Document");
+						}
+						int viewBagTopMenuID = (int)ViewBag.TopMenu;
+						int viewBagSubMenuID = (int)ViewBag.Submenu;
+						int menuID = menu.MenuID;
+						var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == menuID).ToList();
+						<li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span><span class="fa arrow @((subMenus.Count() <= 0 ? "hide" : ""))"></span></a>
+							@Html.Partial("_RenderSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = menu.MenuID, SubMenus = subMenus })
+						</li>
+						}
+					</ul>
 				</div>
-   }<ul class="nav sidebar-menu">
-	   @{var topMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == 0).ToList();
-	  if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
-		  topMenus = topMenus.Where(q => q.MenuID != (int)dotnetsource.Helpers.TopMenu.MenuLevels).ToList();
-	  }}
-	   @foreach (dotnetsource.Helpers.Menu menu in topMenus) {
-		if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() == "Document") {
-			menu.MenuURL = menu.MenuURL.Replace("/Home", "/Document");
-		}
-		int viewBagTopMenuID = (int)ViewBag.TopMenu;
-		int viewBagSubMenuID = (int)ViewBag.Submenu;
-		int menuID = menu.MenuID;
-		var subMenus = dotnetsource.Helpers.Common.Getmenus().Where(q => q.TopMenuID == menuID).ToList();
-		   <li class="@((viewBagTopMenuID == menuID) ? "active open" : "")"><a href="@(string.IsNullOrEmpty(menu.MenuURL) ? "javascript:;" : menu.MenuURL)"><i class="@menu.IconName"></i><span class="menu-text">@menu.MenuName</span><span class="fa arrow @((subMenus.Count() <= 0 ? "hide" : ""))"></span></a>
-			   @Html.Partial("_RenderSubMenu", new dotnetsource.Helpers.RenderSubMenu { MenuID = menu.MenuID, SubMenus = subMenus })
-		   </li>
-	}
-   </ul>
+			</div>
 		</div>
-	</div>
-</div>
-<!-- end sidebar -->
+		<!-- end sidebar -->

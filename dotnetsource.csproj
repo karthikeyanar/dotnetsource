@@ -426,8 +426,6 @@
     <Content Include="js\plugins\morris\morris.js" />
     <Content Include="js\plugins\morris\morris.min.js" />
     <Content Include="js\plugins\morris\raphael-2.1.0.min.js" />
-    <Content Include="js\plugins\nanoscroller\jquery.nanoscroller.js" />
-    <Content Include="js\plugins\nanoscroller\jquery.nanoscroller.min.js" />
     <Content Include="js\plugins\select2\select2.js" />
     <Content Include="js\plugins\select2\select2.min.js" />
     <Content Include="js\plugins\slimscroll\jquery.slimscroll.js" />
