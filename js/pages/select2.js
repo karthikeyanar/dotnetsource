@@ -14,12 +14,10 @@
 		minimumInputLength: 2
 	});
 	function formatResult(state) {
-		window.console.log(state);
 		if(!state.id) return state.text; // optgroup
 		return "<img class='photo' style='width:36px;height:36px;' src='/img/avatars/75/"+state.id.toLowerCase()+".jpg'/>&nbsp;&nbsp;"+state.text;
 	}
 	function formatSelection(state) {
-		window.console.log(state);
 		if(!state.id) return state.text; // optgroup
 		return "<img class='photo' style='width:15px;height:15px;' src='/img/avatars/75/"+state.id.toLowerCase()+".jpg'/>&nbsp;&nbsp;"+state.text;
 	}

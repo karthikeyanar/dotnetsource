@@ -66,7 +66,6 @@ function MessageModel(data) {
 		var date=new Date(dateInt),
             now=new Date(),
             todayStart=new Date(now.getFullYear(),now.getMonth(),now.getDate())
-		window.console.log(date);
 		if(date.getTime()>todayStart) {
 			return date.getHours()+":"+(date.getMinutes()<10?'0'+date.getMinutes():date.getMinutes());
 		}

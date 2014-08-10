@@ -338,7 +338,6 @@ var App=new function() {
 		$sidebarMenu.find('li').has('ul').children('a').off('click').on('click',function(e) {
 			e.preventDefault();
 			var $this=$(this);
-			window.console.log("page sidebar menu expand");
 			var $currentUL=$(this).parent('li').toggleClass('open').children('ul');
 			var $body=$("body");
 
