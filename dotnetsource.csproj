@@ -258,6 +258,7 @@
     <Content Include="img\sprite-social-icons-1.2.4.png" />
     <Content Include="img\spritemap%402x.png" />
     <Content Include="img\spritemap.png" />
+    <Content Include="js\app\app.min.js" />
     <Content Include="js\bootstrap\bootstrap.js" />
     <Content Include="js\bootstrap\bootstrap.min.js" />
     <Content Include="js\app\app.js" />
@@ -534,7 +535,6 @@
     <Content Include="less\components\popovers.less" />
     <Content Include="less\components\progress-bars.less" />
     <Content Include="less\components\scaffolding.less" />
-    <Content Include="less\components\social-icons.less" />
     <Content Include="less\components\tables.less" />
     <Content Include="less\components\thumbnails.less" />
     <Content Include="less\components\tiles.less" />
@@ -786,8 +786,6 @@
     <Folder Include="aspnet_client\system_web\4_0_30319\" />
     <Folder Include="img\metro\black\" />
     <Folder Include="img\metro\white\" />
-    <Folder Include="less\pages\" />
-    <Folder Include="less\plugins\" />
     <Folder Include="php\files\uploads\" />
     <Folder Include="php\jqueryfileupload\files\thumbnail\" />
   </ItemGroup>
@@ -801,6 +799,7 @@
     <Content Include="less\components\blockUI.less" />
     <Content Include="less\site\sidebar-right.less" />
     <Content Include="less\components\code.less" />
+    <Content Include="less\components\close.less" />
     <None Include="packages\jQuery.1.7.2\Content\Scripts\jquery-1.7.2-vsdoc.js" />
     <None Include="packages\jQuery.1.7.2\Tools\jquery-1.7.2.intellisense.js" />
     <Content Include="packages\Newtonsoft.Json.4.5.6\Newtonsoft.Json.4.5.6.nupkg" />

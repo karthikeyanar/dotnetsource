@@ -1,6 +1,7 @@
 ﻿@{string controllerName = ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString();}
 @Html.Partial("_Head")
-@Html.Partial("_Styles")@if (controllerName == "Document") {@Html.Partial("_DocumentStyles")}
+@Html.Partial("_Styles")
+@if (controllerName == "Document") {@Html.Partial("_DocumentStyles")}
 @RenderSection("styles", required: false)
 </head>
 @{

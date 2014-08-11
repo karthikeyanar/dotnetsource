@@ -2,7 +2,7 @@ var App=new function() {
 
 	var self=this;
 
-	this.themesPath="css/themes/";
+	this.themesPath="/css/themes/";
 	// IE mode
 	this._IsIE8=false;
 	this._IsIE9=false;
@@ -115,7 +115,7 @@ var App=new function() {
 			e.preventDefault();
 			var el=$(this).closest(".panel").children(".panel-body");
 			// for demo purpose
-			self.handleBlockUI({ "target": el });
+			self.handleBlockUI({ "target": el,"verticalTop": true });
 			setTimeout(function() {
 				self.unblockUI(el);
 			},1000)

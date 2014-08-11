@@ -109,6 +109,7 @@ namespace ExportHtml {
 			result = ReplaceJS(result);
 			result = ReplaceIMG(result);
 			result = ReplaceCSHTML(result);
+			result = ReplaceCSHTMLAction(result); 
 			result = result.Replace("/php/", "php/");
 			result = result.Replace(" class=\"\"", "");
 			result = result.Replace("class=\"\"", "");
@@ -151,6 +152,30 @@ namespace ExportHtml {
 						href = href.ToLower() + ".html";
 					}
 					result = result.Replace(m.Value, "href=\"" + href + "\"");
+				}
+			}
+			return result;
+		}
+
+		public static string ReplaceCSHTMLAction(string result) {
+			Regex regex = new Regex(
+   @"action\s*=\s*(?:\""(?<action>[^\""]*)\""|(?<action>\\S+))",
+   RegexOptions.IgnoreCase
+   | RegexOptions.Multiline
+   | RegexOptions.IgnorePatternWhitespace
+   | RegexOptions.Compiled
+   );
+			MatchCollection matches = regex.Matches(result);
+			foreach (Match m in matches) {
+				if (m.Value.Contains("/Home") || m.Value.Contains("/Document")) {
+					string action = m.Groups["action"].Value.Replace("/Home", "").Replace("/Document", "");
+					if (action == "") {
+						action = "/";
+					} else {
+						action = action.Replace("/", "");
+						action = action.ToLower() + ".html";
+					}
+					result = result.Replace(m.Value, "action=\"" + action + "\"");
 				}
 			}
 			return result;
