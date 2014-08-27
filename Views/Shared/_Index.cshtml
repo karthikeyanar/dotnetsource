@@ -1,276 +1,213 @@
 ﻿@Html.Partial("_Box")
 <div class="row">
-    <div class="col-lg-6 col-md-12">
-        <div class="panel panel-info">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Order History - Spline Chart
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body">
-                <div id="c3SplineChart">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-12">
-        <div class="panel panel-dark-blue">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Order History - Bar Chart
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body">
-                <div id="c3BarChart">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-6 col-md-12">
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    General Stats
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="easy-pie-chart-box">
-                            <div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
-                                <span></span>
-                            </div>
-                            <div class="title">
-                                New Visitors
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="easy-pie-chart-box">
-                            <div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
-                                <span></span>
-                            </div>
-                            <div class="title">
-                                Bounce Rate
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="easy-pie-chart-box">
-                            <div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
-                                <span></span>
-                            </div>
-                            <div class="title">
-                                Transactions
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-blue">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Order History
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="c3PieChart">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="c3DonutChart">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-blue">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    Feed
-                </h3>@Html.Partial("_PanelCloseTools")
-            </div>
-            <div class="panel-body no-padding">
-                <div class="feed slimscroll" data-height="500">
-                    @Html.Partial("_Feed")
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-6 col-md-12">
-        @Html.Partial("_Chat")
-        <div class="tab-fancy">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#users">Users</a></li>
-                <li><a data-toggle="tab" href="#favorites">Favorites</a></li>
-                <li><a data-toggle="tab" href="#commenters">Commenters</a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content border">
-                <div id="users" class="tab-pane fade in active">
-                    <h5 class="news-heading">
-                        <i class="fa fa-group"></i>&nbsp;Last logged-in users
-                    </h5>
-                    <ul class="users-list slimscroll" data-height="480">
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Angelina Glory
-                                    </div>
-                                    <div class="status">
-                                        Product Designer
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 20, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Carlos Miller
-                                    </div>
-                                    <div class="status">
-                                        Manager
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 21, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Wayne Young
-                                    </div>
-                                    <div class="status">
-                                        Admin
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 22, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Susan Hernandez
-                                    </div>
-                                    <div class="status">
-                                        Sales Manager
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 23, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Angelina Glory
-                                    </div>
-                                    <div class="status">
-                                        Product Designer
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 20, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Carlos Miller
-                                    </div>
-                                    <div class="status">
-                                        Manager
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 21, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Wayne Young
-                                    </div>
-                                    <div class="status">
-                                        Admin
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 22, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img-box">
-                                    <img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
-                                </div>
-                                <div class="news-item-content">
-                                    <div class="name">
-                                        Susan Hernandez
-                                    </div>
-                                    <div class="status">
-                                        Sales Manager
-                                    </div>
-                                    <div class="time">
-                                        Last logged-in: Mar 23, 18:46
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="favorites" class="tab-pane fade">
-                    @Html.Partial("_Favorites")
-                </div>
-                <div id="commenters" class="tab-pane fade">
-                    @Html.Partial("_Commenters")
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="col-lg-6 col-md-12">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					General Stats
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="25" data-bar-color="#007FFF">
+								<span></span>
+							</div>
+							<div class="title">
+								New Visitors
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="50" data-bar-color="#008A17">
+								<span></span>
+							</div>
+							<div class="title">
+								Bounce Rate
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="easy-pie-chart-box">
+							<div class="easy-pie-chart" data-percent="75" data-bar-color="#8C0095">
+								<span></span>
+							</div>
+							<div class="title">
+								Transactions
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-blue">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					Feed
+				</h3>@Html.Partial("_PanelCloseTools")
+			</div>
+			<div class="panel-body no-padding">
+				<div class="feed slimscroll" data-height="500">
+					@Html.Partial("_Feed")
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-12">
+		@Html.Partial("_Chat")
+		<div class="tab-fancy">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#users">Users</a></li>
+				<li><a data-toggle="tab" href="#favorites">Favorites</a></li>
+				<li><a data-toggle="tab" href="#commenters">Commenters</a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content border">
+				<div id="users" class="tab-pane fade in active">
+					<h5 class="news-heading">
+						<i class="fa fa-group"></i>&nbsp;Last logged-in users
+					</h5>
+					<ul class="users-list slimscroll" data-height="480">
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Angelina Glory
+								</div>
+								<div class="status">
+									Product Designer
+								</div>
+								<div class="time">
+									Last logged-in: Mar 20, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Carlos Miller
+								</div>
+								<div class="status">
+									Manager
+								</div>
+								<div class="time">
+									Last logged-in: Mar 21, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Wayne Young
+								</div>
+								<div class="status">
+									Admin
+								</div>
+								<div class="time">
+									Last logged-in: Mar 22, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Susan Hernandez
+								</div>
+								<div class="status">
+									Sales Manager
+								</div>
+								<div class="time">
+									Last logged-in: Mar 23, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/1.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Angelina Glory
+								</div>
+								<div class="status">
+									Product Designer
+								</div>
+								<div class="time">
+									Last logged-in: Mar 20, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/3.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Carlos Miller
+								</div>
+								<div class="status">
+									Manager
+								</div>
+								<div class="time">
+									Last logged-in: Mar 21, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/4.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Wayne Young
+								</div>
+								<div class="status">
+									Admin
+								</div>
+								<div class="time">
+									Last logged-in: Mar 22, 18:46
+								</div>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<div class="img-box">
+								<img src="/img/avatars/75/2.jpg" alt="" class="pull-left img-circle" />
+							</div>
+							<div class="news-item-content">
+								<div class="name">
+									Susan Hernandez
+								</div>
+								<div class="status">
+									Sales Manager
+								</div>
+								<div class="time">
+									Last logged-in: Mar 23, 18:46
+								</div>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+				<div id="favorites" class="tab-pane fade">
+					@Html.Partial("_Favorites")
+				</div>
+				<div id="commenters" class="tab-pane fade">
+					@Html.Partial("_Commenters")
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
